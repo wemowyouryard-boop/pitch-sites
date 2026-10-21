@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelby Condie — The Legend</title>
+<meta name="description" content="Kelby Condie: Issue #1 — The Legend Begins. A comic book tribute to a one-of-one best friend, from Justin Marks.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2311100d'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' font-weight='bold' fill='%23e8b923' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Archivo+Black&family=Comic+Neue:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14100c;
+    --paper:#f7ecd2;
+    --red:#e23636;
+    --blue:#2456c8;
+    --yellow:#ffc907;
+    --gold:#e8b923;
+    --cream:#fffbe9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Comic Neue','Comic Sans MS',cursive,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%;}
+  .bangers{font-family:'Bangers',cursive;letter-spacing:.03em;}
+  .archivo{font-family:'Archivo Black',sans-serif;}
+
+  /* ============ COVER / HERO ============ */
+  .cover{
+    background:#0e0b09;
+    background-image:radial-gradient(circle, rgba(232,185,35,.20) 1.6px, transparent 1.7px);
+    background-size:16px 16px;
+    padding:26px 16px 64px;
+    position:relative;
+  }
+  .cover-frame{
+    max-width:1080px;margin:0 auto;background:var(--cream);
+    border:6px solid var(--ink);
+    box-shadow:14px 14px 0 rgba(0,0,0,.55);
+    padding:18px 18px 26px;
+    position:relative;
+  }
+  .cover-topbar{
+    display:flex;justify-content:space-between;align-items:center;gap:8px;
+    border-bottom:5px solid var(--ink);padding-bottom:10px;margin-bottom:14px;flex-wrap:wrap;
+  }
+  .cover-topbar .box{
+    font-family:'Archivo Black',sans-serif;font-size:.72rem;letter-spacing:.08em;
+    border:3px solid var(--ink);padding:5px 10px;background:#fff;
+  }
+  .cover-topbar .box.red{background:var(--red);color:#fff;}
+  .cover-topbar .box.blue{background:var(--blue);color:#fff;}
+  .cover-topbar .brand{font-family:'Bangers',cursive;font-size:1.25rem;letter-spacing:.14em;}
+  .cover-art{position:relative;border:6px solid var(--ink);overflow:hidden;background:#000;}
+  .cover-art img{width:100%;height:min(74vh,760px);object-fit:cover;object-position:center 22%;}
+  .cover-art::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(to top, rgba(10,6,2,.72) 0%, rgba(10,6,2,0) 46%);
+    pointer-events:none;
+  }
+  .cover-title{
+    position:absolute;left:0;right:0;bottom:12px;z-index:3;text-align:center;padding:0 10px;
+  }
+  .cover-title h1{
+    font-family:'Bangers',cursive;
+    font-size:clamp(3.4rem,12.5vw,8.6rem);
+    line-height:.92;color:var(--yellow);
+    -webkit-text-stroke:3px var(--ink);
+    text-shadow:5px 5px 0 var(--ink), 10px 10px 0 var(--red);
+    letter-spacing:.02em;
+  }
+  .cover-tagline{
+    display:inline-block;margin-top:12px;background:var(--ink);color:#fff;
+    font-family:'Archivo Black',sans-serif;font-size:clamp(.72rem,2.4vw,1.05rem);
+    letter-spacing:.18em;padding:9px 18px;transform:rotate(-1.2deg);
+    border:3px solid #fff;box-shadow:5px 5px 0 rgba(0,0,0,.45);
+  }
+  .legend-begins{
+    margin:18px auto 0;max-width:720px;text-align:center;background:var(--red);color:#fff;
+    border:5px solid var(--ink);box-shadow:8px 8px 0 var(--ink);
+    font-family:'Bangers',cursive;font-size:clamp(1.5rem,4.6vw,2.4rem);letter-spacing:.08em;
+    padding:8px 12px;transform:rotate(.6deg);
+  }
+  .cover-sub{
+    max-width:760px;margin:22px auto 0;text-align:center;font-size:1.12rem;font-weight:700;line-height:1.55;
+  }
+  .cover-sub em{color:var(--red);}
+  /* starbursts */
+  .burst{
+    position:absolute;z-index:4;width:132px;height:132px;display:flex;align-items:center;justify-content:center;
+    text-align:center;font-family:'Bangers',cursive;color:var(--ink);
+    clip-path:polygon(100% 50%, 84.5% 59.8%, 90.5% 74.5%, 76.5% 76.5%, 74.5% 90.5%, 59.8% 84.5%, 50% 100%, 40.2% 84.5%, 25.5% 90.5%, 23.5% 76.5%, 9.5% 74.5%, 15.5% 59.8%, 0% 50%, 15.5% 40.2%, 9.5% 25.5%, 23.5% 23.5%, 25.5% 9.5%, 40.2% 15.5%, 50% 0%, 59.8% 15.5%, 74.5% 9.5%, 76.5% 23.5%, 90.5% 25.5%, 84.5% 40.2%);
+    filter:drop-shadow(4px 4px 0 rgba(0,0,0,.85));
+    font-size:1.28rem;line-height:1.02;padding:20px;
+  }
+  .burst.b1{background:var(--yellow);top:110px;left:-24px;transform:rotate(-13deg);}
+  .burst.b2{background:#fff;top:96px;right:-20px;transform:rotate(11deg);}
+  .burst.b3{background:var(--gold);bottom:170px;right:-26px;transform:rotate(-7deg);width:142px;height:142px;}
+  /* speech bubble */
+  .bubble{
+    position:relative;background:#fff;border:4px solid var(--ink);border-radius:48% 52% 52% 48%/58% 60% 40% 42%;
+    padding:20px 26px;max-width:430px;font-weight:700;font-size:1.06rem;line-height:1.45;text-align:center;
+    box-shadow:7px 7px 0 rgba(0,0,0,.8);z-index:4;
+  }
+  .bubble::after{
+    content:"";position:absolute;bottom:-24px;left:58px;width:34px;height:34px;background:#fff;
+    border-right:4px solid var(--ink);border-bottom:4px solid var(--ink);transform:rotate(48deg) skew(12deg,12deg);
+  }
+  .bubble-row{display:flex;justify-content:center;margin-top:34px;padding:0 8px;}
+  .scroll-cue{
+    display:inline-block;margin:40px auto 0;background:var(--yellow);color:var(--ink);
+    font-family:'Bangers',cursive;font-size:1.35rem;letter-spacing:.08em;text-decoration:none;
+    border:4px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:10px 26px;transform:rotate(-1deg);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .scroll-cue:hover{transform:rotate(0deg) translate(3px,3px);box-shadow:3px 3px 0 var(--ink);}
+  .center{text-align:center;}
+
+  /* ============ SECTIONS ============ */
+  section{padding:70px 18px;}
+  .wrap{max-width:1180px;margin:0 auto;}
+  .section-head{text-align:center;margin-bottom:44px;position:relative;}
+  .kicker{
+    display:inline-block;font-family:'Archivo Black',sans-serif;font-size:.75rem;letter-spacing:.24em;
+    background:var(--ink);color:var(--yellow);padding:7px 16px;transform:rotate(-1deg);margin-bottom:16px;
+  }
+  h2.title{
+    font-family:'Bangers',cursive;font-size:clamp(2.5rem,7vw,4.4rem);line-height:1;letter-spacing:.02em;
+    text-shadow:4px 4px 0 rgba(20,16,12,.18);
+  }
+  h2.title .red{color:var(--red);} h2.title .blue{color:var(--blue);} h2.title .gold{color:#b8860b;}
+  .section-sub{max-width:680px;margin:14px auto 0;font-size:1.08rem;font-weight:700;line-height:1.55;}
+
+  /* narration strip */
+  .narration{
+    background:var(--yellow);
+    background-image:radial-gradient(circle, rgba(20,16,12,.16) 1.4px, transparent 1.5px);
+    background-size:14px 14px;
+    border-top:6px solid var(--ink);border-bottom:6px solid var(--ink);
+    padding:44px 18px;
+  }
+  .narration .box{
+    max-width:820px;margin:0 auto;background:var(--cream);border:5px solid var(--ink);
+    box-shadow:10px 10px 0 var(--ink);padding:28px 30px;transform:rotate(-.5deg);
+  }
+  .narration p{font-size:1.16rem;font-weight:700;line-height:1.65;}
+  .narration p + p{margin-top:12px;}
+  .narration .big{font-family:'Bangers',cursive;font-size:1.7rem;letter-spacing:.04em;}
+
+  /* ============ STAT CARDS ============ */
+  .stats{background:#101319;background-image:radial-gradient(circle, rgba(255,255,255,.13) 1.4px, transparent 1.5px);background-size:15px 15px;border-top:6px solid var(--ink);border-bottom:6px solid var(--ink);}
+  .stats h2.title{color:#fff;text-shadow:4px 4px 0 rgba(0,0,0,.6);}
+  .stats .section-sub{color:#e9e2cf;}
+  .stats .kicker{background:var(--red);color:#fff;}
+  .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;}
+  .stat-card{
+    background:var(--cream);border:5px solid var(--ink);box-shadow:9px 9px 0 rgba(0,0,0,.85);
+    padding:22px 22px 24px;position:relative;
+  }
+  .stat-card:nth-child(odd){transform:rotate(-.7deg);}
+  .stat-card:nth-child(even){transform:rotate(.7deg);}
+  .stat-card h3{font-family:'Bangers',cursive;font-size:1.65rem;letter-spacing:.05em;line-height:1.05;}
+  .stat-card .rating{
+    display:inline-block;margin:10px 0 12px;font-family:'Archivo Black',sans-serif;font-size:.8rem;letter-spacing:.1em;
+    padding:5px 11px;border:3px solid var(--ink);color:#fff;
+  }
+  .stat-card p{font-weight:700;line-height:1.55;font-size:1rem;}
+  .bar{height:20px;border:3px solid var(--ink);background:#fff;margin-top:14px;position:relative;overflow:hidden;}
+  .bar i{position:absolute;inset:0;transform-origin:left;background:repeating-linear-gradient(45deg,var(--gold) 0 12px,#c9930a 12px 24px);}
+  .bar.red i{background:repeating-linear-gradient(45deg,var(--red) 0 12px,#b92a2a 12px 24px);}
+  .bar.blue i{background:repeating-linear-gradient(45deg,var(--blue) 0 12px,#1a3f96 12px 24px);}
+  .stat-num{position:absolute;top:14px;right:16px;font-family:'Bangers',cursive;font-size:1.5rem;color:rgba(20,16,12,.22);}
+
+  /* ============ GALLERY ============ */
+  .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:30px;}
+  figure.panel{
+    background:#fff;border:5px solid var(--ink);box-shadow:9px 9px 0 var(--ink);
+    position:relative;padding:10px 10px 0;transition:transform .18s ease;
+  }
+  figure.panel:hover{transform:translate(-2px,-2px) rotate(0deg)!important;box-shadow:12px 12px 0 var(--ink);}
+  figure.panel:nth-child(3n+1){transform:rotate(-.8deg);}
+  figure.panel:nth-child(3n+2){transform:rotate(.6deg);}
+  figure.panel:nth-child(3n){transform:rotate(-.3deg);}
+  .panel-num{
+    position:absolute;top:-15px;right:-12px;z-index:3;background:var(--red);color:#fff;
+    font-family:'Bangers',cursive;font-size:.95rem;letter-spacing:.06em;padding:4px 10px;
+    border:3px solid var(--ink);transform:rotate(6deg);box-shadow:3px 3px 0 var(--ink);
+  }
+  figure.panel img{width:100%;height:290px;object-fit:cover;border:3px solid var(--ink);}
+  figcaption{padding:13px 6px 15px;}
+  .cap-title{
+    display:inline-block;background:#fff3a0;border:3px solid var(--ink);
+    font-family:'Archivo Black',sans-serif;font-size:.78rem;letter-spacing:.06em;
+    padding:5px 9px;margin-bottom:9px;line-height:1.3;
+  }
+  figcaption p{font-weight:700;font-size:.98rem;line-height:1.5;}
+
+  /* ============ BEARD ODE ============ */
+  .ode{
+    background:var(--blue);
+    background-image:radial-gradient(circle, rgba(255,255,255,.16) 1.5px, transparent 1.6px);
+    background-size:15px 15px;border-top:6px solid var(--ink);border-bottom:6px solid var(--ink);
+  }
+  .ode h2.title{color:#fff;text-shadow:4px 4px 0 rgba(0,0,0,.55);}
+  .ode .kicker{background:var(--yellow);color:var(--ink);}
+  .ode-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start;}
+  .ode-card{background:var(--cream);border:5px solid var(--ink);box-shadow:10px 10px 0 rgba(0,0,0,.8);padding:26px 28px;}
+  .ode-card h3{font-family:'Bangers',cursive;font-size:1.9rem;letter-spacing:.04em;margin-bottom:12px;}
+  .ode-card p{font-weight:700;line-height:1.65;font-size:1.03rem;}
+  .ode-card p + p{margin-top:12px;}
+  .ode .bubble{margin:6px auto 0;}
+
+  /* ============ CLOSING ============ */
+  .closing{background:#0e0b09;background-image:radial-gradient(circle, rgba(232,185,35,.16) 1.5px, transparent 1.6px);background-size:16px 16px;}
+  .letter{
+    max-width:780px;margin:0 auto;background:var(--cream);border:6px solid var(--ink);
+    box-shadow:12px 12px 0 rgba(0,0,0,.6);padding:42px 40px;position:relative;transform:rotate(-.4deg);
+  }
+  .letter h2{font-family:'Bangers',cursive;font-size:clamp(2rem,5.5vw,3rem);letter-spacing:.03em;margin-bottom:18px;}
+  .letter p{font-size:1.12rem;font-weight:700;line-height:1.7;}
+  .letter p + p{margin-top:14px;}
+  .letter .sig{margin-top:26px;font-family:'Bangers',cursive;font-size:1.6rem;letter-spacing:.03em;}
+  .letter .sig small{display:block;font-family:'Archivo Black',sans-serif;font-size:.68rem;letter-spacing:.2em;margin-top:5px;color:#6b5d3f;}
+  .burst.final{position:absolute;top:-52px;right:-38px;background:var(--red);color:#fff;width:150px;height:150px;font-size:1.4rem;transform:rotate(12deg);}
+
+  footer{
+    background:var(--ink);color:var(--paper);text-align:center;padding:30px 16px 36px;
+    font-family:'Archivo Black',sans-serif;font-size:.72rem;letter-spacing:.22em;line-height:2;
+  }
+  footer .fb{font-family:'Bangers',cursive;font-size:1.3rem;letter-spacing:.12em;color:var(--yellow);}
+
+  @media (max-width:760px){
+    .burst{width:104px;height:104px;font-size:1rem;padding:14px;}
+    .burst.b1{top:auto;bottom:235px;left:-8px;}
+    .burst.b2{top:86px;right:-6px;}
+    .burst.b3{display:none;}
+    .ode-grid{grid-template-columns:1fr;}
+    .letter{padding:34px 22px;}
+    .burst.final{top:-44px;right:-8px;width:118px;height:118px;font-size:1.1rem;}
+    figure.panel img{height:320px;}
+    .cover-art img{height:58vh;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= COVER ================= -->
+<header class="cover">
+  <div class="cover-frame">
+    <div class="cover-topbar">
+      <span class="box red">ISSUE #1</span>
+      <span class="brand">BEST FRIEND COMICS</span>
+      <span class="box blue">ONE OF ONE</span>
+    </div>
+    <div class="cover-art">
+      <img src="images/king.jpg" alt="Kelby Condie as a mighty king — crowned, caped in red velvet, beard in full glory">
+      <div class="burst b1">THE<br>MAN!</div>
+      <div class="burst b2">THE<br>BEARD!</div>
+      <div class="burst b3">THE<br>LEGEND!</div>
+      <div class="cover-title">
+        <h1>KELBY CONDIE</h1>
+        <span class="cover-tagline">THE MAN. THE BEARD. THE LEGEND.</span>
+      </div>
+    </div>
+    <div class="legend-begins">ISSUE #1: THE LEGEND BEGINS</div>
+    <p class="cover-sub">A tribute in panels to the one and only <em>Kelby Condie</em> — best friend, hero of this issue, and living proof that they simply do not make them like this anymore.</p>
+    <div class="bubble-row">
+      <div class="bubble">&ldquo;Every legend has an origin story. This one has a beard.&rdquo;</div>
+    </div>
+    <div class="center"><a class="scroll-cue" href="#hero-file">START THE ISSUE &#9660;</a></div>
+  </div>
+</header>
+
+<!-- ================= NARRATION ================= -->
+<div class="narration">
+  <div class="box">
+    <p class="big">MEANWHILE, IN A WORLD FULL OF ORDINARY MEN&hellip;</p>
+    <p>&hellip;one man dared to live larger. King on Monday, holy man by Friday, pirate captain whenever the sunset required one. Collected across these pages: every known form of Kelby — hero, sage, scoundrel, saint, and sculpture — lovingly assembled by his best friend, who has seen it all and can confirm: every word of the legend is earned.</p>
+  </div>
+</div>
+
+<!-- ================= KNOW YOUR HERO ================= -->
+<section class="stats" id="hero-file">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">OFFICIAL HERO FILE</span>
+      <h2 class="title">KNOW YOUR <span class="gold">HERO</span></h2>
+      <p class="section-sub">Declassified stats on the man of the hour. Independent evaluators were brought in. The charts gave up before the evaluators did.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <span class="stat-num">01</span>
+        <h3>STAR TREK DEVOTION</h3>
+        <span class="rating" style="background:var(--blue)">MAXIMUM</span>
+        <p>A devoted Trekkie with pure Starfleet energy. Boldly going — everywhere, always, beard first. Live long and prosper: he fully intends to.</p>
+        <div class="bar blue"><i style="width:100%"></i></div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">02</span>
+        <h3>COLLECTIBLES</h3>
+        <span class="rating" style="background:var(--red)">VAULT-WORTHY HOARD</span>
+        <p>A serious collector. If it exists in miniature, clay, copper, or plastic brick form, there is a strong chance it already lives in the vault.</p>
+        <div class="bar red"><i style="width:95%"></i></div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">03</span>
+        <h3>ASTROLOGY</h3>
+        <span class="rating" style="background:var(--blue)">STAR-CHART FLUENT</span>
+        <p>Extraordinarily into astrology and spiritualism. He reads the stars like a star chart — because to Kelby, that is exactly what they are.</p>
+        <div class="bar blue"><i style="width:92%"></i></div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">04</span>
+        <h3>MEDITATION</h3>
+        <span class="rating" style="background:var(--red)">DEEP-SPACE LEVEL</span>
+        <p>A deep meditator. Jungle shrines, cosmic portraits, total stillness — the man can quiet his mind in any dimension, including this one.</p>
+        <div class="bar red"><i style="width:97%"></i></div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">05</span>
+        <h3>WILLPOWER</h3>
+        <span class="rating" style="background:#b8860b">100 / 100</span>
+        <p>NoFap Grand Master. Monk-level self-discipline and iron willpower, maintained as part of his spiritual practice. Unbothered. Unshaken. Unbreakable.</p>
+        <div class="bar"><i style="width:100%"></i></div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">06</span>
+        <h3>THE BEARD</h3>
+        <span class="rating" style="background:#b8860b">OFF THE CHARTS</span>
+        <p>Not a hairstyle — a landmark. Paired with a handlebar mustache of museum quality, it has ended arguments simply by entering rooms.</p>
+        <div class="bar"><i style="width:100%"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">24 PANELS OF PROOF</span>
+      <h2 class="title">THE MANY FACES OF <span class="red">A LEGEND</span></h2>
+      <p class="section-sub">Kings, sages, robbers, robots of clay — one man contains all of them, and somehow still makes it home for dinner.</p>
+    </div>
+    <div class="gallery-grid">
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 01</span>
+        <img src="images/king.jpg" alt="Kelby Condie as a crowned king in a red velvet cape" loading="lazy">
+        <figcaption><span class="cap-title">THE KING</span>
+        <p>All hail. No election was held. None was needed.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 02</span>
+        <img src="images/man-himself.jpg" alt="Kelby Condie outdoors under a big blue sky, handlebar mustache and long beard, colorful shirt" loading="lazy">
+        <figcaption><span class="cap-title">THE MAN HIMSELF</span>
+        <p>No filter, no costume — just Kelby under a big blue sky, exactly as the legend ships from the factory.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 03</span>
+        <img src="images/mustache.jpg" alt="Kelby Condie shirtless with an epic curled handlebar mustache and long beard" loading="lazy">
+        <figcaption><span class="cap-title">THE MUSTACHE IN ITS NATURAL HABITAT</span>
+        <p>Handlebars so glorious, traffic stops itself out of respect.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 04</span>
+        <img src="images/party.jpg" alt="Kelby Condie in sunglasses with a cigar at a tiki hut, surrounded by glamorous friends" loading="lazy">
+        <figcaption><span class="cap-title">THE PARTY</span>
+        <p>Wherever Kelby goes, the party files a change-of-address form.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 05</span>
+        <img src="images/holy-man.jpg" alt="Kelby Condie as an ash-covered holy man at a jungle shrine, prayer beads and trident behind him" loading="lazy">
+        <figcaption><span class="cap-title">THE HOLY MAN</span>
+        <p>Deep meditation, jungle edition. The deep meditator in his natural temple.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 06</span>
+        <img src="images/hercules.jpg" alt="Classical painting of Kelby Condie as Hercules with a club and lion skin" loading="lazy">
+        <figcaption><span class="cap-title">HERCULES</span>
+        <p>Twelve labors? Handled before breakfast.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 07</span>
+        <img src="images/renaissance.jpg" alt="Renaissance oil-painting portrait of Kelby Condie" loading="lazy">
+        <figcaption><span class="cap-title">THE RENAISSANCE MAN</span>
+        <p>The museums keep calling. He keeps respectfully declining.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 08</span>
+        <img src="images/nephite.jpg" alt="Kelby Condie in ancient armor with a pendant reading 'I am a child of God', beneath the words 'I am a Nephite'" loading="lazy">
+        <figcaption><span class="cap-title">THE NEPHITE</span>
+        <p>Armor on, faith strong, couch conquered.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 09</span>
+        <img src="images/pirate.jpg" alt="Kelby Condie as a pirate captain in a skull-and-crossbones hat aboard a ship at sunset" loading="lazy">
+        <figcaption><span class="cap-title">THE PIRATE CAPTAIN</span>
+        <p>He doesn't chase sunsets. Sunsets report to him.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 10</span>
+        <img src="images/boss.jpg" alt="Kelby Condie in a black suit with a large gold pendant before a wall reading 'Loyalty Respect Power'" loading="lazy">
+        <figcaption><span class="cap-title">THE BOSS</span>
+        <p>Loyalty. Respect. Power. The wall said it; the suit confirmed it.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 11</span>
+        <img src="images/cosmic.jpg" alt="Psychedelic cosmic portrait of Kelby Condie with a third eye, sacred geometry and galaxies" loading="lazy">
+        <figcaption><span class="cap-title">THE COSMIC KELBY</span>
+        <p>Third eye open, galaxies on speed dial — the astrologer-meditator at full power.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 12</span>
+        <img src="images/moonflower.jpg" alt="Kelby Condie taking a garden selfie among moonflowers with mountains behind him" loading="lazy">
+        <figcaption><span class="cap-title">THE MOONFLOWER MAN</span>
+        <p>Communing with moonflowers and mountain air. The garden approves.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 13</span>
+        <img src="images/lego.jpg" alt="A LEGO minifigure version of Kelby Condie with long hair, beard and mustache" loading="lazy">
+        <figcaption><span class="cap-title">LEGO LEGEND</span>
+        <p>Some assembly required. Greatness included. The collector strikes again.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 14</span>
+        <img src="images/claymation-jungle.jpg" alt="Claymation Kelby Condie standing in the jungle beside a walking palm tree" loading="lazy">
+        <figcaption><span class="cap-title">CLAYMATION KELBY</span>
+        <p>Even sculpted in clay, the beard cannot be tamed. A collectible come to life.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 15</span>
+        <img src="images/claymation-closeup.jpg" alt="Close-up of claymation Kelby Condie with a cigar under a thatched roof" loading="lazy">
+        <figcaption><span class="cap-title">CLAYMATION KELBY: CLOSE-UP</span>
+        <p>Frame by frame, the legend still smolders.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 16</span>
+        <img src="images/drama-king.jpg" alt="Kelby Condie in pink sequins, a feather boa, heart-shaped rhinestone glasses and a 'Drama King' chain, beside his friend in matching pink with a 'Fabulous' chain" loading="lazy">
+        <figcaption><span class="cap-title">DRAMA KING &amp; MR. FABULOUS</span>
+        <p>Pink sequins, feather boa, zero apologies — Kelby and his partner-in-crime in full regalia.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 17</span>
+        <img src="images/memorial-pool.jpg" alt="Kelby Condie and his friend standing at the reflecting pool of the Oklahoma City National Memorial" loading="lazy">
+        <figcaption><span class="cap-title">PARTNERS IN CRIME</span>
+        <p>Kelby and his best mate at the Oklahoma City National Memorial — a quiet moment for the duo.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 18</span>
+        <img src="images/memorial-wide.jpg" alt="Wide shot of Kelby Condie and his friend at the Oklahoma City National Memorial" loading="lazy">
+        <figcaption><span class="cap-title">THE DUO, IN FULL FRAME</span>
+        <p>Same legendary pair, wide shot. The memorial has never hosted a finer duo.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 19</span>
+        <img src="images/memorial-wall.jpg" alt="Kelby Condie and his friend by the dark wall of the Oklahoma City National Memorial" loading="lazy">
+        <figcaption><span class="cap-title">THE DUO AFTER DARK</span>
+        <p>By the memorial wall as the city goes quiet — partners in crime, at rest.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 20</span>
+        <img src="images/gadianton.jpg" alt="Wanted-poster style portrait of Kelby Condie as a hooded Gadianton robber with a sack of loot on a moonlit street" loading="lazy">
+        <figcaption><span class="cap-title">WANTED: THE GADIANTON ROBBER</span>
+        <p>Wanted for stealing every single scene he has ever appeared in. Reward: this website.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 21</span>
+        <img src="images/sun-medallion.jpg" alt="A copper sun medallion sculpted with Kelby Condie's face at its center" loading="lazy">
+        <figcaption><span class="cap-title">THE SUN GOD MEDALLION</span>
+        <p>Archaeologists are calling it &ldquo;extremely Kelby.&rdquo; The crown jewel of any collection.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 22</span>
+        <img src="images/andrew-blinged.jpg" alt="Andrew Palmer in an LA cap and sunglasses wearing a gold Giving Tree Lawn Care chain, with a Christus statue behind him" loading="lazy">
+        <figcaption><span class="cap-title">ANDREW PALMER — BLESSED &amp; BLINGED</span>
+        <p>Crew alert! Andrew Palmer: blessed, blinged, and entirely camera-ready.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 23</span>
+        <img src="images/andrew-fanclub.jpg" alt="Andrew Palmer in a hoodie and gold chain on a couch surrounded by friends dressed in white" loading="lazy">
+        <figcaption><span class="cap-title">ANDREW &amp; HIS FAN CLUB</span>
+        <p>Andrew Palmer and his fan club. Membership: everyone pictured. Dues: waived.</p></figcaption>
+      </figure>
+
+      <figure class="panel">
+        <span class="panel-num">PANEL 24</span>
+        <img src="images/justin-cypherpunk.jpg" alt="Justin Marks in a cyberpunk Matrix-style portrait holding a mug reading 'Wake Up — Question Everything', with a Bitcoin coin" loading="lazy">
+        <figcaption><span class="cap-title">THE BEST FRIEND: JUSTIN — CYPHERPUNK MODE</span>
+        <p>And the publisher of this fine issue himself: Justin, best friend of the hero. Wake up. Question everything.</p></figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= ODE TO THE BEARD ================= -->
+<section class="ode">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">A MOMENT OF REVERENCE</span>
+      <h2 class="title">AN ODE TO THE BEARD</h2>
+    </div>
+    <div class="ode-grid">
+      <div class="ode-card">
+        <h3>EXHIBIT A: THE BEARD</h3>
+        <p>Scholars have measured it. Poets have attempted it. lesser beards have simply gone home. Kelby's beard is not facial hair — it is a geographic feature, a rolling landscape of legend that has been photographed from space (the space in every room he enters).</p>
+        <p>It has survived jungles, oceans, oil painters, and being sculpted in clay twice. It fears nothing. It conditions itself on pure confidence.</p>
+      </div>
+      <div>
+        <div class="ode-card" style="margin-bottom:30px;">
+          <h3>EXHIBIT B: THE MUSTACHE</h3>
+          <p>The handlebar mustache is the beard's crown jewel — curled to a perfection that traffic engineers study and bullfighters respect. Legend holds that it once directed traffic during a blackout. The legend has not been corrected, because nobody present disagreed.</p>
+        </div>
+        <div class="bubble">&ldquo;IT'S NOT A BEARD. IT'S A LANDMARK.&rdquo;<br>— EVERYONE WHO HAS SEEN IT</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLOSING ================= -->
+<section class="closing">
+  <div class="wrap">
+    <div class="letter">
+      <div class="burst final">ONE<br>OF<br>ONE!</div>
+      <h2>A NOTE FROM THE PUBLISHER</h2>
+      <p>Kelby — every hero needs somebody who believes the legend, and brother, I have the photographs to prove all of it. King, sage, pirate, saint, robber, sculpture: most men get to be one thing. You got to be all of them, with the beard to match.</p>
+      <p>They don't make them like you anymore. Honestly, they never did — you are one of one, and calling you my best friend is the easiest panel in this whole issue.</p>
+      <p>Here's to the next issue. There will always be a next issue.</p>
+      <div class="sig">— JUSTIN MARKS<small>BEST FRIEND &amp; PUBLISHER OF THIS FINE ISSUE</small></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fb">KELBY CONDIE — ISSUE #1: THE LEGEND BEGINS</div>
+  A TRIBUTE BY JUSTIN MARKS &bull; NOT SOLD IN STORES &bull; PRICELESS<br>
+  NO BEARDS WERE HARMED IN THE MAKING OF THIS ISSUE &bull; THE LEGEND REMAINS AT LARGE
+</footer>
+
+</body>
+</html>
