@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atticus Coffee &amp; Gifts — Spokane, WA</title>
+<meta name="description" content="Atticus Coffee &amp; Gifts is a locally owned café, coffee shop and gift shop at 222 North Howard Street in Spokane, WA, serving espresso, bulk coffee and tea, pastries, sandwiches, and house-made oatmeal and granola.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%235b7153'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='bold' fill='%23fdf8ee' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Atticus Coffee & Gifts",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "222 North Howard Street",
+    "addressLocality": "Spokane",
+    "addressRegion": "WA",
+    "postalCode": "99201",
+    "addressCountry": "US"
+  },
+  "telephone": "(509) 747-0336",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "07:30",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --sage:#5b7153;
+    --sage-dark:#43573d;
+    --sage-light:#e6ebdf;
+    --cream:#fdf8ee;
+    --cream-dark:#f3ead6;
+    --ink:#2e332b;
+    --muted:#5d665a;
+    --line:#ddd3bd;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Work Sans',Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3{font-family:'Lora',Georgia,serif;color:var(--sage-dark);line-height:1.2}
+  a{color:var(--sage-dark)}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  /* Header */
+  header{position:sticky;top:0;z-index:20;background:var(--cream);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand-mark{width:44px;height:44px;border-radius:10px;background:var(--sage);color:var(--cream);font-family:'Lora',Georgia,serif;font-size:26px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  .brand-name{font-family:'Lora',Georgia,serif;font-size:21px;font-weight:700;color:var(--sage-dark);line-height:1.1}
+  .brand-sub{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  nav ul{list-style:none;display:flex;gap:22px;flex-wrap:wrap}
+  nav ul a{text-decoration:none;font-weight:600;font-size:15px;color:var(--ink)}
+  nav ul a:hover{color:var(--sage)}
+  .nav-call{background:var(--sage);color:#fff !important;padding:9px 16px;border-radius:999px}
+  .nav-call:hover{background:var(--sage-dark)}
+  /* Hero — split, text left */
+  .hero{background:linear-gradient(180deg,var(--cream) 0%,var(--cream-dark) 100%)}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
+  .hero-text{padding:64px 40px 64px 0;display:flex;flex-direction:column;justify-content:center}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);margin-bottom:14px}
+  .hero-text h1{font-size:46px;margin-bottom:18px}
+  .hero-text p{font-size:18px;color:var(--muted);max-width:52ch;margin-bottom:16px}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:999px;font-size:15px}
+  .btn-primary{background:var(--sage);color:#fff}
+  .btn-primary:hover{background:var(--sage-dark)}
+  .btn-outline{border:2px solid var(--sage);color:var(--sage-dark);background:transparent}
+  .btn-outline:hover{background:var(--sage-light)}
+  .hero-photo{min-height:420px}
+  .hero-photo img{width:100%;height:100%;object-fit:cover}
+  .hero-bar{background:var(--sage);color:#fff}
+  .hero-bar .wrap{display:flex;gap:28px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px;font-size:15px}
+  .hero-bar strong{font-family:'Lora',Georgia,serif}
+  /* Sections */
+  section{padding:64px 0}
+  .section-head{max-width:720px;margin-bottom:32px}
+  .section-head h2{font-size:34px;margin-bottom:10px}
+  .section-head p{color:var(--muted);font-size:17px}
+  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}
+  .about-grid img{border-radius:18px;width:100%;height:100%;object-fit:cover;min-height:320px}
+  .about-copy p{color:var(--muted);font-size:17px;margin-bottom:14px}
+  .pill-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+  .pill{background:var(--sage-light);color:var(--sage-dark);font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px}
+  .menu-band{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:26px}
+  .card h3{font-size:21px;margin-bottom:10px}
+  .card p,.card li{color:var(--muted);font-size:15.5px}
+  .card ul{list-style:none}
+  .card ul li{padding:7px 0;border-bottom:1px dashed var(--line)}
+  .card ul li:last-child{border-bottom:none}
+  .food-photo{border-radius:18px;overflow:hidden;margin-top:28px}
+  .food-photo img{width:100%;height:380px;object-fit:cover}
+  .gift-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .gift-item{background:var(--sage);color:#fff;border-radius:14px;padding:22px 14px;text-align:center}
+  .gift-item span{display:block;font-family:'Lora',Georgia,serif;font-size:19px;font-weight:600}
+  .gift-item small{opacity:.9;font-size:13px}
+  .visit{background:var(--sage-dark);color:#eef1e8}
+  .visit h2{color:#fff}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px}
+  .visit-box h3{color:#fff;font-size:20px;margin-bottom:10px}
+  .visit-box p,.visit-box a{color:#eef1e8;font-size:16px}
+  .visit-box a{text-decoration:underline}
+  .hours-table{width:100%;border-collapse:collapse;font-size:16px}
+  .hours-table td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.22)}
+  .hours-table td:last-child{text-align:right}
+  .hours-table tr:last-child td{border-bottom:none}
+  footer{background:var(--ink);color:#cfd4cb;padding:30px 0;font-size:14.5px}
+  footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+  footer strong{color:#fff;font-family:'Lora',Georgia,serif}
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero-text{padding:44px 0 30px}
+    .hero-text h1{font-size:36px}
+    .hero-photo{min-height:280px;order:2}
+    .about-grid,.visit-grid{grid-template-columns:1fr}
+    .cards{grid-template-columns:1fr}
+    .gift-grid{grid-template-columns:repeat(2,1fr)}
+    .food-photo img{height:260px}
+    section{padding:48px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Atticus Coffee and Gifts — home">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span>
+        <span class="brand-name">Atticus Coffee &amp; Gifts</span><br>
+        <span class="brand-sub">Café &amp; Gift Shop · Spokane, WA</span>
+      </span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#cafe">Café</a></li>
+        <li><a href="#gifts">Gift Shop</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+        <li><a class="nav-call" href="tel:+15097470336">(509) 747-0336</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Split hero: text on the left, photo on the right -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Locally Owned · Spokane, Washington</p>
+        <h1>Atticus Coffee &amp; Gifts</h1>
+        <p>A café and coffee shop with a gift shop at 222 North Howard Street in Spokane — serving espresso, bulk coffee and tea, pastries, and sandwiches.</p>
+        <p>Come in for a coffee, browse the gift shop for books, candles, soaps, cards, and shirts, and take home bulk coffee or tea.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#cafe">See What We Serve</a>
+          <a class="btn btn-outline" href="#visit">Hours &amp; Directions</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="https://threebestrated.com/images/AtticusCoffeeGifts-Spokane-WA.jpeg" alt="Exterior of Atticus Coffee &amp; Gifts at 222 North Howard Street in Spokane, Washington">
+      </div>
+    </div>
+    <div class="hero-bar">
+      <div class="wrap">
+        <span><strong>Mon–Sat:</strong> 7:30am – 6:00pm</span>
+        <span><strong>Sunday:</strong> 9:00am – 5:00pm</span>
+        <span><strong>Visit:</strong> 222 North Howard Street, Spokane, WA 99201</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="about-copy">
+        <div class="section-head" style="margin-bottom:16px">
+          <h2>A locally owned café &amp; gift shop</h2>
+        </div>
+        <p>Atticus Coffee &amp; Gifts is a locally owned café, coffee shop, and gift shop in Spokane, Washington.</p>
+        <p>Under one roof you will find a café serving espresso, pastries, and sandwiches, bulk coffee and tea, and a gift shop with books, candles, soaps, cards, and shirts.</p>
+        <div class="pill-row" aria-label="Highlights">
+          <span class="pill">Espresso</span>
+          <span class="pill">Bulk Coffee &amp; Tea</span>
+          <span class="pill">Pastries</span>
+          <span class="pill">Sandwiches</span>
+          <span class="pill">Gift Shop</span>
+        </div>
+      </div>
+      <div>
+        <img src="https://threebestrated.com/images/AtticusCoffeeGifts-Spokane-WA-1.jpeg" alt="Interior of Atticus Coffee &amp; Gifts café and gift shop in Spokane, Washington">
+      </div>
+    </div>
+  </section>
+
+  <section id="cafe" class="menu-band">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>From the café</h2>
+        <p>Espresso, bulk coffee and tea, pastries, sandwiches, and house-made oatmeal and granola.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <h3>Coffee &amp; Tea</h3>
+          <ul>
+            <li>Espresso</li>
+            <li>Bulk coffee</li>
+            <li>Bulk tea</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Pastries &amp; House-Made</h3>
+          <ul>
+            <li>Pastries</li>
+            <li>House-made oatmeal</li>
+            <li>House-made granola</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Sandwiches</h3>
+          <ul>
+            <li>Ham &amp; Gruyère</li>
+            <li>Turkey Red Pepper &amp; Goat Cheese</li>
+            <li>White Cheddar Sun-dried Tomato &amp; Pesto</li>
+          </ul>
+        </article>
+      </div>
+      <div class="food-photo">
+        <img src="https://threebestrated.com/images/AtticusCoffeeGifts-Spokane-WA-2.jpeg" alt="Food served at Atticus Coffee &amp; Gifts café in Spokane, Washington">
+      </div>
+    </div>
+  </section>
+
+  <section id="gifts">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>The gift shop</h2>
+        <p>Alongside the café, the gift shop at Atticus Coffee &amp; Gifts carries books, candles, soaps, cards, and shirts.</p>
+      </div>
+      <div class="gift-grid">
+        <div class="gift-item"><span>Books</span><small>Gift shop</small></div>
+        <div class="gift-item"><span>Candles</span><small>Gift shop</small></div>
+        <div class="gift-item"><span>Soaps</span><small>Gift shop</small></div>
+        <div class="gift-item"><span>Cards</span><small>Gift shop</small></div>
+        <div class="gift-item"><span>Shirts</span><small>Gift shop</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Visit us in Spokane</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-box">
+          <h3>Find us</h3>
+          <p>Atticus Coffee &amp; Gifts<br>
+          222 North Howard Street<br>
+          Spokane, WA 99201</p>
+        </div>
+        <div class="visit-box">
+          <h3>Hours</h3>
+          <table class="hours-table">
+            <tr><td>Monday – Saturday</td><td>7:30am – 6:00pm</td></tr>
+            <tr><td>Sunday</td><td>9:00am – 5:00pm</td></tr>
+          </table>
+        </div>
+        <div class="visit-box">
+          <h3>Get in touch</h3>
+          <p>Phone: <a href="tel:+15097470336">(509) 747-0336</a><br>
+          Email: <a href="mailto:atticuscoffee@comcast.net">atticuscoffee@comcast.net</a></p>
+          <p style="margin-top:12px">Stop by for espresso, bulk coffee and tea, a pastry or sandwich — and browse the gift shop while you are here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><strong>Atticus Coffee &amp; Gifts</strong> · 222 North Howard Street, Spokane, WA 99201</span>
+    <span>(509) 747-0336 · atticuscoffee@comcast.net</span>
+  </div>
+</footer>
+
+</body>
+</html>

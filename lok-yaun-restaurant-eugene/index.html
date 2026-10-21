@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lok Yaun Restaurant — Eugene, OR</title>
+<meta name="description" content="Lok Yaun Restaurant is a Chinese restaurant in Eugene, OR. View the menu, hours, and contact information.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%237f1d1d'/%3E%3Ctext x='50' y='70' font-size='60' text-anchor='middle' fill='%23d4af37' font-family='Georgia,serif' font-weight='bold'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Lok Yaun Restaurant",
+  "telephone": "(541) 345-7448",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3000 West 11th Avenue",
+    "addressLocality": "Eugene",
+    "addressRegion": "OR",
+    "postalCode": "97402",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "11:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "11:30",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "11:30",
+      "closes": "21:00"
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --crimson:#7f1d1d;
+    --crimson-dark:#5f1414;
+    --gold:#d4af37;
+    --gold-light:#f3d67a;
+    --cream:#fdf6e9;
+    --cream-dark:#f7ecd2;
+    --ink:#2b2118;
+    --muted:#6b5d4f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Nunito Sans',system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3,h4{font-family:'Marcellus',Georgia,serif;font-weight:400;line-height:1.15;color:var(--crimson)}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .topbar{background:var(--crimson-dark);color:#fff;text-align:center;font-size:.9rem;padding:.5rem 1rem;letter-spacing:.02em}
+  .topbar a{color:var(--gold-light);font-weight:700;text-decoration:none}
+  header.site-header{background:var(--crimson);position:sticky;top:0;z-index:50;box-shadow:0 4px 18px rgba(0,0,0,.22)}
+  .nav-wrap{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 1.25rem;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:#fff}
+  .brand-mark{width:46px;height:46px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-family:'Marcellus',serif;font-size:1.6rem;color:var(--gold);flex:0 0 auto;background:rgba(255,255,255,.06)}
+  .brand-text{line-height:1.1}
+  .brand-text strong{font-family:'Marcellus',serif;font-weight:400;font-size:1.25rem;letter-spacing:.04em;display:block}
+  .brand-text span{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-light)}
+  nav.main-nav{display:flex;gap:.25rem;flex-wrap:wrap}
+  nav.main-nav a{color:#fff;text-decoration:none;font-weight:700;font-size:.95rem;padding:.55rem .85rem;border-radius:999px}
+  nav.main-nav a:hover{background:rgba(255,255,255,.14);color:var(--gold-light)}
+  /* Hero — centered */
+  .hero{background:linear-gradient(180deg,var(--crimson) 0%,var(--crimson-dark) 100%);color:#fff;text-align:center;padding:3.5rem 1.25rem 3rem;position:relative;overflow:hidden}
+  .hero::before,.hero::after{content:"";position:absolute;width:220px;height:220px;border:1px solid rgba(212,175,55,.35);border-radius:50%}
+  .hero::before{top:-90px;left:-70px}
+  .hero::after{bottom:-110px;right:-60px}
+  .hero-inner{max-width:820px;margin:0 auto;position:relative;z-index:1}
+  .hero-eyebrow{letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:800;font-size:.82rem}
+  .hero h1{color:#fff;font-size:clamp(2.6rem,6vw,4.4rem);margin:.5rem 0 .35rem;letter-spacing:.02em}
+  .hero h1 span{color:var(--gold)}
+  .hero p.lead{font-size:1.12rem;color:#fdeec2;max-width:620px;margin:0 auto 1.4rem}
+  .hero-actions{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+  .btn{display:inline-block;text-decoration:none;font-weight:800;padding:.85rem 1.5rem;border-radius:999px;font-size:1rem}
+  .btn-gold{background:var(--gold);color:#2b1400}
+  .btn-outline{border:2px solid rgba(255,255,255,.85);color:#fff;background:transparent}
+  .hero-photo{max-width:760px;margin:0 auto;border:6px solid #fff;outline:2px solid var(--gold);border-radius:18px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.35);background:#fff}
+  .hero-photo img{width:100%;height:420px;object-fit:cover}
+  .hero-meta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.4rem;font-size:.95rem;color:#fff}
+  .hero-meta span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);padding:.45rem .9rem;border-radius:999px}
+  section{padding:3.5rem 1.25rem}
+  .wrap{max-width:1100px;margin:0 auto}
+  .section-head{text-align:center;max-width:700px;margin:0 auto 2rem}
+  .section-head .kicker{letter-spacing:.24em;text-transform:uppercase;color:#9a7b1f;font-weight:800;font-size:.8rem}
+  .section-head h2{font-size:clamp(1.9rem,4vw,2.6rem);margin:.4rem 0 .5rem}
+  .section-head p{color:var(--muted)}
+  .welcome-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+  .welcome-grid img{border-radius:16px;height:340px;width:100%;object-fit:cover;border:4px solid #fff;box-shadow:0 10px 28px rgba(127,29,29,.18)}
+  .fact-list{list-style:none;margin-top:1.25rem;display:grid;gap:.65rem}
+  .fact-list li{background:#fff;border:1px solid #eadfc2;border-left:5px solid var(--gold);padding:.75rem 1rem;border-radius:10px;font-weight:600}
+  .fact-list li strong{color:var(--crimson)}
+  /* Menu board */
+  .menu-section{background:var(--cream-dark)}
+  .menu-board{background:#2a0f0f;background:linear-gradient(180deg,#3a1111,#220a0a);color:#fdf6e9;border:4px solid var(--gold);border-radius:20px;padding:2.25rem;box-shadow:0 16px 36px rgba(0,0,0,.22);max-width:900px;margin:0 auto}
+  .menu-board h3{text-align:center;color:var(--gold);font-size:1.9rem;letter-spacing:.06em;margin-bottom:.25rem}
+  .menu-board .board-sub{text-align:center;color:#e8d9a8;letter-spacing:.18em;text-transform:uppercase;font-size:.8rem;font-weight:700;margin-bottom:1.75rem}
+  .menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 2.5rem}
+  .menu-item{border-bottom:1px dashed rgba(212,175,55,.45);padding-bottom:1rem}
+  .menu-item h4{color:#fff;font-size:1.15rem;margin-bottom:.25rem}
+  .menu-item p{color:#d9c9a3;font-size:.95rem;line-height:1.5}
+  .menu-feature{grid-column:1 / -1;background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.5);border-radius:12px;padding:1.1rem 1.25rem;text-align:center}
+  .menu-feature h4{color:var(--gold)}
+  .menu-feature p{color:#f3e6bd}
+  /* Hours / Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+  .card{background:#fff;border:1px solid #eadfc2;border-radius:16px;padding:1.6rem;box-shadow:0 8px 22px rgba(0,0,0,.06)}
+  .card h3{font-size:1.45rem;margin-bottom:1rem;padding-bottom:.6rem;border-bottom:2px solid var(--cream-dark)}
+  table.hours{width:100%;border-collapse:collapse;font-size:1rem}
+  table.hours td{padding:.55rem .25rem;border-bottom:1px solid #f1e6c8}
+  table.hours tr:last-child td{border-bottom:none}
+  table.hours td:last-child{text-align:right;font-weight:700;color:var(--crimson)}
+  .address-big{font-size:1.2rem;font-weight:800;color:var(--crimson);line-height:1.4}
+  .contact-lines{margin-top:1rem;display:grid;gap:.6rem;font-size:1.02rem}
+  .contact-lines a{color:var(--crimson);font-weight:800;text-decoration:none}
+  .contact-lines a:hover{text-decoration:underline}
+  .gallery-single{max-width:900px;margin:0 auto}
+  .gallery-single img{width:100%;height:380px;object-fit:cover;border-radius:16px;border:4px solid #fff;box-shadow:0 10px 28px rgba(0,0,0,.16)}
+  .gallery-single figcaption{text-align:center;color:var(--muted);font-size:.92rem;margin-top:.7rem}
+  .cta-band{background:var(--crimson);color:#fff;text-align:center;padding:2.75rem 1.25rem}
+  .cta-band h2{color:#fff}
+  .cta-band p{color:#fdeec2;max-width:600px;margin:.6rem auto 1.4rem}
+  footer{background:#1f0a0a;color:#d9c9a3;text-align:center;padding:2rem 1.25rem;font-size:.95rem}
+  footer strong{color:#fff;font-family:'Marcellus',serif;font-weight:400;letter-spacing:.04em}
+  footer a{color:var(--gold-light)}
+  @media (max-width:760px){
+    .nav-wrap{justify-content:center;text-align:center}
+    nav.main-nav{justify-content:center}
+    .welcome-grid,.visit-grid,.menu-cols{grid-template-columns:1fr}
+    .hero-photo img{height:260px}
+    .gallery-single img{height:250px}
+    .menu-board{padding:1.5rem 1.1rem}
+    section{padding:2.5rem 1rem}
+  }
+</style>
+</head>
+<body>
+<div class="topbar">3000 West 11th Avenue, Eugene, OR 97402 &nbsp;·&nbsp; Call <a href="tel:+15413457448">(541) 345-7448</a></div>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="#home" aria-label="Lok Yaun Restaurant home">
+      <span class="brand-mark">L</span>
+      <span class="brand-text"><strong>Lok Yaun Restaurant</strong><span>Eugene, Oregon</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Hours &amp; Location</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <!-- Centered hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Chinese Restaurant · Eugene, OR</p>
+      <h1>Lok Yaun <span>Restaurant</span></h1>
+      <p class="lead">A Chinese restaurant on West 11th Avenue in Eugene — explore the menu below, check the hours, and call to place your order.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="tel:+15413457448">Call (541) 345-7448</a>
+        <a class="btn btn-outline" href="#menu">View the Menu</a>
+      </div>
+      <figure class="hero-photo">
+        <img src="https://threebestrated.com/images/LokYaunrestaurant-Eugene-OR.jpeg" alt="Lok Yaun Restaurant in Eugene, Oregon">
+      </figure>
+      <div class="hero-meta">
+        <span>3000 West 11th Avenue</span>
+        <span>Tue–Fri 11:00am–9:00pm</span>
+        <span>Sat &amp; Sun from 11:30am</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Welcome -->
+  <section aria-labelledby="welcome-heading">
+    <div class="wrap welcome-grid">
+      <div>
+        <p style="letter-spacing:.24em;text-transform:uppercase;color:#9a7b1f;font-weight:800;font-size:.8rem;">Welcome</p>
+        <h2 id="welcome-heading" style="font-size:2.1rem;margin:.4rem 0 .75rem;">Chinese food in Eugene</h2>
+        <p>Lok Yaun Restaurant is a Chinese restaurant located at 3000 West 11th Avenue in Eugene, Oregon. The menu includes chow mein and chop suey, lo mein, egg foo young, mu shu, soups, and combination dinners.</p>
+        <ul class="fact-list">
+          <li><strong>Cuisine:</strong> Chinese</li>
+          <li><strong>Address:</strong> 3000 West 11th Avenue, Eugene, OR 97402</li>
+          <li><strong>Phone:</strong> (541) 345-7448</li>
+          <li><strong>Closed:</strong> Mondays</li>
+        </ul>
+      </div>
+      <div>
+        <img src="https://threebestrated.com/images/LokYaunrestaurant-Eugene-OR-1.jpeg" alt="Exterior of Lok Yaun Restaurant on West 11th Avenue in Eugene">
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu board -->
+  <section class="menu-section" id="menu" aria-labelledby="menu-heading">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">From the kitchen</p>
+        <h2 id="menu-heading">Menu</h2>
+        <p>Categories and dishes from the restaurant&rsquo;s published menu.</p>
+      </div>
+      <div class="menu-board">
+        <h3>Lok Yaun Menu</h3>
+        <p class="board-sub">Eugene, Oregon</p>
+        <div class="menu-cols">
+          <div class="menu-item">
+            <h4>Chow Mein &amp; Chop Suey</h4>
+            <p>Pork, chicken, beef, shrimp, and vegetable.</p>
+          </div>
+          <div class="menu-item">
+            <h4>Lo Mein</h4>
+            <p>Lo mein.</p>
+          </div>
+          <div class="menu-item">
+            <h4>Chinese Street-Style Rice Noodles</h4>
+            <p>Chinese street-style rice noodles.</p>
+          </div>
+          <div class="menu-item">
+            <h4>Egg Foo Young</h4>
+            <p>Egg foo young.</p>
+          </div>
+          <div class="menu-item">
+            <h4>Mu Shu</h4>
+            <p>Pork, chicken, beef, shrimp, tofu, and vegetable.</p>
+          </div>
+          <div class="menu-item">
+            <h4>Appetizers &amp; Soups</h4>
+            <p>Appetizers and soups, including Egg Flower Soup.</p>
+          </div>
+          <div class="menu-feature">
+            <h4>Mar Far Chicken &amp; Combination Dinners</h4>
+            <p>Mar Far Chicken and Combination Dinners are also on the menu.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo -->
+  <section aria-label="Restaurant photo">
+    <div class="wrap">
+      <figure class="gallery-single">
+        <img src="https://threebestrated.com/images/LokYaunrestaurant-Eugene-OR-2.jpeg" alt="Dish served at Lok Yaun Restaurant in Eugene, Oregon">
+        <figcaption>Lok Yaun Restaurant — 3000 West 11th Avenue, Eugene, OR</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section id="visit" style="padding-top:0" aria-labelledby="visit-heading">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Plan your visit</p>
+        <h2 id="visit-heading">Hours &amp; Location</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="card">
+          <h3>Hours</h3>
+          <table class="hours">
+            <tr><td>Monday</td><td>Closed</td></tr>
+            <tr><td>Tuesday</td><td>11:00am – 9:00pm</td></tr>
+            <tr><td>Wednesday</td><td>11:00am – 9:00pm</td></tr>
+            <tr><td>Thursday</td><td>11:00am – 9:00pm</td></tr>
+            <tr><td>Friday</td><td>11:00am – 9:00pm</td></tr>
+            <tr><td>Saturday</td><td>11:30am – 9:00pm</td></tr>
+            <tr><td>Sunday</td><td>11:30am – 9:00pm</td></tr>
+          </table>
+        </div>
+        <div class="card" id="contact">
+          <h3>Find Us &amp; Contact</h3>
+          <p class="address-big">3000 West 11th Avenue<br>Eugene, OR 97402</p>
+          <div class="contact-lines">
+            <span>Phone: <a href="tel:+15413457448">(541) 345-7448</a></span>
+            <span>Email: <a href="mailto:wing88@comcast.net">wing88@comcast.net</a></span>
+          </div>
+          <p style="margin-top:1rem;color:var(--muted)">Call ahead for current menu details and to place your order.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <h2>Hungry in Eugene?</h2>
+    <p>Call Lok Yaun Restaurant at (541) 345-7448 — open Tuesday through Sunday at 3000 West 11th Avenue.</p>
+    <a class="btn btn-gold" href="tel:+15413457448">Call (541) 345-7448</a>
+  </div>
+</main>
+
+<footer>
+  <p><strong>Lok Yaun Restaurant</strong></p>
+  <p>3000 West 11th Avenue, Eugene, OR 97402 &nbsp;·&nbsp; <a href="tel:+15413457448">(541) 345-7448</a> &nbsp;·&nbsp; <a href="mailto:wing88@comcast.net">wing88@comcast.net</a></p>
+  <p style="margin-top:.5rem">Tue–Fri 11:00am–9:00pm &nbsp;·&nbsp; Sat 11:30am–9:00pm &nbsp;·&nbsp; Sun 11:30am–9:00pm &nbsp;·&nbsp; Mon Closed</p>
+</footer>
+</body>
+</html>
