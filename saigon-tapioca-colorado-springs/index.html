@@ -1,40 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Saigon Tapioca — Vietnamese Restaurant in Colorado Springs, CO</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2712%27%20fill%3D%27%238C2B23%27%2F%3E%3Ctext%20x%3D%2732%27%20y%3D%2744%27%20font-family%3D%27Georgia%2Cserif%27%20font-size%3D%2736%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3ES%3C%2Ftext%3E%3C%2Fsvg%3E"/>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#FBF3E2;color:#33241C;font-family:Georgia, serif;line-height:1.6}
-h1,h2{font-family:Garamond, 'Times New Roman', serif;color:#8C2B23}
-.hero{text-align:center;padding:2.2rem 1rem;background:#F3E3C2}
-.hero.split{display:flex;flex-wrap:wrap;align-items:center;text-align:left}
-.hero.split .hero-text{flex:1 1 300px;padding:1rem}
-.hero.split img{flex:1 1 300px;max-width:520px}
-.hero.bleed{background-size:cover;background-position:center;padding:0}
-.hero.bleed .shade{background:rgba(0,0,0,.62);padding:4.5rem 1rem}
-.hero.board{border-bottom:6px double #8C2B23}
-.hero-img{max-width:100%;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,.25)}
-h1{font-size:2.6rem;margin:.7rem 0 .3rem}
-.tag{font-size:1.1rem;opacity:.85}
-.cta{display:inline-block;margin-top:1rem;background:#8C2B23;color:#FBF3E2;padding:.7rem 1.6rem;border-radius:8px;text-decoration:none;font-weight:700}
-section{max-width:900px;margin:0 auto;padding:2rem 1.2rem}
-section h2{font-size:1.7rem;margin-bottom:.8rem;border-bottom:3px solid #2E7D5B;display:inline-block;padding-bottom:.2rem}
-.services ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.7rem;margin-top:.6rem}
-.services li{background:#F3E3C2;padding:.8rem 1rem;border-radius:8px;border-left:5px solid #8C2B23}
-.gallery .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.8rem}
-.gallery img{width:100%;height:230px;object-fit:cover;border-radius:8px}
-.visit .phone a{color:#8C2B23;font-size:1.3rem;font-weight:700;text-decoration:none}
-footer{text-align:center;padding:1.6rem 1rem;background:#F3E3C2;font-size:.95rem}
+*{box-sizing:border-box} body{margin:0;font-family:Georgia,serif;background:#FBF3E2;color:#33241C;line-height:1.6}
+header{background:#8C2B23;color:#fff;padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+header .brand{font-family:Garamond,'Times New Roman',serif;font-size:1.6rem;letter-spacing:.02em}
+nav a{color:#fff;margin-left:16px;text-decoration:none;font-weight:bold} nav a:hover{text-decoration:underline}
+.hero{background:#F3E3C2;padding:34px 20px;text-align:center} .hero img{max-width:520px;width:100%;border-radius:12px}
+.hero h1{font-family:Garamond,'Times New Roman',serif;font-size:2.4rem;margin:.4em 0 .2em} .hero p{font-size:1.15rem;margin:.2em auto;max-width:640px}
+.btn{display:inline-block;background:#8C2B23;color:#fff;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:12px}
+main{max-width:960px;margin:0 auto;padding:10px 20px 30px} section{margin-top:34px}
+h2{font-family:Garamond,'Times New Roman',serif;color:#8C2B23;border-bottom:3px solid #F3E3C2;padding-bottom:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.card{background:#fff;border:1px solid #F3E3C2;border-radius:10px;padding:16px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px} .gallery img{width:100%;border-radius:10px}
+table{border-collapse:collapse} td{padding:4px 18px 4px 0}
+footer{background:#8C2B23;color:#fff;text-align:center;padding:18px;margin-top:40px}
+@media (max-width:600px){.hero h1{font-size:1.8rem} nav a{margin-left:10px}}
 </style>
-</head>
-<body>
-<header class="hero"><img class="hero-img" src="https://threebestrated.com/images/SaigonTapioca-ColoradoSprings-CO.jpeg" alt="Saigon Tapioca"><h1>Saigon Tapioca</h1><p class="tag">Vietnamese Restaurant · Colorado Springs, CO</p><a class="cta" href="tel:(719) 597-6559">Call (719) 597-6559</a></header>
-<section class="about"><h2>About Saigon Tapioca</h2><p>Saigon Tapioca is a vietnamese restaurant in Colorado Springs, CO. Customers rate us 4.8 score on ThreeBestRated listing; family-owned, since 2013 — come see why your neighbors keep coming back.</p></section>
-<section class="services"><h2>What We Do</h2><ul><li>Pho noodle soups</li><li>Grilled pork spring rolls</li><li>Steamed buns</li><li>Chicken wings</li><li>Stir-fried meats with rice</li><li>Delivery, takeout and catering</li><li>Reservations</li></ul></section>
-<section class="gallery"><h2>Take a Look Inside</h2><div class="grid"><img src="https://threebestrated.com/images/SaigonTapioca-ColoradoSprings-CO.jpeg" alt="Saigon Tapioca photo" loading="lazy"><img src="https://threebestrated.com/images/SaigonTapioca-ColoradoSprings-CO-1.jpeg" alt="Saigon Tapioca photo" loading="lazy"><img src="https://threebestrated.com/images/SaigonTapioca-ColoradoSprings-CO-2.jpeg" alt="Saigon Tapioca photo" loading="lazy"></div></section>
-<section class="visit"><h2>Visit Us</h2><p class="addr">3712 Galley Road<br>Colorado Springs, CO 80909</p><p class="phone"><a href="tel:(719) 597-6559">(719) 597-6559</a></p><p class="hours">Mon-Sat: 11am - 8:30pm, Sun: Closed</p><p><a href="https://www.facebook.com/saigontapioca">https://www.facebook.com/saigontapioca</a></p></section>
-<footer><strong>Saigon Tapioca</strong> · 3712 Galley Road · Colorado Springs, CO 80909 · (719) 597-6559</footer>
-</body>
-</html>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Saigon Tapioca", "telephone": "(719) 597-6559", "address": {"@type": "PostalAddress", "streetAddress": "3712 Galley Road", "addressLocality": "Colorado Springs", "addressRegion": "CO", "postalCode": "80909", "addressCountry": "US"}, "openingHours": ["Mo-Sa 11:00-20:30"]}</script>
+</head><body>
+<header><span class="brand">Saigon Tapioca</span><nav><a href="#about">About</a><a href="#services">What We Do</a><a href="#gallery">Gallery</a><a href="#visit">Visit Us</a></nav></header>
+<div class="hero"><img src="images/photo-1.jpeg" alt="Saigon Tapioca Vietnamese restaurant in Colorado Springs"/><h1>Saigon Tapioca</h1><p>Vietnamese Restaurant · Colorado Springs, CO 80909</p><p>Pho, spring rolls and boba drinks — a family-run Vietnamese kitchen since 2013.</p><a class="btn" href="tel:7195976559">Call (719) 597-6559</a></div>
+<main>
+<section id="about"><h2>About Saigon Tapioca</h2><p>Saigon Tapioca is a family-run Vietnamese restaurant in Colorado Springs, serving pho noodle soups, spring rolls, stir-fried meats with rice and chicken wings, plus boba drinks. Rated 4.8 on ThreeBestRated. Delivery and takeout available.</p></section>
+<section id="services"><h2>What We Do</h2><div class="grid"><div class="card">Pho noodle soups</div><div class="card">Grilled pork spring rolls</div><div class="card">Chicken wings</div><div class="card">Stir-fried meats with rice</div><div class="card">Boba drinks</div><div class="card">Delivery and takeout</div></div></section>
+<section id="gallery"><h2>Take a Look Inside</h2><div class="gallery"><img src="images/photo-2.jpeg" alt="Pho and Vietnamese dishes at Saigon Tapioca"/><img src="images/photo-3.jpeg" alt="Inside Saigon Tapioca"/></div></section>
+<section id="visit"><h2>Visit Us</h2><p>3712 Galley Road<br/>Colorado Springs, CO 80909<br/>(719) 597-6559</p><table><tr><td>Monday – Saturday</td><td>11:00 AM – 8:30 PM</td></tr><tr><td>Sunday</td><td>Closed</td></tr></table><p>Find us on Facebook: <a href="https://www.facebook.com/saigontapioca">facebook.com/saigontapioca</a></p></section>
+</main>
+<footer>Saigon Tapioca · 3712 Galley Road · Colorado Springs, CO 80909 · (719) 597-6559</footer>
+</body></html>
