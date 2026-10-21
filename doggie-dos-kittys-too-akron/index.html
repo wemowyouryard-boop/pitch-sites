@@ -385,7 +385,13 @@
       @media (prefers-reduced-motion: reduce) {
         .btn-call, .btn-ghost { transition: none; }
       }
-    </style>
+    
+/* CENTERED-CONTENT STANDARD (Justin, 2026-10-21): page text sits in a centered container with comfortable side margins — never edge-hugging. Spacing correction only. */
+.footer-bottom,.footer-inner,.heritage-inner,.hero-inner,.topbar-inner,.wrap{padding-left:32px!important;padding-right:32px!important}
+@media (max-width:899px){.footer-bottom,.footer-inner,.heritage-inner,.hero-inner,.topbar-inner,.wrap{padding-left:28px!important;padding-right:28px!important}}
+.board{padding-left:clamp(32px,5vw,48px)!important;padding-right:clamp(32px,5vw,48px)!important}
+@media (max-width:899px){.board{padding-left:clamp(28px,5vw,48px)!important;padding-right:clamp(28px,5vw,48px)!important}}
+</style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Doggie Do's & Kittys Too", "telephone": "(330) 753-6001", "address": {"@type": "PostalAddress", "streetAddress": "2464 Manchester Road", "addressLocality": "Akron", "addressRegion": "OH", "postalCode": "44314"}}</script></head>
   <body>
     <div class="stripe" aria-hidden="true"></div>

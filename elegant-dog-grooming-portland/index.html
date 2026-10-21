@@ -276,7 +276,13 @@
       @media (prefers-reduced-motion: reduce) {
         html { scroll-behavior: auto; }
       }
-    </style>
+    
+/* CENTERED-CONTENT STANDARD (Justin, 2026-10-21): page text sits in a centered container with comfortable side margins — never edge-hugging. Spacing correction only. */
+.menu{padding-left:clamp(32px,5vw,3.5rem)!important;padding-right:clamp(32px,5vw,3.5rem)!important}
+@media (max-width:899px){.menu{padding-left:clamp(28px,5vw,3.5rem)!important;padding-right:clamp(28px,5vw,3.5rem)!important}}
+.wrap{width:min(1140px,calc(100% - 64px))!important}
+@media (max-width:899px){.wrap{width:min(1140px,calc(100% - 56px))!important}}
+</style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "PetStore", "name": "Elegant Dog Grooming LLC", "telephone": "(503) 617-1467", "address": {"@type": "PostalAddress", "streetAddress": "5340 Northwest 185th Avenue", "addressLocality": "Portland", "addressRegion": "OR", "postalCode": "97229", "addressCountry": "US"}, "openingHours": ["Mo-Tu 09:00-17:00", "Th-Sa 09:00-17:00", "Su 10:00-17:00"]}</script>
 </head>
   <body>

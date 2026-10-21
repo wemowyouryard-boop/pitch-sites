@@ -270,7 +270,15 @@
       }
       footer .fb:hover { background: rgba(201,162,75,0.12); }
       footer .fine { margin-top: 1.8rem; font-size: 0.82rem; color: #8fa398; letter-spacing: 0.06em; }
-    </style>
+    
+/* CENTERED-CONTENT STANDARD (Justin, 2026-10-21): page text sits in a centered container with comfortable side margins — never edge-hugging. Spacing correction only. */
+.wrap{padding-left:32px!important;padding-right:32px!important}
+@media (max-width:899px){.wrap{padding-left:28px!important;padding-right:28px!important}}
+.hero-inner{padding-left:clamp(32px,5vw,3rem)!important;padding-right:clamp(32px,5vw,3rem)!important}
+@media (max-width:899px){.hero-inner{padding-left:clamp(28px,5vw,3rem)!important;padding-right:clamp(28px,5vw,3rem)!important}}
+footer{padding-left:clamp(32px,5vw,3rem)!important;padding-right:clamp(32px,5vw,3rem)!important}
+@media (max-width:899px){footer{padding-left:clamp(28px,5vw,3rem)!important;padding-right:clamp(28px,5vw,3rem)!important}}
+</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Rio Nails Bar", "telephone": "(210) 870-5888", "address": {"@type": "PostalAddress", "streetAddress": "2318 South East Military, Suite 105", "addressLocality": "San Antonio", "addressRegion": "TX", "postalCode": "78223"}, "openingHours": ["Mo-Sa 10:00-20:00", "Su 11:00-18:00"]}</script></head>
 <body>
 <header class="topbar">

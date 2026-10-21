@@ -316,6 +316,10 @@
   }
   a:focus-visible, button:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;}
   @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+
+/* CENTERED-CONTENT STANDARD (Justin, 2026-10-21): page text sits in a centered container with comfortable side margins — never edge-hugging. Spacing correction only. */
+.hero-frame,.sec-intro,.topbar-inner,.wrap,footer{padding-left:32px!important;padding-right:32px!important}
+@media (max-width:899px){.hero-frame,.sec-intro,.topbar-inner,.wrap,footer{padding-left:28px!important;padding-right:28px!important}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NailSalon", "name": "Royal Nails", "telephone": "(206) 334-4721", "address": {"@type": "PostalAddress", "streetAddress": "7725 24th Avenue Northwest", "addressLocality": "Seattle", "addressRegion": "WA", "postalCode": "98117", "addressCountry": "US"}, "openingHours": ["Mo-Fr 10:00-19:00", "Sa 09:30-19:00", "Su 10:00-18:00"]}</script></head>
 <body>

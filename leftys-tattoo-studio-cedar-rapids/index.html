@@ -329,7 +329,11 @@
         .visit-grid { grid-template-columns: 1fr; }
         .topstrip-inner { justify-content: center; text-align: center; }
       }
-    </style>
+    
+/* CENTERED-CONTENT STANDARD (Justin, 2026-10-21): page text sits in a centered container with comfortable side margins — never edge-hugging. Spacing correction only. */
+.topstrip-inner,.wrap{padding-left:32px!important;padding-right:32px!important}
+@media (max-width:899px){.topstrip-inner,.wrap{padding-left:28px!important;padding-right:28px!important}}
+</style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "TattooParlor", "name": "Lefty's Tattoo Studio", "address": {"@type": "PostalAddress", "streetAddress": "112 32nd Street Drive Southeast", "addressLocality": "Cedar Rapids", "addressRegion": "IA", "postalCode": "52402", "addressCountry": "US"}, "telephone": "(319) 365-3389", "openingHours": ["Tu-Sa 10:00-19:00"]}</script>
 </head>
   <body>
