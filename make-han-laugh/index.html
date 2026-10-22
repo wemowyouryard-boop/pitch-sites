@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Make Han Laugh — A Completely Reasonable Website</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
+<style>
+  :root{
+    --purple:#2a0a4a; --deep:#16042e; --magenta:#ff2e88; --violet:#8b3dff;
+    --teal:#19e3c2; --gold:#ffc93c; --cream:#fff6ea; --pink:#ff8ac2;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Avenir Next","Segoe UI",Verdana,sans-serif;
+    color:var(--cream);
+    background:var(--deep);
+    overflow-x:hidden;
+    line-height:1.6;
+  }
+  /* ---- animated psychedelic sky ---- */
+  .sky{
+    position:fixed; inset:0; z-index:-3;
+    background:
+      radial-gradient(ellipse 60% 45% at 15% 10%, rgba(255,46,136,.45), transparent 60%),
+      radial-gradient(ellipse 55% 40% at 85% 20%, rgba(25,227,194,.35), transparent 60%),
+      radial-gradient(ellipse 70% 50% at 50% 85%, rgba(139,61,255,.5), transparent 65%),
+      radial-gradient(ellipse 45% 35% at 80% 80%, rgba(255,201,60,.25), transparent 60%),
+      linear-gradient(160deg,#2a0a4a 0%,#16042e 55%,#0d1b3e 100%);
+    background-size:200% 200%;
+    animation:swirl 26s ease-in-out infinite alternate;
+  }
+  @keyframes swirl{
+    0%{background-position:0% 0%,100% 0%,50% 100%,100% 100%,0% 0%;}
+    50%{background-position:40% 30%,60% 40%,30% 60%,70% 50%,50% 50%;}
+    100%{background-position:100% 60%,0% 80%,70% 20%,20% 30%,100% 100%;}
+  }
+  .stars{position:fixed; inset:0; z-index:-2; pointer-events:none; overflow:hidden;}
+  .star{
+    position:absolute; border-radius:50%; background:#fff;
+    animation:twinkle 3s ease-in-out infinite, drift 14s linear infinite;
+    box-shadow:0 0 8px 2px rgba(255,255,255,.55);
+  }
+  @keyframes twinkle{0%,100%{opacity:.25; transform:scale(.7);}50%{opacity:1; transform:scale(1.25);}}
+  @keyframes drift{from{transform:translateY(0);}to{transform:translateY(-46px);}}
+  /* ---- layout ---- */
+  .wrap{max-width:1060px; margin:0 auto; padding-left:32px; padding-right:32px;}
+  @media (max-width:640px){ .wrap{padding-left:28px; padding-right:28px;} }
+  section{padding:72px 0 8px;}
+  .kicker{
+    text-align:center; letter-spacing:.35em; text-transform:uppercase;
+    font-size:.78rem; color:var(--teal); font-weight:700; margin-bottom:14px;
+  }
+  h2{
+    font-family:"Cooper Black","Arial Rounded MT Bold","Trebuchet MS",sans-serif;
+    text-align:center; font-size:clamp(1.9rem,5.5vw,3.1rem); line-height:1.15;
+    background:linear-gradient(92deg,var(--gold),var(--magenta),var(--teal),var(--violet));
+    background-size:300% 100%;
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    animation:rainbow 9s linear infinite; margin-bottom:18px;
+  }
+  @keyframes rainbow{to{background-position:300% 0;}}
+  .sub{text-align:center; max-width:640px; margin:0 auto 40px; color:#e9dcff; font-size:1.05rem;}
+  /* ---- hero ---- */
+  .hero{padding-top:64px; text-align:center;}
+  .hero h1{
+    font-family:"Cooper Black","Arial Rounded MT Bold","Trebuchet MS",sans-serif;
+    font-size:clamp(3.4rem,13vw,8.2rem); letter-spacing:.04em; line-height:1;
+    background:linear-gradient(95deg,#ffc93c 5%,#ff2e88 30%,#8b3dff 55%,#19e3c2 80%,#ffc93c 100%);
+    background-size:250% 100%;
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    animation:rainbow 8s linear infinite;
+    filter:drop-shadow(0 6px 26px rgba(255,46,136,.35));
+  }
+  .hero .tagline{font-size:clamp(1.05rem,3vw,1.35rem); margin:20px auto 8px; max-width:620px; color:#ffe9f6;}
+  .hero .from{font-style:italic; color:var(--gold); margin-bottom:38px;}
+  .hero-photo{
+    max-width:520px; margin:0 auto; border-radius:26px; overflow:hidden;
+    border:3px solid rgba(255,201,60,.65);
+    box-shadow:0 0 0 6px rgba(139,61,255,.35), 0 24px 70px rgba(0,0,0,.55), 0 0 60px rgba(255,46,136,.35);
+    transform:rotate(-1.2deg);
+  }
+  .hero-photo img{width:100%; display:block;}
+  .scroll-hint{margin-top:36px; font-size:.9rem; letter-spacing:.25em; text-transform:uppercase; color:var(--teal); animation:bob 2.2s ease-in-out infinite;}
+  @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(7px);}}
+  /* ---- gallery ---- */
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:30px;}
+  @media (max-width:720px){ .grid{grid-template-columns:1fr;} }
+  .card{
+    background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14);
+    border-radius:22px; overflow:hidden; backdrop-filter:blur(4px);
+    box-shadow:0 16px 44px rgba(0,0,0,.4);
+    transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .card:hover{transform:translateY(-6px) rotate(-.4deg); box-shadow:0 24px 60px rgba(255,46,136,.28);}
+  .card img{width:100%; height:430px; object-fit:cover; object-position:top center; display:block;}
+  @media (max-width:720px){ .card img{height:380px;} }
+  .card .cap{padding:20px 22px 24px;}
+  .card .exhibit{
+    display:inline-block; font-size:.72rem; font-weight:800; letter-spacing:.22em; text-transform:uppercase;
+    color:#16042e; background:linear-gradient(90deg,var(--gold),var(--pink));
+    padding:4px 12px; border-radius:999px; margin-bottom:10px;
+  }
+  .card h3{font-family:"Trebuchet MS",sans-serif; font-size:1.25rem; color:#fff; margin-bottom:6px;}
+  .card p{color:#e6d8ff; font-size:.98rem;}
+  /* ---- matrix ---- */
+  .matrix-zone{
+    background:linear-gradient(180deg, rgba(3,32,12,.88), rgba(2,20,8,.94));
+    border:1px solid rgba(53,255,120,.35); border-radius:26px;
+    padding:44px 34px 40px; box-shadow:0 0 60px rgba(0,255,110,.14) inset, 0 20px 50px rgba(0,0,0,.5);
+  }
+  @media (max-width:640px){ .matrix-zone{padding:34px 22px 32px;} }
+  .matrix-zone h2{background:linear-gradient(92deg,#7dff9e,#35ff78,#19e3c2); -webkit-background-clip:text; background-clip:text;}
+  .duo{display:grid; grid-template-columns:1fr 1fr; gap:26px; margin-bottom:28px;}
+  @media (max-width:720px){ .duo{grid-template-columns:1fr;} }
+  .duo figure{border-radius:18px; overflow:hidden; border:2px solid rgba(53,255,120,.5); box-shadow:0 14px 40px rgba(0,0,0,.55);}
+  .duo img{width:100%; height:420px; object-fit:cover; object-position:top center; display:block;}
+  .duo figcaption{padding:12px 16px; background:rgba(0,0,0,.55); color:#b8ffd2; font-size:.92rem; text-align:center;}
+  .pills{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:26px;}
+  @media (max-width:720px){ .pills{grid-template-columns:1fr;} }
+  .pill{border-radius:18px; padding:22px 24px; font-size:.98rem;}
+  .pill.blue{background:rgba(38,92,255,.16); border:1px solid rgba(92,140,255,.55);}
+  .pill.red{background:rgba(255,40,70,.15); border:1px solid rgba(255,90,120,.6);}
+  .pill b{display:block; font-size:1.08rem; margin-bottom:6px; letter-spacing:.04em;}
+  .pill.blue b{color:#9db9ff;} .pill.red b{color:#ff9db1;}
+  /* ---- stars / virgo ---- */
+  .signs{display:flex; justify-content:center; gap:18px; flex-wrap:wrap; margin-bottom:30px;}
+  .sign-chip{
+    border:1px solid rgba(255,201,60,.55); background:rgba(255,201,60,.1);
+    border-radius:999px; padding:9px 20px; font-weight:700; color:var(--gold); letter-spacing:.05em;
+  }
+  .jokes{max-width:700px; margin:0 auto; display:grid; gap:16px;}
+  .joke{
+    background:rgba(255,255,255,.05); border-left:4px solid var(--magenta);
+    border-radius:0 16px 16px 0; padding:16px 20px; font-size:1.02rem; color:#f3eaff;
+  }
+  .joke:nth-child(2){border-left-color:var(--teal);}
+  .joke:nth-child(3){border-left-color:var(--gold);}
+  .joke:nth-child(4){border-left-color:var(--violet);}
+  /* ---- riddle ---- */
+  .riddle-box{
+    max-width:680px; margin:0 auto; text-align:center;
+    background:rgba(22,4,46,.72); border:2px dashed rgba(255,201,60,.6);
+    border-radius:26px; padding:42px 34px;
+    box-shadow:0 20px 55px rgba(0,0,0,.5);
+  }
+  @media (max-width:640px){ .riddle-box{padding:32px 22px;} }
+  .riddle-text{font-family:Georgia,serif; font-style:italic; font-size:clamp(1.2rem,3.4vw,1.55rem); color:#ffe9a8; margin-bottom:26px; line-height:1.5;}
+  .riddle-row{display:flex; gap:12px; justify-content:center; flex-wrap:wrap;}
+  .riddle-row input{
+    font-size:1.05rem; padding:13px 18px; border-radius:999px; border:2px solid rgba(255,255,255,.3);
+    background:rgba(255,255,255,.1); color:#fff; outline:none; min-width:220px; text-align:center;
+  }
+  .riddle-row input:focus{border-color:var(--teal);}
+  .btn{
+    font-size:1.02rem; font-weight:800; letter-spacing:.03em; cursor:pointer;
+    padding:13px 28px; border-radius:999px; border:none; color:#16042e;
+    background:linear-gradient(92deg,var(--gold),var(--magenta)); color:#fff;
+    box-shadow:0 8px 24px rgba(255,46,136,.4); transition:transform .2s ease;
+  }
+  .btn:hover{transform:scale(1.05) rotate(-.5deg);}
+  .btn.ghost{background:transparent; border:2px solid rgba(255,255,255,.4); color:#e9dcff; box-shadow:none; font-weight:600;}
+  .feedback{min-height:30px; margin-top:18px; font-size:1.05rem; color:var(--pink); font-weight:600;}
+  .hint{display:none; margin-top:6px; color:var(--teal); font-style:italic;}
+  .prize{
+    display:none; margin-top:28px; text-align:center;
+    background:linear-gradient(160deg, rgba(255,201,60,.16), rgba(255,46,136,.14));
+    border:2px solid var(--gold); border-radius:22px; padding:34px 28px;
+    animation:pop .6s ease;
+  }
+  @keyframes pop{from{transform:scale(.85); opacity:0;}to{transform:scale(1); opacity:1;}}
+  .prize h3{
+    font-family:"Cooper Black","Arial Rounded MT Bold",sans-serif; font-size:1.7rem; color:var(--gold); margin-bottom:12px;
+  }
+  .prize p{color:#fff3da; max-width:520px; margin:0 auto 10px;}
+  /* ---- closing ---- */
+  .closing{text-align:center; padding-bottom:90px;}
+  .closing .big{font-size:clamp(1.25rem,3.6vw,1.7rem); max-width:680px; margin:0 auto 18px; color:#ffe9f6;}
+  .closing .sig{font-family:Georgia,serif; font-style:italic; font-size:1.3rem; color:var(--gold); margin-top:26px;}
+  .tiny{margin-top:44px; font-size:.8rem; color:rgba(233,220,255,.55); letter-spacing:.14em; text-transform:uppercase;}
+  .confetti{position:fixed; top:-12px; z-index:50; pointer-events:none; width:10px; height:16px; border-radius:2px; animation:fall linear forwards;}
+  @keyframes fall{to{transform:translateY(110vh) rotate(720deg); opacity:.85;}}
+</style>
+</head>
+<body>
+<div class="sky"></div>
+<div class="stars" id="stars"></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero wrap">
+  <div class="kicker">✦ A Very Serious Scientific Presentation ✦</div>
+  <h1>HANNAH</h1>
+  <p class="tagline">This website exists for exactly one reason: <strong>to make you laugh.</strong><br>
+  (Reason two is that you're breathtaking. Reason three is classified.)</p>
+  <p class="from">— from the desk of the Jester (Justin) 🃏</p>
+  <div class="hero-photo">
+    <img src="hannah-sweater.jpg" alt="Hannah in a rainbow striped sweater, glowing">
+  </div>
+  <div class="scroll-hint">↓ Scroll for the evidence ↓</div>
+</header>
+
+<!-- ============ THE EVIDENCE ============ -->
+<section class="wrap" id="evidence">
+  <div class="kicker">Case File No. 001 — Beauty, Documented</div>
+  <h2>The Evidence</h2>
+  <p class="sub">Ladies and gentlemen of the jury, the prosecution rests its case before it even begins. Exhibit by exhibit, the facts are simply undeniable.</p>
+  <div class="grid">
+    <article class="card">
+      <img src="hannah-sweater.jpg" alt="Hannah in a colorful striped sweater">
+      <div class="cap">
+        <span class="exhibit">Exhibit A</span>
+        <h3>The Sweater Incident</h3>
+        <p>Scientists confirm this sweater destabilized the space-time continuum. Three rainbows filed a noise complaint. The smile, however, remains fully legal — and devastating.</p>
+      </div>
+    </article>
+    <article class="card">
+      <img src="hannah-car.jpg" alt="Hannah in dark sunglasses in the car">
+      <div class="cap">
+        <span class="exhibit">Exhibit B</span>
+        <h3>The Sunglasses Situation</h3>
+        <p>The authorities have been notified. A woman this cool in a driver's seat is a public safety concern — hearts are being stolen at red lights and nobody is pressing charges.</p>
+      </div>
+    </article>
+    <article class="card">
+      <img src="hannah-glow.jpg" alt="Hannah glowing under purple light">
+      <div class="cap">
+        <span class="exhibit">Exhibit C</span>
+        <h3>The Aura Reading</h3>
+        <p>Her aura is so strong it charges crystals by proximity. Local psychics refuse to read her — not out of fear, just professional jealousy. The purple light isn't a filter. It's a side effect of her.</p>
+      </div>
+    </article>
+    <article class="card">
+      <img src="hannah-mirror.jpg" alt="Hannah in a mirror selfie with a tattoo sleeve">
+      <div class="cap">
+        <span class="exhibit">Exhibit D</span>
+        <h3>Main-Character Energy</h3>
+        <p>Tattoo-sleeve edition. The mirror filed for overtime. Every other reflection in a five-mile radius quietly resigned, because how do you compete with the final boss of gorgeous?</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ THE MATRIX ============ -->
+<section class="wrap" id="matrix">
+  <div class="kicker" style="color:#7dff9e;">Wake Up, Hannah…</div>
+  <div class="matrix-zone">
+    <h2>The Matrix Has You</h2>
+    <p class="sub" style="color:#c9f7da;">You took the red pill the day you matched with a Virgo jester who builds entire websites as a joke-delivery system. There is no going back. There is no spoon. <strong>But there IS coffee.</strong></p>
+    <div class="duo">
+      <figure>
+        <img src="hannah-matrix.webp" alt="Hannah inside the Matrix, code reflected in her sunglasses">
+        <figcaption>HER — The One, apparently. The code bends around her because even the simulation knows better than to argue.</figcaption>
+      </figure>
+      <figure>
+        <img src="justin-matrix.webp" alt="Justin in a suit inside the Matrix with a glowing code clock">
+        <figcaption>HIM — The Jester, suited up, right on time. The clock behind him is set to "date o'clock," presumably.</figcaption>
+      </figure>
+    </div>
+    <div class="pills">
+      <div class="pill blue">
+        <b>🔵 THE BLUE PILL</b>
+        You close this tab. The story ends. You wake up in your bed and believe whatever you want to believe — including that some guy did NOT build you a whole website.
+      </div>
+      <div class="pill red">
+        <b>🔴 THE RED PILL</b>
+        You stay in Wonderland — one coffee date — and I show you how deep the rabbit hole goes. Fair warning: the rabbit hole has excellent pastries.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WRITTEN IN THE STARS ============ -->
+<section class="wrap" id="stars-section">
+  <div class="kicker">Astrology Department — Official Findings</div>
+  <h2>Written in the Stars</h2>
+  <p class="sub">Two Virgos. Both spiritual. Both suspiciously good-looking (one of them verifiably, see Exhibits A–D). The universe isn't being subtle — it's filing paperwork.</p>
+  <div class="signs">
+    <span class="sign-chip">♍ Hannah — Virgo</span>
+    <span class="sign-chip">×</span>
+    <span class="sign-chip">♍ Justin — Virgo</span>
+    <span class="sign-chip">=</span>
+    <span class="sign-chip">✨ Cosmically Inevitable ✨</span>
+  </div>
+  <div class="jokes">
+    <div class="joke">♍ Two Virgos on one date means the restaurant table will be perfectly organized, the conversation alphabetized, and the chemistry — meticulously, devastatingly — undeniable.</div>
+    <div class="joke">☕ Hannah, I have to be honest with you: words cannot <em>espresso</em> how I feel. You're simply <em>brew-tiful</em>. I know, I know — I'm just trying to espresso my feelings without making it a <em>latte</em> awkward.</div>
+    <div class="joke">🔮 Her birth chart said "a charming fool will arrive bearing jokes and unreasonable confidence." She assumed it was a metaphor. It was not a metaphor. It was a schedule.</div>
+    <div class="joke">💎 Some people carry crystals for luck. Hannah doesn't need to — the crystals carry tiny pictures of <em>her</em> for luck. This is how energy works. Probably.</div>
+  </div>
+</section>
+
+<!-- ============ THE RIDDLE ============ -->
+<section class="wrap" id="riddle">
+  <div class="kicker">One Final Trial, Gorgeous</div>
+  <h2>The Jester's Riddle</h2>
+  <p class="sub">Every great quest has a gatekeeper, and this one accepts only one key. Solve the riddle, claim the prize. The Jester believes in you. The Jester also wrote the riddle, so — level playing field.</p>
+  <div class="riddle-box">
+    <p class="riddle-text">"I can be cracked, I can be made,<br>I can be told, and I can be played.<br>What am I?"</p>
+    <div class="riddle-row">
+      <input type="text" id="answer" placeholder="Your answer, brave one…" autocomplete="off">
+      <button class="btn" id="guessBtn">Unlock the prize</button>
+      <button class="btn ghost" id="hintBtn">Psst… a hint</button>
+    </div>
+    <div class="feedback" id="feedback"></div>
+    <div class="hint" id="hint">Hint: it's the Jester's whole profession. His entire personality, honestly.</div>
+    <div class="prize" id="prize">
+      <h3>🎉 YOU CRACKED IT. (Pun fully intended.) 🎉</h3>
+      <p><strong>YOUR PRIZE:</strong> one (1) coffee date with Justin — redeemable at any café of your choosing, where you, an actual barista, get to professionally judge his order. He accepts these terms. He is nervous. It is adorable.</p>
+      <p><strong>The terms:</strong> One coffee. If it's terrible, you walk away with a great story. If it's great… well. The stars already knew. ♍✨</p>
+      <p>All that's left is to tell him yes. He'll be the one grinning like he planned this. (He did. There's a website.)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE ASK ============ -->
+<section class="wrap closing">
+  <div class="kicker">The Jester, Unmasked (Briefly)</div>
+  <h2>Why So Serious?</h2>
+  <p class="big">Hannah — a man built you an entire website just to make you laugh. Curated your photos. Wrote you jokes. Hid a date inside a riddle like a cartoon villain of romance.</p>
+  <p class="big">Now imagine what he'd do for a first date.</p>
+  <p class="big">One coffee. Your turf, your terms, your verdict. Worst case: free coffee and a story. Best case: the stars get to say "told you so."</p>
+  <p class="sig">— Justin<br><span style="font-size:1rem; color:#e9dcff;">(Virgo, obviously)</span></p>
+  <div class="tiny">🃏 Handcrafted with jokes, stardust & an unreasonable amount of confidence 🃏</div>
+</section>
+
+<script>
+  // floating stars / sparkles
+  (function(){
+    var box = document.getElementById('stars');
+    var colors = ['#ffffff','#ffc93c','#ff8ac2','#19e3c2','#c9a7ff'];
+    for (var i = 0; i < 70; i++){
+      var s = document.createElement('div');
+      s.className = 'star';
+      var size = 2 + Math.random() * 4;
+      s.style.width = size + 'px';
+      s.style.height = size + 'px';
+      s.style.left = Math.random() * 100 + '%';
+      s.style.top = Math.random() * 100 + '%';
+      s.style.background = colors[Math.floor(Math.random() * colors.length)];
+      s.style.animationDelay = (Math.random() * 3) + 's, ' + (Math.random() * 10) + 's';
+      box.appendChild(s);
+    }
+  })();
+
+  // the riddle
+  (function(){
+    var input = document.getElementById('answer');
+    var feedback = document.getElementById('feedback');
+    var prize = document.getElementById('prize');
+    var misses = 0;
+    var taunts = [
+      "Nope! The Jester is spinning in his little hat. Try again, gorgeous.",
+      "Incorrect — but delivered with such confidence, the stars applauded anyway. Once more!",
+      "Swing and a miss! Somewhere, a crystal just whispered the answer. Listen closer…",
+      "Not it! The Jester has hidden a hint button around here somewhere. He believes in shortcuts AND in you."
+    ];
+    function confetti(){
+      var colors = ['#ffc93c','#ff2e88','#19e3c2','#8b3dff','#fff6ea','#7dff9e'];
+      for (var i = 0; i < 90; i++){
+        var c = document.createElement('div');
+        c.className = 'confetti';
+        c.style.left = Math.random() * 100 + 'vw';
+        c.style.background = colors[Math.floor(Math.random() * colors.length)];
+        c.style.animationDuration = (1.6 + Math.random() * 1.8) + 's';
+        c.style.animationDelay = (Math.random() * 0.5) + 's';
+        c.style.transform = 'rotate(' + (Math.random() * 360) + 'deg)';
+        document.body.appendChild(c);
+        (function(el){ setTimeout(function(){ el.remove(); }, 4200); })(c);
+      }
+    }
+    function guess(){
+      var v = input.value.trim().toLowerCase();
+      if (v === 'joke' || v === 'a joke' || v === 'jokes'){
+        feedback.textContent = "✨ A JOKE. Of course it is. The gate swings open… ✨";
+        feedback.style.color = '#ffc93c';
+        prize.style.display = 'block';
+        confetti();
+        prize.scrollIntoView({behavior:'smooth', block:'center'});
+      } else if (v === ''){
+        feedback.textContent = "The Jester accepts silence as performance art, but the gate needs a word.";
+        feedback.style.color = '#ff8ac2';
+      } else {
+        feedback.textContent = taunts[misses % taunts.length];
+        feedback.style.color = '#ff8ac2';
+        misses++;
+      }
+    }
+    document.getElementById('guessBtn').addEventListener('click', guess);
+    input.addEventListener('keydown', function(e){ if (e.key === 'Enter') guess(); });
+    document.getElementById('hintBtn').addEventListener('click', function(){
+      document.getElementById('hint').style.display = 'block';
+    });
+  })();
+</script>
+</body>
+</html>
