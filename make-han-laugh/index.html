@@ -427,7 +427,19 @@ var hanPlayer;
 function onYouTubeIframeAPIReady(){hanPlayer=new YT.Player('theme-player',{videoId:'-F7c7Es0nuM',playerVars:{autoplay:1,loop:1,playlist:'-F7c7Es0nuM',rel:0,playsinline:1,controls:1},events:{onReady:function(e){e.target.mute();e.target.playVideo();}}});}
 function hanUnmute(){if(window.hanPlayer&&hanPlayer.isMuted()){hanPlayer.unMute();hanPlayer.setVolume(100);hanPlayer.playVideo();var b=document.getElementById('sound-badge');if(b)b.style.display='none';}}
 document.addEventListener('pointerdown',hanUnmute);document.addEventListener('keydown',hanUnmute);
-function hanOpen(){hanUnmute();if(window.hanPlayer){hanPlayer.unMute();hanPlayer.setVolume(100);hanPlayer.playVideo();}var g=document.getElementById('gate');if(g){g.style.opacity='0';setTimeout(function(){g.style.display='none';},650);}var b=document.getElementById('sound-badge');if(b)b.style.display='none';}
+function hanOpen(){
+  var g=document.getElementById('gate'); if(g){g.style.opacity='0'; setTimeout(function(){g.style.display='none';},650);}
+  var b=document.getElementById('sound-badge'); if(b)b.style.display='none';
+  if(window.hanPlayer&&hanPlayer.playVideo){try{hanPlayer.unMute();hanPlayer.setVolume(100);hanPlayer.playVideo();}catch(e){}}
+  setTimeout(function(){
+    var ok=false;
+    try{ok=window.hanPlayer&&hanPlayer.getPlayerState&&hanPlayer.getPlayerState()===1&&!hanPlayer.isMuted();}catch(e){}
+    if(!ok){
+      var el=document.getElementById('theme-player');
+      if(el){var f=document.createElement('iframe');f.width='100%';f.style.cssText='aspect-ratio:16/9;display:block;border:0;';f.src='https://www.youtube.com/embed/-F7c7Es0nuM?autoplay=1&loop=1&playlist=-F7c7Es0nuM&rel=0&playsinline=1';f.setAttribute('allow','autoplay; encrypted-media; picture-in-picture');f.setAttribute('allowfullscreen','');f.title='Foxwarren - Deadhead';el.replaceWith(f);}
+    }
+  },1600);
+}
 </script>
 </body>
 </html>
