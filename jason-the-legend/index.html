@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JASON — The Legend | Sixteen Years. Zero Give-Ups.</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌳</text></svg>">
+<style>
+  :root{
+    --green-950:#0c2417; --green-900:#123320; --green-700:#1d5233; --green-500:#2e7d46;
+    --gold:#e8b64c; --gold-soft:#f5d98a; --cream:#fdf8ec; --ink:#1c2419;
+    --card:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+  .wrap{max-width:1120px;margin:0 auto;padding-left:32px;padding-right:32px}
+  @media (max-width:899px){.wrap{padding-left:28px;padding-right:28px}}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15}
+
+  /* ---------- HERO ---------- */
+  .hero{background:radial-gradient(1200px 600px at 50% -10%,#2e7d46 0%,var(--green-900) 55%,var(--green-950) 100%);color:var(--cream);text-align:center;padding:72px 0 84px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:linear-gradient(90deg,var(--gold),var(--gold-soft),var(--gold))}
+  .hero .kicker{letter-spacing:.35em;text-transform:uppercase;font-size:.8rem;color:var(--gold-soft);font-weight:700}
+  .hero-photo{width:min(340px,78vw);aspect-ratio:3/4;object-fit:cover;border-radius:22px;border:5px solid var(--gold);box-shadow:0 24px 60px rgba(0,0,0,.45);margin:30px auto 8px;display:block;transform:rotate(-1.2deg)}
+  .hero h1{font-size:clamp(4rem,14vw,8.5rem);letter-spacing:.06em;color:#fff;text-shadow:0 6px 0 rgba(0,0,0,.25);margin-top:14px}
+  .hero .tagline{font-family:Georgia,serif;font-style:italic;font-size:clamp(1.3rem,3.4vw,2rem);color:var(--gold-soft)}
+  .hero .sub{max-width:640px;margin:22px auto 0;font-size:1.05rem;color:#e9e2cd}
+  .badge{display:inline-block;margin-top:26px;background:var(--gold);color:var(--green-950);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;padding:10px 20px;border-radius:999px;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+
+  /* ---------- STATS ---------- */
+  .stats{background:var(--green-950);color:var(--cream)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding-top:30px;padding-bottom:30px;text-align:center}
+  .stat .num{font-family:Georgia,serif;font-size:clamp(1.7rem,4.5vw,2.6rem);color:var(--gold);font-weight:700}
+  .stat .lbl{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:#cfc7a8;margin-top:2px}
+  @media (max-width:700px){.stats .wrap{grid-template-columns:repeat(2,1fr);gap:22px 8px}}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:72px 0}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 44px}
+  .sec-head .kicker{letter-spacing:.3em;text-transform:uppercase;font-size:.75rem;color:var(--green-500);font-weight:800}
+  .sec-head h2{font-size:clamp(2rem,5vw,3rem);color:var(--green-900);margin:8px 0 10px}
+  .sec-head p{color:#4c5546}
+
+  /* ---------- GALLERY ---------- */
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+  .card{background:var(--card);border-radius:20px;overflow:hidden;box-shadow:0 12px 34px rgba(18,51,32,.14);border:1px solid #eee3c2;transition:transform .25s ease,box-shadow .25s ease}
+  .card:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 20px 44px rgba(18,51,32,.22)}
+  .card img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+  .card .cap{padding:20px 22px 24px}
+  .card .era{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--green-500);font-weight:800}
+  .card h3{font-size:1.35rem;color:var(--green-900);margin:5px 0 6px}
+  .card p{color:#4c5546;font-size:.97rem}
+
+  /* ---------- THE CODE ---------- */
+  .code-sec{background:linear-gradient(180deg,var(--green-900),var(--green-950));color:var(--cream)}
+  .code-sec .sec-head h2{color:#fff}
+  .code-sec .sec-head p{color:#cfc7a8}
+  .code-sec .sec-head .kicker{color:var(--gold-soft)}
+  .code-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+  .code-card{background:rgba(255,255,255,.06);border:1px solid rgba(232,182,76,.35);border-radius:16px;padding:26px 24px;text-align:center}
+  .code-card .icon{font-size:2rem}
+  .code-card h3{color:var(--gold);font-size:1.3rem;margin:10px 0 8px;letter-spacing:.04em}
+  .code-card p{color:#e9e2cd;font-size:.95rem}
+
+  /* ---------- CLOSING ---------- */
+  .closing{text-align:center}
+  .closing .quote{font-family:Georgia,serif;font-style:italic;font-size:clamp(1.35rem,3.6vw,2.1rem);color:var(--green-900);max-width:760px;margin:0 auto 22px;line-height:1.45}
+  .closing .from{font-weight:700;color:var(--green-700);letter-spacing:.06em}
+  .closing .sig{margin-top:8px;color:#4c5546}
+  footer{background:var(--green-950);color:#cfc7a8;text-align:center;padding:26px 0;font-size:.88rem}
+  footer strong{color:var(--gold-soft)}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Giving Tree Lawn Care Presents</div>
+    <img class="hero-photo" src="jason-real.jpg" alt="Jason himself — bandana on, shades on, ready for work">
+    <h1>JASON</h1>
+    <div class="tagline">Sixteen years. Zero give-ups.</div>
+    <p class="sub">The Man Himself. Sixteen years on the crew and still the first one you'd bet on to finish the job — any job, any weather, any yard.</p>
+    <div class="badge">🤌 The Underboss — 16 Years of Loyalty to the Family</div>
+  </div>
+</header>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="num">16</div><div class="lbl">Years of Service</div></div>
+    <div class="stat"><div class="num">Unbreakable</div><div class="lbl">Loyalty</div></div>
+    <div class="stat"><div class="num">0</div><div class="lbl">Give-Ups (Career)</div></div>
+    <div class="stat"><div class="num">Legendary</div><div class="lbl">Endurance</div></div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Verified Sightings</div>
+      <h2>The Many Lives of Jason</h2>
+      <p>Sixteen years is a long time. Long enough for a man to live several lives — and somehow, every single one of them involves a yard.</p>
+    </div>
+    <div class="gallery">
+      <article class="card">
+        <img src="gnome-purple.jpg" alt="Jason as a garden gnome with a purple pointed hat and long grey beard among tall flowers">
+        <div class="cap">
+          <div class="era">Life № 1 — The Gnome Era</div>
+          <h3>Guardian of the Garden</h3>
+          <p>Before the trucks, before the trailers — there was the garden. Jason has been watching over Oklahoma flower beds since roughly the dawn of time. The flowers respect him. The weeds fear him.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="gnome-mower.jpg" alt="Jason as a garden gnome with a pink hat, riding a green mower through a garden">
+        <div class="cap">
+          <div class="era">Life № 2 — The Mowing Years</div>
+          <h3>The Lawn Whisperer</h3>
+          <p>They say if you listen closely on a Saturday morning, you can hear him coming. Sixteen years of stripes so straight they'd make a ruler jealous. The lawn has never won. Not once.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="gnome-weeds.jpg" alt="Jason as a garden gnome with a blue hat, triumphantly holding up a fistful of pulled weeds among purple blooms">
+        <div class="cap">
+          <div class="era">Life № 3 — The Championship Run</div>
+          <h3>Weed-Pulling Champion</h3>
+          <p>Another trophy raised high. Botanists estimate Jason has personally evicted more weeds than most small nations. He doesn't pull weeds — he serves them notice.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="astronaut.jpg" alt="Jason in an astronaut suit in a fantasy forest, tending a tiny red toy mower">
+        <div class="cap">
+          <div class="era">Life № 4 — The Space Program</div>
+          <h3>Mowing the Final Frontier</h3>
+          <p>When NASA needed someone who would never, ever give up — not even in a magical forest with a mower the size of a shoebox — there was only one name on the list.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="shears.jpg" alt="Jason standing under a blooming crepe myrtle holding a pair of oversized pruning shears">
+        <div class="cap">
+          <div class="era">Life № 5 — The Legend Today</div>
+          <h3>The Man with the Golden Shears</h3>
+          <p>Present day. The crepe myrtles bloom a little brighter when he shows up — partly out of admiration, partly out of respect for the shears. Sixteen years in, and just getting warmed up.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- THE CODE -->
+<section class="code-sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">How He Operates</div>
+      <h2>The Code</h2>
+      <p>Every legend runs on a code. Jason's has four rules, and in sixteen years he has never broken one of them.</p>
+    </div>
+    <div class="code-grid">
+      <div class="code-card">
+        <div class="icon">🤝</div>
+        <h3>Loyalty</h3>
+        <p>Sixteen years with the same family. In a world of job-hoppers, Jason is a landmark — you don't visit Oklahoma City without driving past him.</p>
+      </div>
+      <div class="code-card">
+        <div class="icon">🔋</div>
+        <h3>Endurance</h3>
+        <p>August heat, frozen mornings, the yard that never ends — Jason outlasts all of it. The energizer has nothing on him.</p>
+      </div>
+      <div class="code-card">
+        <div class="icon">🧱</div>
+        <h3>Perseverance</h3>
+        <p>When a job gets hard, most people get creative with excuses. Jason just gets back to work. It's a simpler system, and it has a perfect record.</p>
+      </div>
+      <div class="code-card">
+        <div class="icon">🏆</div>
+        <h3>Never Gives Up</h3>
+        <p>Career give-ups: zero. Sixteen years, thousands of yards, one unbroken streak. Some records are just never meant to be broken.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="wrap">
+    <p class="quote">"Great crews aren't built on equipment. They're built on men like Jason — loyal, tireless, and still standing long after everyone else has gone home."</p>
+    <div class="from">— Thank you for sixteen years, Jason</div>
+    <div class="sig">From Justin, and everyone at Giving Tree Lawn Care, LLC 🌳</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Jason Buker · <strong>Est. on the crew since 2009</strong> · Sixteen years and counting</div>
+</footer>
+
+</body>
+</html>
