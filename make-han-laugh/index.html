@@ -184,6 +184,17 @@
 </style>
 </head>
 <body>
+<div id="gate" onclick="hanOpen()" style="position:fixed; inset:0; z-index:10000; display:flex; align-items:center; justify-content:center; text-align:center; cursor:pointer; background:radial-gradient(ellipse at 30% 20%, #3b0764 0%, #1e1033 55%, #0b0618 100%); transition:opacity .6s ease; padding:32px 28px;">
+  <div style="max-width:520px; margin:0 auto;">
+    <div style="font-size:4.2rem; line-height:1; margin-bottom:14px;">&#128140;</div>
+    <div style="font-size:.78rem; letter-spacing:.3em; text-transform:uppercase; color:#ffd23f; margin-bottom:10px;">A website, sealed with a jest</div>
+    <div style="font-family:Georgia,'Times New Roman',serif; font-size:clamp(2rem,7vw,3.2rem); color:#fff; margin-bottom:12px;">For Hannah</div>
+    <p style="color:#e9dcff; font-size:1.05rem; margin:0 auto 24px; max-width:420px;">Somebody built you something. It sings, it sparkles, and it has a riddle in it. One tap to open it &mdash; sound on, obviously.</p>
+    <div style="display:inline-block; background:linear-gradient(92deg,#ff5ea8,#ffd23f); color:#2a0a2e; font-weight:800; font-size:1.05rem; padding:14px 34px; border-radius:999px; box-shadow:0 12px 32px rgba(0,0,0,.5); animation:badgepulse 1.6s ease-in-out infinite;">Open it &#127911;</div>
+    <p style="color:#a98fd6; font-size:.8rem; margin-top:18px;">(the music starts the moment you do)</p>
+  </div>
+</div>
+
 <div class="sky"></div>
 <div class="stars" id="stars"></div>
 
@@ -414,8 +425,9 @@
 var tag=document.createElement('script');tag.src='https://www.youtube.com/iframe_api';var first=document.getElementsByTagName('script')[0];first.parentNode.insertBefore(tag,first);
 var hanPlayer;
 function onYouTubeIframeAPIReady(){hanPlayer=new YT.Player('theme-player',{videoId:'-F7c7Es0nuM',playerVars:{autoplay:1,loop:1,playlist:'-F7c7Es0nuM',rel:0,playsinline:1,controls:1},events:{onReady:function(e){e.target.mute();e.target.playVideo();}}});}
-function hanUnmute(){if(window.hanPlayer&&hanPlayer.isMuted){hanPlayer.unMute();hanPlayer.setVolume(100);var b=document.getElementById('sound-badge');if(b)b.style.display='none';}}
+function hanUnmute(){if(window.hanPlayer&&hanPlayer.isMuted()){hanPlayer.unMute();hanPlayer.setVolume(100);hanPlayer.playVideo();var b=document.getElementById('sound-badge');if(b)b.style.display='none';}}
 document.addEventListener('pointerdown',hanUnmute);document.addEventListener('keydown',hanUnmute);
+function hanOpen(){hanUnmute();if(window.hanPlayer){hanPlayer.unMute();hanPlayer.setVolume(100);hanPlayer.playVideo();}var g=document.getElementById('gate');if(g){g.style.opacity='0';setTimeout(function(){g.style.display='none';},650);}var b=document.getElementById('sound-badge');if(b)b.style.display='none';}
 </script>
 </body>
 </html>
