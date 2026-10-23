@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Oak Room | Bar &amp; Lounge — Midtown Oklahoma City</title>
+<meta name="description" content="The Oak Room Bar and Lounge is an exclusive, high-end nightclub and lounge at 808 NW 6th St in Midtown Oklahoma City — Karaoke Wednesdays, Fame Fridays, Function Saturdays and Red Room Sundays.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0B0906;
+  --black2:#12100B;
+  --panel:#171309;
+  --gold:#C9A24B;
+  --gold-bright:#E3B34C;
+  --gold-dim:#8f7434;
+  --cream:#F4ECDC;
+  --cream-dim:#CBBfa5;
+  --muted:#9a8f78;
+  --red:#8E1626;
+  --red-glow:#c22337;
+  --line:rgba(201,162,75,.28);
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Jost','Century Gothic',Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--cream);font-family:var(--sans);font-weight:300;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding-left:40px;padding-right:40px}
+@media(max-width:640px){.wrap{padding-left:28px;padding-right:28px}}
+
+/* ---------- NAV ---------- */
+nav{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(11,9,6,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:42px;height:42px;object-fit:contain}
+.brand .bname{font-family:var(--serif);font-size:1.25rem;letter-spacing:.14em;color:var(--cream);line-height:1}
+.brand .bsub{display:block;font-family:var(--sans);font-size:.58rem;letter-spacing:.42em;color:var(--gold);margin-top:4px}
+.nav-links{display:flex;gap:34px;align-items:center}
+.nav-links a{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--cream-dim);transition:color .25s}
+.nav-links a:hover{color:var(--gold-bright)}
+.nav-call{border:1px solid var(--gold);color:var(--gold)!important;padding:9px 18px;border-radius:2px;transition:background .25s,color .25s}
+.nav-call:hover{background:var(--gold);color:var(--black)!important}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{display:block;width:26px;height:2px;background:var(--gold);margin:6px 0;transition:.3s}
+@media(max-width:900px){
+  .nav-links{position:absolute;top:72px;left:0;right:0;background:rgba(11,9,6,.97);flex-direction:column;gap:0;padding:10px 0 18px;border-bottom:1px solid var(--line);display:none}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:13px 0;font-size:.85rem}
+  .nav-call{margin-top:8px}
+  .burger{display:block}
+}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('hero.jpg') center 38%/cover no-repeat;transform:scale(1.04)}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,9,6,.66) 0%,rgba(11,9,6,.42) 34%,rgba(11,9,6,.62) 68%,var(--black) 100%)}
+.hero-shade::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 42%,rgba(11,9,6,.55) 100%)}
+.hero-in{position:relative;z-index:2;padding:150px 0 110px;max-width:860px}
+.hero-mark{width:92px;height:92px;object-fit:contain;margin:0 auto 26px;filter:drop-shadow(0 6px 24px rgba(0,0,0,.7))}
+.hero-eyebrow{font-size:.74rem;letter-spacing:.5em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:22px}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(3.2rem,9.5vw,6.4rem);line-height:1.02;letter-spacing:.045em;color:var(--cream);text-shadow:0 10px 44px rgba(0,0,0,.65)}
+.hero h1 .amp{color:var(--gold);font-style:italic;font-weight:500}
+.hero-rule{display:flex;align-items:center;justify-content:center;gap:16px;margin:30px auto 26px;max-width:420px}
+.hero-rule::before,.hero-rule::after{content:'';height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.hero-rule i{width:7px;height:7px;background:var(--gold);transform:rotate(45deg);display:block}
+.hero-sub{font-family:var(--serif);font-style:italic;font-size:clamp(1.08rem,2.6vw,1.4rem);color:var(--cream);max-width:620px;margin:0 auto 14px}
+.hero-addr{font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;color:var(--cream-dim);margin-bottom:40px}
+.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;font-size:.8rem;letter-spacing:.26em;text-transform:uppercase;padding:16px 32px;border-radius:2px;transition:.25s;font-weight:500}
+.btn-gold{background:var(--gold);color:var(--black)}
+.btn-gold:hover{background:var(--gold-bright)}
+.btn-ghost{border:1px solid rgba(244,236,220,.55);color:var(--cream)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-bright)}
+.hero-scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;font-size:.62rem;letter-spacing:.44em;text-transform:uppercase;color:var(--muted)}
+
+/* ---------- MARQUEE ---------- */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--black2);overflow:hidden;padding:15px 0}
+.marquee-track{display:flex;width:max-content;animation:slide 34s linear infinite}
+.marquee-track span{font-family:var(--serif);font-size:1.02rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);white-space:nowrap;padding-right:.4em}
+.marquee-track b{color:var(--red-glow);font-weight:400;padding:0 .6em}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---------- SECTIONS ---------- */
+section{padding:104px 0}
+.sec-head{text-align:center;max-width:700px;margin:0 auto 58px}
+.sec-num{font-size:.7rem;letter-spacing:.5em;color:var(--red-glow);text-transform:uppercase;display:block;margin-bottom:16px}
+.sec-head h2{font-family:var(--serif);font-weight:600;font-size:clamp(2.1rem,5vw,3.1rem);line-height:1.12;letter-spacing:.02em}
+.sec-head p{color:var(--cream-dim);margin-top:16px;font-size:1.02rem}
+.gold-i{color:var(--gold);font-style:italic}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.about-copy p{color:var(--cream-dim);font-size:1.06rem;margin-bottom:20px}
+.about-copy p:first-of-type{font-size:1.18rem;color:var(--cream)}
+.about-copy .sig{font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--gold);margin-top:6px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.chip{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;border:1px solid var(--line);color:var(--gold);padding:9px 16px;border-radius:100px}
+.about-photo{position:relative}
+.about-photo img{width:100%;height:560px;object-fit:cover;border-radius:3px}
+.about-photo::before{content:'';position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--line);border-radius:3px;z-index:-1}
+.about-photo figcaption{margin-top:34px;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);text-align:right}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:44px}.about-photo img{height:420px}.about-photo::before{display:none}.about-photo figcaption{margin-top:12px}}
+
+/* The Week */
+.week-sec{background:linear-gradient(180deg,var(--black) 0%,var(--black2) 50%,var(--black) 100%)}
+.week-grid{display:grid;grid-template-columns:340px 1fr;gap:56px;align-items:start}
+.hours-panel{border:1px solid var(--line);background:var(--panel);padding:36px 34px;border-radius:3px;position:sticky;top:100px}
+.hours-panel h3{font-family:var(--serif);font-size:1.45rem;font-weight:600;letter-spacing:.04em;margin-bottom:6px}
+.hours-panel .hp-sub{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:block}
+.hrow{display:flex;justify-content:space-between;gap:14px;padding:13px 0;border-top:1px solid rgba(201,162,75,.14);font-size:.98rem}
+.hrow:first-of-type{border-top:0}
+.hrow .d{color:var(--cream);letter-spacing:.08em}
+.hrow .t{color:var(--cream-dim);text-align:right;white-space:nowrap}
+.hrow.hl .d,.hrow.hl .t{color:var(--gold-bright)}
+.hours-note{margin-top:22px;font-size:.9rem;color:var(--muted);line-height:1.6}
+.hours-note a{color:var(--gold);border-bottom:1px solid var(--gold-dim)}
+.nights{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.night{border:1px solid rgba(201,162,75,.18);background:rgba(23,19,9,.55);padding:34px 32px;border-radius:3px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
+.night:hover{border-color:var(--gold);transform:translateY(-4px)}
+.night::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold),var(--gold-dim));opacity:.65}
+.night.hot::before{background:linear-gradient(90deg,var(--red),var(--red-glow),var(--red))}
+.night .day{font-size:.7rem;letter-spacing:.44em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
+.night.hot .day{color:var(--red-glow)}
+.night h3{font-family:var(--serif);font-size:1.85rem;font-weight:600;line-height:1.15;margin-bottom:12px}
+.night p{color:var(--cream-dim);font-size:.99rem}
+.night .meta{margin-top:18px;padding-top:16px;border-top:1px solid rgba(201,162,75,.14);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cream)}
+@media(max-width:980px){.week-grid{grid-template-columns:1fr}.hours-panel{position:static}}
+@media(max-width:640px){.nights{grid-template-columns:1fr}}
+
+/* The Bar */
+.bar-photo{position:relative;border-radius:3px;overflow:hidden;margin-bottom:56px}
+.bar-photo img{width:100%;height:440px;object-fit:cover}
+.bar-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:64px 40px 26px;background:linear-gradient(180deg,transparent,rgba(11,9,6,.92));font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--cream)}
+.drinks{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.drink{text-align:center;padding:40px 28px;border:1px solid rgba(201,162,75,.18);border-radius:3px;background:rgba(23,19,9,.55)}
+.drink .glyph{font-family:var(--serif);font-size:2rem;color:var(--gold);display:block;margin-bottom:16px}
+.drink h3{font-family:var(--serif);font-size:1.5rem;font-weight:600;margin-bottom:10px}
+.drink p{color:var(--cream-dim);font-size:.97rem}
+@media(max-width:860px){.drinks{grid-template-columns:1fr}.bar-photo img{height:320px}}
+
+/* Reservations band */
+.res-band{background:linear-gradient(120deg,#2a0810 0%,var(--red) 55%,#5d0d1a 100%);padding:74px 0;text-align:center;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(0,0,0,.5)}
+.res-band h2{font-family:var(--serif);font-size:clamp(1.9rem,4.6vw,2.9rem);font-weight:600;margin-bottom:14px}
+.res-band p{color:#f3d9dc;max-width:560px;margin:0 auto 30px;font-size:1.03rem}
+.btn-light{background:var(--cream);color:#5d0d1a}
+.btn-light:hover{background:#fff}
+
+/* Gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gal figure{overflow:hidden;border-radius:3px;position:relative}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gal figure:hover img{transform:scale(1.06)}
+.gal .tall{grid-row:span 2}
+.gal .wide{grid-column:span 2}
+.gal figure{height:260px}
+.gal .tall{height:534px}
+@media(max-width:900px){.gal{grid-template-columns:repeat(2,1fr)}.gal .tall{height:400px}.gal figure{height:230px}}
+@media(max-width:520px){.gal{grid-template-columns:1fr}.gal .wide{grid-column:span 1}.gal .tall{height:340px}}
+
+/* Visit */
+.visit-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:64px;align-items:center}
+.visit-photo img{width:100%;height:520px;object-fit:cover;border-radius:3px}
+.visit-info h2{font-family:var(--serif);font-size:clamp(2rem,4.6vw,2.9rem);font-weight:600;line-height:1.15;margin-bottom:22px}
+.visit-info>p{color:var(--cream-dim);margin-bottom:30px;font-size:1.04rem}
+.vrow{display:flex;gap:20px;padding:17px 0;border-top:1px solid rgba(201,162,75,.16)}
+.vrow .k{flex:0 0 104px;font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);padding-top:5px}
+.vrow .v{font-size:1.05rem;color:var(--cream)}
+.vrow .v small{display:block;color:var(--muted);font-size:.9rem}
+.vrow a:hover{color:var(--gold-bright)}
+.visit-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+@media(max-width:900px){.visit-grid{grid-template-columns:1fr;gap:40px}.visit-photo img{height:380px}}
+
+/* Footer */
+footer{border-top:1px solid var(--line);background:var(--black2);padding:70px 0 40px;text-align:center}
+footer .f-logo{width:190px;margin:0 auto 26px}
+footer .f-addr{font-size:.82rem;letter-spacing:.26em;text-transform:uppercase;color:var(--cream-dim);line-height:2.1}
+footer .f-addr a{color:var(--gold)}
+footer .f-social{display:flex;gap:26px;justify-content:center;margin:26px 0 8px}
+footer .f-social a{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--cream-dim)}
+footer .f-social a:hover{color:var(--gold-bright)}
+footer .f-copy{margin-top:26px;font-size:.78rem;color:var(--muted);letter-spacing:.12em}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .marquee-track{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="The Oak Room — home">
+      <img src="logo-mark.png" alt="The Oak Room gold oak-leaf monogram logo">
+      <span><span class="bname">THE OAK ROOM</span><span class="bsub">BAR AND LOUNGE</span></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">The Room</a>
+      <a href="#week">The Week</a>
+      <a href="#bar">The Bar</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+      <a class="nav-call" href="tel:+14052104534">Call for a Table</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg" role="img" aria-label="A packed night inside The Oak Room, with the gold Oak Room crest glowing on the big screen"></div>
+  <div class="hero-shade"></div>
+  <div class="wrap hero-in">
+    <img class="hero-mark" src="logo-mark.png" alt="The Oak Room gold oak-leaf monogram">
+    <p class="hero-eyebrow">Midtown &middot; Oklahoma City</p>
+    <h1>THE OAK<br>ROOM</h1>
+    <div class="hero-rule"><i></i></div>
+    <p class="hero-sub">An oasis of sophistication and elegance &mdash; an exclusive, high-end retreat for those who seek the finest in style.</p>
+    <p class="hero-addr">808 NW 6th St &middot; Bar and Lounge</p>
+    <div class="hero-ctas">
+      <a class="btn btn-gold" href="#week">See the Weekly Lineup</a>
+      <a class="btn btn-ghost" href="tel:+14052104534">(405) 210-4534</a>
+    </div>
+  </div>
+  <p class="hero-scroll">Scroll</p>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="mtrack">
+    <span>Karaoke Wednesdays <b>&#10022;</b> Fame Fridays <b>&#10022;</b> Function Saturdays <b>&#10022;</b> Red Room Sundays <b>&#10022;</b> Live Music <b>&#10022;</b> Bottle Service <b>&#10022;</b>&nbsp;</span>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy rv">
+        <span class="sec-num">01 &mdash; The Room</span>
+        <h2 style="font-family:var(--serif);font-size:clamp(2rem,4.6vw,2.9rem);font-weight:600;line-height:1.15;margin-bottom:24px">Sophistication,<br>poured <span class="gold-i">nightly.</span></h2>
+        <p>Step into an oasis of sophistication and elegance, where every detail has been carefully curated to offer an unparalleled experience of opulence.</p>
+        <p>Oak Room Bar and Lounge is an exclusive, high-end retreat in Midtown Oklahoma City, designed for those who seek the finest in style &mdash; marble tables under warm brass light, the gold crest glowing over the room, and a crowd that dresses for the night.</p>
+        <p>Come for karaoke, stay for the DJs. From live performances to R&amp;B Sundays, every night of the week has its own signature.</p>
+        <p class="sig">&mdash; The Oak Room, Bar and Lounge</p>
+        <div class="chips">
+          <span class="chip">Night Club</span>
+          <span class="chip">Lounge</span>
+          <span class="chip">Bar</span>
+          <span class="chip">Live Music</span>
+          <span class="chip">Live Performances</span>
+        </div>
+      </div>
+      <figure class="about-photo rv">
+        <img src="wall.jpg" alt="The Oak Room's greenery wall with its backlit gold Oak Room sign, green velvet seating and a marble cocktail table">
+        <figcaption>The signature wall &middot; The Oak Room</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="week-sec" id="week">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">02 &mdash; The Week</span>
+      <h2>Every night has<br>a <span class="gold-i">name.</span></h2>
+      <p>Four signature nights a week &mdash; plus weekend hours built for the late crowd.</p>
+    </div>
+    <div class="week-grid">
+      <aside class="hours-panel rv">
+        <h3>Hours</h3>
+        <span class="hp-sub">808 NW 6th St &middot; OKC</span>
+        <div class="hrow"><span class="d">Wednesday</span><span class="t">Karaoke Night &mdash; doors 5 PM</span></div>
+        <div class="hrow hl"><span class="d">Friday</span><span class="t">9 PM &ndash; 2 AM</span></div>
+        <div class="hrow hl"><span class="d">Saturday</span><span class="t">9 PM &ndash; 2 AM</span></div>
+        <div class="hrow hl"><span class="d">Sunday</span><span class="t">9 PM &ndash; 1 AM</span></div>
+        <p class="hours-note">Planning a section or a celebration? Tables and bottle service are reserved by phone &mdash; <a href="tel:+14052104534">(405) 210-4534</a>.</p>
+      </aside>
+      <div class="nights">
+        <article class="night rv">
+          <span class="day">Wednesday</span>
+          <h3>Karaoke Wednesday</h3>
+          <p>Grab the mic and own the room. The Oak Room's weekly karaoke night, hosted by Cartier &mdash; doors at five, singing from seven.</p>
+          <p class="meta">Doors 5 PM &middot; Karaoke 7 PM</p>
+        </article>
+        <article class="night hot rv">
+          <span class="day">Friday</span>
+          <h3>Fame Fridays</h3>
+          <p>The Friday night Oklahoma City talks about &mdash; presented by SoHo VVS &amp; TMG, with the room sold out week after week.</p>
+          <p class="meta">Doors 10 PM &middot; No cover before 11 PM w/ RSVP &middot; 21+</p>
+        </article>
+        <article class="night rv">
+          <span class="day">Saturday</span>
+          <h3>Function Saturdays</h3>
+          <p>The Saturday function &mdash; the week's biggest room, bottle-service marquees up, and the crest lit red over the dance floor.</p>
+          <p class="meta">Doors 10 PM &ndash; 2 AM</p>
+        </article>
+        <article class="night hot rv">
+          <span class="day">Sunday</span>
+          <h3>Red Room Sundays</h3>
+          <p>R&amp;B all night to close the weekend &mdash; DJ Lyfe, DJ Keilo and DJ Eddie Brasco on the decks. The R&amp;B Sunday is unmatched.</p>
+          <p class="meta">R&amp;B All Night &middot; Sundays</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bar">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">03 &mdash; The Bar</span>
+      <h2>From the <span class="gold-i">bar.</span></h2>
+      <p>A wide selection, poured late &mdash; from craft beers to fine wines.</p>
+    </div>
+    <figure class="bar-photo rv">
+      <img src="bar.jpg" alt="The bar at The Oak Room, with the backlit gold Oak Room sign and red lounge lighting">
+      <figcaption>Under the gold sign &mdash; where the night starts.</figcaption>
+    </figure>
+    <div class="drinks">
+      <div class="drink rv">
+        <span class="glyph">&#10022;</span>
+        <h3>Espresso Martini</h3>
+        <p>Bold, smooth and ice-cold &mdash; the pour that keeps the night lively at The Oak Room.</p>
+      </div>
+      <div class="drink rv">
+        <span class="glyph">&#10022;</span>
+        <h3>Craft Beers</h3>
+        <p>Craft beers on hand for the table that wants to keep it classic while the room turns up.</p>
+      </div>
+      <div class="drink rv">
+        <span class="glyph">&#10022;</span>
+        <h3>Fine Wines</h3>
+        <p>Fine wines for the lounge pace &mdash; settle into the velvet, the crest glowing red overhead.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="res-band">
+  <div class="wrap rv">
+    <h2>Your table is waiting.</h2>
+    <p>Sections, celebrations and bottle service &mdash; reserve your table at The Oak Room with one call.</p>
+    <a class="btn btn-light" href="tel:+14052104534">Call (405) 210-4534</a>
+  </div>
+</div>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">04 &mdash; Gallery</span>
+      <h2>Nights at the <span class="gold-i">Oak Room.</span></h2>
+    </div>
+    <div class="gal">
+      <figure class="wide rv"><img src="crowd.jpg" alt="A packed night at The Oak Room — bottle service celebration under the gold crest screen" loading="lazy"></figure>
+      <figure class="tall rv"><img src="live.jpg" alt="A live performer on the microphone at The Oak Room under red stage light" loading="lazy"></figure>
+      <figure class="rv"><img src="interior.jpg" alt="Inside The Oak Room — marble cocktail tables with brass lamps beneath red-lit Oak Room crest screens" loading="lazy"></figure>
+      <figure class="wide rv"><img src="hero.jpg" alt="Celebration inside The Oak Room with the gold Oak Room crest glowing on the big screen" loading="lazy"></figure>
+      <figure class="rv"><img src="guests.jpg" alt="Guests dressed for the night out, smiling at The Oak Room" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="background:var(--black2);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="visit-grid">
+      <figure class="visit-photo rv">
+        <img src="door.jpg" alt="The entrance to The Oak Room, with its gold Oak Room Bar and Lounge mat at the door">
+      </figure>
+      <div class="visit-info rv">
+        <span class="sec-num">05 &mdash; Visit</span>
+        <h2>Find the <span class="gold-i">gold sign.</span></h2>
+        <p>In the heart of Midtown, minutes from downtown &mdash; look for the gold crest at 808 NW 6th Street.</p>
+        <div class="vrow"><span class="k">Address</span><span class="v">808 NW 6th St<small>Oklahoma City, OK 73106</small></span></div>
+        <div class="vrow"><span class="k">Phone</span><span class="v"><a href="tel:+14052104534">(405) 210-4534</a><small>Call for reservations &amp; tables</small></span></div>
+        <div class="vrow"><span class="k">Hours</span><span class="v">Fri &amp; Sat 9 PM &ndash; 2 AM &middot; Sun 9 PM &ndash; 1 AM<small>Karaoke Wednesdays &mdash; doors 5 PM</small></span></div>
+        <div class="vrow"><span class="k">Follow</span><span class="v"><a href="https://www.instagram.com/oakroomokc" target="_blank" rel="noopener">@oakroomokc on Instagram</a><small><a href="https://www.facebook.com/461218357079351" target="_blank" rel="noopener">The Oak Room on Facebook</a></small></span></div>
+        <div class="visit-ctas">
+          <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=The+Oak+Room+808+NW+6th+St+Oklahoma+City+OK+73106" target="_blank" rel="noopener">Get Directions</a>
+          <a class="btn btn-ghost" href="tel:+14052104534">Call the Room</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img class="f-logo" src="logo-full.jpg" alt="The Oak Room Bar and Lounge gold logo — an oak leaf over the words Oak Room">
+    <p class="f-addr">808 NW 6th St &middot; Oklahoma City, OK 73106<br>
+    <a href="tel:+14052104534">(405) 210-4534</a> &middot; Fri &amp; Sat 9 PM &ndash; 2 AM &middot; Sun 9 PM &ndash; 1 AM</p>
+    <div class="f-social">
+      <a href="https://www.instagram.com/oakroomokc" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/461218357079351" target="_blank" rel="noopener">Facebook</a>
+      <a href="#week">The Week</a>
+    </div>
+    <p class="f-copy">&copy; 2026 The Oak Room Bar and Lounge &middot; Oklahoma City, Oklahoma</p>
+  </div>
+</footer>
+
+<script>
+// Duplicate marquee content for a seamless loop
+(function(){
+  var t = document.getElementById('mtrack');
+  t.innerHTML += t.innerHTML;
+})();
+// Mobile nav
+(function(){
+  var b = document.getElementById('burger'), n = document.getElementById('navLinks');
+  b.addEventListener('click', function(){
+    var open = n.classList.toggle('open');
+    b.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  n.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ n.classList.remove('open'); b.setAttribute('aria-expanded','false'); }
+  });
+})();
+// Reveal on scroll
+(function(){
+  var els = document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){ els.forEach(function(e){ e.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {threshold: .12});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
