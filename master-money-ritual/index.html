@@ -81,17 +81,26 @@
   }
   .words span em{font-style:normal;color:var(--gold)}
   .talisman{
-    display:block;width:min(88vw,430px);max-height:62vh;object-fit:contain;
-    border:1px solid var(--gold-dim);border-radius:4px;background:#000;
-    box-shadow:0 0 44px rgba(217,180,92,.13);
-    margin:.4em auto 1em;
+    display:block;width:min(88vw,430px,40.7vh);height:auto;
+    padding:clamp(12px,3vw,18px);
+    background:#14110a;
+    border:1px solid var(--gold);
+    outline:1px solid rgba(217,180,92,.45);outline-offset:4px;
+    border-radius:2px;
+    box-shadow:0 14px 44px rgba(0,0,0,.6),0 0 44px rgba(217,180,92,.10);
+    margin:.9em auto 1.15em;
   }
-  .talisman.small{width:min(64vw,300px);max-height:40vh}
+  .talisman.small{width:min(64vw,300px,26.3vh)}
   .scanstep{
     font-size:clamp(2.4rem,11vw,3.6rem);color:var(--gold);line-height:1;margin-bottom:.25em;
   }
   .done{
     font-size:clamp(2.2rem,10vw,3.6rem);color:var(--ink);letter-spacing:.03em;margin-bottom:.5em;
+  }
+  body::after{
+    content:"";position:fixed;inset:12px;z-index:30;pointer-events:none;
+    border:1px solid rgba(217,180,92,.30);border-radius:2px;
+    outline:1px solid rgba(217,180,92,.16);outline-offset:3px;
   }
   .hint{
     position:fixed;left:0;right:0;bottom:calc(14px + env(safe-area-inset-bottom));z-index:40;
@@ -115,7 +124,26 @@
   <div class="begin">Tap to begin</div>
 </section>
 
-<!-- 1 · CONTEMPLATE LACK -->
+<!-- 1 · ACTIVATING THE TALISMAN -->
+<section class="slide">
+  <div class="kicker">Before You Begin</div>
+  <h2>Activating the Talisman</h2>
+  <p>Simply looking at the talisman &mdash; or practising the scan &mdash; does <b>not</b> activate it. You cannot activate it by accident.</p>
+  <p>The talisman is activated when you perform the ritual deliberately: scanning it within the ritual, holding the feeling of pleasure while the white of the sigil turns to yellow-orange fire.</p>
+  <p>That deliberate performance is the activation. There is no separate activation ceremony.</p>
+  <p class="dim">&ldquo;Only when you come to the ritual and deliberately activate it, will the effects begin.&rdquo;</p>
+</section>
+
+<!-- 2 · THE 11 DAYS -->
+<section class="slide">
+  <div class="kicker">Before You Begin</div>
+  <h2>The 11 Days</h2>
+  <p>The first time, perform the ritual once a day for <b>11 days</b>.</p>
+  <p>Eleven days in a row is ideal &mdash; but if you miss a day, you do <b>not</b> start over. Keep gaps to no more than 2 days, and finish all 11 within one month.</p>
+  <p class="dim">After the first run, repeat for 3 days in a row every 3 to 4 months. If money is flowing steadily, the 3-day version once a year is enough.</p>
+</section>
+
+<!-- 3 · CONTEMPLATE LACK -->
 <section class="slide">
   <div class="kicker">Step One</div>
   <h2>Contemplate Lack</h2>
@@ -125,7 +153,7 @@
   <p class="dim">The same memory each day, or a different one, is fine.</p>
 </section>
 
-<!-- 2 · THE FIVE WORDS -->
+<!-- 4 · THE FIVE WORDS -->
 <section class="slide">
   <div class="kicker">Step Two &middot; Speak Aloud</div>
   <div class="words">
@@ -139,7 +167,7 @@
   <p class="dim">The CH is as in &ldquo;loch&rdquo;; a K sound is fine. Pronunciation does not have to be perfect. These words call angelic aid for relief from lack, and the series ends with Metatron, binding the sigil to the power of this mighty archangel.</p>
 </section>
 
-<!-- 3 · TRANSMUTE TO PLEASURE -->
+<!-- 5 · TRANSMUTE TO PLEASURE -->
 <section class="slide">
   <div class="kicker">Step Three</div>
   <h2>Transmute to Pleasure</h2>
@@ -149,7 +177,7 @@
   <p class="dim">Only pleasures that money makes possible. Pleasant things that need no money are left aside.</p>
 </section>
 
-<!-- 4 · THE TALISMAN -->
+<!-- 6 · THE TALISMAN -->
 <section class="slide">
   <div class="kicker">Step Four &middot; The Talisman</div>
   <img class="talisman" alt="The Master Money Talisman">
@@ -157,7 +185,7 @@
   <p class="dim">Keep your eyes relaxed. Never read or translate the letters; let their shapes sink in. As you scan, see the white of the image become yellow-orange fire.</p>
 </section>
 
-<!-- 5 · SCAN 1 -->
+<!-- 7 · SCAN 1 -->
 <section class="slide">
   <div class="kicker">The Scan</div>
   <div class="scanstep">1</div>
@@ -167,7 +195,7 @@
   <p class="dim">No need to turn the screen &mdash; simply scan up the word. Hold the pleasure feeling; white becomes fire.</p>
 </section>
 
-<!-- 6 · SCAN 2 -->
+<!-- 8 · SCAN 2 -->
 <section class="slide">
   <div class="kicker">The Scan</div>
   <div class="scanstep">2</div>
@@ -177,7 +205,7 @@
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
 
-<!-- 7 · SCAN 3 -->
+<!-- 9 · SCAN 3 -->
 <section class="slide">
   <div class="kicker">The Scan</div>
   <div class="scanstep">3</div>
@@ -187,7 +215,7 @@
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
 
-<!-- 8 · SCAN 4 -->
+<!-- 10 · SCAN 4 -->
 <section class="slide">
   <div class="kicker">The Scan</div>
   <div class="scanstep">4</div>
@@ -197,7 +225,7 @@
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
 
-<!-- 9 · SCAN 5 -->
+<!-- 11 · SCAN 5 -->
 <section class="slide">
   <div class="kicker">The Scan</div>
   <div class="scanstep">5</div>
@@ -207,7 +235,7 @@
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
 
-<!-- 10 · SCAN 6 -->
+<!-- 12 · SCAN 6 -->
 <section class="slide">
   <div class="kicker">The Scan</div>
   <div class="scanstep">6</div>
@@ -217,7 +245,7 @@
   <p class="dim">Begin at the top-right &mdash; the larger gap in the words marks the start. Hold the pleasure feeling; white becomes fire.</p>
 </section>
 
-<!-- 11 · SCAN 7 -->
+<!-- 13 · SCAN 7 -->
 <section class="slide">
   <div class="kicker">The Scan</div>
   <div class="scanstep">7</div>
@@ -227,7 +255,7 @@
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
 
-<!-- 12 · SCAN 8 -->
+<!-- 14 · SCAN 8 -->
 <section class="slide">
   <div class="kicker">The Scan</div>
   <div class="scanstep">8</div>
@@ -237,7 +265,7 @@
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
 
-<!-- 13 · SCAN 9 -->
+<!-- 15 · SCAN 9 -->
 <section class="slide">
   <div class="kicker">The Scan</div>
   <div class="scanstep">9</div>
@@ -248,7 +276,7 @@
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
 
-<!-- 14 · SCAN 10 -->
+<!-- 16 · SCAN 10 -->
 <section class="slide">
   <div class="kicker">The Scan</div>
   <div class="scanstep">10</div>
@@ -258,7 +286,7 @@
   <p class="dim">No more than five seconds &mdash; it is a scan, not a study.</p>
 </section>
 
-<!-- 15 · TRANSMUTE TO GRATITUDE -->
+<!-- 17 · TRANSMUTE TO GRATITUDE -->
 <section class="slide">
   <div class="kicker">Step Five</div>
   <h2>Transmute to Gratitude</h2>
@@ -267,7 +295,7 @@
   <p>Rest in that feeling.</p>
 </section>
 
-<!-- 16 · THE FIVE WORDS AGAIN -->
+<!-- 18 · THE FIVE WORDS AGAIN -->
 <section class="slide">
   <div class="kicker">Step Six &middot; Speak Aloud</div>
   <div class="words">
@@ -280,7 +308,7 @@
   <p>Speak the same five words again &mdash; this time feeling a surge of gratitude as you say them.</p>
 </section>
 
-<!-- 17 · LIGHT FROM THE DARK -->
+<!-- 19 · LIGHT FROM THE DARK -->
 <section class="slide">
   <div class="kicker">Step Seven</div>
   <h2>Light From The Dark</h2>
@@ -290,7 +318,7 @@
   <p class="dim">While you are still learning, this step is optional &mdash; the ritual works without it.</p>
 </section>
 
-<!-- 18 · CLOSE -->
+<!-- 20 · CLOSE -->
 <section class="slide">
   <div class="kicker">Step Eight &middot; Close</div>
   <div class="done">It is done.</div>
