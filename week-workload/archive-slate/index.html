@@ -58,6 +58,17 @@
     <h3>⏱ Time on site, by property</h3>
     <div id="averages"><p class="small">Loading…</p></div>
   </div>
+  <div class="card">
+    <h3 style="margin-top:0;">How to read this page</h3>
+    <p class="small" style="margin:0; line-height:1.55;">
+      <strong>Customer / Property</strong> — who the work was for, and where.<br>
+      <strong>Work done</strong> — what was done on that visit.<br>
+      <strong>Status</strong> — ✅ Finished = completed · Scheduled = coming up.<br>
+      <strong>Time on site</strong> — <strong>You:</strong> the start/finish times you reported. <strong>Phone:</strong> times captured automatically from your phone's location (accurate to about 15 minutes).<br>
+      <strong>Averages</strong> — your typical minutes at each property, figured separately from your reported times and from the phone's times, so the two can be checked against each other.
+    </p>
+  </div>
+
   <div id="results"></div>
   <p class="small" style="margin-top:24px;">Design preview: Ocean Slate. Same data, same search — pick the look you like and it becomes the archive.</p>
 </div>
@@ -66,10 +77,10 @@ var ALL = [];
 function mins(it){ return (typeof it.minutes === 'number') ? it.minutes : null; }
 function timeText(it){
   var parts = [];
-  if (it.start && it.finish && mins(it) !== null) parts.push(it.start + ' – ' + it.finish + ' (' + it.minutes + ' min)');
-  else if (it.start && it.finish) parts.push(it.start + ' – ' + it.finish);
-  if (typeof it.auto_minutes === 'number') parts.push('<span class="small">auto: ' + (it.auto_start || '?') + ' – ' + (it.auto_finish || '?') + ' (' + it.auto_minutes + ' min)</span>');
-  else if (it.auto_start && !it.auto_finish) parts.push('<span class="small">auto: arrived ' + it.auto_start + '</span>');
+  if (it.start && it.finish && mins(it) !== null) parts.push('You: ' + it.start + ' – ' + it.finish + ' (' + it.minutes + ' min)');
+  else if (it.start && it.finish) parts.push('You: ' + it.start + ' – ' + it.finish);
+  if (typeof it.auto_minutes === 'number') parts.push('<span class="small">Phone: ' + (it.auto_start || '?') + ' – ' + (it.auto_finish || '?') + ' (' + it.auto_minutes + ' min)</span>');
+  else if (it.auto_start && !it.auto_finish) parts.push('<span class="small">Phone: arrived ' + it.auto_start + '</span>');
   return parts.length ? parts.join('<br>') : '—';
 }
 function statusPill(it){
@@ -105,7 +116,7 @@ function renderAverages(){
   rows.sort(function(a,b){ return b.v.visits - a.v.visits; });
   var el = document.getElementById('averages');
   if (!rows.length){ el.innerHTML = '<p class="small">No properties on record yet.</p>'; return; }
-  var html = '<div class="tblwrap"><table><tr><th>Property</th><th>Visits</th><th>Avg — manual</th><th>Avg — auto</th></tr>';
+  var html = '<div class="tblwrap"><table><tr><th>Property</th><th>Visits on record</th><th>Avg time — your reported times</th><th>Avg time — phone location</th></tr>';
   rows.forEach(function(r){
     var avgM = r.v.timed ? Math.round(r.v.total / r.v.timed) + ' min (' + r.v.timed + ' timed)' : '—';
     var avgA = r.v.timedA ? Math.round(r.v.totalA / r.v.timedA) + ' min (' + r.v.timedA + ' timed)' : '—';
@@ -128,7 +139,7 @@ function render(query){
       });
       if (!items.length) return;
       shown += items.length;
-      weekHtml += '<div class="day"><h3>' + d.label + '</h3><div class="tblwrap"><table><tr><th>Job</th><th>Scope</th><th>Status</th><th>Time on site</th></tr>';
+      weekHtml += '<div class="day"><h3>' + d.label + '</h3><div class="tblwrap"><table><tr><th>Customer / Property</th><th>Work done</th><th>Status</th><th>Time on site (start – finish)</th></tr>';
       items.forEach(function(it){
         weekHtml += '<tr' + (it.status === 'done' ? ' class="done"' : '') + '><td><strong>' + it.name + '</strong>' + (it.address ? '<br><span class="small">' + it.address + '</span>' : '') + '</td><td>' + it.scope + '</td><td>' + statusPill(it) + '</td><td>' + timeText(it) + '</td></tr>';
       });
