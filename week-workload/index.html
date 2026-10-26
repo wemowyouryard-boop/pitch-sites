@@ -37,6 +37,9 @@
   .wx-chip.ok { background: #eef7ee; color: #0d4718; }
   .wx-chip.watch { background: #fdf0c0; color: #7a5b00; }
   .wx-chip.risk { background: #f8d2d2; color: #8c1d1d; }
+  .money-strip { background:#eef7ee; border:2px solid #2e7d32; border-radius:14px; padding:14px 18px; margin:0 0 18px; }
+  .money-strip .amt { font-size:26px; font-weight:800; color:#0d4718; letter-spacing:-0.3px; }
+  .money-strip .lbl { font-size:15px; color:#10160d; }
 </style>
 </head>
 <body>
@@ -44,6 +47,10 @@
   <h1>Week's Workload</h1>
   <p class="sub">Monday Oct 26 – Sunday Nov 1, 2026 · Giving Tree Lawn Care, LLC · Routes start at home (1501 Oakhill Lane), first yard 7:30 AM, ~30 min per stop.</p>
   <p class="sub">📚 <a href="archive/"><strong>Workload Archive</strong></a> — every week on record, searchable by name, address, or date, with start/finish times and how long each property takes.</p>
+
+  <div class="money-strip" id="invoices-due">
+    <span class="amt">$187.50</span> <span class="lbl"><strong>invoices due by Sunday, Nov 1, 2026</strong> — total unpaid, all customers combined.</span>
+  </div>
 
   <div class="wx-live" id="wx-live">
     <h3>🌦 Live Rain-Delay Watch — Oklahoma City</h3>
