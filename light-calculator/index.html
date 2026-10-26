@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christmas Lights Cost Calculator — Giving Tree Lawn Care, LLC | Oklahoma City</title>
+<meta name="description" content="Instant estimate for professional Christmas light installation in Oklahoma City. $5 per foot — materials, installation, and takedown all included. Free exact quote: call or text 405-226-4100.">
+<style>
+  :root{
+    --green:#0e3b2e;
+    --green-2:#14503d;
+    --gold:#d4af37;
+    --gold-soft:#f3e5b8;
+    --cream:#fdfaf2;
+    --ink:#1c2a24;
+    --muted:#5c6b63;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:linear-gradient(160deg,var(--green) 0%,#0a2c22 100%);
+    color:var(--ink);
+    min-height:100vh;
+    padding:24px 16px 48px;
+  }
+  .wrap{max-width:640px;margin:0 auto}
+  header{text-align:center;color:var(--cream);padding:12px 8px 20px}
+  header .lights{font-size:22px;letter-spacing:6px;color:var(--gold)}
+  header h1{font-size:30px;line-height:1.2;margin:8px 0 6px;font-weight:800}
+  header p{color:var(--gold-soft);font-size:16px}
+  .card{
+    background:var(--cream);
+    border-radius:16px;
+    padding:26px 22px;
+    box-shadow:0 12px 32px rgba(0,0,0,.35);
+    border-top:5px solid var(--gold);
+  }
+  .rate-banner{
+    background:var(--green);
+    color:var(--cream);
+    border-radius:10px;
+    text-align:center;
+    padding:14px 12px;
+    margin-bottom:22px;
+  }
+  .rate-banner .big{font-size:26px;font-weight:800;color:var(--gold)}
+  .rate-banner .small{font-size:14px;color:var(--gold-soft)}
+  label.field-label{display:block;font-weight:700;font-size:16px;margin:18px 0 8px;color:var(--green)}
+  .feet-row{display:flex;gap:12px;align-items:center}
+  input[type=range]{flex:1;accent-color:var(--green-2);height:32px}
+  .feet-num{display:flex;align-items:center;gap:6px}
+  input[type=number]{
+    width:88px;padding:10px;font-size:18px;font-weight:700;text-align:center;
+    border:2px solid var(--green-2);border-radius:8px;color:var(--green);background:#fff;
+  }
+  .unit{font-weight:700;color:var(--muted)}
+  .hint{font-size:13px;color:var(--muted);margin-top:4px}
+  .toggle-row{
+    display:flex;justify-content:space-between;align-items:center;gap:14px;
+    background:#fff;border:1px solid #e4ddc8;border-radius:10px;
+    padding:14px 16px;margin-top:16px;
+  }
+  .toggle-row .t-text{font-weight:700;font-size:15px;color:var(--ink)}
+  .toggle-row .t-sub{font-size:13px;color:var(--muted);font-weight:400;margin-top:2px}
+  .switch{position:relative;width:52px;height:30px;flex:none}
+  .switch input{opacity:0;width:0;height:0}
+  .slider-ui{position:absolute;cursor:pointer;inset:0;background:#cfd6d1;border-radius:30px;transition:.2s}
+  .slider-ui:before{content:"";position:absolute;height:24px;width:24px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+  .switch input:checked + .slider-ui{background:var(--green-2)}
+  .switch input:checked + .slider-ui:before{transform:translateX(22px)}
+  .tree-count{display:none;margin-top:12px}
+  .tree-count.open{display:block}
+  .tree-count select{
+    width:100%;padding:11px;font-size:16px;border:2px solid var(--green-2);
+    border-radius:8px;background:#fff;color:var(--ink);font-weight:600;
+  }
+  .note-box{
+    display:none;background:#fff7dd;border:1px solid var(--gold);border-radius:10px;
+    padding:12px 14px;margin-top:14px;font-size:14px;color:#6b5410;
+  }
+  .note-box.open{display:block}
+  .result{
+    margin-top:24px;background:var(--green);color:var(--cream);
+    border-radius:12px;padding:20px;text-align:center;
+  }
+  .result .r-label{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-soft)}
+  .result .r-total{font-size:44px;font-weight:800;color:var(--gold);line-height:1.1;margin:4px 0}
+  .result .r-feet{font-size:15px;color:var(--gold-soft)}
+  .included{margin-top:20px}
+  .included h2{font-size:16px;color:var(--green);margin-bottom:8px}
+  .included ul{list-style:none}
+  .included li{padding:6px 0 6px 28px;position:relative;font-size:15px;border-bottom:1px dashed #e4ddc8}
+  .included li:last-child{border-bottom:none}
+  .included li:before{content:"✓";position:absolute;left:2px;color:var(--green-2);font-weight:800}
+  .cta{margin-top:22px;text-align:center}
+  .cta a.call{
+    display:block;background:var(--gold);color:#231a02;text-decoration:none;
+    font-size:19px;font-weight:800;padding:16px;border-radius:12px;
+    box-shadow:0 4px 14px rgba(212,175,55,.45);
+  }
+  .cta a.text{
+    display:block;margin-top:10px;background:transparent;color:var(--green);
+    border:2px solid var(--green);text-decoration:none;font-size:16px;font-weight:700;
+    padding:13px;border-radius:12px;
+  }
+  .booking{text-align:center;font-weight:700;color:#8a1f1f;margin-top:16px;font-size:15px}
+  .fineprint{font-size:12.5px;color:var(--muted);text-align:center;margin-top:12px;line-height:1.5}
+  footer{text-align:center;color:var(--gold-soft);font-size:13.5px;margin-top:22px;line-height:1.6}
+  footer strong{color:var(--cream)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="lights">✦ ✦ ✦</div>
+    <h1>Christmas Lights Cost Calculator</h1>
+    <p>Professional installation for Oklahoma City homes</p>
+  </header>
+
+  <div class="card">
+    <div class="rate-banner">
+      <div class="big">$5 per foot — everything included</div>
+      <div class="small">Materials &middot; Professional installation &middot; Takedown after the season</div>
+    </div>
+
+    <label class="field-label" for="feetRange">How many feet of roofline?</label>
+    <div class="feet-row">
+      <input type="range" id="feetRange" min="40" max="400" step="5" value="120">
+      <div class="feet-num">
+        <input type="number" id="feetNum" min="40" max="400" step="5" value="120">
+        <span class="unit">ft</span>
+      </div>
+    </div>
+    <p class="hint">Most single-story homes run 100–150 ft of front roofline. Not sure? We'll measure free with your exact quote.</p>
+
+    <div class="toggle-row">
+      <div>
+        <div class="t-text">Add tree wraps</div>
+        <div class="t-sub">Wrapped trees use about 50 ft of lights each — priced at the same $5/ft.</div>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="treeToggle">
+        <span class="slider-ui"></span>
+      </label>
+    </div>
+    <div class="tree-count" id="treeCountWrap">
+      <label class="field-label" for="treeCount" style="margin-top:4px">How many trees?</label>
+      <select id="treeCount">
+        <option value="1">1 tree</option>
+        <option value="2">2 trees</option>
+        <option value="3">3 trees</option>
+        <option value="4">4 trees</option>
+        <option value="5">5 trees</option>
+      </select>
+    </div>
+
+    <div class="toggle-row">
+      <div>
+        <div class="t-text">Two-story home</div>
+        <div class="t-sub">Second-story rooflines are measured and quoted on site.</div>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="storyToggle">
+        <span class="slider-ui"></span>
+      </label>
+    </div>
+    <div class="note-box" id="storyNote">Two-story note: upper rooflines need an on-site look for safe ladder and lift access, so your exact quote confirms the second-story footage in person — no surprises, the $5/ft rate still applies to every foot we hang.</div>
+
+    <div class="result">
+      <div class="r-label">Your instant estimate</div>
+      <div class="r-total" id="totalOut">$600</div>
+      <div class="r-feet" id="feetOut">120 ft of lights at $5/ft</div>
+    </div>
+
+    <div class="included">
+      <h2>Every estimate includes:</h2>
+      <ul>
+        <li>All lights and materials — we supply everything</li>
+        <li>Professional design and installation — you never touch a ladder</li>
+        <li>Takedown after the season, included in the same price</li>
+        <li>A local Oklahoma City crew you can call or text anytime</li>
+      </ul>
+    </div>
+
+    <div class="cta">
+      <a class="call" href="tel:+14052264100">Get your exact free quote — call 405-226-4100</a>
+      <a class="text" href="sms:+14052264100">Or text us at 405-226-4100</a>
+    </div>
+    <p class="booking">Booking now — the install calendar fills fast.</p>
+    <p class="fineprint">This is an instant ballpark based on the footage you enter. Your exact free quote confirms the real measurement at your home — the price is $5 per foot of lights installed, with materials, installation, and takedown all included.</p>
+  </div>
+
+  <footer>
+    <strong>Giving Tree Lawn Care, LLC</strong><br>
+    Oklahoma City, Oklahoma<br>
+    10443 North May Ave, #754, Oklahoma City, OK 73120 &middot; 405-226-4100
+  </footer>
+</div>
+
+<script>
+  var PRICE = 5, TREE_FEET = 50;
+  var range = document.getElementById('feetRange');
+  var num = document.getElementById('feetNum');
+  var treeToggle = document.getElementById('treeToggle');
+  var treeCountWrap = document.getElementById('treeCountWrap');
+  var treeCount = document.getElementById('treeCount');
+  var storyToggle = document.getElementById('storyToggle');
+  var storyNote = document.getElementById('storyNote');
+  var totalOut = document.getElementById('totalOut');
+  var feetOut = document.getElementById('feetOut');
+
+  function clampFeet(v){
+    v = parseInt(v, 10);
+    if (isNaN(v)) v = 120;
+    if (v < 40) v = 40;
+    if (v > 400) v = 400;
+    return v;
+  }
+  function money(n){ return '$' + n.toLocaleString('en-US'); }
+  function update(){
+    var feet = clampFeet(range.value);
+    var trees = treeToggle.checked ? parseInt(treeCount.value, 10) : 0;
+    var treeFeet = trees * TREE_FEET;
+    var totalFeet = feet + treeFeet;
+    totalOut.textContent = money(totalFeet * PRICE);
+    var desc = feet + ' ft of roofline';
+    if (trees > 0) desc += ' + ' + trees + (trees === 1 ? ' tree' : ' trees') + ' (' + treeFeet + ' ft)';
+    desc += ' = ' + totalFeet + ' ft at $5/ft';
+    feetOut.textContent = desc;
+  }
+  range.addEventListener('input', function(){ num.value = range.value; update(); });
+  num.addEventListener('input', function(){ range.value = clampFeet(num.value); update(); });
+  num.addEventListener('change', function(){ num.value = clampFeet(num.value); range.value = num.value; update(); });
+  treeToggle.addEventListener('change', function(){
+    treeCountWrap.classList.toggle('open', treeToggle.checked);
+    update();
+  });
+  treeCount.addEventListener('change', update);
+  storyToggle.addEventListener('change', function(){
+    storyNote.classList.toggle('open', storyToggle.checked);
+  });
+  update();
+</script>
+</body>
+</html>
