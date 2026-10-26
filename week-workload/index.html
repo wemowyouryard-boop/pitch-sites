@@ -40,8 +40,8 @@
   .money-strip { background:#eef7ee; border:2px solid #2e7d32; border-radius:14px; padding:14px 18px; margin:0 0 18px; }
   .money-strip .amt { font-size:26px; font-weight:800; color:#0d4718; letter-spacing:-0.3px; }
   .money-strip .lbl { font-size:15px; color:#10160d; }
-  .page-frame { position: fixed; inset: 0; border: 6px solid #2e7d32; pointer-events: none; z-index: 9999; }
-  @media (max-width: 700px) { .page-frame { border-width: 4px; } }
+  .page-frame { position: fixed; inset: 0; box-shadow: inset 0 0 0 6px #2e7d32; pointer-events: none; z-index: 9999; transform: translateZ(0); will-change: transform; }
+  @media (max-width: 700px) { .page-frame { box-shadow: inset 0 0 0 4px #2e7d32; } }
 </style>
 </head>
 <body>
@@ -106,7 +106,7 @@
   <h2 data-date="2026-10-29">Thursday, Oct 29 — Growing Beauty (Donovan), afternoon <span class="wx-badge" data-wx-badge>…</span></h2>
   <p class="crew">Crew: Justin + Jason</p>
   <div class="card">
-    <p style="margin:0;"><strong>Afternoon only: 1:00 PM – 5:00 PM.</strong> Meet at Justin's house (1501 Oakhill Lane) at 1:00 PM. No property list given for Thursday yet.</p>
+    <p style="margin:0;"><strong>Afternoon only: 1:00 PM – 5:00 PM.</strong> Meet at Donovan's house (2504 NW 154th St, Edmond) at 1:00 PM. No property list given for Thursday yet.</p>
   </div>
   <div class="note"><strong>Eira:</strong> PJ Day (pajamas).</div>
 
