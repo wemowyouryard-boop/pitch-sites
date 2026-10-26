@@ -43,8 +43,8 @@
               "finish": null,
               "minutes": null,
               "auto_start": "13:29",
-              "auto_finish": null,
-              "auto_minutes": null
+              "auto_finish": "14:59",
+              "auto_minutes": 90
             }
           ]
         },
