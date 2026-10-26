@@ -24,6 +24,18 @@
   .small { font-size: 13px; color: #5a6653; }
   tr.done td { background: #d9f0d9; }
   .done-tag { color: #1e6b1e; font-weight: 700; }
+  .wx-badge { float: right; font-size: 12.5px; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: #e8e8e8; color: #333; letter-spacing: 0; text-transform: none; }
+  .wx-badge.ok { background: #d9f0d9; color: #1e6b1e; }
+  .wx-badge.watch { background: #fdf0c0; color: #7a5b00; }
+  .wx-badge.risk { background: #f8d2d2; color: #8c1d1d; }
+  .wx-live { border: 1px solid #c9d6bd; background: #f2f7ee; border-radius: 10px; padding: 12px 16px; margin: 12px 0 4px; }
+  .wx-live h3 { margin: 0 0 4px; font-size: 16px; }
+  .wx-updated { font-size: 12.5px; color: #5a6653; margin: 0 0 8px; }
+  .wx-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .wx-chip { font-size: 13px; padding: 4px 10px; border-radius: 999px; background: #e8e8e8; color: #333; font-weight: 600; }
+  .wx-chip.ok { background: #d9f0d9; color: #1e6b1e; }
+  .wx-chip.watch { background: #fdf0c0; color: #7a5b00; }
+  .wx-chip.risk { background: #f8d2d2; color: #8c1d1d; }
 </style>
 </head>
 <body>
@@ -31,7 +43,13 @@
   <h1>Week's Workload</h1>
   <p class="sub">Monday Oct 26 – Sunday Nov 1, 2026 · Giving Tree Lawn Care, LLC · Routes start at home (1501 Oakhill Lane), first yard 7:30 AM, ~30 min per stop.</p>
 
-  <h2>Monday, Oct 26 — Route, 3 stops</h2>
+  <div class="wx-live" id="wx-live">
+    <h3>🌦 Live Rain-Delay Watch — Oklahoma City</h3>
+    <p class="wx-updated" id="wx-updated">Loading live forecast…</p>
+    <div class="wx-chips" id="wx-chips"></div>
+  </div>
+
+  <h2 data-date="2026-10-26">Monday, Oct 26 — Route, 3 stops <span class="wx-badge" data-wx-badge>…</span>
   <p class="crew">Crew: Justin + Jason</p>
   <table>
     <tr><th>Time</th><th>Stop</th><th>Notes</th></tr>
@@ -45,7 +63,7 @@
   </div>
   <div class="note"><strong>Eira — Red Ribbon Week starts:</strong> Manic Monday (dress crazy).</div>
 
-  <h2>Tuesday, Oct 27 — Growing Beauty (Donovan), 4 jobs</h2>
+  <h2 data-date="2026-10-27">Tuesday, Oct 27 — Growing Beauty (Donovan), 4 jobs <span class="wx-badge" data-wx-badge>…</span>
   <p class="crew">Crew: Justin + Jason · Full instructions with pictures: <a href="https://wemowyouryard-boop.github.io/pitch-sites/donovan-week/">Donovan's instruction sheet</a></p>
   <table>
     <tr><th>#</th><th>Job</th><th>Scope</th></tr>
@@ -56,7 +74,7 @@
   </table>
   <div class="note"><strong>Eira:</strong> Team Day (favorite team gear).</div>
 
-  <h2>Wednesday, Oct 28 — Growing Beauty (Donovan), 5 jobs</h2>
+  <h2 data-date="2026-10-28">Wednesday, Oct 28 — Growing Beauty (Donovan), 5 jobs <span class="wx-badge" data-wx-badge>…</span>
   <p class="crew">Crew: Justin only (Jason unavailable)</p>
   <table>
     <tr><th>#</th><th>Job</th><th>Scope</th></tr>
@@ -68,14 +86,14 @@
   </table>
   <div class="note"><strong>Eira:</strong> Workout Wednesday (workout gear).</div>
 
-  <h2>Thursday, Oct 29 — Growing Beauty (Donovan), afternoon</h2>
+  <h2 data-date="2026-10-29">Thursday, Oct 29 — Growing Beauty (Donovan), afternoon <span class="wx-badge" data-wx-badge>…</span>
   <p class="crew">Crew: Justin + Jason</p>
   <div class="card">
     <p style="margin:0;"><strong>Afternoon only: 1:00 PM – 5:00 PM.</strong> Meet at Justin's house (1501 Oakhill Lane) at 1:00 PM. No property list given for Thursday yet.</p>
   </div>
   <div class="note"><strong>Eira:</strong> PJ Day (pajamas).</div>
 
-  <h2>Friday, Oct 30 — Route (Friday #2), 11 stops</h2>
+  <h2 data-date="2026-10-30">Friday, Oct 30 — Route (Friday #2), 11 stops <span class="wx-badge" data-wx-badge>…</span>
   <p class="crew">Crew: Justin + Jason</p>
   <table>
     <tr><th>Time</th><th>Stop</th><th>Address</th></tr>
@@ -93,12 +111,12 @@
   </table>
   <div class="note"><strong>Eira:</strong> Halloween Costume Day at school — she needs her costume this morning.</div>
 
-  <h2>Saturday, Oct 31 — Halloween (no route)</h2>
+  <h2 data-date="2026-10-31">Saturday, Oct 31 — Halloween (no route) <span class="wx-badge" data-wx-badge>…</span>
   <div class="card">
     <p style="margin:0;"><strong>Eric's Toy Extravaganza: Halloween Edition</strong> — Cleveland County Fairgrounds, 615 E Robinson St, Norman. Early entry 9:00 AM ($10 entry), show hours 10:00 AM–5:00 PM ($5 entry). Costume contest with prizes for all ages, trick-or-treat the vendors, hourly raffles, hundreds of toy/comic vendors. <strong>Taking Quentin and Eira.</strong></p>
   </div>
 
-  <h2 class="off">Sunday, Nov 1 — Nothing scheduled</h2>
+  <h2 data-date="2026-11-01" class="off">Sunday, Nov 1 — Nothing scheduled <span class="wx-badge" data-wx-badge>…</span>
   <div class="card">
     <ul style="margin:0 0 0 18px; padding:0;">
       <li>Tamara Gorbet's invoice ($187.50) is due today.</li>
@@ -111,5 +129,67 @@
   </div>
 
 </div>
+
+<script>
+// Live rain-delay watch — pulls the current Oklahoma City forecast (Open-Meteo, no key needed)
+// and flags each day on this page. Refreshes on load and every 30 minutes while open.
+(function () {
+  var LAT = 35.4676, LON = -97.5164; // Oklahoma City
+  var URL = 'https://api.open-meteo.com/v1/forecast?latitude=' + LAT + '&longitude=' + LON +
+    '&daily=weather_code,precipitation_sum,precipitation_probability_max' +
+    '&precipitation_unit=inch&timezone=America%2FChicago&forecast_days=16';
+
+  function classify(prob, inches) {
+    if ((prob !== null && prob >= 50) || inches >= 0.15) return { cls: 'risk', label: '🌧 Rain delay risk' };
+    if ((prob !== null && prob >= 30) || inches >= 0.05) return { cls: 'watch', label: '⚠️ Rain watch' };
+    return { cls: 'ok', label: '✅ No delay expected' };
+  }
+  function detail(prob, inches) {
+    var p = (prob === null || prob === undefined) ? '' : prob + '%';
+    var i = (inches === null || inches === undefined) ? '' : inches.toFixed(2) + ' in';
+    return [p, i].filter(Boolean).join(' · ');
+  }
+  function dayName(iso) {
+    var d = new Date(iso + 'T12:00:00');
+    return d.toLocaleDateString('en-US', { weekday: 'short' });
+  }
+
+  function render(daily) {
+    var byDate = {};
+    for (var i = 0; i < daily.time.length; i++) {
+      byDate[daily.time[i]] = {
+        prob: daily.precipitation_probability_max[i],
+        inches: daily.precipitation_sum[i] || 0
+      };
+    }
+    var chips = [];
+    document.querySelectorAll('h2[data-date]').forEach(function (h) {
+      var date = h.getAttribute('data-date');
+      var f = byDate[date];
+      var badge = h.querySelector('[data-wx-badge]');
+      if (!f) { if (badge) { badge.textContent = 'No forecast'; badge.className = 'wx-badge'; } return; }
+      var c = classify(f.prob, f.inches);
+      var txt = c.label + ' — ' + detail(f.prob, f.inches);
+      if (badge) { badge.textContent = txt; badge.className = 'wx-badge ' + c.cls; }
+      chips.push('<span class="wx-chip ' + c.cls + '">' + dayName(date) + ': ' + txt + '</span>');
+    });
+    var box = document.getElementById('wx-chips');
+    if (box) box.innerHTML = chips.join('');
+    var upd = document.getElementById('wx-updated');
+    if (upd) upd.textContent = 'Live forecast updated ' + new Date().toLocaleString('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) + ' · refreshes automatically every 30 min while this page is open.';
+  }
+
+  function load() {
+    fetch(URL).then(function (r) { return r.json(); }).then(function (j) {
+      if (j && j.daily) render(j.daily);
+    }).catch(function () {
+      var upd = document.getElementById('wx-updated');
+      if (upd) upd.textContent = 'Live forecast unavailable right now — badges will retry on refresh.';
+    });
+  }
+  load();
+  setInterval(load, 30 * 60 * 1000);
+})();
+</script>
 </body>
 </html>
