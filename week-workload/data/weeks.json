@@ -177,6 +177,19 @@
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null
+      },
+      {
+       "name": "Quentin Marks \u2014 Just Kids Pediatrics appointment",
+       "address": "Just Kids Pediatrics, Bethany",
+       "scope": null,
+       "status": "scheduled",
+       "start": "3:45 PM",
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "date": "2026-10-28"
       }
      ]
     },
