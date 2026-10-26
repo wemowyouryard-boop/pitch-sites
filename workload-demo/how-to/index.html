@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Use — Workload Platform (Demo)</title>
+<style>
+  :root { --green:#1d4d22; --accent:#16a34a; --ink:#152111; --muted:#5c6e55; --bg:#f4f6f2; --card:#ffffff; --line:#e2e8dd; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: ui-rounded, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px 56px; }
+  nav.tabs { display:flex; flex-wrap:wrap; gap:8px; margin: 0 -20px; padding: 14px 20px; background: var(--green); border-radius: 0 0 20px 20px; }
+  nav.tabs a { color:#eaf5ea; text-decoration:none; font-weight:700; font-size:15px; padding:8px 14px; border-radius:999px; background: rgba(255,255,255,.12); }
+  nav.tabs a.active { background:#ffffff; color: var(--green); }
+  h1 { font-size: 28px; letter-spacing:-0.5px; margin: 26px 0 8px; }
+  .sub { color: var(--muted); font-size: 16px; line-height: 1.55; }
+  .card { background: var(--card); border:1px solid var(--line); border-radius:16px; padding:18px 20px; margin:16px 0; box-shadow: 0 6px 20px rgba(30,60,30,.08); }
+  .card h2 { margin: 0 0 8px; font-size: 20px; }
+  .card p, .card li { font-size: 16px; line-height: 1.6; }
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+  .steps li { counter-increment: step; padding: 10px 0 10px 52px; position: relative; font-size: 16px; line-height: 1.55; }
+  .steps li::before { content: counter(step); position: absolute; left: 0; top: 6px; width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 800; display:flex; align-items:center; justify-content:center; font-size: 18px; }
+  table { width:100%; border-collapse: collapse; }
+  th, td { padding: 9px; text-align:left; font-size: 15px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .5px; }
+  .pill { display:inline-block; padding:3px 11px; border-radius:999px; font-size:12px; font-weight:700; white-space:nowrap; }
+  .paid { background:#e7f6e9; color:#166534; } .due { background:#fdf6e0; color:#92600a; } .over { background:#fdeaea; color:#991b1b; }
+  .total { font-size: 20px; font-weight: 800; }
+  .tblwrap { overflow-x:auto; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="tabs">
+    <a href="/pitch-sites/workload-demo/">📅 This Week</a>
+    <a href="/pitch-sites/workload-demo/archive/">📚 Archive</a>
+    <a href="/pitch-sites/workload-demo/invoicing/">🧾 Invoicing</a>
+    <a href="/pitch-sites/workload-demo/how-to/" class="active">❓ How to Use</a>
+    <a href="/pitch-sites/workload-demo/purpose/">🎯 What It's For</a>
+    <a href="/pitch-sites/workload-demo/about/">👋 About Us</a>
+  </nav>
+
+  <h1>❓ How to Use</h1>
+  <p class="sub">No app to learn, no logins to remember. If you can send a text, you can run this.</p>
+  <div class="card">
+    <ol class="steps">
+      <li><strong>We set up your week.</strong> Send us your customers and routes once — we build your week page, your archive, and your customer list.</li>
+      <li><strong>Work your week like always.</strong> Your week page shows each day's stops. Finished a yard? Just tell us — or tap check-in on your phone — and the stop is marked finished on your page the same day.</li>
+      <li><strong>Times log themselves.</strong> Your phone's location can stamp when you arrive at and leave each property. You can also give us times yourself ("Johnson, 7:31 to 8:02") — both are kept, side by side, so the numbers check each other.</li>
+      <li><strong>Look back anytime.</strong> Your archive holds every week. Search any customer or street and see every visit, how long it took, and what was done.</li>
+      <li><strong>Billing takes minutes.</strong> Invoices build from the finished work. Review them, send them, and watch the total due on the 1st — one number, always current.</li>
+    </ol>
+  </div>
+  <div class="card">
+    <h2>What if something changes mid-week?</h2>
+    <p>Rain delay, a skipped yard, a new customer — just say the word and the week updates. The rain watch on your page flags risky days by itself, straight from the live forecast.</p>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invoicing — Workload Platform (Demo)</title>
+<style>
+  :root { --green:#1d4d22; --accent:#16a34a; --ink:#152111; --muted:#5c6e55; --bg:#f4f6f2; --card:#ffffff; --line:#e2e8dd; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: ui-rounded, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px 56px; }
+  nav.tabs { display:flex; flex-wrap:wrap; gap:8px; margin: 0 -20px; padding: 14px 20px; background: var(--green); border-radius: 0 0 20px 20px; }
+  nav.tabs a { color:#eaf5ea; text-decoration:none; font-weight:700; font-size:15px; padding:8px 14px; border-radius:999px; background: rgba(255,255,255,.12); }
+  nav.tabs a.active { background:#ffffff; color: var(--green); }
+  h1 { font-size: 28px; letter-spacing:-0.5px; margin: 26px 0 8px; }
+  .sub { color: var(--muted); font-size: 16px; line-height: 1.55; }
+  .card { background: var(--card); border:1px solid var(--line); border-radius:16px; padding:18px 20px; margin:16px 0; box-shadow: 0 6px 20px rgba(30,60,30,.08); }
+  .card h2 { margin: 0 0 8px; font-size: 20px; }
+  .card p, .card li { font-size: 16px; line-height: 1.6; }
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+  .steps li { counter-increment: step; padding: 10px 0 10px 52px; position: relative; font-size: 16px; line-height: 1.55; }
+  .steps li::before { content: counter(step); position: absolute; left: 0; top: 6px; width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 800; display:flex; align-items:center; justify-content:center; font-size: 18px; }
+  table { width:100%; border-collapse: collapse; }
+  th, td { padding: 9px; text-align:left; font-size: 15px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .5px; }
+  .pill { display:inline-block; padding:3px 11px; border-radius:999px; font-size:12px; font-weight:700; white-space:nowrap; }
+  .paid { background:#e7f6e9; color:#166534; } .due { background:#fdf6e0; color:#92600a; } .over { background:#fdeaea; color:#991b1b; }
+  .total { font-size: 20px; font-weight: 800; }
+  .tblwrap { overflow-x:auto; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="tabs">
+    <a href="/pitch-sites/workload-demo/">📅 This Week</a>
+    <a href="/pitch-sites/workload-demo/archive/">📚 Archive</a>
+    <a href="/pitch-sites/workload-demo/invoicing/" class="active">🧾 Invoicing</a>
+    <a href="/pitch-sites/workload-demo/how-to/">❓ How to Use</a>
+    <a href="/pitch-sites/workload-demo/purpose/">🎯 What It's For</a>
+    <a href="/pitch-sites/workload-demo/about/">👋 About Us</a>
+  </nav>
+
+  <h1>🧾 Invoicing</h1>
+  <p class="sub">Invoices build themselves from the work in your archive — every finished job is already on record, so billing is just reviewing and sending. (Demo business, sample invoices.)</p>
+  <div class="card">
+    <p class="total" style="margin:0;">Due on the 1st: $552.50 total</p>
+    <p class="sub" style="margin:6px 0 0;">One number for everything coming due — no digging through individual invoices unless you want to.</p>
+  </div>
+  <div class="card">
+    <div class="tblwrap"><table>
+      <tr><th>Invoice</th><th>Customer</th><th>For</th><th>Due</th><th>Amount</th><th>Status</th></tr>
+      <tr><td>#1041</td><td><strong>Johnson Residence</strong></td><td>October weekly mowing plan</td><td>Oct 1</td><td>$340.00</td><td><span class="pill paid">Paid</span></td></tr>
+      <tr><td>#1042</td><td><strong>Faith Community Church</strong></td><td>October grounds service</td><td>Nov 1</td><td>$240.00</td><td><span class="pill due">Due</span></td></tr>
+      <tr><td>#1043</td><td><strong>Brooks Apartments</strong></td><td>October common-area service</td><td>Nov 1</td><td>$312.50</td><td><span class="pill due">Due</span></td></tr>
+      <tr><td>#1038</td><td><strong>Nguyen Residence</strong></td><td>September biweekly service</td><td>Oct 1</td><td>$95.00</td><td><span class="pill over">Overdue</span></td></tr>
+      <tr><td>#1044</td><td><strong>Riverside HOA</strong></td><td>Entrance cleanup, Oct 19</td><td>Nov 1</td><td>$0.00 — included in plan</td><td><span class="pill paid">Paid</span></td></tr>
+    </table></div>
+    <p class="sub">Each invoice carries a pay link for the customer (card, Cash App, or Venmo — your choice). When a customer pays, the invoice flips to <strong>Paid</strong> here automatically in the full version.</p>
+  </div>
+
+</div>
+</body>
+</html>
