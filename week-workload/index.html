@@ -40,9 +40,12 @@
   .money-strip { background:#eef7ee; border:2px solid #2e7d32; border-radius:14px; padding:14px 18px; margin:0 0 18px; }
   .money-strip .amt { font-size:26px; font-weight:800; color:#0d4718; letter-spacing:-0.3px; }
   .money-strip .lbl { font-size:15px; color:#10160d; }
+  .page-frame { position: fixed; inset: 0; border: 6px solid #2e7d32; pointer-events: none; z-index: 9999; }
+  @media (max-width: 700px) { .page-frame { border-width: 4px; } }
 </style>
 </head>
 <body>
+<div class="page-frame" aria-hidden="true"></div>
 <div class="wrap">
   <h1>Week's Workload</h1>
   <p class="sub">Monday Oct 26 – Sunday Nov 1, 2026 · Giving Tree Lawn Care, LLC · Routes start at home (1501 Oakhill Lane), first yard 7:30 AM, ~30 min per stop.</p>
