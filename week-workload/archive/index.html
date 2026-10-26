@@ -48,9 +48,12 @@
 var ALL = [];
 function mins(it){ return (typeof it.minutes === 'number') ? it.minutes : null; }
 function timeText(it){
-  if (it.start && it.finish && mins(it) !== null) return it.start + ' – ' + it.finish + ' (' + it.minutes + ' min)';
-  if (it.start && it.finish) return it.start + ' – ' + it.finish;
-  return '—';
+  var parts = [];
+  if (it.start && it.finish && mins(it) !== null) parts.push(it.start + ' – ' + it.finish + ' (' + it.minutes + ' min)');
+  else if (it.start && it.finish) parts.push(it.start + ' – ' + it.finish);
+  if (typeof it.auto_minutes === 'number') parts.push('<span class="small">auto: ' + (it.auto_start || '?') + ' – ' + (it.auto_finish || '?') + ' (' + it.auto_minutes + ' min)</span>');
+  else if (it.auto_start && !it.auto_finish) parts.push('<span class="small">auto: arrived ' + it.auto_start + '</span>');
+  return parts.length ? parts.join('<br>') : '—';
 }
 function statusText(it){
   if (it.status === 'done') return '<span class="tag-done">✅ Finished</span>';
@@ -62,20 +65,22 @@ function renderAverages(){
   ALL.forEach(function(w){ w.days.forEach(function(d){ d.items.forEach(function(it){
     if (!it.address) return;
     var k = it.address;
-    byAddr[k] = byAddr[k] || { name: it.name, visits: 0, timed: 0, total: 0 };
+    byAddr[k] = byAddr[k] || { name: it.name, visits: 0, timed: 0, total: 0, timedA: 0, totalA: 0 };
     byAddr[k].visits++;
     if (mins(it) !== null){ byAddr[k].timed++; byAddr[k].total += it.minutes; }
+    if (typeof it.auto_minutes === 'number'){ byAddr[k].timedA++; byAddr[k].totalA += it.auto_minutes; }
   });});});
   var rows = Object.keys(byAddr).map(function(k){ return { addr:k, v:byAddr[k] }; });
   rows.sort(function(a,b){ return b.v.visits - a.v.visits; });
   var el = document.getElementById('averages');
   if (!rows.length){ el.innerHTML = '<p class="small">No properties on record yet.</p>'; return; }
-  var html = '<table><tr><th>Property</th><th>Visits</th><th>Avg time on site</th></tr>';
+  var html = '<table><tr><th>Property</th><th>Visits</th><th>Avg time — manual</th><th>Avg time — auto (location)</th></tr>';
   rows.forEach(function(r){
-    var avg = r.v.timed ? Math.round(r.v.total / r.v.timed) + ' min (over ' + r.v.timed + ' timed visit' + (r.v.timed>1?'s':'') + ')' : 'times not logged yet';
-    html += '<tr class="avg"><td><strong>' + r.v.name + '</strong><br><span class="small">' + r.addr + '</span></td><td>' + r.v.visits + '</td><td>' + avg + '</td></tr>';
+    var avgM = r.v.timed ? Math.round(r.v.total / r.v.timed) + ' min (' + r.v.timed + ' timed)' : '—';
+    var avgA = r.v.timedA ? Math.round(r.v.totalA / r.v.timedA) + ' min (' + r.v.timedA + ' timed)' : '—';
+    html += '<tr class="avg"><td><strong>' + r.v.name + '</strong><br><span class="small">' + r.addr + '</span></td><td>' + r.v.visits + '</td><td>' + avgM + '</td><td>' + avgA + '</td></tr>';
   });
-  html += '</table><p class="small">Averages build automatically as start/finish times get logged at each visit — down to the minute.</p>';
+  html += '</table><p class="small">Two clocks run side by side: Justin\'s manual start/finish times, and the automatic location-based times — so each checks the other. Averages build as times get logged, down to the minute.</p>';
   el.innerHTML = html;
 }
 function render(query){
