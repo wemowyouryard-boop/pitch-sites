@@ -165,17 +165,11 @@
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null
-      }
-     ]
-    },
-    {
-     "date": "2026-10-29",
-     "label": "Thursday, Oct 29 \u2014 Growing Beauty (Donovan), afternoon 1\u20135 PM",
-     "items": [
+      },
       {
        "name": "Clare Hadwiger \u2014 ESTIMATE",
        "address": "3701 Oakdale Forest Rd, Edmond, OK 73113",
-       "scope": "Estimate visit: backyard cleanup quote (front-yard clean-out project completed Oct 20\u201322). Morning, before the 1 PM Donovan meet-up.",
+       "scope": "Estimate visit: backyard cleanup quote (front-yard clean-out project completed Oct 20\u201322). After the last Donovan stop of the day (1109 Jamestown Cir, ~4.5 mi away).",
        "status": "scheduled",
        "start": null,
        "finish": null,
@@ -183,7 +177,13 @@
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null
-      },
+      }
+     ]
+    },
+    {
+     "date": "2026-10-29",
+     "label": "Thursday, Oct 29 \u2014 Growing Beauty (Donovan), afternoon 1\u20135 PM",
+     "items": [
       {
        "name": "Donovan afternoon session",
        "address": "Meet at 1501 Oakhill Lane, Oklahoma City at 1 PM",
