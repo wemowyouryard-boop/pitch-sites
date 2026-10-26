@@ -48,6 +48,7 @@
       <strong>Work done</strong> — what was done on that visit.<br>
       <strong>Status</strong> — ✅ Finished = completed · Scheduled = coming up.<br>
       <strong>Time on site</strong> — <strong>You:</strong> the start/finish times you reported. <strong>Phone:</strong> times captured automatically from your phone's location (accurate to about 15 minutes).<br>
+      <strong>Man-hours</strong> — the true labor in a job: time on site × men on the crew (2 men working 1 hour = 2 man-hours).<br>
       <strong>Averages</strong> — your typical minutes at each property, figured separately from your reported times and from the phone's times, so the two can be checked against each other.
     </p>
   </div>
@@ -66,6 +67,15 @@ function timeText(it){
   else if (it.auto_start && !it.auto_finish) parts.push('<span class="small">Phone: arrived ' + it.auto_start + '</span>');
   return parts.length ? parts.join('<br>') : '—';
 }
+function manText(it, d){
+  var cs = (d && d.crew_size) ? d.crew_size : 1;
+  var mm = (typeof it.man_minutes === 'number') ? it.man_minutes : null;
+  if (mm === null && typeof it.man_auto_minutes === 'number') mm = it.man_auto_minutes;
+  if (mm === null && mins(it) !== null) mm = it.minutes * cs;
+  if (mm === null && typeof it.auto_minutes === 'number') mm = it.auto_minutes * cs;
+  if (mm === null) return '—';
+  return mm + ' min' + (cs > 1 ? ' <span class="small">(' + cs + ' men)</span>' : '');
+}
 function statusText(it){
   if (it.status === 'done') return '<span class="tag-done">✅ Finished</span>';
   if (it.status === 'note') return 'Note';
@@ -76,10 +86,15 @@ function renderAverages(){
   ALL.forEach(function(w){ w.days.forEach(function(d){ d.items.forEach(function(it){
     if (!it.address) return;
     var k = it.address;
-    byAddr[k] = byAddr[k] || { name: it.name, visits: 0, timed: 0, total: 0, timedA: 0, totalA: 0 };
+    byAddr[k] = byAddr[k] || { name: it.name, visits: 0, timed: 0, total: 0, timedA: 0, totalA: 0, timedM: 0, totalM: 0, timedMA: 0, totalMA: 0 };
     byAddr[k].visits++;
     if (mins(it) !== null){ byAddr[k].timed++; byAddr[k].total += it.minutes; }
     if (typeof it.auto_minutes === 'number'){ byAddr[k].timedA++; byAddr[k].totalA += it.auto_minutes; }
+    var cs2 = d.crew_size || 1;
+    var mmv = (typeof it.man_minutes === 'number') ? it.man_minutes : (mins(it) !== null ? it.minutes * cs2 : null);
+    if (mmv !== null){ byAddr[k].timedM++; byAddr[k].totalM += mmv; }
+    var mav = (typeof it.man_auto_minutes === 'number') ? it.man_auto_minutes : (typeof it.auto_minutes === 'number' ? it.auto_minutes * cs2 : null);
+    if (mav !== null){ byAddr[k].timedMA++; byAddr[k].totalMA += mav; }
   });});});
   var rows = Object.keys(byAddr).map(function(k){ return { addr:k, v:byAddr[k] }; });
   rows.sort(function(a,b){ return b.v.visits - a.v.visits; });
@@ -89,6 +104,8 @@ function renderAverages(){
   rows.forEach(function(r){
     var avgM = r.v.timed ? Math.round(r.v.total / r.v.timed) + ' min (' + r.v.timed + ' timed)' : '—';
     var avgA = r.v.timedA ? Math.round(r.v.totalA / r.v.timedA) + ' min (' + r.v.timedA + ' timed)' : '—';
+    if (r.v.timedM) avgM += '<br><span class="small">Man-hrs avg: ' + Math.round(r.v.totalM / r.v.timedM) + ' min</span>';
+    if (r.v.timedMA) avgA += '<br><span class="small">Man-hrs avg: ' + Math.round(r.v.totalMA / r.v.timedMA) + ' min</span>';
     html += '<tr class="avg"><td><strong>' + r.v.name + '</strong><br><span class="small">' + r.addr + '</span></td><td>' + r.v.visits + '</td><td>' + avgM + '</td><td>' + avgA + '</td></tr>';
   });
   html += '</table><p class="small">Two clocks run side by side: Justin\'s manual start/finish times, and the automatic location-based times — so each checks the other. Averages build as times get logged, down to the minute.</p>';
@@ -108,9 +125,9 @@ function render(query){
       });
       if (!items.length) return;
       shown += items.length;
-      weekHtml += '<h3>' + d.label + '</h3><table><tr><th>Customer / Property</th><th>Work done</th><th>Status</th><th>Time on site (start – finish)</th></tr>';
+      weekHtml += '<h3>' + d.label + '</h3><table><tr><th>Customer / Property</th><th>Work done</th><th>Status</th><th>Time on site (start – finish)</th><th>Man-hours</th></tr>';
       items.forEach(function(it){
-        weekHtml += '<tr' + (it.status === 'done' ? ' class="done"' : '') + '><td><strong>' + it.name + '</strong>' + (it.address ? '<br><span class="small">' + it.address + '</span>' : '') + '</td><td>' + it.scope + '</td><td>' + statusText(it) + '</td><td>' + timeText(it) + '</td></tr>';
+        weekHtml += '<tr' + (it.status === 'done' ? ' class="done"' : '') + '><td><strong>' + it.name + '</strong>' + (it.address ? '<br><span class="small">' + it.address + '</span>' : '') + '</td><td>' + it.scope + '</td><td>' + statusText(it) + '</td><td>' + timeText(it) + '</td><td>' + manText(it, d) + '</td></tr>';
       });
       weekHtml += '</table>';
     });

@@ -20,7 +20,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "Jeffery Elliott",
@@ -32,7 +34,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "Ridgewood Village Apartments",
@@ -44,9 +48,12 @@
        "minutes": null,
        "auto_start": "13:29",
        "auto_finish": "14:59",
-       "auto_minutes": 90
+       "auto_minutes": 90,
+       "man_minutes": null,
+       "man_auto_minutes": 180
       }
-     ]
+     ],
+     "crew_size": 2
     },
     {
      "date": "2026-10-27",
@@ -62,7 +69,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "2275 NW 227th St",
@@ -74,7 +83,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "Summit Lakes Entrances 1 & 2",
@@ -86,7 +97,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "6309 Norham Ct",
@@ -98,9 +111,12 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       }
-     ]
+     ],
+     "crew_size": 2
     },
     {
      "date": "2026-10-28",
@@ -116,7 +132,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "2801 NW 154th St",
@@ -128,7 +146,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "2404 NW 154th St",
@@ -140,7 +160,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "17400 Braken Dr",
@@ -152,7 +174,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "1109 Jamestown Cir",
@@ -164,7 +188,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "Clare Hadwiger \u2014 ESTIMATE",
@@ -176,7 +202,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "Quentin Marks \u2014 Just Kids Pediatrics appointment",
@@ -189,9 +217,12 @@
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "date": "2026-10-28"
+       "date": "2026-10-28",
+       "man_minutes": null,
+       "man_auto_minutes": null
       }
-     ]
+     ],
+     "crew_size": 1
     },
     {
      "date": "2026-10-29",
@@ -207,9 +238,12 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       }
-     ]
+     ],
+     "crew_size": 2
     },
     {
      "date": "2026-10-30",
@@ -225,7 +259,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "Hal Williams",
@@ -237,7 +273,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "Dotti",
@@ -249,7 +287,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "Hilaire Johnson",
@@ -261,7 +301,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "Robert Windsor",
@@ -273,7 +315,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "Barry Rockler",
@@ -285,7 +329,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "Christina Brown",
@@ -297,7 +343,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "Jenetta Davis",
@@ -309,7 +357,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "Aj",
@@ -321,7 +371,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "Hilaire Johnson",
@@ -333,7 +385,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "Sam",
@@ -345,9 +399,12 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       }
-     ]
+     ],
+     "crew_size": 2
     },
     {
      "date": "2026-10-31",
@@ -363,9 +420,12 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       }
-     ]
+     ],
+     "crew_size": 0
     },
     {
      "date": "2026-11-01",
@@ -381,7 +441,9 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       },
       {
        "name": "OKC Utilities bill",
@@ -393,9 +455,12 @@
        "minutes": null,
        "auto_start": null,
        "auto_finish": null,
-       "auto_minutes": null
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       }
-     ]
+     ],
+     "crew_size": 0
     }
    ]
   }
