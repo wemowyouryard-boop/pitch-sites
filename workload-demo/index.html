@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week's Workload — Demo — Workload Platform</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; margin: 0; background: #f6f7f4; color: #1d2419; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 24px 20px 48px; }
+  h1 { font-size: 24px; margin: 8px 0 2px; }
+  .sub { color: #5a6653; margin: 0 0 20px; }
+  h2 { font-size: 19px; margin: 28px 0 6px; padding: 8px 12px; background: #2e4a22; color: #fff; border-radius: 8px; }
+  h2.off { background: #6b725f; }
+  .crew { color: #43503c; font-size: 14px; margin: 4px 2px 10px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #dfe4da; border-radius: 10px; overflow: hidden; margin: 10px 0; }
+  th, td { text-align: left; padding: 9px 12px; font-size: 15px; border-bottom: 1px solid #edf0ea; vertical-align: top; }
+  th { background: #eef3e8; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: #43503c; }
+  tr:last-child td { border-bottom: none; }
+  td.time { white-space: nowrap; color: #43503c; width: 86px; }
+  .card { background: #fff; border: 1px solid #dfe4da; border-radius: 10px; padding: 14px 16px; margin: 12px 0; }
+  .note { background: #fdf6e0; border-left: 4px solid #d9a514; padding: 8px 12px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
+  .offcard { background: #eef3e8; border: 1px solid #c9d6bd; border-radius: 10px; padding: 14px 16px; margin: 12px 0; }
+  a { color: #2e4a22; font-weight: 600; }
+  .small { font-size: 13px; color: #5a6653; }
+  tr.done td { background: #f0f7f0; color: #10160d; }
+  tr.done td:first-child { border-left: 6px solid #2e7d32; }
+  .done-tag { color: #0d4718; font-weight: 800; }
+  .wx-badge { float: right; font-size: 12.5px; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: #e8e8e8; color: #333; letter-spacing: 0; text-transform: none; }
+  .wx-badge.ok { background: #eef7ee; color: #0d4718; }
+  .wx-badge.watch { background: #fdf0c0; color: #7a5b00; }
+  .wx-badge.risk { background: #f8d2d2; color: #8c1d1d; }
+  .wx-live { border: 1px solid #c9d6bd; background: #f2f7ee; border-radius: 10px; padding: 12px 16px; margin: 12px 0 4px; }
+  .wx-live h3 { margin: 0 0 4px; font-size: 16px; }
+  .wx-updated { font-size: 12.5px; color: #5a6653; margin: 0 0 8px; }
+  .wx-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .wx-chip { font-size: 13px; padding: 4px 10px; border-radius: 999px; background: #e8e8e8; color: #333; font-weight: 600; }
+  .wx-chip.ok { background: #eef7ee; color: #0d4718; }
+  .wx-chip.watch { background: #fdf0c0; color: #7a5b00; }
+  .wx-chip.risk { background: #f8d2d2; color: #8c1d1d; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Week's Workload — Oct 26 to Nov 1, 2026</h1>
+  <p class="sub">Monday Oct 26 – Sunday Nov 1, 2026 · <strong>GreenScape Lawn Care (Demo)</strong> · Routes start at the shop, first yard 7:30 AM, ~30 min per stop.</p>
+  <p class="sub">📚 <a href="archive/"><strong>Workload Archive</strong></a> — every week on record, searchable by name, address, or date, with start/finish times and how long each property takes.</p>
+  <div class="card" id="wx-live"><strong>🌦 Live Rain-Delay Watch</strong><div id="wx-chips" style="margin-top:8px;">Loading the Oklahoma City forecast…</div><div class="small" id="wx-updated"></div></div>
+
+  <h2 data-date="2026-10-26">Monday, Oct 26 — Route A, 4 stops <span class="wx-badge" data-wx-badge>…</span></h2>
+  <table>
+    <tr><th class="time">Time</th><th>Stop</th><th>Scope</th></tr>
+    <tr class="done"><td class="time">7:30 AM</td><td><strong>Johnson Residence</strong><br>4210 S Harvard Ave</td><td>Weekly mow + edge. <span class="done-tag">✅ Finished</span></td></tr>
+    <tr class="done"><td class="time">8:15 AM</td><td><strong>Patel Residence</strong><br>4222 S Harvard Ave</td><td>Weekly mow. <span class="done-tag">✅ Finished</span></td></tr>
+    <tr><td class="time">9:00 AM</td><td><strong>Riverside HOA entrance</strong></td><td>Mow/edge/blow + leaf cleanup.</td></tr>
+    <tr><td class="time">10:00 AM</td><td><strong>Nguyen Residence</strong><br>1510 E 41st St</td><td>Biweekly mow + hedge trim.</td></tr>
+  </table>
+
+  <h2 data-date="2026-10-30">Friday, Oct 30 — Route B, 5 stops <span class="wx-badge" data-wx-badge>…</span></h2>
+  <table>
+    <tr><th class="time">Time</th><th>Stop</th><th>Scope</th></tr>
+    <tr><td class="time">7:30 AM</td><td><strong>Garcia Residence</strong><br>9012 S Yale Ave</td><td>Weekly mow.</td></tr>
+    <tr><td class="time">8:15 AM</td><td><strong>Thompson Residence</strong><br>8920 S Yale Ave</td><td>Weekly mow + flowerbed weeds.</td></tr>
+    <tr><td class="time">9:00 AM</td><td><strong>Faith Community Church</strong><br>8800 S Lewis Ave</td><td>Grounds mow/edge/blow.</td></tr>
+    <tr><td class="time">10:30 AM</td><td><strong>Brooks Apartments</strong><br>7600 S Memorial Dr</td><td>Common areas mow + blow.</td></tr>
+    <tr><td class="time">12:00 PM</td><td><strong>Johnson Residence</strong><br>4210 S Harvard Ave</td><td>Leaf cleanup (extra).</td></tr>
+  </table>
+
+  <h2 data-date="2026-11-01" class="off">Sunday, Nov 1 — Nothing scheduled <span class="wx-badge" data-wx-badge>…</span></h2>
+  <div class="card">
+    <ul style="margin:0 0 0 18px; padding:0;">
+      <li><strong>Invoices due today (Nov 1): $412.50 total.</strong></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <p style="margin:0;" class="small"><strong>Demo page</strong> — sample business and sample data showing the Workload Platform: weekly workload page, searchable archive, automatic + manual time-on-site tracking, and route completion. Times and averages for this demo live in the <a href="archive/">archive</a>.</p>
+  </div>
+
+</div>
+<script>
+// Live rain-delay watch — pulls the current Oklahoma City forecast (Open-Meteo, no key needed)
+// and flags each day on this page. Refreshes on load and every 30 minutes while open.
+(function () {
+  var LAT = 35.4676, LON = -97.5164; // Oklahoma City
+  var URL = 'https://api.open-meteo.com/v1/forecast?latitude=' + LAT + '&longitude=' + LON +
+    '&daily=weather_code,precipitation_sum,precipitation_probability_max' +
+    '&precipitation_unit=inch&timezone=America%2FChicago&forecast_days=16';
+
+  function classify(prob, inches) {
+    if ((prob !== null && prob >= 50) || inches >= 0.15) return { cls: 'risk', label: '🌧 Rain delay risk' };
+    if ((prob !== null && prob >= 30) || inches >= 0.05) return { cls: 'watch', label: '⚠️ Rain watch' };
+    return { cls: 'ok', label: '✅ No delay expected' };
+  }
+  function detail(prob, inches) {
+    var p = (prob === null || prob === undefined) ? '' : prob + '%';
+    var i = (inches === null || inches === undefined) ? '' : inches.toFixed(2) + ' in';
+    return [p, i].filter(Boolean).join(' · ');
+  }
+  function dayName(iso) {
+    var d = new Date(iso + 'T12:00:00');
+    return d.toLocaleDateString('en-US', { weekday: 'short' });
+  }
+
+  function render(daily) {
+    var byDate = {};
+    for (var i = 0; i < daily.time.length; i++) {
+      byDate[daily.time[i]] = {
+        prob: daily.precipitation_probability_max[i],
+        inches: daily.precipitation_sum[i] || 0
+      };
+    }
+    var chips = [];
+    document.querySelectorAll('h2[data-date]').forEach(function (h) {
+      var date = h.getAttribute('data-date');
+      var f = byDate[date];
+      var badge = h.querySelector('[data-wx-badge]');
+      if (!f) { if (badge) { badge.textContent = 'No forecast'; badge.className = 'wx-badge'; } return; }
+      var c = classify(f.prob, f.inches);
+      var txt = c.label + ' — ' + detail(f.prob, f.inches);
+      if (badge) { badge.textContent = txt; badge.className = 'wx-badge ' + c.cls; }
+      chips.push('<span class="wx-chip ' + c.cls + '">' + dayName(date) + ': ' + txt + '</span>');
+    });
+    var box = document.getElementById('wx-chips');
+    if (box) box.innerHTML = chips.join('');
+    var upd = document.getElementById('wx-updated');
+    if (upd) upd.textContent = 'Live forecast updated ' + new Date().toLocaleString('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) + ' · refreshes automatically every 30 min while this page is open.';
+  }
+
+  function load() {
+    fetch(URL).then(function (r) { return r.json(); }).then(function (j) {
+      if (j && j.daily) render(j.daily);
+    }).catch(function () {
+      var upd = document.getElementById('wx-updated');
+      if (upd) upd.textContent = 'Live forecast unavailable right now — badges will retry on refresh.';
+    });
+  }
+  load();
+  setInterval(load, 30 * 60 * 1000);
+})();
+</script>
+</body>
+</html>

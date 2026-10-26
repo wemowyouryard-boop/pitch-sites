@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workload Archive — Demo — Workload Platform</title>
+<style>
+  :root { --green:#1d4d22; --green2:#2e7d32; --ink:#10160d; --bg:#f6f8f4; --card:#fff; --line:#d8e2d4; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background:var(--bg); color:var(--ink); }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 20px 28px 48px; }
+  h1 { background:var(--green); color:#fff; margin:0 -28px; padding:18px 28px; font-size:24px; }
+  .sub { color:#3c4a38; margin:14px 0 4px; font-size:15px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin:14px 0; }
+  input[type=search] { width:100%; font-size:18px; padding:12px 14px; border:2px solid var(--green2); border-radius:10px; }
+  h2 { background:var(--green); color:#fff; padding:10px 14px; border-radius:8px; font-size:18px; margin:22px 0 10px; }
+  h3 { margin:16px 0 6px; font-size:16px; color:var(--green); }
+  table { width:100%; border-collapse:collapse; background:#fff; }
+  th, td { border:1px solid var(--line); padding:7px 9px; text-align:left; font-size:14px; vertical-align:top; }
+  th { background:#eef4ec; }
+  tr.done td { background:#f0f7f0; }
+  tr.done td:first-child { border-left:6px solid var(--green2); }
+  .tag-done { color:#0d4718; font-weight:800; }
+  .small { font-size:13px; color:#3c4a38; }
+  a { color:var(--green2); font-weight:600; }
+  .avg td { font-size:15px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>📚 Workload Archive — every week, searchable</h1>
+  <p class="sub">Demo — sample business, sample data. Search any name, address, or word to see every visit on record — with start/finish times and how long each property takes. <a href="../">← Back to this week's workload</a></p>
+
+  <div class="card">
+    <input type="search" id="q" placeholder="Search — try a name, a street, or a date like 2026-10-30" autocomplete="off">
+    <p class="small" id="count" style="margin:10px 0 0;"></p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">⏱ Time on site, by property</h3>
+    <div id="averages"><p class="small">Loading…</p></div>
+  </div>
+
+  <div id="results"></div>
+</div>
+
+<script>
+var ALL = [];
+function mins(it){ return (typeof it.minutes === 'number') ? it.minutes : null; }
+function timeText(it){
+  var parts = [];
+  if (it.start && it.finish && mins(it) !== null) parts.push(it.start + ' – ' + it.finish + ' (' + it.minutes + ' min)');
+  else if (it.start && it.finish) parts.push(it.start + ' – ' + it.finish);
+  if (typeof it.auto_minutes === 'number') parts.push('<span class="small">auto: ' + (it.auto_start || '?') + ' – ' + (it.auto_finish || '?') + ' (' + it.auto_minutes + ' min)</span>');
+  else if (it.auto_start && !it.auto_finish) parts.push('<span class="small">auto: arrived ' + it.auto_start + '</span>');
+  return parts.length ? parts.join('<br>') : '—';
+}
+function statusText(it){
+  if (it.status === 'done') return '<span class="tag-done">✅ Finished</span>';
+  if (it.status === 'note') return 'Note';
+  return 'Scheduled';
+}
+function renderAverages(){
+  var byAddr = {};
+  ALL.forEach(function(w){ w.days.forEach(function(d){ d.items.forEach(function(it){
+    if (!it.address) return;
+    var k = it.address;
+    byAddr[k] = byAddr[k] || { name: it.name, visits: 0, timed: 0, total: 0, timedA: 0, totalA: 0 };
+    byAddr[k].visits++;
+    if (mins(it) !== null){ byAddr[k].timed++; byAddr[k].total += it.minutes; }
+    if (typeof it.auto_minutes === 'number'){ byAddr[k].timedA++; byAddr[k].totalA += it.auto_minutes; }
+  });});});
+  var rows = Object.keys(byAddr).map(function(k){ return { addr:k, v:byAddr[k] }; });
+  rows.sort(function(a,b){ return b.v.visits - a.v.visits; });
+  var el = document.getElementById('averages');
+  if (!rows.length){ el.innerHTML = '<p class="small">No properties on record yet.</p>'; return; }
+  var html = '<table><tr><th>Property</th><th>Visits</th><th>Avg time — manual</th><th>Avg time — auto (location)</th></tr>';
+  rows.forEach(function(r){
+    var avgM = r.v.timed ? Math.round(r.v.total / r.v.timed) + ' min (' + r.v.timed + ' timed)' : '—';
+    var avgA = r.v.timedA ? Math.round(r.v.totalA / r.v.timedA) + ' min (' + r.v.timedA + ' timed)' : '—';
+    html += '<tr class="avg"><td><strong>' + r.v.name + '</strong><br><span class="small">' + r.addr + '</span></td><td>' + r.v.visits + '</td><td>' + avgM + '</td><td>' + avgA + '</td></tr>';
+  });
+  html += '</table><p class="small">Two clocks run side by side: Justin\'s manual start/finish times, and the automatic location-based times — so each checks the other. Averages build as times get logged, down to the minute.</p>';
+  el.innerHTML = html;
+}
+function render(query){
+  var q = (query || '').trim().toLowerCase();
+  var out = '', shown = 0;
+  var weeks = ALL.slice().reverse();
+  weeks.forEach(function(w){
+    var weekHtml = '';
+    w.days.forEach(function(d){
+      var items = d.items.filter(function(it){
+        if (!q) return true;
+        var hay = (d.date + ' ' + d.label + ' ' + it.name + ' ' + it.address + ' ' + it.scope).toLowerCase();
+        return hay.indexOf(q) !== -1;
+      });
+      if (!items.length) return;
+      shown += items.length;
+      weekHtml += '<h3>' + d.label + '</h3><table><tr><th>Job</th><th>Scope</th><th>Status</th><th>Time on site</th></tr>';
+      items.forEach(function(it){
+        weekHtml += '<tr' + (it.status === 'done' ? ' class="done"' : '') + '><td><strong>' + it.name + '</strong>' + (it.address ? '<br><span class="small">' + it.address + '</span>' : '') + '</td><td>' + it.scope + '</td><td>' + statusText(it) + '</td><td>' + timeText(it) + '</td></tr>';
+      });
+      weekHtml += '</table>';
+    });
+    if (weekHtml) out += '<h2>Week of ' + w.label + '</h2>' + weekHtml;
+  });
+  document.getElementById('results').innerHTML = out || '<div class="card"><p>Nothing matches that search.</p></div>';
+  document.getElementById('count').textContent = q ? (shown + ' matching item' + (shown === 1 ? '' : 's') + ' found') : (shown + ' items on record across ' + ALL.length + ' week' + (ALL.length === 1 ? '' : 's'));
+}
+fetch('../data/weeks.json', { cache: 'no-store' })
+  .then(function(r){ return r.json(); })
+  .then(function(data){
+    ALL = data.weeks || [];
+    renderAverages();
+    render('');
+    document.getElementById('q').addEventListener('input', function(e){ render(e.target.value); });
+  })
+  .catch(function(){
+    document.getElementById('results').innerHTML = '<div class="card"><p>Could not load the archive data. Check your connection and reload.</p></div>';
+    document.getElementById('averages').innerHTML = '';
+  });
+</script>
+</body>
+</html>
