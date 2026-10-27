@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overview — Prospect Workbook</title><style>
+*{box-sizing:border-box} body{margin:0;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:#f4f5f4;color:#1f2937}
+.wrap{max-width:1060px;margin:0 auto;padding:20px 16px 48px;border-left:6px solid #2e7d32;border-right:6px solid #2e7d32;background:#fff;min-height:100vh}
+@media(max-width:640px){.wrap{border-left-width:4px;border-right-width:4px;padding:14px 10px 40px}}
+header.brand{border-bottom:3px solid #2e7d32;padding-bottom:12px;margin-bottom:18px}
+header.brand h1{margin:0;font-size:24px;color:#14532d} header.brand p{margin:4px 0 0;color:#6b7280;font-size:14px}
+nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+nav.tabs a{padding:7px 12px;border:1px solid #d1d5db;border-radius:999px;color:#374151;text-decoration:none;font-size:13.5px;background:#fff}
+nav.tabs a.on{background:#2e7d32;border-color:#2e7d32;color:#fff;font-weight:600}
+h2{font-size:19px;color:#14532d;margin:22px 0 4px} .sub{color:#6b7280;font-size:14px;margin:0 0 12px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:14px 0}
+.card{border:1px solid #e5e7eb;border-radius:10px;padding:14px;background:#fff}
+.card h3{margin:0 0 4px;font-size:16px}.card h3 a{color:#14532d;text-decoration:none}.card .n{font-size:26px;font-weight:700;color:#2e7d32}.card p{margin:6px 0 0;font-size:13.5px;color:#4b5563}
+.search{width:100%;padding:10px 12px;border:1px solid #d1d5db;border-radius:8px;font-size:15px;margin:6px 0 12px}
+.tblwrap{overflow-x:auto;border:1px solid #e5e7eb;border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th{background:#f3f4f6;text-align:left;padding:9px 10px;border-bottom:1px solid #e5e7eb;white-space:nowrap}
+td{padding:8px 10px;border-bottom:1px solid #eef0ee;vertical-align:top}
+tr:last-child td{border-bottom:none}
+.st{white-space:nowrap;font-size:13px}.st .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
+.yes{color:#166534}.yes .dot{background:#2e7d32}.no{color:#9ca3af}.no .dot{background:#d1d5db}
+a.site{color:#2e7d32} .muted{color:#6b7280;font-size:13px}
+footer{margin-top:28px;color:#9ca3af;font-size:12.5px;border-top:1px solid #e5e7eb;padding-top:10px}
+</style></head><body><div class="wrap">
+<header class="brand"><h1>Prospect Workbook</h1><p>Giving Tree Lawn Care, LLC — every prospect list, organized by project.</p></header>
+<nav class="tabs"><a href="index.html" class=on>Overview</a><a href="contacted.html">Website Pitches — Contacted</a><a href="reserve.html">Website Reserve</a><a href="okc.html">OKC Prospects</a><a href="christmas.html">Christmas Lights — Staged</a><a href="pools.html">Pool Owners</a></nav><h2>Overview</h2><p class="sub">Every prospect list in one place, organized by project. Pick a project to see its list.</p><div class="cards"><div class="card"><h3><a href="contacted.html">Website Pitches — Contacted</a></h3><div class="n">299</div><p>Businesses across the US that were built a website and emailed the $50/month pitch.</p></div><div class="card"><h3><a href="reserve.html">Website Reserve — Not Contacted</a></h3><div class="n">141</div><p>Businesses with a finished website sitting in reserve, not yet pitched. Building continues daily while Gmail rests.</p></div><div class="card"><h3><a href="okc.html">OKC Prospects — No Website</a></h3><div class="n">372</div><p>Oklahoma City businesses confirmed to have no website. Only 2 publish an email — phone is the contact route for the rest.</p></div><div class="card"><h3><a href="christmas.html">Christmas Lights — Staged</a></h3><div class="n">105</div><p>OKC prospects researched for the Christmas lights pitch ($5/foot), each with its own subject line, staged and ready. Gmail blocked the Oct 27 attempts, so none count as contacted.</p></div><div class="card"><h3><a href="pools.html">Pool Owners — Not Contacted</a></h3><div class="n">5430</div><p>Homes with pools verified from county assessor records: Norman 3253, Moore 832, Oklahoma City 769, Edmond 576. None contacted yet.</p></div></div><p class="muted">Related files kept separately: the New-Homeowner Lead Inventory (1,373 leads — the product sold to realtors and insurers). Campaign email is paused as of Oct 27, 2026 while the Gmail account rests; research, building, and staging continue.</p>
+<footer>Contacted status is shown as a simple marker on each row — no row highlighting. Lists update as research, building, and staging continue.</footer>
+</div><script>
+function filt(inp, tbl){var q=inp.value.toLowerCase();var rows=document.querySelectorAll('#'+tbl+' tbody tr');var n=0;rows.forEach(function(r){var hit=r.textContent.toLowerCase().indexOf(q)>-1;r.style.display=hit?'':'none';if(hit)n++});document.getElementById('cnt').textContent=n;}
+</script></body></html>
