@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Database — Growing Beauty LLC</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; margin: 0; background: #f6f7f4; color: #1d2419; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 24px 20px 48px; }
+  .brand { display:flex; align-items:center; gap:14px; margin:2px 0 4px; }
+  .brand .name { font-size:23px; font-weight:800; color:#2e4a22; letter-spacing:-0.2px; line-height:1.15; }
+  .brand .tag { color:#5a6653; font-size:13.5px; }
+  a { color: #2e4a22; font-weight: 600; }
+  input[type="search"] { width: 100%; font-size: 16px; padding: 11px 13px; border: 1px solid #c9d1c2; border-radius: 10px; margin: 14px 0 12px; box-sizing: border-box; }
+  .card { background:#fff; border:1px solid #dfe4da; border-radius:10px; overflow:hidden; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th { background:#eef3e8; text-align:left; padding:8px 10px; border-bottom:1px solid #dfe4da; white-space:nowrap; }
+  td { padding:8px 10px; border-bottom:1px solid #eef1ea; vertical-align:top; }
+  tr.done td { background:#f0f7f0; }
+  td.t { white-space:nowrap; }
+  .small { font-size:13px; color:#5a6653; }
+  .count { font-size:13px; color:#5a6653; margin:8px 2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">
+    <svg width="58" height="58" viewBox="0 0 64 64" role="img" aria-label="Growing Beauty logo"><circle cx="32" cy="32" r="30" fill="#fdf8e3" stroke="#558b2f" stroke-width="2.5"/><circle cx="45" cy="19" r="5.5" fill="#f9a825"/><g stroke="#f9a825" stroke-width="2" stroke-linecap="round"><path d="M45 9.5 v3"/><path d="M54.5 19 h-3"/><path d="M51.7 12.3 l-2.1 2.1"/><path d="M38.3 12.3 l2.1 2.1"/></g><path d="M32 47 V33" stroke="#6d4c41" stroke-width="3.5" stroke-linecap="round"/><path d="M32 36 C25 36 21.5 31.5 21 26 C26.5 26.5 31 29.5 32 36 Z" fill="#43a047"/><path d="M32 32 C32.8 26 37 22.5 43 22.5 C42.6 28.5 38.5 32 32 32 Z" fill="#7cb342"/><path d="M15 49 Q32 44 49 49" stroke="#558b2f" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+    <div>
+      <div class="name">Growing Beauty LLC — Job Database</div>
+      <div class="tag">Every job, with arrival &amp; departure times, hours on site, man-hours, and finished-work photos.</div>
+    </div>
+  </div>
+  <p><a href="../">← Back to this week's instructions</a></p>
+  <input type="search" id="q" placeholder="Search by address, date, or word in the work — e.g. Craig, mowing, Oct 27">
+  <p class="count" id="count"></p>
+  <div class="card">
+    <table>
+      <thead><tr><th>Date</th><th>Job</th><th>Work</th><th>Arrival</th><th>Departure</th><th>Hours on site</th><th>Man-hours</th><th>Status</th><th>Photos</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <p class="small">How to read this: <strong>Hours on site</strong> = departure minus arrival. <strong>Man-hours</strong> = hours on site × the men on the crew. Work performed by Giving Tree Lawn Care, LLC for Growing Beauty LLC.</p>
+</div>
+<script>
+var JOBS = [];
+function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+function dash(s){ return s ? esc(s) : '—'; }
+function render(){
+  var q = document.getElementById('q').value.trim().toLowerCase();
+  var out = '';
+  var n = 0;
+  JOBS.forEach(function(j){
+    var hay = (j.day+' '+j.address+' '+j.work+' '+j.status).toLowerCase();
+    if(q && hay.indexOf(q) === -1) return;
+    n++;
+    out += '<tr' + (j.status==='Finished' ? ' class="done"' : '') + '>'
+      + '<td class="t">' + esc(j.day) + '</td>'
+      + '<td><strong>' + esc(j.address) + '</strong></td>'
+      + '<td>' + esc(j.work) + '</td>'
+      + '<td class="t">' + dash(j.arrival) + '</td>'
+      + '<td class="t">' + dash(j.departure) + '</td>'
+      + '<td class="t">' + dash(j.hours_on_site) + '</td>'
+      + '<td class="t">' + dash(j.man_hours) + '</td>'
+      + '<td>' + esc(j.status) + (j.status==='Finished' ? ' ✅' : '') + '</td>'
+      + '<td>' + (j.photos ? '📷 <a href="' + j.photos + '">Photos</a>' : '—') + '</td>'
+      + '</tr>';
+  });
+  document.getElementById('rows').innerHTML = out || '<tr><td colspan="9">No jobs match that search.</td></tr>';
+  document.getElementById('count').textContent = n + ' of ' + JOBS.length + ' jobs shown';
+}
+document.getElementById('q').addEventListener('input', render);
+fetch('../data/jobs.json').then(function(r){ return r.json(); }).then(function(d){
+  JOBS = d.jobs || [];
+  render();
+}).catch(function(){
+  document.getElementById('rows').innerHTML = '<tr><td colspan="9">The job list could not load — please try again in a moment.</td></tr>';
+});
+</script>
+</body>
+</html>
