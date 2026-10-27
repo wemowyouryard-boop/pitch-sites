@@ -152,20 +152,6 @@
      "label": "Wednesday, Oct 28 — Growing Beauty (Donovan), Justin solo",
      "items": [
       {
-       "name": "6309 Norham Ct",
-       "address": "6309 Norham Ct, Oklahoma City",
-       "scope": "Trim large tree/shrub by back patio; clean up backyard tree rings/islands",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
-      },
-      {
        "name": "15504 Juniper Dr",
        "address": "15504 Juniper Dr, Edmond",
        "scope": "Mow + trim holly/boxwood shrubs",
@@ -239,6 +225,20 @@
        "name": "Clare Hadwiger — ESTIMATE",
        "address": "3701 Oakdale Forest Rd, Edmond, OK 73113",
        "scope": "Estimate visit: backyard cleanup quote (front-yard clean-out project completed Oct 20–22). After the last Donovan stop of the day (1109 Jamestown Cir, ~4.5 mi away).",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
+      },
+      {
+       "name": "6309 Norham Ct",
+       "address": "6309 Norham Ct, Oklahoma City",
+       "scope": "Trim large tree/shrub by back patio; clean up backyard tree rings/islands. Needs the ladder. LAST STOP of the day — moved to the end of Wednesday per Donovan's email Oct 27 (he offered end of Wednesday or Thursday morning; Donovan already notified Wednesday's mow customers of their approximate times, and 15504 Juniper Dr starts the day).",
        "status": "scheduled",
        "start": null,
        "finish": null,
