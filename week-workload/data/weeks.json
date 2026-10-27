@@ -63,7 +63,7 @@
        "name": "1517 Craig Blvd",
        "address": "1517 Craig Blvd, Edmond",
        "scope": "First stop \u2014 mow; clean front flowerbed weeds; trim front two shrubs (aggressive, do NOT scalp); remove volunteer trees along south back fence (loppers/maybe chainsaw; stack limbs at front curb)",
-       "status": "scheduled",
+       "status": "done",
        "start": null,
        "finish": null,
        "minutes": null,
@@ -71,7 +71,17 @@
        "auto_finish": null,
        "auto_minutes": null,
        "man_minutes": null,
-       "man_auto_minutes": null
+       "man_auto_minutes": null,
+       "photos": [
+        "photos/craig-blvd-1.jpg",
+        "photos/craig-blvd-2.jpg",
+        "photos/craig-blvd-3.jpg",
+        "photos/craig-blvd-4.jpg",
+        "photos/craig-blvd-5.jpg",
+        "photos/craig-blvd-6.jpg",
+        "photos/craig-blvd-7.jpg",
+        "photos/craig-blvd-8.jpg"
+       ]
       },
       {
        "name": "2275 NW 227th St",
