@@ -143,20 +143,6 @@
        ],
        "photos_page": "photos/summit-lakes.html",
        "gate_code": "8585"
-      },
-      {
-       "name": "6309 Norham Ct",
-       "address": "6309 Norham Ct, Oklahoma City",
-       "scope": "Trim large tree/shrub by back patio; clean up backyard tree rings/islands",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
       }
      ],
      "crew_size": 2
@@ -239,6 +225,20 @@
        "name": "Clare Hadwiger \u2014 ESTIMATE",
        "address": "3701 Oakdale Forest Rd, Edmond, OK 73113",
        "scope": "Estimate visit: backyard cleanup quote (front-yard clean-out project completed Oct 20\u201322). After the last Donovan stop of the day (1109 Jamestown Cir, ~4.5 mi away).",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
+      },
+      {
+       "name": "6309 Norham Ct",
+       "address": "6309 Norham Ct, Oklahoma City",
+       "scope": "Trim large tree/shrub by back patio; clean up backyard tree rings/islands",
        "status": "scheduled",
        "start": null,
        "finish": null,
