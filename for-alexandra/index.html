@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Alexandra — One Question</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#14071f; color:#fdf3e3; font-family:'Poppins', system-ui, sans-serif; }
+  .wrap { max-width:880px; margin:0 auto; padding:28px 32px 56px; }
+  @media (max-width:640px){ .wrap{ padding:20px 28px 44px; } }
+  .ball { text-align:center; font-size:64px; animation:sway 3s ease-in-out infinite; }
+  @keyframes sway { 0%,100%{transform:rotate(-6deg)} 50%{transform:rotate(6deg)} }
+  h1.script { font-family:'Pacifico', cursive; font-weight:400; text-align:center; font-size:56px; line-height:1.15;
+    background:linear-gradient(90deg,#ff4fa3,#ff9a3d,#ffd23d,#ff4fa3); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .sub { text-align:center; color:#e9c9ff; font-size:17px; margin:10px 0 26px; }
+  .hero { border-radius:22px; overflow:hidden; border:3px solid #ff9a3d; box-shadow:0 0 44px rgba(255,79,163,.35); }
+  .hero img { width:100%; display:block; }
+  .card { background:#22103a; border:1px solid #4a2a6e; border-radius:18px; padding:22px 24px; margin:22px 0; }
+  .card h2 { font-family:'Pacifico', cursive; font-weight:400; color:#ffd23d; font-size:30px; margin-bottom:10px; }
+  .card p { font-size:16.5px; line-height:1.65; color:#f6e8d8; }
+  .quote { border-left:4px solid #ff4fa3; padding:4px 0 4px 16px; margin:14px 0; font-style:italic; color:#ffd9ec; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:22px 0; }
+  @media (max-width:640px){ .grid{ grid-template-columns:1fr; } }
+  .fact { background:#1d0b31; border:1px solid #4a2a6e; border-radius:16px; padding:18px 20px; }
+  .fact .big { font-size:26px; }
+  .fact h3 { color:#ff9a3d; font-size:17px; margin:6px 0 6px; }
+  .fact p { font-size:15px; line-height:1.55; color:#efdfca; }
+  .gallery { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:22px 0; }
+  .gallery img { width:100%; height:100%; object-fit:cover; border-radius:16px; border:2px solid #4a2a6e; display:block; }
+  .gallery .tall { grid-row:span 2; }
+  .invite { background:linear-gradient(160deg,#2b1152,#3d0f38); border:2px solid #ff4fa3; border-radius:20px; padding:26px 24px; margin:26px 0; text-align:center; }
+  .invite h2 { font-family:'Pacifico', cursive; font-weight:400; font-size:36px; color:#ffd23d; margin-bottom:12px; }
+  .invite p { font-size:16.5px; line-height:1.65; color:#fbeed9; }
+  .venue { font-size:21px; font-weight:800; color:#fff; margin:14px 0 4px; }
+  .venue a { color:#7ee0ff; }
+  .ask { text-align:center; margin:34px 0 8px; }
+  .ask h2 { font-family:'Pacifico', cursive; font-weight:400; font-size:38px; color:#ff4fa3; margin-bottom:18px; }
+  .btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+  button { font-family:'Poppins',sans-serif; font-size:17px; font-weight:600; border:none; cursor:pointer; border-radius:999px; padding:14px 30px; }
+  .yes { background:linear-gradient(90deg,#ff4fa3,#ff9a3d); color:#fff; box-shadow:0 6px 24px rgba(255,79,163,.45); }
+  .convince { background:#2b1152; color:#e9c9ff; border:1px solid #6a3fa0; }
+  #yesMsg { display:none; margin:22px auto 0; max-width:560px; background:#123524; border:1px solid #2f9e63; color:#d9ffe9; border-radius:16px; padding:18px 20px; font-size:16.5px; line-height:1.6; }
+  .sign { text-align:center; margin-top:36px; color:#e9c9ff; font-size:16px; line-height:1.7; }
+  .sign .name { font-family:'Pacifico', cursive; font-size:30px; color:#ffd23d; }
+  .small { font-size:13.5px; color:#b79bd6; text-align:center; margin-top:26px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="ball">🪩</div>
+  <h1 class="script">Alexandra</h1>
+  <p class="sub">This page exists for exactly one reason — and you're looking at her.</p>
+
+  <div class="hero"><img src="photo1.jpg" alt="Alexandra"></div>
+
+  <div class="card">
+    <h2>How we got here</h2>
+    <p>Your profile said: <em>"If you can make me laugh, like having fun &amp; can hold an interesting conversation, swipe right."</em></p>
+    <p style="margin-top:10px;">So I swiped right. And then, because a plain "hey" felt like an insult to that whole profile, I built you this page instead. Everything on it is just me answering what you already said about yourself.</p>
+  </div>
+
+  <h2 style="font-family:'Pacifico',cursive;font-weight:400;color:#ffd23d;font-size:30px;margin:26px 0 4px;">The evidence (your words, not mine)</h2>
+  <div class="grid">
+    <div class="fact"><div class="big">🏋️</div><h3>Alexandra loves the gym</h3><p>That's the first line of her own profile — before anything else, that's what she wants you to know. Strong, active, and she actually shows up. Respect.</p></div>
+    <div class="fact"><div class="big">📏</div><h3>5'10" and not hiding</h3><p>Five foot ten, head up, own style, tattoos and all. Nobody in any room is mistaking her for part of the furniture.</p></div>
+    <div class="fact"><div class="big">🧘</div><h3>Sober, clear, at peace</h3><p>"I mind my business &amp; I like my peace." Sober, into mindfulness and tea. A woman who protects her peace is a woman who knows her worth.</p></div>
+    <div class="fact"><div class="big">🤣</div><h3>Funny is the entry fee</h3><p>"Emotionally intelligent, funny as fuck, and can communicate without playing weird games." Noted. No games on this page — just a real invitation.</p></div>
+    <div class="fact"><div class="big">🗣️</div><h3>Truth, or nothing</h3><p>"I can respect truth, I cannot respect a lie." Same here. So honestly: yes, a guy really made you a website. That's the level of interest. No pretending otherwise.</p></div>
+    <div class="fact"><div class="big">🛹</div><h3>Free &amp; artsy, Aquarius energy</h3><p>Skateboards, ink, black-and-white mirror selfies, and a profile that reads like someone mid-adventure. "I'm feeling very free &amp; artsy lately. I wanna do it all." Good. Plans below.</p></div>
+  </div>
+
+  <div class="gallery">
+    <img class="tall" src="photo4.jpg" alt="Alexandra outdoors">
+    <img src="photo5.jpg" alt="Alexandra close up">
+    <img src="photo3.jpg" alt="Alexandra selfie">
+  </div>
+
+  <div class="card">
+    <h2>Her exact words</h2>
+    <div class="quote">"Take me somewhere that is exhilarating. I'm feeling very free &amp; artsy lately. I wanna do it all. Pottery, dirt bikes, learn guitar, hikes, kickboxing, gun range, etc."</div>
+    <p>Challenge accepted. Starting with the one that fits her best — a dance floor.</p>
+  </div>
+
+  <div class="invite">
+    <h2>The Invitation</h2>
+    <p>Alexandra, I'd like to take you dancing.</p>
+    <p class="venue">🪩 <a href="http://groovysokc.com/" target="_blank" rel="noopener">Groovy's</a> — Oklahoma City</p>
+    <p>5705 Mosteller Dr · OKC's retro dance club, going strong since 1975<br>
+    '70s, '80s &amp; '90s all night · neon-lit dance floor · open Wed–Sat, 8 PM – 1:30 AM</p>
+    <p style="margin-top:14px;">Good music, no weird games, and a man who can hold an interesting conversation on the way there and back. And if the dancing goes well — your list is long, and I'm game for all of it: pottery, dirt bikes, kickboxing, the range, a hike. Date two is already half-planned.</p>
+  </div>
+
+  <div class="ask" id="ask">
+    <h2>So — will you go to Groovy's with me?</h2>
+    <div class="btns">
+      <button class="yes" onclick="sayYes()">Yes, let's dance 💃</button>
+      <button class="convince" onclick="convinceMe()">I need convincing</button>
+    </div>
+    <div id="yesMsg">🕺💃 <strong>It's a date.</strong><br>Pick your night — Wednesday through Saturday, the floor lights up at 8. Send me the day and I'll handle the rest. Can't wait to make you laugh in person.</div>
+  </div>
+
+  <div class="gallery">
+    <img src="photo2.jpg" alt="Alexandra, black and white">
+    <img src="photo1.jpg" alt="Alexandra">
+  </div>
+
+  <div class="sign">
+    <p>You said you're doing life just fine — but you wouldn't mind having someone by your side.<br>Neither would I. Consider this my application for the position.</p>
+    <p class="name" style="margin-top:10px;">— Justin</p>
+  </div>
+
+  <p class="small">Made for one person only: Alexandra. 🪩</p>
+
+</div>
+<script>
+  function sayYes(){
+    var m = document.getElementById('yesMsg');
+    m.style.display = 'block';
+    m.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+  function convinceMe(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+</script>
+</body>
+</html>
