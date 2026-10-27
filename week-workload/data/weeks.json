@@ -108,7 +108,7 @@
        "address": "Summit Lakes, Edmond",
        "scope": "Mow, edge, trim, blow + clean up all leaves & pine needles",
        "status": "scheduled",
-       "start": null,
+       "start": "13:30",
        "finish": null,
        "minutes": null,
        "auto_start": null,
