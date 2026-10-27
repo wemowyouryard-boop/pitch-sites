@@ -4,11 +4,11 @@
   {
    "week_start": "2026-10-26",
    "week_end": "2026-11-01",
-   "label": "Oct 26 \u2013 Nov 1, 2026",
+   "label": "Oct 26 – Nov 1, 2026",
    "days": [
     {
      "date": "2026-10-26",
-     "label": "Monday, Oct 26 \u2014 Monday route (3 stops)",
+     "label": "Monday, Oct 26 — Monday route (3 stops)",
      "items": [
       {
        "name": "Reid Martin",
@@ -27,7 +27,7 @@
       {
        "name": "Jeffery Elliott",
        "address": "2625 NW 58th Pl, Oklahoma City",
-       "scope": "Christmas light quote visit \u2014 ~114 ft roof line at $5/ft = $570",
+       "scope": "Christmas light quote visit — ~114 ft roof line at $5/ft = $570",
        "status": "done",
        "start": null,
        "finish": null,
@@ -57,12 +57,12 @@
     },
     {
      "date": "2026-10-27",
-     "label": "Tuesday, Oct 27 \u2014 Growing Beauty (Donovan), Justin + Jason",
+     "label": "Tuesday, Oct 27 — Growing Beauty (Donovan), Justin + Jason",
      "items": [
       {
        "name": "1517 Craig Blvd",
        "address": "1517 Craig Blvd, Edmond",
-       "scope": "First stop \u2014 mow; clean front flowerbed weeds; trim front two shrubs (aggressive, do NOT scalp); remove volunteer trees along south back fence (loppers/maybe chainsaw; stack limbs at front curb)",
+       "scope": "First stop — mow; clean front flowerbed weeds; trim front two shrubs (aggressive, do NOT scalp); remove volunteer trees along south back fence (loppers/maybe chainsaw; stack limbs at front curb)",
        "status": "done",
        "start": null,
        "finish": "10:32",
@@ -87,7 +87,7 @@
       {
        "name": "2275 NW 227th St",
        "address": "2275 NW 227th St, Edmond",
-       "scope": "Mow + weed front & back flowerbeds. Gate code #5252. 1 acre \u2014 zero turn useful.",
+       "scope": "Mow + weed front & back flowerbeds. Gate code #5252. 1 acre — zero turn useful.",
        "status": "done",
        "start": "10:52",
        "finish": "12:49",
@@ -149,8 +149,22 @@
     },
     {
      "date": "2026-10-28",
-     "label": "Wednesday, Oct 28 \u2014 Growing Beauty (Donovan), Justin solo",
+     "label": "Wednesday, Oct 28 — Growing Beauty (Donovan), Justin solo",
      "items": [
+      {
+       "name": "6309 Norham Ct",
+       "address": "6309 Norham Ct, Oklahoma City",
+       "scope": "Trim large tree/shrub by back patio; clean up backyard tree rings/islands",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
+      },
       {
        "name": "15504 Juniper Dr",
        "address": "15504 Juniper Dr, Edmond",
@@ -222,9 +236,9 @@
        "man_auto_minutes": null
       },
       {
-       "name": "Clare Hadwiger \u2014 ESTIMATE",
+       "name": "Clare Hadwiger — ESTIMATE",
        "address": "3701 Oakdale Forest Rd, Edmond, OK 73113",
-       "scope": "Estimate visit: backyard cleanup quote (front-yard clean-out project completed Oct 20\u201322). After the last Donovan stop of the day (1109 Jamestown Cir, ~4.5 mi away).",
+       "scope": "Estimate visit: backyard cleanup quote (front-yard clean-out project completed Oct 20–22). After the last Donovan stop of the day (1109 Jamestown Cir, ~4.5 mi away).",
        "status": "scheduled",
        "start": null,
        "finish": null,
@@ -232,35 +246,6 @@
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
-      },
-      {
-       "name": "6309 Norham Ct",
-       "address": "6309 Norham Ct, Oklahoma City",
-       "scope": "Trim large tree/shrub by back patio; clean up backyard tree rings/islands",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
-      },
-      {
-       "name": "Quentin Marks \u2014 Just Kids Pediatrics appointment",
-       "address": "Just Kids Pediatrics, Bethany",
-       "scope": null,
-       "status": "scheduled",
-       "start": "3:45 PM",
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "date": "2026-10-28",
        "man_minutes": null,
        "man_auto_minutes": null
       }
@@ -269,12 +254,12 @@
     },
     {
      "date": "2026-10-29",
-     "label": "Thursday, Oct 29 \u2014 Growing Beauty (Donovan), afternoon 1\u20135 PM",
+     "label": "Thursday, Oct 29 — Growing Beauty (Donovan), afternoon 1–5 PM",
      "items": [
       {
        "name": "Donovan afternoon session",
-       "address": "Meet at Donovan Grahn's \u2014 2504 NW 154th St, Edmond, OK 73013 at 1 PM",
-       "scope": "Justin + Jason, 1\u20135 PM. Properties to be assigned by Donovan.",
+       "address": "Meet at Donovan Grahn's — 2504 NW 154th St, Edmond, OK 73013 at 1 PM",
+       "scope": "Justin + Jason, 1–5 PM. Properties to be assigned by Donovan.",
        "status": "scheduled",
        "start": null,
        "finish": null,
@@ -290,7 +275,7 @@
     },
     {
      "date": "2026-10-30",
-     "label": "Friday, Oct 30 \u2014 Friday route #2 (11 stops)",
+     "label": "Friday, Oct 30 — Friday route #2 (11 stops)",
      "items": [
       {
        "name": "Adam's sister",
@@ -447,7 +432,7 @@
        "man_auto_minutes": null
       },
       {
-       "name": "Jeffery Elliott \u2014 MEETING (in person, ~12:00 PM)",
+       "name": "Jeffery Elliott — MEETING (in person, ~12:00 PM)",
        "address": "2625 NW 58th Place, Oklahoma City",
        "scope": "Christmas light bid follow-up: $570 quote (~114 ft at $5/ft, front roof line fence to fence incl. courtyard; materials, install, takedown; full amount due up front when booked). Confirm uncertain east segment on site. Phone (805) 975-8191. Mid-route: Hilaire Johnson (10308 N May Ave) and Sam slide ~30 min later.",
        "status": "scheduled",
@@ -465,12 +450,12 @@
     },
     {
      "date": "2026-10-31",
-     "label": "Saturday, Oct 31 \u2014 Day off (family)",
+     "label": "Saturday, Oct 31 — Day off (family)",
      "items": [
       {
        "name": "Eric's Toy Extravaganza",
        "address": "Cleveland County Fairgrounds, 615 E Robinson St, Norman",
-       "scope": "Family day with Eira and Quentin \u2014 no route work",
+       "scope": "Family day with Eira and Quentin — no route work",
        "status": "scheduled",
        "start": null,
        "finish": null,
@@ -486,7 +471,7 @@
     },
     {
      "date": "2026-11-01",
-     "label": "Sunday, Nov 1 \u2014 Nothing scheduled",
+     "label": "Sunday, Nov 1 — Nothing scheduled",
      "items": [
       {
        "name": "Invoices due Nov 1",

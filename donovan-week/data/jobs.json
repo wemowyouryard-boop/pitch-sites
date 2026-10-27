@@ -68,6 +68,19 @@
    "finish": "3:21 PM"
   },
   {
+   "address": "6309 Norham Ct, Oklahoma City",
+   "arrival": "",
+   "crew": 1,
+   "date": "2026-10-28",
+   "day": "Wed, Oct 28",
+   "departure": "",
+   "hours_on_site": "",
+   "man_hours": "",
+   "photos": "",
+   "status": "Scheduled",
+   "work": "Trim large tree/shrub by back patio; clean up backyard tree rings/islands"
+  },
+  {
    "address": "15504 Juniper Dr, Edmond",
    "arrival": "",
    "crew": 1,
@@ -131,19 +144,6 @@
    "photos": "",
    "status": "Scheduled",
    "work": "Mowing (skip the freshly seeded area in the back yard)"
-  },
-  {
-   "address": "6309 Norham Ct, Oklahoma City",
-   "arrival": "",
-   "crew": 1,
-   "date": "2026-10-28",
-   "day": "Wed, Oct 28",
-   "departure": "",
-   "hours_on_site": "",
-   "man_hours": "",
-   "photos": "",
-   "status": "Scheduled",
-   "work": "Trim large tree/shrub by back patio; clean up backyard tree rings/islands"
   }
  ],
  "updated": "2026-10-27",
