@@ -24,7 +24,7 @@
   .brand { display:flex; align-items:center; gap:14px; margin:2px 0 4px; }
   .brand .name { font-size:23px; font-weight:800; color:#2e4a22; letter-spacing:-0.2px; line-height:1.15; }
   .brand .tag { color:#5a6653; font-size:13.5px; }
-  table.report { width:100%; border-collapse:collapse; font-size:14px; }
+  table.report { width:100%; border-collapse:collapse; font-size:14px; min-width:680px; }
   table.report th { background:#eef3e8; text-align:left; padding:8px 10px; border-bottom:1px solid #dfe4da; white-space:nowrap; }
   table.report td { padding:8px 10px; border-bottom:1px solid #eef1ea; vertical-align:top; }
   table.report tr.done td { background:#f0f7f0; }
@@ -45,7 +45,7 @@
 
   <h2>⏱ Time &amp; Hours Report</h2>
   <p class="crew">Arrival and departure for every job, with hours on site and man-hours (hours on site × the men on the crew). Updated as each job finishes.</p>
-  <div style="background:#fff; border:1px solid #dfe4da; border-radius:10px; overflow:hidden; margin:10px 0 4px;">
+  <div style="background:#fff; border:1px solid #dfe4da; border-radius:10px; overflow-x:auto; margin:10px 0 4px;">
   <table class="report">
     <tr><th>Date</th><th>Job</th><th>Arrival</th><th>Departure</th><th>Hours on site</th><th>Man-hours</th><th>Photos</th></tr>
     <tr class="done"><td class="t">Tue Oct 27</td><td><strong>1517 Craig Blvd, Edmond</strong> ✅</td><td class="t">8:29 AM</td><td class="t">10:32 AM</td><td class="t">2:03:00</td><td class="t">4:06:00</td><td>📷 <a href="photos/craig-blvd.html">Photos (8)</a></td></tr>
