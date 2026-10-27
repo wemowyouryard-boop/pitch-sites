@@ -115,7 +115,29 @@
        "auto_finish": null,
        "auto_minutes": null,
        "man_minutes": null,
-       "man_auto_minutes": null
+       "man_auto_minutes": null,
+       "parts": [
+        {
+         "name": "Entrance 1",
+         "start": "13:30",
+         "finish": "14:21",
+         "minutes": 51
+        },
+        {
+         "name": "Entrance 2",
+         "start": null,
+         "finish": null,
+         "minutes": null
+        }
+       ],
+       "photos": [
+        "summit-lakes-1.jpg",
+        "summit-lakes-2.jpg",
+        "summit-lakes-3.jpg",
+        "summit-lakes-4.jpg",
+        "summit-lakes-5.jpg"
+       ],
+       "photos_page": "photos/summit-lakes.html"
       },
       {
        "name": "6309 Norham Ct",

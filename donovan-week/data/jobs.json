@@ -36,9 +36,30 @@
    "departure": "",
    "hours_on_site": "",
    "man_hours": "",
-   "photos": "",
+   "photos": [
+    "summit-lakes-1.jpg",
+    "summit-lakes-2.jpg",
+    "summit-lakes-3.jpg",
+    "summit-lakes-4.jpg",
+    "summit-lakes-5.jpg"
+   ],
    "status": "In progress",
-   "work": "Mowing, edging, trimming and blowing; clean up leaves and pine needles"
+   "work": "Mowing, edging, trimming and blowing; clean up leaves and pine needles",
+   "parts": [
+    {
+     "name": "Entrance 1",
+     "start": "1:30 PM",
+     "finish": "2:21 PM",
+     "minutes": 51
+    },
+    {
+     "name": "Entrance 2",
+     "start": null,
+     "finish": null,
+     "minutes": null
+    }
+   ],
+   "photos_page": "photos/summit-lakes.html"
   },
   {
    "address": "6309 Norham Ct, Oklahoma City",
