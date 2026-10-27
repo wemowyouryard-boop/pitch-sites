@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OKC Bathroom Remodel Cost Calculator — Get a Ballpark Estimate in 60 Seconds</title>
+<meta name="description" content="Answer 5 quick questions and get a ballpark cost range for your bathroom remodel in the Oklahoma City metro — then, only if you want, have one local remodeler contact you. Ballpark estimate only, not a quote.">
+<style>
+  :root{
+    --navy:#12283d;
+    --navy-2:#1b3a56;
+    --copper:#c07a3e;
+    --copper-dark:#a5652f;
+    --paper:#faf7f2;
+    --card:#ffffff;
+    --ink:#22303c;
+    --muted:#68778a;
+    --line:#e3ddd2;
+    --good:#1e7d46;
+    --err:#b3261e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.5;
+    padding:0 14px 44px;
+  }
+  .wrap{max-width:660px;margin:0 auto}
+  header.top{
+    background:linear-gradient(150deg,var(--navy) 0%,var(--navy-2) 100%);
+    color:#fff;margin:0 -14px;padding:26px 18px 24px;text-align:center;
+  }
+  header.top .brand{font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#e8c39a;font-weight:700}
+  header.top h1{font-family:Georgia,"Times New Roman",serif;font-size:30px;line-height:1.18;font-weight:700;margin:8px 0 8px}
+  header.top p{font-size:15.5px;color:#cfdce8;max-width:520px;margin:0 auto}
+  .trustbar{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:16px 0 4px}
+  .trustbar span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600;color:var(--navy)}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:22px 18px;margin-top:16px;box-shadow:0 2px 10px rgba(18,40,61,.05);
+  }
+  .step-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+  .step-num{
+    flex:none;width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;
+  }
+  .step-head h2{font-family:Georgia,"Times New Roman",serif;font-size:19px;color:var(--navy)}
+  .opts{display:grid;gap:9px}
+  .opt{position:relative}
+  .opt input{position:absolute;opacity:0;inset:0;cursor:pointer}
+  .opt label{
+    display:block;border:2px solid var(--line);border-radius:10px;padding:13px 14px;
+    font-size:16px;font-weight:600;cursor:pointer;background:#fff;min-height:48px;
+  }
+  .opt label small{display:block;font-weight:400;color:var(--muted);font-size:13.5px;margin-top:2px}
+  .opt input:checked + label{border-color:var(--copper);background:#fdf3e7}
+  .opt input:focus-visible + label{outline:3px solid var(--navy);outline-offset:2px}
+  .ziprow{display:flex;gap:10px}
+  .ziprow input{
+    flex:1;padding:13px;font-size:17px;border:2px solid var(--line);border-radius:10px;font-weight:600;
+  }
+  .zipnote{font-size:13px;color:var(--muted);margin-top:6px}
+  .btn{
+    display:block;width:100%;border:none;cursor:pointer;border-radius:12px;
+    padding:16px;font-size:18px;font-weight:800;text-align:center;
+  }
+  .btn-main{background:var(--copper);color:#fff;margin-top:18px;box-shadow:0 4px 14px rgba(192,122,62,.35)}
+  .btn-main:active{background:var(--copper-dark)}
+  .result{
+    display:none;margin-top:18px;background:var(--navy);color:#fff;border-radius:14px;
+    padding:24px 18px;text-align:center;
+  }
+  .result.open{display:block}
+  .result .r-label{font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;color:#e8c39a;font-weight:700}
+  .result .r-range{font-family:Georgia,serif;font-size:38px;font-weight:700;line-height:1.15;margin:6px 0 4px}
+  .result .r-sub{font-size:14.5px;color:#cfdce8}
+  .result .r-warn{margin-top:12px;font-size:13px;color:#f0d9b5;background:rgba(255,255,255,.08);border-radius:8px;padding:9px 11px}
+  label.flabel{display:block;font-weight:700;font-size:15px;margin:16px 0 7px;color:var(--navy)}
+  label.flabel:first-of-type{margin-top:4px}
+  .finput{
+    width:100%;padding:13px;font-size:16px;border:2px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);
+  }
+  .finput.bad{border-color:var(--err)}
+  select.finput{appearance:auto}
+  .err-msg{display:none;color:var(--err);font-size:13.5px;font-weight:600;margin-top:5px}
+  .err-msg.open{display:block}
+  .consent{
+    margin-top:20px;background:#f4efe6;border:1px solid var(--line);border-radius:10px;padding:14px;
+    display:flex;gap:12px;align-items:flex-start;
+  }
+  .consent input{width:24px;height:24px;flex:none;margin-top:2px;accent-color:var(--copper);cursor:pointer}
+  .consent label{font-size:13.5px;line-height:1.55;cursor:pointer}
+  .confirm{display:none;margin-top:18px;background:#eef7f0;border:1.5px solid var(--good);border-radius:14px;padding:22px 18px;text-align:center}
+  .confirm.open{display:block}
+  .confirm h2{font-family:Georgia,serif;color:var(--good);font-size:23px;margin-bottom:6px}
+  .confirm p{font-size:15px}
+  .confirm .ref{display:inline-block;margin-top:10px;background:#fff;border:1px dashed var(--good);border-radius:8px;padding:7px 14px;font-weight:800;color:var(--navy)}
+  .fineprint{font-size:12.5px;color:var(--muted);margin-top:16px;line-height:1.55}
+  footer{margin-top:26px;font-size:13px;color:var(--muted);line-height:1.6}
+  footer h3{font-size:13px;letter-spacing:1.4px;text-transform:uppercase;color:var(--navy);margin-bottom:6px}
+  footer a{color:var(--navy-2)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="brand">OKC Bath Quotes</div>
+  <h1>Bathroom Remodel Cost Calculator</h1>
+  <p>Answer 5 quick questions and see what a bathroom remodel like yours typically costs in the Oklahoma City metro.</p>
+</header>
+
+<div class="trustbar">
+  <span>⏱ About 60 seconds</span>
+  <span>📍 Oklahoma City metro</span>
+  <span>🔒 Your info stays private unless you ask for a call</span>
+</div>
+
+<form id="calcForm" novalidate>
+
+  <!-- STEP 1 -->
+  <section class="card">
+    <div class="step-head"><div class="step-num">1</div><h2>Which bathroom are you remodeling?</h2></div>
+    <div class="opts">
+      <div class="opt"><input type="radio" name="size" id="sz-master" value="master"><label for="sz-master">Primary / master bathroom<small>The big one — often has a tub plus a shower, or a double vanity</small></label></div>
+      <div class="opt"><input type="radio" name="size" id="sz-hall" value="hall"><label for="sz-hall">Hall / guest bathroom<small>A standard full bathroom used by family or guests</small></label></div>
+      <div class="opt"><input type="radio" name="size" id="sz-half" value="half"><label for="sz-half">Half bath / powder room<small>Toilet and sink only — no tub or shower</small></label></div>
+    </div>
+  </section>
+
+  <!-- STEP 2 -->
+  <section class="card">
+    <div class="step-head"><div class="step-num">2</div><h2>How big is the project?</h2></div>
+    <div class="opts">
+      <div class="opt"><input type="radio" name="scope" id="sc-refresh" value="refresh"><label for="sc-refresh">Cosmetic refresh<small>Paint, fixtures, mirror, lighting — no tile or plumbing changes</small></label></div>
+      <div class="opt"><input type="radio" name="scope" id="sc-wet" value="wetarea"><label for="sc-wet">New tub or shower only<small>Replace the tub/shower, or convert a tub into a walk-in shower</small></label></div>
+      <div class="opt"><input type="radio" name="scope" id="sc-full" value="full"><label for="sc-full">Full remodel, same layout<small>Everything new — tub/shower, tile, vanity, toilet, floor — in the same places</small></label></div>
+      <div class="opt"><input type="radio" name="scope" id="sc-layout" value="layout"><label for="sc-layout">Full remodel with changes<small>Moving walls or plumbing, or making the bathroom bigger</small></label></div>
+    </div>
+  </section>
+
+  <!-- STEP 3 -->
+  <section class="card">
+    <div class="step-head"><div class="step-num">3</div><h2>What finish level are you picturing?</h2></div>
+    <div class="opts">
+      <div class="opt"><input type="radio" name="finish" id="fi-standard" value="standard"><label for="fi-standard">Standard<small>Clean and solid — stock vanity, acrylic or basic tile, standard fixtures</small></label></div>
+      <div class="opt"><input type="radio" name="finish" id="fi-mid" value="mid"><label for="fi-mid">Mid-range<small>Tiled shower, nicer vanity and fixtures, some upgrades</small></label></div>
+      <div class="opt"><input type="radio" name="finish" id="fi-premium" value="premium"><label for="fi-premium">Premium<small>Frameless glass, high-end tile, semi-custom vanity, top fixtures</small></label></div>
+      <div class="opt"><input type="radio" name="finish" id="fi-luxury" value="luxury"><label for="fi-luxury">Luxury<small>Full custom — freestanding tub, stone, heated floors, smart fixtures</small></label></div>
+    </div>
+  </section>
+
+  <!-- STEP 4 -->
+  <section class="card">
+    <div class="step-head"><div class="step-num">4</div><h2>When do you want it done?</h2></div>
+    <div class="opts">
+      <div class="opt"><input type="radio" name="timeline" id="tl-asap" value="asap"><label for="tl-asap">As soon as possible</label></div>
+      <div class="opt"><input type="radio" name="timeline" id="tl-13" value="1-3 months"><label for="tl-13">Within 1–3 months</label></div>
+      <div class="opt"><input type="radio" name="timeline" id="tl-36" value="3-6 months"><label for="tl-36">Within 3–6 months</label></div>
+      <div class="opt"><input type="radio" name="timeline" id="tl-research" value="researching"><label for="tl-research">Just researching for now</label></div>
+    </div>
+  </section>
+
+  <!-- STEP 5 -->
+  <section class="card">
+    <div class="step-head"><div class="step-num">5</div><h2>Where is the home?</h2></div>
+    <div class="ziprow">
+      <input type="text" id="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="ZIP code — e.g. 73120">
+    </div>
+    <p class="zipnote">We serve the Oklahoma City metro: OKC, Edmond, Norman, Moore, Yukon, Mustang, Del City, Midwest City, Bethany, and nearby.</p>
+    <p class="err-msg" id="quizErr">Please answer all 5 questions (and check your ZIP) so we can size up your estimate.</p>
+    <button type="button" class="btn btn-main" id="calcBtn">See My Ballpark Estimate →</button>
+
+    <div class="result" id="resultBox" aria-live="polite">
+      <div class="r-label">Your ballpark estimate</div>
+      <div class="r-range" id="rangeOut">$0 – $0</div>
+      <div class="r-sub" id="rangeSub"></div>
+      <div class="r-warn">⚠️ This is a <strong>ballpark estimate — not a quote</strong>. Your real price depends on your bathroom's condition, the materials you pick, and the contractor's in-home measurement.</div>
+    </div>
+  </section>
+
+  <!-- LEAD FORM -->
+  <section class="card" id="leadCard">
+    <div class="step-head"><div class="step-num">✓</div><h2>Want a real price? Get one free in-home quote</h2></div>
+    <p style="font-size:15px">Estimates only go so far. If you'd like, <strong>one</strong> local bathroom remodeler — just one, not a crowd of them — can call you to set up a free in-home measurement and an exact written quote.</p>
+
+    <label class="flabel" for="f-name">Full name</label>
+    <input class="finput" id="f-name" autocomplete="name" placeholder="Jane Smith">
+    <p class="err-msg" id="e-name">Please enter your name.</p>
+
+    <label class="flabel" for="f-phone">Mobile phone</label>
+    <input class="finput" id="f-phone" type="tel" autocomplete="tel" placeholder="(405) 555-0123">
+    <p class="err-msg" id="e-phone">Please enter a valid 10-digit mobile number.</p>
+
+    <label class="flabel" for="f-email">Email</label>
+    <input class="finput" id="f-email" type="email" autocomplete="email" placeholder="you@example.com">
+    <p class="err-msg" id="e-email">Please enter a valid email address.</p>
+
+    <label class="flabel" for="f-address">Property address</label>
+    <input class="finput" id="f-address" autocomplete="street-address" placeholder="123 Main St, Oklahoma City, OK">
+    <p class="err-msg" id="e-address">Please enter the address of the home being remodeled.</p>
+
+    <label class="flabel" for="f-own">Do you own this home?</label>
+    <select class="finput" id="f-own">
+      <option value="">Choose one…</option>
+      <option value="own">Yes, I own it</option>
+      <option value="buying">I'm buying it / under contract</option>
+      <option value="rent">No, I rent it</option>
+    </select>
+    <p class="err-msg" id="e-own">Please choose one.</p>
+
+    <label class="flabel" for="f-besttime">Best time to contact you</label>
+    <select class="finput" id="f-besttime">
+      <option value="">Choose one…</option>
+      <option value="morning">Morning (8 a.m. – 12 p.m.)</option>
+      <option value="afternoon">Afternoon (12 p.m. – 5 p.m.)</option>
+      <option value="evening">Evening (5 p.m. – 8 p.m.)</option>
+    </select>
+    <p class="err-msg" id="e-besttime">Please pick the best time to reach you.</p>
+
+    <div class="consent">
+      <input type="checkbox" id="f-consent">
+      <label for="f-consent" id="consentLabel"></label>
+    </div>
+    <p class="err-msg" id="e-consent">Please check the box so the remodeler is allowed to contact you — that's what gives them legal permission to call.</p>
+
+    <button type="submit" class="btn btn-main" id="submitBtn">Request My Free Quote →</button>
+    <p class="fineprint">No spam, no obligation, and your project details are shared with <strong>one</strong> local remodeler only — never sold to a list. Prefer to just keep your estimate? That's fine — close this page and it's yours.</p>
+
+    <div class="confirm" id="confirmBox" aria-live="polite">
+      <h2>You're all set ✅</h2>
+      <p>Your request is in. <strong>One</strong> local bathroom remodeler will contact you at your best time to schedule a free in-home measurement and exact quote. Calls and texts only come between 8 a.m. and 8 p.m.</p>
+      <div class="ref" id="refOut"></div>
+      <p style="margin-top:10px;font-size:13.5px;color:var(--muted)">Keep this reference code handy. Changed your mind? Reply STOP to any text, or tell the caller to remove you — they'll honor it right away.</p>
+    </div>
+  </section>
+
+</form>
+
+<footer>
+  <h3>How these numbers were figured</h3>
+  <p>The ranges come from 2026 cost data for this kind of work: national bathroom remodel cost bands by project scope (HomeDesigns.ai 2026 data), Oklahoma City project examples published by Thumbtack, and the <em>Journal of Light Construction</em> Cost vs. Value report for Oklahoma City (a midrange bath remodel's job cost there is about $24,800). Your answers about size, scope, and finish level move the range up or down. It is a <strong>ballpark estimate — not a quote</strong>, and not a promise of any contractor's price.</p>
+  <h3 style="margin-top:16px">About this service</h3>
+  <p>OKC Bath Quotes is a local matching service that connects Oklahoma City–area homeowners with independent bathroom remodeling contractors. We are not a contractor and we don't perform remodeling work. We share your information only as described in the consent text above, with your permission, and we keep a record of that permission (the date, time, this page, and the exact wording you agreed to).</p>
+</footer>
+
+</div>
+
+<script>
+/* =========================================================
+   OKC Bathroom Remodel Cost Calculator
+   Estimate bands (base, before size/finish multipliers) come
+   from the sources cited in the footer:
+   - refresh:  $3,000–$8,500   (cosmetic refresh band)
+   - wetarea:  $5,000–$13,000  (tub/shower replacement or conversion)
+   - full:     $11,000–$26,000 (full remodel, same layout; JLC Cost vs.
+               Value puts an OKC midrange bath remodel at ~$24,800)
+   - layout:   $25,000–$50,000 (major remodel / layout changes)
+   ========================================================= */
+var SCOPE_BANDS = {
+  refresh: [3000, 8500],
+  wetarea: [5000, 13000],
+  full:    [11000, 26000],
+  layout:  [25000, 50000]
+};
+var SIZE_MULT  = { half: 0.45, hall: 1.0, master: 1.3 };
+var FINISH_MULT = { standard: 0.85, mid: 1.0, premium: 1.35, luxury: 1.8 };
+
+var answers = { size: null, scope: null, finish: null, timeline: null, zip: "" };
+var lastEstimate = null;
+
+function pick(name){
+  var el = document.querySelector('input[name="' + name + '"]:checked');
+  return el ? el.value : null;
+}
+function round500(n){ return Math.round(n / 500) * 500; }
+function money(n){ return "$" + n.toLocaleString("en-US"); }
+
+function computeEstimate(){
+  var band = SCOPE_BANDS[answers.scope];
+  var sm = SIZE_MULT[answers.size], fm = FINISH_MULT[answers.finish];
+  var low  = round500(band[0] * sm * fm);
+  var high = round500(band[1] * sm * fm);
+  if (high > 95000) high = 95000;
+  if (low < 1500) low = 1500;
+  return { low: low, high: high };
+}
+
+document.getElementById("calcBtn").addEventListener("click", function(){
+  answers.size = pick("size");
+  answers.scope = pick("scope");
+  answers.finish = pick("finish");
+  answers.timeline = pick("timeline");
+  answers.zip = document.getElementById("zip").value.trim();
+  var zipOk = /^\d{5}$/.test(answers.zip);
+  var ok = answers.size && answers.scope && answers.finish && answers.timeline && zipOk;
+  document.getElementById("quizErr").classList.toggle("open", !ok);
+  if (!ok) return;
+  lastEstimate = computeEstimate();
+  document.getElementById("rangeOut").textContent =
+    money(lastEstimate.low) + " – " + money(lastEstimate.high);
+  var sizeTxt = { half: "half bath", hall: "hall/guest bathroom", master: "primary bathroom" }[answers.size];
+  var finTxt  = { standard: "standard", mid: "mid-range", premium: "premium", luxury: "luxury" }[answers.finish];
+  document.getElementById("rangeSub").textContent =
+    "For a " + sizeTxt + " at a " + finTxt + " finish level, in ZIP " + answers.zip + ".";
+  document.getElementById("resultBox").classList.add("open");
+  document.getElementById("resultBox").scrollIntoView({ behavior: "smooth", block: "center" });
+});
+
+/* =========================================================
+   CONSENT — the exact wording the homeowner agrees to.
+   CONSENT_TEXT is rendered into the label below AND stored
+   verbatim with every submission (see buildPayload), so the
+   record always shows exactly what the consumer agreed to.
+   ========================================================= */
+var CONSENT_TEXT_VERSION = "v1-2026-10-27";
+var CONSENT_TEXT =
+  "Yes — contact me about my bathroom remodel. By checking this box and tapping " +
+  "\"Request My Free Quote,\" I agree that OKC Bath Quotes and the local bathroom " +
+  "remodeling contractors it matches me with may call and text me at the mobile " +
+  "number I provided — including by automated dialing systems and prerecorded " +
+  "messages — and email me about my project. Message and data rates may apply. " +
+  "Contacts will only come between 8 a.m. and 8 p.m. Central, no more than 3 " +
+  "times in a day. My consent is not a condition of buying anything, and I can " +
+  "opt out anytime by replying STOP to a text or telling the caller to remove me.";
+document.getElementById("consentLabel").textContent = CONSENT_TEXT;
+
+function fieldOk(id, errId, test){
+  var el = document.getElementById(id);
+  var good = test(el.value.trim());
+  el.classList.toggle("bad", !good);
+  document.getElementById(errId).classList.toggle("open", !good);
+  return good;
+}
+
+document.getElementById("calcForm").addEventListener("submit", function(ev){
+  ev.preventDefault();
+
+  var ok = true;
+  ok = fieldOk("f-name", "e-name", function(v){ return v.length >= 2; }) && ok;
+  ok = fieldOk("f-phone", "e-phone", function(v){ return v.replace(/\D/g, "").length === 10; }) && ok;
+  ok = fieldOk("f-email", "e-email", function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }) && ok;
+  ok = fieldOk("f-address", "e-address", function(v){ return v.length >= 8; }) && ok;
+  ok = fieldOk("f-own", "e-own", function(v){ return v !== ""; }) && ok;
+  ok = fieldOk("f-besttime", "e-besttime", function(v){ return v !== ""; }) && ok;
+
+  var consentEl = document.getElementById("f-consent");
+  var consentOk = consentEl.checked === true;   /* unchecked by default — must be an active opt-in */
+  document.getElementById("e-consent").classList.toggle("open", !consentOk);
+  ok = ok && consentOk;
+  if (!ok) return;
+
+  /* If the visitor skipped the quiz, capture what we have (estimate may be null). */
+  if (!lastEstimate){
+    answers.size = pick("size"); answers.scope = pick("scope");
+    answers.finish = pick("finish"); answers.timeline = pick("timeline");
+    answers.zip = document.getElementById("zip").value.trim();
+    if (answers.size && answers.scope && answers.finish) lastEstimate = computeEstimate();
+  }
+
+  var payload = buildPayload();
+  window.__lastLeadPayload = payload;   /* kept for inspection during integration */
+
+  /* =========================================================
+     ★ LEAD DELIVERY — INTEGRATION POINT (Justin's decision) ★
+     ---------------------------------------------------------
+     There is NO backend wired up yet, on purpose. Nothing is
+     emailed, texted, or sent to any third party from this page.
+     When Justin picks the delivery method, implement
+     deliverLead(payload) to POST the payload JSON to ONE of:
+       (a) a form endpoint (Formspree / Getform / Basin), or
+       (b) a small webhook that writes to the lead sheet and
+           texts/emails the assigned buyer in real time, or
+       (c) a CRM (e.g. GoHighLevel) endpoint.
+     Also capture a consent certificate at that point
+     (TrustedForm or Jornaya LeadiD token field on `payload`)
+     and store: timestamp, IP, user agent, page URL, and
+     CONSENT_TEXT verbatim — many buyers require the cert.
+
+     async function deliverLead(p){
+       // TODO(Justin): choose endpoint, then:
+       // return fetch(ENDPOINT, { method:"POST",
+       //   headers:{ "Content-Type":"application/json" },
+       //   body: JSON.stringify(p) });
+     }
+     ========================================================= */
+  console.log("Lead payload (not transmitted — no backend connected):", payload);
+
+  var ref = "OKCB-" + Date.now().toString(36).toUpperCase();
+  document.getElementById("refOut").textContent = "Reference: " + ref;
+  document.getElementById("confirmBox").classList.add("open");
+  document.getElementById("submitBtn").disabled = true;
+  document.getElementById("confirmBox").scrollIntoView({ behavior: "smooth", block: "center" });
+});
+
+function buildPayload(){
+  return {
+    lead: {
+      name: document.getElementById("f-name").value.trim(),
+      phone: document.getElementById("f-phone").value.trim(),
+      email: document.getElementById("f-email").value.trim(),
+      property_address: document.getElementById("f-address").value.trim(),
+      homeowner_status: document.getElementById("f-own").value,
+      best_time_to_contact: document.getElementById("f-besttime").value
+    },
+    quiz: {
+      bathroom_size: answers.size,
+      scope: answers.scope,
+      finish_level: answers.finish,
+      timeline: answers.timeline,
+      service_zip: answers.zip
+    },
+    estimate_shown: lastEstimate,          /* {low, high} in dollars, or null */
+    consent: {
+      agreed: true,
+      text: CONSENT_TEXT,                  /* exact wording, stored verbatim */
+      text_version: CONSENT_TEXT_VERSION,
+      timestamp_iso: new Date().toISOString(),
+      page_url: window.location.href,
+      user_agent: navigator.userAgent
+      /* ip_address + trustedform_cert_url: captured server-side / at integration */
+    }
+  };
+}
+</script>
+</body>
+</html>
