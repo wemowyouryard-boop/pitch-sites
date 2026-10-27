@@ -93,10 +93,10 @@
        "finish": "12:49",
        "minutes": 117,
        "auto_start": "10:59",
-       "auto_finish": "11:59",
-       "auto_minutes": 60,
+       "auto_finish": "12:44",
+       "auto_minutes": 105,
        "man_minutes": 234,
-       "man_auto_minutes": 120,
+       "man_auto_minutes": 210,
        "photos": [
         "photos/2275-nw-227th-1.mp4",
         "photos/2275-nw-227th-2.mp4"
