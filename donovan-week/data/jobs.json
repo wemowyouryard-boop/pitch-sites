@@ -36,17 +36,7 @@
       "departure": "",
       "hours_on_site": "1:48:00",
       "man_hours": "3:36:00",
-      "photos": [
-        "summit-lakes-1.jpg",
-        "summit-lakes-2.jpg",
-        "summit-lakes-3.jpg",
-        "summit-lakes-4.jpg",
-        "summit-lakes-5.jpg",
-        "summit-lakes-e2-1.jpg",
-        "summit-lakes-e2-2.jpg",
-        "summit-lakes-e2-3.jpg",
-        "summit-lakes-e2-1.mp4"
-      ],
+      "photos": "../photos/summit-lakes.html",
       "status": "Finished",
       "work": "Mowing, edging, trimming and blowing; clean up leaves and pine needles",
       "parts": [
@@ -146,7 +136,7 @@
       "work": "Trim large tree/shrub by back patio; clean up backyard tree rings/islands"
     },
     {
-      "address": "Donovan's property \u2014 2504 NW 154th St, Edmond",
+      "address": "Donovan's property — 2504 NW 154th St, Edmond",
       "arrival": "1:00 PM",
       "crew": 2,
       "date": "2026-10-29",
