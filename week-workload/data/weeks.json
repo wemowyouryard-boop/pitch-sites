@@ -180,7 +180,7 @@
               "address": "2801 NW 154th St, Oklahoma City",
               "scope": "Mow",
               "status": "scheduled",
-              "start": null,
+              "start": "09:56",
               "finish": null,
               "minutes": null,
               "auto_start": null,
