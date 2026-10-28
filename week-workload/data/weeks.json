@@ -295,9 +295,9 @@
               "man_auto_minutes": null
             },
             {
-              "name": "Donovan afternoon session",
-              "address": "Meet at Donovan Grahn's \u2014 2504 NW 154th St, Edmond, OK 73013 at 1 PM",
-              "scope": "Justin + Jason, 1\u20135 PM. Properties to be assigned by Donovan.",
+              "name": "Donovan's property",
+              "address": "2504 NW 154th St, Edmond, OK 73013",
+              "scope": "Afternoon job AT Donovan's property: arrive 1:00 PM, work until 5:00 PM. Jobs assigned by Donovan on site.",
               "status": "scheduled",
               "start": null,
               "finish": null,

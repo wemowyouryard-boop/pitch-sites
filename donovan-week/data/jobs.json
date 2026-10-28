@@ -144,6 +144,19 @@
       "photos": "",
       "status": "Scheduled",
       "work": "Trim large tree/shrub by back patio; clean up backyard tree rings/islands"
+    },
+    {
+      "address": "Donovan's property \u2014 2504 NW 154th St, Edmond",
+      "arrival": "1:00 PM",
+      "crew": 2,
+      "date": "2026-10-29",
+      "day": "Thu, Oct 29",
+      "departure": "5:00 PM",
+      "hours_on_site": "",
+      "man_hours": "",
+      "photos": "",
+      "status": "Scheduled",
+      "work": "Afternoon job at Donovan's property; jobs assigned by Donovan on site"
     }
   ],
   "updated": "2026-10-27",
