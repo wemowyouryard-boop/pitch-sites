@@ -233,8 +233,8 @@
               "finish": "12:04",
               "minutes": 30,
               "auto_start": "11:44",
-              "auto_finish": null,
-              "auto_minutes": null,
+              "auto_finish": "12:00",
+              "auto_minutes": 16,
               "man_minutes": 60,
               "man_auto_minutes": null,
               "photos": [
