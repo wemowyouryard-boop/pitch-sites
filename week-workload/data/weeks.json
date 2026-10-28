@@ -228,14 +228,14 @@
               "name": "17400 Braken Dr",
               "address": "17400 Braken Dr, Oklahoma City",
               "scope": "Mow",
-              "status": "scheduled",
+              "status": "done",
               "start": "11:34",
-              "finish": null,
-              "minutes": null,
+              "finish": "12:04",
+              "minutes": 30,
               "auto_start": "11:44",
               "auto_finish": null,
               "auto_minutes": null,
-              "man_minutes": null,
+              "man_minutes": 60,
               "man_auto_minutes": null,
               "photos": [
                 "photos/17400-braken-dr-1.jpg",
@@ -272,11 +272,18 @@
               "auto_minutes": null,
               "man_minutes": null,
               "man_auto_minutes": null
-            },
+            }
+          ],
+          "crew_size": 2
+        },
+        {
+          "date": "2026-10-29",
+          "label": "Thursday, Oct 29 \u2014 Growing Beauty (Donovan)",
+          "items": [
             {
               "name": "6309 Norham Ct",
               "address": "6309 Norham Ct, Oklahoma City",
-              "scope": "Trim large tree/shrub by back patio; clean up backyard tree rings/islands. Needs the ladder. LAST STOP of the day \u2014 moved to the end of Wednesday per Donovan's email Oct 27 (he offered end of Wednesday or Thursday morning; Donovan already notified Wednesday's mow customers of their approximate times, and 15504 Juniper Dr starts the day).",
+              "scope": "Trim large tree/shrub by back patio; clean up backyard tree rings/islands. Needs the ladder. FIRST JOB of Thursday \u2014 early start 7:30 AM (moved from Wednesday by Justin, Oct 28).",
               "status": "scheduled",
               "start": null,
               "finish": null,
@@ -286,14 +293,7 @@
               "auto_minutes": null,
               "man_minutes": null,
               "man_auto_minutes": null
-            }
-          ],
-          "crew_size": 2
-        },
-        {
-          "date": "2026-10-29",
-          "label": "Thursday, Oct 29 \u2014 Growing Beauty (Donovan), afternoon 1\u20135 PM",
-          "items": [
+            },
             {
               "name": "Donovan afternoon session",
               "address": "Meet at Donovan Grahn's \u2014 2504 NW 154th St, Edmond, OK 73013 at 1 PM",
