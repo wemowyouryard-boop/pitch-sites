@@ -187,7 +187,18 @@
               "auto_finish": null,
               "auto_minutes": null,
               "man_minutes": null,
-              "man_auto_minutes": null
+              "man_auto_minutes": null,
+              "photos": [
+                "photos/2801-nw-154th-1.jpg",
+                "photos/2801-nw-154th-2.jpg",
+                "photos/2801-nw-154th-3.jpg",
+                "photos/2801-nw-154th-4.jpg",
+                "photos/2801-nw-154th-5.jpg",
+                "photos/2801-nw-154th-6.jpg",
+                "photos/2801-nw-154th-7.jpg",
+                "photos/2801-nw-154th-8.jpg"
+              ],
+              "photos_page": "photos/2801-nw-154th.html"
             },
             {
               "name": "2404 NW 154th St",
