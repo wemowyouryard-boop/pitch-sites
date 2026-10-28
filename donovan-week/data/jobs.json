@@ -83,20 +83,20 @@
     {
       "address": "2801 NW 154th St, Oklahoma City",
       "arrival": "9:56 AM",
-      "crew": 1,
+      "crew": 2,
       "date": "2026-10-28",
       "day": "Wed, Oct 28",
-      "departure": "",
-      "hours_on_site": "",
-      "man_hours": "",
+      "departure": "10:22 AM",
+      "hours_on_site": "0:26:00",
+      "man_hours": "0:52:00",
       "photos": "../photos/2801-nw-154th.html",
-      "status": "Scheduled",
+      "status": "Finished",
       "work": "Mowing"
     },
     {
       "address": "2404 NW 154th St, Oklahoma City",
       "arrival": "",
-      "crew": 1,
+      "crew": 2,
       "date": "2026-10-28",
       "day": "Wed, Oct 28",
       "departure": "",
@@ -109,7 +109,7 @@
     {
       "address": "17400 Braken Dr, Oklahoma City",
       "arrival": "",
-      "crew": 1,
+      "crew": 2,
       "date": "2026-10-28",
       "day": "Wed, Oct 28",
       "departure": "",
@@ -122,7 +122,7 @@
     {
       "address": "1109 Jamestown Cir, Oklahoma City",
       "arrival": "",
-      "crew": 1,
+      "crew": 2,
       "date": "2026-10-28",
       "day": "Wed, Oct 28",
       "departure": "",
@@ -135,7 +135,7 @@
     {
       "address": "6309 Norham Ct, Oklahoma City",
       "arrival": "",
-      "crew": 1,
+      "crew": 2,
       "date": "2026-10-28",
       "day": "Wed, Oct 28",
       "departure": "",
