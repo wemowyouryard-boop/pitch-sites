@@ -73,11 +73,11 @@
       "crew": 1,
       "date": "2026-10-28",
       "day": "Wed, Oct 28",
-      "departure": "",
-      "hours_on_site": "",
-      "man_hours": "",
+      "departure": "9:53 AM",
+      "hours_on_site": "0:42:00",
+      "man_hours": "1:24:00",
       "photos": "../photos/juniper-dr.html",
-      "status": "Scheduled",
+      "status": "Finished",
       "work": "Mowing; trim all holly and boxwood shrubs, front and back"
     },
     {

@@ -149,20 +149,20 @@
         },
         {
           "date": "2026-10-28",
-          "label": "Wednesday, Oct 28 \u2014 Growing Beauty (Donovan), Justin solo",
+          "label": "Wednesday, Oct 28 \u2014 Growing Beauty (Donovan)",
           "items": [
             {
               "name": "15504 Juniper Dr",
               "address": "15504 Juniper Dr, Edmond",
               "scope": "Mow + trim holly/boxwood shrubs",
-              "status": "scheduled",
+              "status": "done",
               "start": "09:11",
-              "finish": null,
-              "minutes": null,
+              "finish": "09:53",
+              "minutes": 42,
               "auto_start": "09:15",
               "auto_finish": null,
               "auto_minutes": null,
-              "man_minutes": null,
+              "man_minutes": 84,
               "man_auto_minutes": null,
               "photos": [
                 "photos/juniper-dr-1.jpg",
@@ -260,7 +260,7 @@
               "man_auto_minutes": null
             }
           ],
-          "crew_size": 1
+          "crew_size": 2
         },
         {
           "date": "2026-10-29",
