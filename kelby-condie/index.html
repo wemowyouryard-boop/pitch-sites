@@ -31,14 +31,57 @@
   }
   img{display:block;max-width:100%;}
   .wrap{max-width:1120px;margin:0 auto;padding:0 22px;}
+  body.locked{overflow:hidden;}
+  .hero h1:focus{outline:none;}
 
   /* scroll reveal */
   .reveal{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s ease;}
   .reveal.visible{opacity:1;transform:none;}
   @media (prefers-reduced-motion: reduce){
     .reveal{opacity:1;transform:none;transition:none;}
+    .gate{transition:none;}
     html{scroll-behavior:auto;}
   }
+
+  /* ============ OPENING GATE ============ */
+  .gate{
+    position:fixed;inset:0;z-index:1000;overflow-y:auto;
+    background:var(--bg);
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;padding:28px 22px;
+    transition:opacity .9s ease;
+  }
+  .gate.open{opacity:0;pointer-events:none;}
+  .gate-inner{max-width:560px;margin:auto;}
+  .gate-eyebrow{
+    font-size:.72rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);
+    margin-bottom:26px;font-weight:500;
+  }
+  .gate-art{
+    max-width:340px;margin:0 auto;border:1px solid var(--gold-soft);
+    padding:10px;background:var(--bg-soft);
+  }
+  .gate-art img{width:100%;height:min(46vh,440px);object-fit:cover;object-position:center 22%;}
+  .gate-name{
+    font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;
+    font-size:clamp(2.6rem,8vw,4.2rem);line-height:1.05;letter-spacing:.015em;
+    margin:36px 0 8px;
+  }
+  .gate-tagline{
+    font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;
+    font-size:clamp(1.15rem,3.2vw,1.4rem);color:var(--cream-dim);
+  }
+  .gate-open-btn{
+    margin-top:34px;display:inline-flex;align-items:center;gap:10px;
+    background:transparent;border:1px solid var(--gold);color:var(--gold);
+    font-family:'Inter',sans-serif;font-size:.78rem;font-weight:500;
+    letter-spacing:.3em;text-transform:uppercase;
+    padding:15px 38px 15px 42px;cursor:pointer;border-radius:999px;
+    transition:background .25s ease,color .25s ease;
+  }
+  .gate-open-btn:hover{background:var(--gold);color:#171410;}
+  .gate-open-btn:focus-visible{outline:2px solid var(--cream);outline-offset:3px;}
+  .gate-hint{margin-top:16px;font-size:.74rem;letter-spacing:.16em;color:var(--cream-dim);text-transform:uppercase;}
 
   /* ============ HERO ============ */
   .hero{padding:64px 0 0;text-align:center;}
@@ -207,7 +250,22 @@
   }
 </style>
 </head>
-<body>
+<body class="locked">
+
+<!-- ================= OPENING GATE ================= -->
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-label="Welcome — Kelby Condie, a tribute">
+  <div class="gate-inner">
+    <div class="gate-eyebrow">A Portrait Exhibition</div>
+    <div class="gate-art">
+      <img src="images/king.jpg" alt="Kelby Condie as a mighty king — crowned, caped in red velvet, beard in full glory">
+    </div>
+    <div class="gate-name">Kelby Condie</div>
+    <p class="gate-tagline">A tribute to a best friend.</p>
+    <button class="gate-open-btn" id="gate-open" type="button">Open</button>
+    <p class="gate-hint">A song for Kelby plays as you enter</p>
+  </div>
+</div>
+<noscript><style>.gate{display:none;} body.locked{overflow:auto;}</style></noscript>
 
 <!-- ================= HERO ================= -->
 <header class="hero">
@@ -571,7 +629,7 @@
   })();
 
   /* ---- music: YouTube IFrame API, audio only, starts on tap ---- */
-  var ytPlayer = null, ytReady = false, ytPlaying = false;
+  var ytPlayer = null, ytReady = false, ytPlaying = false, pendingPlay = false;
   var toggleBtn = document.getElementById('music-toggle');
   var toggleLabel = document.getElementById('music-label');
 
@@ -585,7 +643,10 @@
       videoId: 'GeZhkjN0Yio',
       playerVars: { playsinline: 1, rel: 0, modestbranding: 1 },
       events: {
-        onReady: function(){ ytReady = true; },
+        onReady: function(){
+          ytReady = true;
+          if (pendingPlay) { pendingPlay = false; ytPlayer.playVideo(); }
+        },
         onStateChange: function(e){
           if (e.data === YT.PlayerState.PLAYING) { ytPlaying = true; }
           if (e.data === YT.PlayerState.PAUSED || e.data === YT.PlayerState.ENDED) { ytPlaying = false; }
@@ -603,6 +664,28 @@
     if (ytPlaying) { ytPlayer.pauseVideo(); }
     else { ytPlayer.playVideo(); }
   });
+
+  /* ---- opening gate: first tap opens the page and starts the song ---- */
+  var gate = document.getElementById('gate');
+  var gateBtn = document.getElementById('gate-open');
+  function startMusic(){
+    if (ytReady && ytPlayer) { ytPlayer.playVideo(); }
+    else { pendingPlay = true; }
+  }
+  function openGate(){
+    if (!gate || gate.classList.contains('open')) return;
+    startMusic();
+    gate.classList.add('open');
+    document.body.classList.remove('locked');
+    window.scrollTo(0, 0);
+    var h1 = document.querySelector('.hero h1');
+    if (h1) { h1.setAttribute('tabindex', '-1'); h1.focus({ preventScroll: true }); }
+    setTimeout(function(){ gate.style.display = 'none'; }, 950);
+  }
+  if (gateBtn) {
+    gateBtn.addEventListener('click', openGate);
+    gateBtn.focus();
+  }
 </script>
 
 </body>
