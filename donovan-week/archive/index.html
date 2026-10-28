@@ -115,7 +115,7 @@ function renderAverages(){
     if (r.v.timedMA) avgA += '<br><span class="small">Man-hrs avg: ' + Math.round(r.v.totalMA / r.v.timedMA) + ' min</span>';
     html += '<tr class="avg"><td><strong>' + r.v.name + '</strong><br><span class="small">' + r.addr + '</span></td><td>' + r.v.visits + '</td><td>' + avgM + '</td><td>' + avgA + '</td></tr>';
   });
-  html += '</table><p class="small">Two clocks run side by side: the crew's reported start/finish times, with the automatic location-based times kept as a cross-check. Averages build as times get logged, down to the minute.</p>';
+  html += '</table><p class="small">Two clocks run side by side: the crew\'s reported start/finish times, with the automatic location-based times kept as a cross-check. Averages build as times get logged, down to the minute.</p>';
   el.innerHTML = html;
 }
 function render(query){
