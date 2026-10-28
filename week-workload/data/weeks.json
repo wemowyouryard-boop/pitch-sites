@@ -208,7 +208,7 @@
               "start": "10:34",
               "finish": null,
               "minutes": null,
-              "auto_start": null,
+              "auto_start": "10:29",
               "auto_finish": null,
               "auto_minutes": null,
               "man_minutes": null,
