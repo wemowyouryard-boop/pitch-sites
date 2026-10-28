@@ -205,7 +205,7 @@
               "address": "2404 NW 154th St, Oklahoma City",
               "scope": "Mow + trim hollys/boxwoods",
               "status": "scheduled",
-              "start": null,
+              "start": "10:34",
               "finish": null,
               "minutes": null,
               "auto_start": null,
