@@ -232,11 +232,18 @@
               "start": "11:34",
               "finish": null,
               "minutes": null,
-              "auto_start": null,
+              "auto_start": "11:44",
               "auto_finish": null,
               "auto_minutes": null,
               "man_minutes": null,
-              "man_auto_minutes": null
+              "man_auto_minutes": null,
+              "photos": [
+                "photos/17400-braken-dr-1.jpg",
+                "photos/17400-braken-dr-2.jpg",
+                "photos/17400-braken-dr-3.jpg",
+                "photos/17400-braken-dr-4.jpg"
+              ],
+              "photos_page": "photos/17400-braken-dr.html"
             },
             {
               "name": "1109 Jamestown Cir",
