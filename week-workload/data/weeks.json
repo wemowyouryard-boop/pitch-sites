@@ -204,15 +204,25 @@
               "name": "2404 NW 154th St",
               "address": "2404 NW 154th St, Oklahoma City",
               "scope": "Mow + trim hollys/boxwoods",
-              "status": "scheduled",
+              "status": "done",
               "start": "10:34",
-              "finish": null,
-              "minutes": null,
+              "finish": "11:23",
+              "minutes": 49,
               "auto_start": "10:29",
               "auto_finish": null,
               "auto_minutes": null,
-              "man_minutes": null,
-              "man_auto_minutes": null
+              "man_minutes": 98,
+              "man_auto_minutes": null,
+              "photos": [
+                "photos/2404-nw-154th-1.jpg",
+                "photos/2404-nw-154th-2.jpg",
+                "photos/2404-nw-154th-3.jpg",
+                "photos/2404-nw-154th-4.jpg",
+                "photos/2404-nw-154th-5.jpg",
+                "photos/2404-nw-154th-6.jpg",
+                "photos/2404-nw-154th-7.jpg"
+              ],
+              "photos_page": "photos/2404-nw-154th.html"
             },
             {
               "name": "17400 Braken Dr",

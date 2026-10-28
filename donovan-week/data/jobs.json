@@ -99,11 +99,11 @@
       "crew": 2,
       "date": "2026-10-28",
       "day": "Wed, Oct 28",
-      "departure": "",
-      "hours_on_site": "",
-      "man_hours": "",
-      "photos": "",
-      "status": "Scheduled",
+      "departure": "11:23 AM",
+      "hours_on_site": "0:49:00",
+      "man_hours": "1:38:00",
+      "photos": "../photos/2404-nw-154th.html",
+      "status": "Finished",
       "work": "Mowing; trim all front and side hollys and boxwoods"
     },
     {
