@@ -1,0 +1,277 @@
+{
+ "updated": "2026-10-26",
+ "weeks": [
+  {
+   "week_start": "2026-10-26",
+   "week_end": "2026-11-01",
+   "label": "Oct 26 \u2013 Nov 1, 2026",
+   "days": [
+    {
+     "date": "2026-10-27",
+     "label": "Tuesday, Oct 27 \u2014 Growing Beauty (Donovan), Justin + Jason",
+     "items": [
+      {
+       "name": "1517 Craig Blvd",
+       "address": "1517 Craig Blvd, Edmond",
+       "scope": "First stop \u2014 mow; clean front flowerbed weeds; trim front two shrubs (aggressive, do NOT scalp); remove volunteer trees along south back fence (loppers/maybe chainsaw; stack limbs at front curb)",
+       "status": "done",
+       "start": null,
+       "finish": "10:32",
+       "minutes": 123,
+       "auto_start": "08:29",
+       "auto_finish": "10:29",
+       "auto_minutes": 120,
+       "man_minutes": 246,
+       "man_auto_minutes": 240,
+       "photos": [
+        "photos/craig-blvd-1.jpg",
+        "photos/craig-blvd-2.jpg",
+        "photos/craig-blvd-3.jpg",
+        "photos/craig-blvd-4.jpg",
+        "photos/craig-blvd-5.jpg",
+        "photos/craig-blvd-6.jpg",
+        "photos/craig-blvd-7.jpg",
+        "photos/craig-blvd-8.jpg"
+       ],
+       "photos_page": "photos/craig-blvd.html"
+      },
+      {
+       "name": "2275 NW 227th St",
+       "address": "2275 NW 227th St, Edmond",
+       "scope": "Mow + weed front & back flowerbeds. Gate code #5252. 1 acre \u2014 zero turn useful.",
+       "status": "done",
+       "start": "10:52",
+       "finish": "12:49",
+       "minutes": 117,
+       "auto_start": "10:59",
+       "auto_finish": "12:44",
+       "auto_minutes": 105,
+       "man_minutes": 234,
+       "man_auto_minutes": 210,
+       "photos": [
+        "photos/2275-nw-227th-1.mp4",
+        "photos/2275-nw-227th-2.mp4"
+       ],
+       "photos_page": "photos/2275-nw-227th.html"
+      },
+      {
+       "name": "Summit Lakes Entrances 1 & 2",
+       "address": "Summit Lakes, Edmond",
+       "scope": "Mow, edge, trim, blow + clean up all leaves & pine needles",
+       "status": "done",
+       "start": "13:30",
+       "finish": "15:21",
+       "minutes": 108,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": 216,
+       "man_auto_minutes": null,
+       "parts": [
+        {
+         "name": "Entrance 1",
+         "start": "13:30",
+         "finish": "14:21",
+         "minutes": 51
+        },
+        {
+         "name": "Entrance 2",
+         "start": "14:24",
+         "finish": "15:21",
+         "minutes": 57
+        }
+       ],
+       "photos": [
+        "summit-lakes-1.jpg",
+        "summit-lakes-2.jpg",
+        "summit-lakes-3.jpg",
+        "summit-lakes-4.jpg",
+        "summit-lakes-5.jpg",
+        "summit-lakes-e2-1.jpg",
+        "summit-lakes-e2-2.jpg",
+        "summit-lakes-e2-3.jpg",
+        "summit-lakes-e2-1.mp4"
+       ],
+       "photos_page": "photos/summit-lakes.html",
+       "gate_code": "8585"
+      }
+     ],
+     "crew_size": 2
+    },
+    {
+     "date": "2026-10-28",
+     "label": "Wednesday, Oct 28 \u2014 Growing Beauty (Donovan)",
+     "items": [
+      {
+       "name": "15504 Juniper Dr",
+       "address": "15504 Juniper Dr, Edmond",
+       "scope": "Mow + trim holly/boxwood shrubs",
+       "status": "done",
+       "start": "09:11",
+       "finish": "09:53",
+       "minutes": 42,
+       "auto_start": "09:15",
+       "auto_finish": "10:16",
+       "auto_minutes": 61,
+       "man_minutes": 84,
+       "man_auto_minutes": null,
+       "photos": [
+        "photos/juniper-dr-1.jpg",
+        "photos/juniper-dr-2.jpg",
+        "photos/juniper-dr-3.jpg",
+        "photos/juniper-dr-4.jpg",
+        "photos/juniper-dr-5.jpg",
+        "photos/juniper-dr-6.jpg",
+        "photos/juniper-dr-7.jpg"
+       ],
+       "photos_page": "photos/juniper-dr.html"
+      },
+      {
+       "name": "2801 NW 154th St",
+       "address": "2801 NW 154th St, Oklahoma City",
+       "scope": "Mow",
+       "status": "done",
+       "start": "09:56",
+       "finish": "10:22",
+       "minutes": 26,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": 52,
+       "man_auto_minutes": null,
+       "photos": [
+        "photos/2801-nw-154th-1.jpg",
+        "photos/2801-nw-154th-2.jpg",
+        "photos/2801-nw-154th-3.jpg",
+        "photos/2801-nw-154th-4.jpg",
+        "photos/2801-nw-154th-5.jpg",
+        "photos/2801-nw-154th-6.jpg",
+        "photos/2801-nw-154th-7.jpg",
+        "photos/2801-nw-154th-8.jpg"
+       ],
+       "photos_page": "photos/2801-nw-154th.html"
+      },
+      {
+       "name": "2404 NW 154th St",
+       "address": "2404 NW 154th St, Oklahoma City",
+       "scope": "Mow + trim hollys/boxwoods",
+       "status": "done",
+       "start": "10:34",
+       "finish": "11:23",
+       "minutes": 49,
+       "auto_start": "10:29",
+       "auto_finish": "11:15",
+       "auto_minutes": 46,
+       "man_minutes": 98,
+       "man_auto_minutes": null,
+       "photos": [
+        "photos/2404-nw-154th-1.jpg",
+        "photos/2404-nw-154th-2.jpg",
+        "photos/2404-nw-154th-3.jpg",
+        "photos/2404-nw-154th-4.jpg",
+        "photos/2404-nw-154th-5.jpg",
+        "photos/2404-nw-154th-6.jpg",
+        "photos/2404-nw-154th-7.jpg"
+       ],
+       "photos_page": "photos/2404-nw-154th.html"
+      },
+      {
+       "name": "17400 Braken Dr",
+       "address": "17400 Braken Dr, Oklahoma City",
+       "scope": "Mow",
+       "status": "done",
+       "start": "11:34",
+       "finish": "12:04",
+       "minutes": 30,
+       "auto_start": "11:44",
+       "auto_finish": "12:00",
+       "auto_minutes": 16,
+       "man_minutes": 60,
+       "man_auto_minutes": null,
+       "photos": [
+        "photos/17400-braken-dr-1.jpg",
+        "photos/17400-braken-dr-2.jpg",
+        "photos/17400-braken-dr-3.jpg",
+        "photos/17400-braken-dr-4.jpg"
+       ],
+       "photos_page": "photos/17400-braken-dr.html"
+      },
+      {
+       "name": "1109 Jamestown Cir",
+       "address": "1109 Jamestown Cir, Oklahoma City",
+       "scope": "Mow EXCEPT the freshly seeded back area",
+       "status": "done",
+       "start": "12:30",
+       "finish": "12:54",
+       "minutes": 24,
+       "auto_start": "12:29",
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": 48,
+       "man_auto_minutes": null,
+       "photos": [
+        "photos/1109-jamestown-cir-1.jpg",
+        "photos/1109-jamestown-cir-2.jpg",
+        "photos/1109-jamestown-cir-3.jpg",
+        "photos/1109-jamestown-cir-4.jpg",
+        "photos/1109-jamestown-cir-5.jpg"
+       ],
+       "photos_page": "photos/1109-jamestown-cir.html"
+      },
+      {
+       "name": "Clare Hadwiger \u2014 ESTIMATE",
+       "address": "3701 Oakdale Forest Rd, Edmond, OK 73113",
+       "scope": "Estimate visit: backyard cleanup quote (front-yard clean-out project completed Oct 20\u201322). After the last Donovan stop of the day (1109 Jamestown Cir, ~4.5 mi away).",
+       "status": "done",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null,
+       "note": "Estimate done Oct 28 \u2014 job BOOKED: $1,200 agreement. Backyard cleanup. Materials: black metal border sections 7 ft + 6 ft + 13 ft + 17 ft + 31 ft (90 ft of black metal border (order quantity set by Justin Oct 28)), 60 bags of mulch, 13 lb Preen, 1 gal high-concentrate Roundup (Home Depot). Work date not yet set."
+      }
+     ],
+     "crew_size": 2
+    },
+    {
+     "date": "2026-10-29",
+     "label": "Thursday, Oct 29 \u2014 Growing Beauty (Donovan)",
+     "items": [
+      {
+       "name": "6309 Norham Ct",
+       "address": "6309 Norham Ct, Oklahoma City",
+       "scope": "Trim large tree/shrub by back patio; clean up backyard tree rings/islands. Needs the ladder. FIRST JOB of Thursday \u2014 early start 7:30 AM (moved from Wednesday by Justin, Oct 28).",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
+      },
+      {
+       "name": "Donovan's property",
+       "address": "2504 NW 154th St, Edmond, OK 73013",
+       "scope": "Afternoon job AT Donovan's property: arrive 1:00 PM, work until 5:00 PM. Jobs assigned by Donovan on site.",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
+      }
+     ],
+     "crew_size": 2
+    }
+   ]
+  }
+ ]
+}
