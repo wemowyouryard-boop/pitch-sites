@@ -250,7 +250,7 @@
               "address": "1109 Jamestown Cir, Oklahoma City",
               "scope": "Mow EXCEPT the freshly seeded back area",
               "status": "scheduled",
-              "start": null,
+              "start": "12:30",
               "finish": null,
               "minutes": null,
               "auto_start": null,
