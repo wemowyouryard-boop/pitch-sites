@@ -249,15 +249,23 @@
               "name": "1109 Jamestown Cir",
               "address": "1109 Jamestown Cir, Oklahoma City",
               "scope": "Mow EXCEPT the freshly seeded back area",
-              "status": "scheduled",
+              "status": "done",
               "start": "12:30",
-              "finish": null,
-              "minutes": null,
+              "finish": "12:54",
+              "minutes": 24,
               "auto_start": "12:29",
               "auto_finish": null,
               "auto_minutes": null,
-              "man_minutes": null,
-              "man_auto_minutes": null
+              "man_minutes": 48,
+              "man_auto_minutes": null,
+              "photos": [
+                "photos/1109-jamestown-cir-1.jpg",
+                "photos/1109-jamestown-cir-2.jpg",
+                "photos/1109-jamestown-cir-3.jpg",
+                "photos/1109-jamestown-cir-4.jpg",
+                "photos/1109-jamestown-cir-5.jpg"
+              ],
+              "photos_page": "photos/1109-jamestown-cir.html"
             },
             {
               "name": "Clare Hadwiger \u2014 ESTIMATE",

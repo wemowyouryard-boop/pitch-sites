@@ -125,11 +125,11 @@
       "crew": 2,
       "date": "2026-10-28",
       "day": "Wed, Oct 28",
-      "departure": "",
-      "hours_on_site": "",
-      "man_hours": "",
-      "photos": "",
-      "status": "Scheduled",
+      "departure": "12:54 PM",
+      "hours_on_site": "0:24:00",
+      "man_hours": "0:48:00",
+      "photos": "../photos/1109-jamestown-cir.html",
+      "status": "Finished",
       "work": "Mowing (skip the freshly seeded area in the back yard)"
     },
     {
