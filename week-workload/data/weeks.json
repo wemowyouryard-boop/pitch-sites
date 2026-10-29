@@ -293,15 +293,23 @@
               "name": "6309 Norham Ct",
               "address": "6309 Norham Ct, Oklahoma City",
               "scope": "Trim large tree/shrub by back patio; clean up backyard tree rings/islands. Needs the ladder. FIRST JOB of Thursday — start 8:00 AM (moved from Wednesday by Justin, Oct 28).",
-              "status": "scheduled",
+              "status": "done",
               "start": "08:00",
-              "finish": null,
-              "minutes": null,
+              "finish": "12:21",
+              "minutes": 261,
               "auto_start": null,
               "auto_finish": null,
               "auto_minutes": null,
-              "man_minutes": null,
-              "man_auto_minutes": null
+              "man_minutes": 522,
+              "man_auto_minutes": null,
+              "photos": [
+                "photos/6309-norham-ct-1.jpg",
+                "photos/6309-norham-ct-2.jpg",
+                "photos/6309-norham-ct-3.jpg",
+                "photos/6309-norham-ct-4.jpg",
+                "photos/6309-norham-ct-5.jpg"
+              ],
+              "photos_page": "photos/6309-norham-ct.html"
             },
             {
               "name": "Donovan's property",

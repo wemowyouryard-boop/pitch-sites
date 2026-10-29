@@ -128,11 +128,11 @@
       "crew": 2,
       "date": "2026-10-29",
       "day": "Thu, Oct 29",
-      "departure": "",
-      "hours_on_site": "",
-      "man_hours": "",
-      "photos": "",
-      "status": "Scheduled",
+      "departure": "12:21 PM",
+      "hours_on_site": "4:21:00",
+      "man_hours": "8:42:00",
+      "photos": "../photos/6309-norham-ct.html",
+      "status": "Finished",
       "work": "Trim large tree/shrub by back patio; clean up backyard tree rings/islands"
     },
     {
