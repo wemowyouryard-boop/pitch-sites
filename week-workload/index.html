@@ -46,6 +46,24 @@
     th { font-size: 10.5px; letter-spacing: 0; }
     td.time { white-space: normal; width: auto; } }
 .eod{margin:12px 0 4px;padding:9px 12px;background:#eef4ee;border-top:3px solid #2e7d32;border-radius:6px;font-size:15px}
+
+  /* Wide tables: the page never scrolls sideways — a wide table scrolls inside its own
+     box instead, with arrow buttons, so the Job / Address column stays fully readable. */
+  .tbl-wrap { margin: 10px 0; }
+  .tbl-nav { display: flex; justify-content: flex-end; gap: 6px; margin: 0 0 6px; }
+  .tbl-nav[hidden] { display: none; }
+  .tbl-btn { background: #eef3e8; border: 1.5px solid #2e7d32; color: #2e4a22; font-family: inherit; font-size: 14px; line-height: 1; padding: 7px 18px; border-radius: 999px; cursor: pointer; }
+  .tbl-btn:active { background: #dcebdc; }
+  .tbl-btn:disabled { opacity: .3; cursor: default; }
+  .tbl-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tbl-scroll table { margin: 0; }
+  @media (max-width: 700px) {
+    .tbl-scroll table { table-layout: auto; width: auto; min-width: 100%; }
+    .tbl-scroll th, .tbl-scroll td { overflow-wrap: normal; }
+    .tbl-scroll th:nth-child(2), .tbl-scroll td:nth-child(2) { min-width: 190px; }
+    .tbl-scroll th:nth-child(3), .tbl-scroll td:nth-child(3) { max-width: 230px; }
+    .tbl-scroll table.tbl3addr th:nth-child(3), .tbl-scroll table.tbl3addr td:nth-child(3) { min-width: 185px; max-width: none; }
+  }
 </style>
 </head>
 <body>
@@ -75,12 +93,12 @@
 
   <h2 data-date="2026-10-26">Monday, Oct 26 — Route, 3 stops <span class="wx-badge" data-wx-badge>…</span></h2>
   <p class="crew">Crew: Justin + Jason</p>
-  <table>
+  <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table>
     <tr><th>Time</th><th>Stop</th><th>Notes</th><th>Time on site</th><th>Man-hours</th></tr>
     <tr class="done"><td class="time">7:30 AM</td><td><strong>Reid Martin</strong><br>2624 NW 58th Pl, Oklahoma City</td><td>Mow at 2 inches. His last weekly visit. <span class="done-tag">✅ Finished</span></td><td>—</td><td>—</td></tr>
     <tr class="done"><td class="time">8:00 AM</td><td><strong>Jeffery Elliott — Christmas light quote</strong><br>2625 NW 58th Pl, Oklahoma City</td><td>Right across the street from Reid. Quote includes tree lights for the courtyard. <span class="done-tag">✅ Finished</span> — roof line measured ~114 ft (fence to fence + courtyard), quote $570 at $5/ft.</td><td>—</td><td>—</td></tr>
     <tr class="done"><td class="time"><strong>1:29 PM – 2:59 PM</strong><br><span class="small">planned 8:30 AM</span></td><td><strong>Ridgewood Village Apartments</strong><br>101 NE 18th St, Moore</td><td>Monthly stop. <span class="done-tag">✅ Finished</span> GPS times: arrived 1:29 PM, left 2:59 PM.</td><td><strong>1:30:00</strong></td><td><strong>3:00:00</strong> <span class="small">(2 men)</span></td></tr>
-  </table>
+  </table></div></div>
   <div class="eod">🏁 <strong>End of day</strong> — Total man-hours: <strong>3:00:00</strong></div>
   <p class="small" style="margin:6px 2px 0;">Man-hours = time on site × men on the crew — the true labor in each job.</p>
   <div class="card">
@@ -91,18 +109,18 @@
 
   <h2 data-date="2026-10-27">Tuesday, Oct 27 — Growing Beauty (Donovan), 3 jobs <span class="wx-badge" data-wx-badge>…</span></h2>
   <p class="crew">Crew: Justin + Jason · Full instructions with pictures: <a href="https://wemowyouryard-boop.github.io/pitch-sites/donovan-week/">Donovan's instruction sheet</a></p>
-  <table>
+  <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table>
     <tr><th>#</th><th>Job</th><th>Scope</th><th>Time on site</th><th>Man-hours</th></tr>
     <tr class="done"><td>1</td><td><strong>1517 Craig Blvd, Edmond</strong> — first stop</td><td>Mow; clean out front flowerbed weeds; trim front two shrubs (aggressive trim, do NOT scalp); remove volunteer trees along south back fence (loppers/maybe chainsaw; stack limbs neatly at front curb). <span class="done-tag">✅ Finished</span> — on site 8:29 AM – 10:32 AM · 📷 <a href="photos/craig-blvd.html">Finished-work photos (8)</a></td><td><strong>2:03:00</strong></td><td><strong>4:06:00</strong> <span class="small">(2 men)</span></td></tr>
     <tr class="done"><td>2</td><td><strong>2275 NW 227th St, Edmond</strong> <span class="done-tag">✅ Finished</span><br>🎬 <a href="photos/2275-nw-227th.html">Finished-work videos (2)</a></td><td>Mow + weed front &amp; back flowerbeds. Gate code #5252. 1 acre — zero turn useful.</td><td class="time"><strong>10:52 AM – 12:49 PM</strong><br><span class="small">GPS 10:59 AM – 12:44 PM</span></td><td><strong>1:57:00</strong></td><td><strong>3:54:00</strong></td></tr>
     <tr class="done"><td>3</td><td><strong>Summit Lakes Entrances 1 &amp; 2</strong> <span class="done-tag">✅ Finished</span><br><span class="small">Entrance 1: 1:30 PM → 2:21 PM · Entrance 2: 2:24 PM → 3:21 PM · <a href="photos/summit-lakes.html">📷 Finished-work photos &amp; video (9)</a></span></td><td>Mow, edge, trim, blow + clean up all leaves &amp; pine needles. Gate #8585.</td><td>1:30 PM → 3:21 PM</td><td>1:48:00</td><td>3:36:00</td></tr>
-  </table>
+  </table></div></div>
   <div class="eod">🏁 <strong>End of day</strong> — Total man-hours: <strong>11:36:00</strong></div>
   <div class="note"><strong>Eira:</strong> Team Day (favorite team gear).</div>
 
   <h2 data-date="2026-10-28">Wednesday, Oct 28 — Growing Beauty (Donovan), 5 jobs <span class="wx-badge" data-wx-badge>…</span></h2>
   <p class="crew">Crew: 2 men</p>
-  <table>
+  <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table>
     <tr><th>#</th><th>Job</th><th>Scope</th><th>Time on site</th><th>Man-hours</th></tr>
     <tr class="done"><td>1</td><td><strong>15504 Juniper Dr, Edmond</strong> — FIRST STOP (start here — per Donovan)</td><td>Mow + trim all holly and boxwood shrubs, front &amp; back. <span class="done-tag">✅ Finished</span> — on site 9:11 AM – 9:53 AM · 📷 <a href="photos/juniper-dr.html">Finished-work photos (7)</a></td><td><strong>0:42:00</strong></td><td><strong>1:24:00</strong> <span class="small">(2 men)</span></td></tr>
     <tr class="done"><td>2</td><td><strong>2801 NW 154th St</strong></td><td>Mow. <span class="done-tag">✅ Finished</span> — on site 9:56 AM – 10:22 AM · 📷 <a href="photos/2801-nw-154th.html">Finished-work photos (8)</a></td><td><strong>0:26:00</strong></td><td><strong>0:52:00</strong> <span class="small">(2 men)</span></td></tr>
@@ -110,25 +128,25 @@
     <tr class="done"><td>4</td><td><strong>17400 Braken Dr</strong></td><td>Mow. <span class="done-tag">✅ Finished</span> — on site 11:34 AM – 12:04 PM · 📷 <a href="photos/17400-braken-dr.html">Finished-work photos (4)</a></td><td><strong>0:30:00</strong></td><td><strong>1:00:00</strong> <span class="small">(2 men)</span></td></tr>
     <tr class="done"><td>5</td><td><strong>1109 Jamestown Cir</strong></td><td>Mow — seeded back area left unmowed, as instructed. <span class="done-tag">✅ Finished</span> — on site 12:30 PM – 12:54 PM · 📷 <a href="photos/1109-jamestown-cir.html">Finished-work photos (5)</a></td><td><strong>0:24:00</strong></td><td><strong>0:48:00</strong> <span class="small">(2 men)</span></td></tr>
     <tr class="done"><td>6</td><td><strong>Clare Hadwiger — ESTIMATE</strong><br>3701 Oakdale Forest Rd, Edmond</td><td><span class="done-tag">✅ Estimate done</span> — <strong>job booked: $1,200 agreement</strong> (backyard cleanup; black metal border, 60 bags mulch, Preen, Roundup). Work date to be set.</td><td>—</td><td>—</td></tr>
-  </table>
+  </table></div></div>
   <div class="eod">🏁 <strong>End of day</strong> — Total man-hours: <strong>5:42:00</strong></div>
   <div class="note"><strong>Eira:</strong> Workout Wednesday (workout gear).</div>
 
   <h2 data-date="2026-10-29">Thursday, Oct 29 — Growing Beauty (Donovan) <span class="wx-badge" data-wx-badge>…</span></h2>
   <p class="crew">Crew: Justin + Jason</p>
-  <table>
+  <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table>
     <tr><th>Time</th><th>Stop</th><th>Notes</th><th>Time on site</th><th>Man-hours</th></tr>
     <tr class="done"><td>1</td><td><strong>6309 Norham Ct, Oklahoma City</strong> — FIRST JOB (moved from Wednesday)</td><td>Trim large tree/shrub by back patio; clean up backyard tree rings/islands. Needs the ladder. <span class="done-tag">✅ Finished</span> — on site 8:00 AM – 12:21 PM <span class="small">(planned start 8:00 AM)</span> · 📷 <a href="photos/6309-norham-ct.html">Finished-work photos (7)</a></td><td><strong>4:21:00</strong></td><td><strong>8:42:00</strong> <span class="small">(2 men)</span></td></tr>
     <tr class="done"><td>2</td><td><strong>1517 Craig Blvd, Edmond</strong> — CORRECTION VISIT</td><td>Correction visit — redo the front bed (too much Bermuda grass and weeds). <span class="done-tag">✅ Finished</span> — on site 1:15 PM – 1:48 PM</td><td><strong>0:33:00</strong></td><td><strong>1:06:00</strong> <span class="small">(2 men)</span></td></tr>
     <tr class="done"><td>3</td><td><strong>2801 NW 154th St, Oklahoma City</strong> — LAST JOB</td><td>Level the backyard with dirt and seed. <span class="done-tag">✅ Finished</span> — on site 2:07 PM – 4:25 PM</td><td><strong>2:18:00</strong></td><td><strong>4:36:00</strong> <span class="small">(2 men)</span></td></tr>
-  </table>
+  </table></div></div>
   <div class="eod">🏁 <strong>End of day</strong> — Total man-hours: <strong>14:24:00</strong></div>
   <div class="eod">🏁 <strong>End of week — Donovan (Tue–Thu, Oct 27–29)</strong> — Hours worked: <strong>15:51:00</strong> · Total man-hours: <strong>31:42:00</strong></div>
   <div class="note"><strong>Eira:</strong> PJ Day (pajamas).</div>
 
   <h2 data-date="2026-10-30">Friday, Oct 30 — Route (Friday #2), 11 stops <span class="wx-badge" data-wx-badge>…</span></h2>
   <p class="crew">Crew: Justin + Jason</p>
-  <table>
+  <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table class="tbl3addr">
     <tr><th>Time</th><th>Stop</th><th>Address</th><th>Time on site</th><th>Man-hours</th></tr>
     <tr><td class="time">7:30 AM</td><td>Adam's sister</td><td>5312 NW 108th Ter</td><td>—</td><td>—</td></tr>
     <tr><td class="time">8:00 AM</td><td>Hal Williams</td><td>6524 NW 115th St</td><td>—</td><td>—</td></tr>
@@ -141,7 +159,7 @@
     <tr><td class="time">11:30 AM</td><td>Aj</td><td>2505 NW 20th St</td><td>—</td><td>—</td></tr>
     <tr><td class="time">12:00 PM</td><td>Hilaire Johnson</td><td>10308 N May Ave</td><td>—</td><td>—</td></tr>
     <tr><td class="time">12:30 PM</td><td>Sam</td><td>1205 East Madison St</td><td>—</td><td>—</td></tr>
-  </table>
+  </table></div></div>
   <div class="eod">🏁 <strong>End of day</strong> — Total man-hours: <strong>—</strong></div>
   <div class="card">
     <p style="margin:0;"><strong>~12:00 PM — Meeting: Jeffery Elliott (in person)</strong> — 2625 NW 58th Place. Christmas light bid follow-up: $570 quote (~114 ft at $5/ft, front roof line fence to fence incl. the courtyard run; materials, installation and takedown included; full amount due up front when booked). Confirm the uncertain east segment on site. Phone: (805) 975-8191. Falls mid-route — Hilaire Johnson (10308 N May Ave) and Sam slide ~30 min later.</p>
@@ -227,6 +245,39 @@
   }
   load();
   setInterval(load, 30 * 60 * 1000);
+})();
+</script>
+
+<script>
+// Wide-table helper: a table wider than the screen scrolls inside its own box —
+// tap the arrows to move it, or swipe inside the table. The page never scrolls sideways.
+(function () {
+  function init(wrap) {
+    var sc = wrap.querySelector('.tbl-scroll');
+    var nav = wrap.querySelector('.tbl-nav');
+    if (!sc || !nav) return;
+    var prev = nav.querySelector('.tbl-prev');
+    var next = nav.querySelector('.tbl-next');
+    function update() {
+      var over = sc.scrollWidth - sc.clientWidth > 2;
+      nav.hidden = !over;
+      if (!over) return;
+      prev.disabled = sc.scrollLeft <= 1;
+      next.disabled = sc.scrollLeft + sc.clientWidth >= sc.scrollWidth - 1;
+    }
+    if (!wrap.__tblReady) {
+      wrap.__tblReady = true;
+      prev.addEventListener('click', function () { sc.scrollBy({ left: -Math.round(sc.clientWidth * 0.75), behavior: 'smooth' }); });
+      next.addEventListener('click', function () { sc.scrollBy({ left: Math.round(sc.clientWidth * 0.75), behavior: 'smooth' }); });
+      sc.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      if (window.MutationObserver) new MutationObserver(update).observe(sc, { childList: true, subtree: true });
+    }
+    update();
+  }
+  function initAll() { document.querySelectorAll('.tbl-wrap').forEach(init); }
+  initAll();
+  window.addEventListener('load', initAll);
 })();
 </script>
 </body>

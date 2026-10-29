@@ -53,6 +53,24 @@
   .wx-chip.ok { background: #eef7ee; color: #0d4718; }
   .wx-chip.watch { background: #fdf0c0; color: #7a5b00; }
   .wx-chip.risk { background: #f8d2d2; color: #8c1d1d; }
+
+  /* Wide tables: the page never scrolls sideways — a wide table scrolls inside its own
+     box instead, with arrow buttons, so the Job / Address column stays fully readable. */
+  .tbl-wrap { margin: 10px 0; }
+  .tbl-nav { display: flex; justify-content: flex-end; gap: 6px; margin: 0 0 6px; }
+  .tbl-nav[hidden] { display: none; }
+  .tbl-btn { background: #eef3e8; border: 1.5px solid #2e7d32; color: #2e4a22; font-family: inherit; font-size: 14px; line-height: 1; padding: 7px 18px; border-radius: 999px; cursor: pointer; }
+  .tbl-btn:active { background: #dcebdc; }
+  .tbl-btn:disabled { opacity: .3; cursor: default; }
+  .tbl-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tbl-scroll table { margin: 0; }
+  @media (max-width: 700px) {
+    .tbl-scroll table { table-layout: auto; width: auto; min-width: 100%; }
+    .tbl-scroll th, .tbl-scroll td { overflow-wrap: normal; }
+    .tbl-scroll th:nth-child(2), .tbl-scroll td:nth-child(2) { min-width: 190px; }
+    .tbl-scroll th:nth-child(3), .tbl-scroll td:nth-child(3) { max-width: 230px; }
+    .tbl-scroll table.tbl3addr th:nth-child(3), .tbl-scroll table.tbl3addr td:nth-child(3) { min-width: 185px; max-width: none; }
+  }
 </style>
 </head>
 <body>
@@ -217,7 +235,7 @@
 
   <h2>⏱ Time &amp; Hours Report</h2>
   <p class="crew">Arrival and departure for every job, with hours on site and man-hours (hours on site × the men on the crew). Updated as each job finishes.</p>
-  <table>
+  <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table>
     <tr><th>Date</th><th>Job</th><th>Arrival</th><th>Departure</th><th>Hours on site</th><th>Man-hours</th><th>Photos</th></tr>
     <tr class="done"><td>Tue Oct 27</td><td><strong>1517 Craig Blvd, Edmond</strong> ✅</td><td>8:29 AM</td><td>10:32 AM</td><td>2:03:00</td><td>4:06:00</td><td>📷 <a href="../photos/craig-blvd.html">Photos (8)</a></td></tr>
     <tr class="done"><td>Tue Oct 27</td><td><strong>2275 NW 227th St, Edmond</strong> ✅</td><td>10:52 AM</td><td>12:49 PM</td><td>1:57:00</td><td>3:54:00</td><td>🎬 <a href="../photos/2275-nw-227th.html">Videos (2)</a></td></tr>
@@ -230,7 +248,7 @@
     <tr class="done"><td>Thu Oct 29</td><td><strong>6309 Norham Ct, Oklahoma City</strong> ✅</td><td>8:00 AM</td><td>12:21 PM</td><td>4:21:00</td><td>8:42:00</td><td>📷 <a href="../photos/6309-norham-ct.html">Photos (7)</a></td></tr>
     <tr class="done"><td>Thu Oct 29</td><td><strong>1517 Craig Blvd, Edmond</strong> — correction visit ✅</td><td>1:15 PM</td><td>1:48 PM</td><td>0:33:00</td><td>1:06:00</td><td>—</td></tr>
     <tr class="done"><td>Thu Oct 29</td><td><strong>2801 NW 154th St, Oklahoma City</strong> ✅</td><td>2:07 PM</td><td>4:25 PM</td><td>2:18:00</td><td>4:36:00</td><td>—</td></tr>
-      </table>
+      </table></div></div>
   <p class="small">How to read this: <strong>Hours on site</strong> = departure minus arrival. <strong>Man-hours</strong> = hours on site × the men on the crew (the crew is 2 men each day this week).</p>
 
   <p><a href="../">← Back to Donovan's instructions</a></p>
@@ -295,6 +313,39 @@
   }
   load();
   setInterval(load, 30 * 60 * 1000);
+})();
+</script>
+
+<script>
+// Wide-table helper: a table wider than the screen scrolls inside its own box —
+// tap the arrows to move it, or swipe inside the table. The page never scrolls sideways.
+(function () {
+  function init(wrap) {
+    var sc = wrap.querySelector('.tbl-scroll');
+    var nav = wrap.querySelector('.tbl-nav');
+    if (!sc || !nav) return;
+    var prev = nav.querySelector('.tbl-prev');
+    var next = nav.querySelector('.tbl-next');
+    function update() {
+      var over = sc.scrollWidth - sc.clientWidth > 2;
+      nav.hidden = !over;
+      if (!over) return;
+      prev.disabled = sc.scrollLeft <= 1;
+      next.disabled = sc.scrollLeft + sc.clientWidth >= sc.scrollWidth - 1;
+    }
+    if (!wrap.__tblReady) {
+      wrap.__tblReady = true;
+      prev.addEventListener('click', function () { sc.scrollBy({ left: -Math.round(sc.clientWidth * 0.75), behavior: 'smooth' }); });
+      next.addEventListener('click', function () { sc.scrollBy({ left: Math.round(sc.clientWidth * 0.75), behavior: 'smooth' }); });
+      sc.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      if (window.MutationObserver) new MutationObserver(update).observe(sc, { childList: true, subtree: true });
+    }
+    update();
+  }
+  function initAll() { document.querySelectorAll('.tbl-wrap').forEach(init); }
+  initAll();
+  window.addEventListener('load', initAll);
 })();
 </script>
 </body>
