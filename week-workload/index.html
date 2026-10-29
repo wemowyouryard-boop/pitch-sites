@@ -40,7 +40,11 @@
   .money-strip { background:#eef7ee; border:2px solid #2e7d32; border-radius:14px; padding:14px 18px; margin:0 0 18px; }
   .money-strip .amt { font-size:26px; font-weight:800; color:#0d4718; letter-spacing:-0.3px; }
   .money-strip .lbl { font-size:15px; color:#10160d; }
-  @media (max-width: 700px) { .wrap { border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; } }
+  @media (max-width: 700px) { .wrap { border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; padding-left: 12px; padding-right: 12px; }
+    table { table-layout: fixed; }
+    th, td { padding: 7px 5px; font-size: 13px; overflow-wrap: anywhere; }
+    th { font-size: 10.5px; letter-spacing: 0; }
+    td.time { white-space: normal; width: auto; } }
 .eod{margin:12px 0 4px;padding:9px 12px;background:#eef4ee;border-top:3px solid #2e7d32;border-radius:6px;font-size:15px}
 </style>
 </head>

@@ -35,7 +35,11 @@
   figure { margin: 12px 0 4px; }
   figure img { width: 100%; max-width: 420px; border-radius: 8px; border: 1px solid #cfd6c9; display: block; }
   figcaption { font-size: 13px; color: #5a6653; margin-top: 4px; }
-  @media (max-width: 700px) { .wrap { border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; } }
+  @media (max-width: 700px) { .wrap { border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; padding-left: 12px; padding-right: 12px; }
+    table { table-layout: fixed; }
+    th, td { padding: 7px 5px; font-size: 13px; overflow-wrap: anywhere; }
+    th { font-size: 10.5px; letter-spacing: 0; }
+    td.time { white-space: normal; width: auto; } }
 .eod{margin:12px 0 4px;padding:9px 12px;background:#eef4ee;border-top:3px solid #2e7d32;border-radius:6px;font-size:15px}
   .wx-badge { float: right; font-size: 12.5px; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: #e8e8e8; color: #333; letter-spacing: 0; text-transform: none; }
   .wx-badge.ok { background: #eef7ee; color: #0d4718; }
