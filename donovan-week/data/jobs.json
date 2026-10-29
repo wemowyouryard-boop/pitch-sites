@@ -154,11 +154,11 @@
    "crew": 2,
    "date": "2026-10-29",
    "day": "Thu, Oct 29",
-   "departure": "",
-   "hours_on_site": "",
-   "man_hours": "",
+   "departure": "1:48 PM",
+   "hours_on_site": "0:33:00",
+   "man_hours": "1:06:00",
    "photos": "",
-   "status": "Scheduled",
+   "status": "Finished",
    "work": "Correction visit — redo the front bed (too much Bermuda grass and weeds)"
   }
  ],
