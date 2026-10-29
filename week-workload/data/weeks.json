@@ -312,24 +312,6 @@
        "photos_page": "photos/6309-norham-ct.html"
       },
       {
-       "name": "Donovan's property",
-       "address": "2504 NW 154th St, Edmond, OK 73013",
-       "scope": "Afternoon job AT Donovan's property: arrive 1:00 PM, work until 5:00 PM. Jobs assigned by Donovan on site.",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null,
-       "photos": [
-        "photos/2504-nw-154th-st-1.jpg"
-       ],
-       "photos_page": "photos/2504-nw-154th-st.html"
-      },
-      {
        "name": "1517 Craig Blvd",
        "address": "1517 Craig Blvd, Edmond",
        "scope": "Correction visit — front bed redo: Bermuda grass and weeds (redo the front bed — it has too much Bermuda grass and weeds).",
@@ -341,6 +323,20 @@
        "auto_finish": null,
        "auto_minutes": null,
        "man_minutes": 66,
+       "man_auto_minutes": null
+      },
+      {
+       "name": "2801 NW 154th St",
+       "address": "2801 NW 154th St, Oklahoma City",
+       "scope": "Leveling backyard with dirt and seed",
+       "status": "scheduled",
+       "start": "14:07",
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
        "man_auto_minutes": null
       }
      ],
