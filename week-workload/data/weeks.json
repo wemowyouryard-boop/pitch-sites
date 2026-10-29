@@ -323,7 +323,11 @@
        "auto_finish": null,
        "auto_minutes": null,
        "man_minutes": null,
-       "man_auto_minutes": null
+       "man_auto_minutes": null,
+       "photos": [
+        "photos/2504-nw-154th-st-1.jpg"
+       ],
+       "photos_page": "photos/2504-nw-154th-st.html"
       },
       {
        "name": "1517 Craig Blvd",
