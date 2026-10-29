@@ -324,6 +324,20 @@
               "auto_minutes": null,
               "man_minutes": null,
               "man_auto_minutes": null
+            },
+            {
+              "name": "1517 Craig Blvd",
+              "address": "1517 Craig Blvd, Edmond",
+              "scope": "Correction visit — front bed redo: Bermuda grass and weeds (redo the front bed — it has too much Bermuda grass and weeds).",
+              "status": "scheduled",
+              "start": null,
+              "finish": null,
+              "minutes": null,
+              "auto_start": null,
+              "auto_finish": null,
+              "auto_minutes": null,
+              "man_minutes": null,
+              "man_auto_minutes": null
             }
           ],
           "crew_size": 2

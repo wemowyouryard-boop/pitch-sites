@@ -147,6 +147,19 @@
       "photos": "",
       "status": "Scheduled",
       "work": "Afternoon job at Donovan's property; jobs assigned by Donovan on site"
+    },
+    {
+      "address": "1517 Craig Blvd, Edmond",
+      "arrival": "",
+      "crew": 2,
+      "date": "2026-10-29",
+      "day": "Thu, Oct 29",
+      "departure": "",
+      "hours_on_site": "",
+      "man_hours": "",
+      "photos": "",
+      "status": "Scheduled",
+      "work": "Correction visit — redo the front bed (too much Bermuda grass and weeds)"
     }
   ],
   "updated": "2026-10-27",
