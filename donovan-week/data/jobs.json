@@ -154,11 +154,11 @@
    "crew": 2,
    "date": "2026-10-29",
    "day": "Thu, Oct 29",
-   "departure": "",
-   "hours_on_site": "",
-   "man_hours": "",
+   "departure": "4:25 PM",
+   "hours_on_site": "2:18:00",
+   "man_hours": "4:36:00",
    "photos": "",
-   "status": "Scheduled",
+   "status": "Finished",
    "work": "Leveling backyard with dirt and seed"
   }
  ],

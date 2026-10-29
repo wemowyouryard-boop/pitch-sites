@@ -329,14 +329,14 @@
        "name": "2801 NW 154th St",
        "address": "2801 NW 154th St, Oklahoma City",
        "scope": "Leveling backyard with dirt and seed",
-       "status": "scheduled",
+       "status": "done",
        "start": "14:07",
-       "finish": null,
-       "minutes": null,
+       "finish": "16:25",
+       "minutes": 138,
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "man_minutes": null,
+       "man_minutes": 276,
        "man_auto_minutes": null
       }
      ],
