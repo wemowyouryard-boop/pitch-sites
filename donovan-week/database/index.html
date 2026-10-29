@@ -39,12 +39,15 @@
   .tbl-btn:disabled { opacity: .3; cursor: default; }
   .tbl-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .tbl-scroll table { margin: 0; }
+  /* Addresses sit on two lines: street first, then the city/state/ZIP underneath,
+     smaller and muted — keeps the address column narrow without squeezing it. */
+  .addr-city { display: block; font-size: 0.86em; font-weight: 400; color: #5a6653; margin-top: 1px; }
   @media (max-width: 700px) {
     .tbl-scroll table { table-layout: auto; width: auto; min-width: 100%; }
     .tbl-scroll th, .tbl-scroll td { overflow-wrap: normal; }
-    .tbl-scroll th:nth-child(2), .tbl-scroll td:nth-child(2) { min-width: 190px; }
-    .tbl-scroll th:nth-child(3), .tbl-scroll td:nth-child(3) { max-width: 230px; }
-    .tbl-scroll table.tbl3addr th:nth-child(3), .tbl-scroll table.tbl3addr td:nth-child(3) { min-width: 185px; max-width: none; }
+    .tbl-scroll th:nth-child(2), .tbl-scroll td:nth-child(2) { min-width: 170px; }
+    .tbl-scroll table.tblnotes th:nth-child(3), .tbl-scroll table.tblnotes td:nth-child(3) { min-width: 200px; max-width: 280px; }
+    .tbl-scroll table.tbl3addr th:nth-child(3), .tbl-scroll table.tbl3addr td:nth-child(3) { min-width: 170px; max-width: none; }
   }
 </style>
 </head>
@@ -60,7 +63,7 @@
   <p><a href="../">← Back to this week's instructions</a></p>
   <input type="search" id="q" placeholder="Search by address, date, or word in the work — e.g. Craig, mowing, Oct 27">
   <p class="small" id="count"></p>
-  <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table>
+  <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table class="tblnotes">
     <thead><tr><th>Date</th><th>Job</th><th>Work</th><th>Time there</th><th>Hours on site</th><th>Man-hours</th><th>Status</th><th>Photos</th></tr></thead>
     <tbody id="rows"></tbody>
   </table></div></div>
@@ -70,6 +73,7 @@
 var JOBS = [];
 function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
 function dash(s){ return s ? esc(s) : '—'; }
+function addrHtml(s){ return esc(s).replace(/, ((?:Oklahoma City|Edmond|Moore)(?:, OK \d{5})?)$/, ', <span class="addr-city">$1</span>'); }
 function render(){
   var q = document.getElementById('q').value.trim().toLowerCase();
   var out = '';
@@ -81,7 +85,7 @@ function render(){
     var time = (j.arrival || j.departure) ? (dash(j.arrival) + (j.departure ? ' – ' + esc(j.departure) : '')) : '—';
     out += '<tr' + (j.status==='Finished' ? ' class="done"' : '') + '>'
       + '<td>' + esc(j.day) + '</td>'
-      + '<td><strong>' + esc(j.address) + '</strong></td>'
+      + '<td><strong>' + addrHtml(j.address) + '</strong></td>'
       + '<td>' + esc(j.work) + '</td>'
       + '<td>' + time + '</td>'
       + '<td>' + dash(j.hours_on_site) + '</td>'

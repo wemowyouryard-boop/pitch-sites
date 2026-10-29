@@ -64,12 +64,15 @@
   .tbl-btn:disabled { opacity: .3; cursor: default; }
   .tbl-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .tbl-scroll table { margin: 0; }
+  /* Addresses sit on two lines: street first, then the city/state/ZIP underneath,
+     smaller and muted — keeps the address column narrow without squeezing it. */
+  .addr-city { display: block; font-size: 0.86em; font-weight: 400; color: #5a6653; margin-top: 1px; }
   @media (max-width: 700px) {
     .tbl-scroll table { table-layout: auto; width: auto; min-width: 100%; }
     .tbl-scroll th, .tbl-scroll td { overflow-wrap: normal; }
-    .tbl-scroll th:nth-child(2), .tbl-scroll td:nth-child(2) { min-width: 190px; }
-    .tbl-scroll th:nth-child(3), .tbl-scroll td:nth-child(3) { max-width: 230px; }
-    .tbl-scroll table.tbl3addr th:nth-child(3), .tbl-scroll table.tbl3addr td:nth-child(3) { min-width: 185px; max-width: none; }
+    .tbl-scroll th:nth-child(2), .tbl-scroll td:nth-child(2) { min-width: 170px; }
+    .tbl-scroll table.tblnotes th:nth-child(3), .tbl-scroll table.tblnotes td:nth-child(3) { min-width: 200px; max-width: 280px; }
+    .tbl-scroll table.tbl3addr th:nth-child(3), .tbl-scroll table.tbl3addr td:nth-child(3) { min-width: 170px; max-width: none; }
   }
 </style>
 </head>
@@ -237,17 +240,17 @@
   <p class="crew">Arrival and departure for every job, with hours on site and man-hours (hours on site × the men on the crew). Updated as each job finishes.</p>
   <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table>
     <tr><th>Date</th><th>Job</th><th>Arrival</th><th>Departure</th><th>Hours on site</th><th>Man-hours</th><th>Photos</th></tr>
-    <tr class="done"><td>Tue Oct 27</td><td><strong>1517 Craig Blvd, Edmond</strong> ✅</td><td>8:29 AM</td><td>10:32 AM</td><td>2:03:00</td><td>4:06:00</td><td>📷 <a href="../photos/craig-blvd.html">Photos (8)</a></td></tr>
-    <tr class="done"><td>Tue Oct 27</td><td><strong>2275 NW 227th St, Edmond</strong> ✅</td><td>10:52 AM</td><td>12:49 PM</td><td>1:57:00</td><td>3:54:00</td><td>🎬 <a href="../photos/2275-nw-227th.html">Videos (2)</a></td></tr>
-    <tr class="done"><td>Tue Oct 27</td><td><strong>Summit Lakes Entrances 1 &amp; 2, Edmond</strong> ✅</td><td>1:30 PM</td><td>3:21 PM</td><td>1:48:00</td><td>3:36:00</td><td><a href="../photos/summit-lakes.html">📷 Photos &amp; video (9)</a></td></tr>
-    <tr class="done"><td>Wed Oct 28</td><td><strong>15504 Juniper Dr, Edmond</strong> ✅</td><td>9:11 AM</td><td>9:53 AM</td><td>0:42:00</td><td>1:24:00</td><td>📷 <a href="../photos/juniper-dr.html">Photos (7)</a></td></tr>
-    <tr class="done"><td>Wed Oct 28</td><td><strong>2801 NW 154th St, Oklahoma City</strong> ✅</td><td>9:56 AM</td><td>10:22 AM</td><td>0:26:00</td><td>0:52:00</td><td>📷 <a href="../photos/2801-nw-154th.html">Photos (8)</a></td></tr>
-    <tr class="done"><td>Wed Oct 28</td><td><strong>2404 NW 154th St, Oklahoma City</strong> ✅</td><td>10:34 AM</td><td>11:23 AM</td><td>0:49:00</td><td>1:38:00</td><td>📷 <a href="../photos/2404-nw-154th.html">Photos (7)</a></td></tr>
-    <tr class="done"><td>Wed Oct 28</td><td><strong>17400 Braken Dr, Oklahoma City</strong> ✅</td><td>11:34 AM</td><td>12:04 PM</td><td>0:30:00</td><td>1:00:00</td><td>📷 <a href="../photos/17400-braken-dr.html">Photos (4)</a></td></tr>
-    <tr class="done"><td>Wed Oct 28</td><td><strong>1109 Jamestown Cir, Oklahoma City</strong> ✅</td><td>12:30 PM</td><td>12:54 PM</td><td>0:24:00</td><td>0:48:00</td><td>📷 <a href="../photos/1109-jamestown-cir.html">Photos (5)</a></td></tr>
-    <tr class="done"><td>Thu Oct 29</td><td><strong>6309 Norham Ct, Oklahoma City</strong> ✅</td><td>8:00 AM</td><td>12:21 PM</td><td>4:21:00</td><td>8:42:00</td><td>📷 <a href="../photos/6309-norham-ct.html">Photos (7)</a></td></tr>
-    <tr class="done"><td>Thu Oct 29</td><td><strong>1517 Craig Blvd, Edmond</strong> — correction visit ✅</td><td>1:15 PM</td><td>1:48 PM</td><td>0:33:00</td><td>1:06:00</td><td>—</td></tr>
-    <tr class="done"><td>Thu Oct 29</td><td><strong>2801 NW 154th St, Oklahoma City</strong> ✅</td><td>2:07 PM</td><td>4:25 PM</td><td>2:18:00</td><td>4:36:00</td><td>—</td></tr>
+    <tr class="done"><td>Tue Oct 27</td><td><strong>1517 Craig Blvd, <span class="addr-city">Edmond</span></strong> ✅</td><td>8:29 AM</td><td>10:32 AM</td><td>2:03:00</td><td>4:06:00</td><td>📷 <a href="../photos/craig-blvd.html">Photos (8)</a></td></tr>
+    <tr class="done"><td>Tue Oct 27</td><td><strong>2275 NW 227th St, <span class="addr-city">Edmond</span></strong> ✅</td><td>10:52 AM</td><td>12:49 PM</td><td>1:57:00</td><td>3:54:00</td><td>🎬 <a href="../photos/2275-nw-227th.html">Videos (2)</a></td></tr>
+    <tr class="done"><td>Tue Oct 27</td><td><strong>Summit Lakes Entrances 1 &amp; 2, <span class="addr-city">Edmond</span></strong> ✅</td><td>1:30 PM</td><td>3:21 PM</td><td>1:48:00</td><td>3:36:00</td><td><a href="../photos/summit-lakes.html">📷 Photos &amp; video (9)</a></td></tr>
+    <tr class="done"><td>Wed Oct 28</td><td><strong>15504 Juniper Dr, <span class="addr-city">Edmond</span></strong> ✅</td><td>9:11 AM</td><td>9:53 AM</td><td>0:42:00</td><td>1:24:00</td><td>📷 <a href="../photos/juniper-dr.html">Photos (7)</a></td></tr>
+    <tr class="done"><td>Wed Oct 28</td><td><strong>2801 NW 154th St, <span class="addr-city">Oklahoma City</span></strong> ✅</td><td>9:56 AM</td><td>10:22 AM</td><td>0:26:00</td><td>0:52:00</td><td>📷 <a href="../photos/2801-nw-154th.html">Photos (8)</a></td></tr>
+    <tr class="done"><td>Wed Oct 28</td><td><strong>2404 NW 154th St, <span class="addr-city">Oklahoma City</span></strong> ✅</td><td>10:34 AM</td><td>11:23 AM</td><td>0:49:00</td><td>1:38:00</td><td>📷 <a href="../photos/2404-nw-154th.html">Photos (7)</a></td></tr>
+    <tr class="done"><td>Wed Oct 28</td><td><strong>17400 Braken Dr, <span class="addr-city">Oklahoma City</span></strong> ✅</td><td>11:34 AM</td><td>12:04 PM</td><td>0:30:00</td><td>1:00:00</td><td>📷 <a href="../photos/17400-braken-dr.html">Photos (4)</a></td></tr>
+    <tr class="done"><td>Wed Oct 28</td><td><strong>1109 Jamestown Cir, <span class="addr-city">Oklahoma City</span></strong> ✅</td><td>12:30 PM</td><td>12:54 PM</td><td>0:24:00</td><td>0:48:00</td><td>📷 <a href="../photos/1109-jamestown-cir.html">Photos (5)</a></td></tr>
+    <tr class="done"><td>Thu Oct 29</td><td><strong>6309 Norham Ct, <span class="addr-city">Oklahoma City</span></strong> ✅</td><td>8:00 AM</td><td>12:21 PM</td><td>4:21:00</td><td>8:42:00</td><td>📷 <a href="../photos/6309-norham-ct.html">Photos (7)</a></td></tr>
+    <tr class="done"><td>Thu Oct 29</td><td><strong>1517 Craig Blvd, <span class="addr-city">Edmond</span></strong> — correction visit ✅</td><td>1:15 PM</td><td>1:48 PM</td><td>0:33:00</td><td>1:06:00</td><td>—</td></tr>
+    <tr class="done"><td>Thu Oct 29</td><td><strong>2801 NW 154th St, <span class="addr-city">Oklahoma City</span></strong> ✅</td><td>2:07 PM</td><td>4:25 PM</td><td>2:18:00</td><td>4:36:00</td><td>—</td></tr>
       </table></div></div>
   <p class="small">How to read this: <strong>Hours on site</strong> = departure minus arrival. <strong>Man-hours</strong> = hours on site × the men on the crew (the crew is 2 men each day this week).</p>
 

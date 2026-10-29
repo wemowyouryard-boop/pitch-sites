@@ -64,12 +64,15 @@
   .tbl-btn:disabled { opacity: .3; cursor: default; }
   .tbl-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .tbl-scroll table { margin: 0; }
+  /* Addresses sit on two lines: street first, then the city/state/ZIP underneath,
+     smaller and muted — keeps the address column narrow without squeezing it. */
+  .addr-city { display: block; font-size: 0.86em; font-weight: 400; color: #5a6653; margin-top: 1px; }
   @media (max-width: 700px) {
     .tbl-scroll table { table-layout: auto; width: auto; min-width: 100%; }
     .tbl-scroll th, .tbl-scroll td { overflow-wrap: normal; }
-    .tbl-scroll th:nth-child(2), .tbl-scroll td:nth-child(2) { min-width: 190px; }
-    .tbl-scroll th:nth-child(3), .tbl-scroll td:nth-child(3) { max-width: 230px; }
-    .tbl-scroll table.tbl3addr th:nth-child(3), .tbl-scroll table.tbl3addr td:nth-child(3) { min-width: 185px; max-width: none; }
+    .tbl-scroll th:nth-child(2), .tbl-scroll td:nth-child(2) { min-width: 170px; }
+    .tbl-scroll table.tblnotes th:nth-child(3), .tbl-scroll table.tblnotes td:nth-child(3) { min-width: 200px; max-width: 280px; }
+    .tbl-scroll table.tbl3addr th:nth-child(3), .tbl-scroll table.tbl3addr td:nth-child(3) { min-width: 170px; max-width: none; }
   }
 </style>
 </head>
