@@ -325,7 +325,11 @@
        "auto_finish": null,
        "auto_minutes": null,
        "man_minutes": 66,
-       "man_auto_minutes": null
+       "man_auto_minutes": null,
+       "photos": [
+        "photos/craig-blvd-correction-1.jpg"
+       ],
+       "photos_page": "photos/craig-blvd-correction.html"
       },
       {
        "name": "2801 NW 154th St",
