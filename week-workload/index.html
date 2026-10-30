@@ -63,9 +63,28 @@
   @media (max-width: 700px) {
     .tbl-scroll table { table-layout: auto; width: auto; min-width: 100%; }
     .tbl-scroll th, .tbl-scroll td { overflow-wrap: normal; }
-    .tbl-scroll th:nth-child(2), .tbl-scroll td:nth-child(2) { min-width: 170px; }
+    /* Columns are sized per table shape, to the content each column actually holds
+       (one rigid template starved the time/money columns and bloated Friday's name column):
+       - tbltime (Mon: Time | Stop | Notes | Time on site | Man-hours) — the Time column
+         fits "7:30 AM" / a range on two lines; the money columns fit a duration on one line.
+       - tblnotes (Tue/Wed/Thu: # | Job | Scope | Time on site | Man-hours) — slim # column,
+         roomy Scope, same money-column widths as tbltime.
+       - tbl3addr (Fri: Time | Stop | Address | ...) — Stop holds short names only (~122px),
+         Address gets the room instead (~152px, a full street address on one line). */
+    .tbl-scroll table.tbltime th:nth-child(1), .tbl-scroll table.tbltime td:nth-child(1) { min-width: 58px; }
+    .tbl-scroll table.tbltime th:nth-child(2), .tbl-scroll table.tbltime td:nth-child(2) { min-width: 168px; }
+    .tbl-scroll table.tbltime th:nth-child(3), .tbl-scroll table.tbltime td:nth-child(3) { min-width: 205px; max-width: 285px; }
+    .tbl-scroll table.tblnotes th:nth-child(2), .tbl-scroll table.tblnotes td:nth-child(2) { min-width: 168px; }
     .tbl-scroll table.tblnotes th:nth-child(3), .tbl-scroll table.tblnotes td:nth-child(3) { min-width: 200px; max-width: 280px; }
-    .tbl-scroll table.tbl3addr th:nth-child(3), .tbl-scroll table.tbl3addr td:nth-child(3) { min-width: 170px; max-width: none; }
+    .tbl-scroll table.tbltime th:nth-child(4), .tbl-scroll table.tbltime td:nth-child(4),
+    .tbl-scroll table.tblnotes th:nth-child(4), .tbl-scroll table.tblnotes td:nth-child(4) { min-width: 54px; }
+    .tbl-scroll table.tbltime th:nth-child(5), .tbl-scroll table.tbltime td:nth-child(5),
+    .tbl-scroll table.tblnotes th:nth-child(5), .tbl-scroll table.tblnotes td:nth-child(5) { min-width: 62px; }
+    .tbl-scroll table.tbl3addr th:nth-child(1), .tbl-scroll table.tbl3addr td:nth-child(1) { min-width: 56px; }
+    .tbl-scroll table.tbl3addr th:nth-child(2), .tbl-scroll table.tbl3addr td:nth-child(2) { min-width: 112px; }
+    .tbl-scroll table.tbl3addr th:nth-child(3), .tbl-scroll table.tbl3addr td:nth-child(3) { min-width: 142px; max-width: none; }
+    .tbl-scroll table.tbl3addr th:nth-child(4), .tbl-scroll table.tbl3addr td:nth-child(4) { min-width: 50px; }
+    .tbl-scroll table.tbl3addr th:nth-child(5), .tbl-scroll table.tbl3addr td:nth-child(5) { min-width: 58px; }
   }
 </style>
 </head>
@@ -96,7 +115,7 @@
 
   <h2 data-date="2026-10-26">Monday, Oct 26 — Route, 3 stops <span class="wx-badge" data-wx-badge>…</span></h2>
   <p class="crew">Crew: Justin + Jason</p>
-  <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table class="tblnotes">
+  <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table class="tbltime">
     <tr><th>Time</th><th>Stop</th><th>Notes</th><th>Time on site</th><th>Man-hours</th></tr>
     <tr class="done"><td class="time">7:30 AM</td><td><strong>Reid Martin</strong><br>2624 NW 58th Pl, <span class="addr-city">Oklahoma City</span></td><td>Mow at 2 inches. His last weekly visit. <span class="done-tag">✅ Finished</span></td><td>—</td><td>—</td></tr>
     <tr class="done"><td class="time">8:00 AM</td><td><strong>Jeffery Elliott — Christmas light quote</strong><br>2625 NW 58th Pl, <span class="addr-city">Oklahoma City</span></td><td>Right across the street from Reid. Quote includes tree lights for the courtyard. <span class="done-tag">✅ Finished</span> — roof line measured ~114 ft (fence to fence + courtyard), quote $570 at $5/ft.</td><td>—</td><td>—</td></tr>
@@ -115,8 +134,8 @@
   <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table class="tblnotes">
     <tr><th>#</th><th>Job</th><th>Scope</th><th>Time on site</th><th>Man-hours</th></tr>
     <tr class="done"><td>1</td><td><strong>1517 Craig Blvd, <span class="addr-city">Edmond</span></strong> — first stop</td><td>Mow; clean out front flowerbed weeds; trim front two shrubs (aggressive trim, do NOT scalp); remove volunteer trees along south back fence (loppers/maybe chainsaw; stack limbs neatly at front curb). <span class="done-tag">✅ Finished</span> — on site 8:29 AM – 10:32 AM · 📷 <a href="photos/craig-blvd.html">Finished-work photos (8)</a></td><td><strong>2:03:00</strong></td><td><strong>4:06:00</strong> <span class="small">(2 men)</span></td></tr>
-    <tr class="done"><td>2</td><td><strong>2275 NW 227th St, <span class="addr-city">Edmond</span></strong> <span class="done-tag">✅ Finished</span><br>🎬 <a href="photos/2275-nw-227th.html">Finished-work videos (2)</a></td><td>Mow + weed front &amp; back flowerbeds. Gate code #5252. 1 acre — zero turn useful.</td><td class="time"><strong>10:52 AM – 12:49 PM</strong><br><span class="small">GPS 10:59 AM – 12:44 PM</span></td><td><strong>1:57:00</strong></td><td><strong>3:54:00</strong></td></tr>
-    <tr class="done"><td>3</td><td><strong>Summit Lakes Entrances 1 &amp; 2</strong> <span class="done-tag">✅ Finished</span><br><span class="small">Entrance 1: 1:30 PM → 2:21 PM · Entrance 2: 2:24 PM → 3:21 PM · <a href="photos/summit-lakes.html">📷 Finished-work photos &amp; video (9)</a></span></td><td>Mow, edge, trim, blow + clean up all leaves &amp; pine needles. Gate #8585.</td><td>1:30 PM → 3:21 PM</td><td>1:48:00</td><td>3:36:00</td></tr>
+    <tr class="done"><td>2</td><td><strong>2275 NW 227th St, <span class="addr-city">Edmond</span></strong> <span class="done-tag">✅ Finished</span><br>🎬 <a href="photos/2275-nw-227th.html">Finished-work videos (2)</a></td><td>Mow + weed front &amp; back flowerbeds. Gate code #5252. 1 acre — zero turn useful.<br><strong>10:52 AM – 12:49 PM</strong><br><span class="small">GPS 10:59 AM – 12:44 PM</span></td><td><strong>1:57:00</strong></td><td><strong>3:54:00</strong></td></tr>
+    <tr class="done"><td>3</td><td><strong>Summit Lakes Entrances 1 &amp; 2</strong> <span class="done-tag">✅ Finished</span><br><span class="small">Entrance 1: 1:30 PM → 2:21 PM · Entrance 2: 2:24 PM → 3:21 PM · <a href="photos/summit-lakes.html">📷 Finished-work photos &amp; video (9)</a></span></td><td>Mow, edge, trim, blow + clean up all leaves &amp; pine needles. Gate #8585.<br><span class="small">1:30 PM → 3:21 PM</span></td><td>1:48:00</td><td>3:36:00</td></tr>
   </table></div></div>
   <div class="eod">🏁 <strong>End of day</strong> — Total man-hours: <strong>11:36:00</strong></div>
   <div class="note"><strong>Eira:</strong> Team Day (favorite team gear).</div>
@@ -138,7 +157,7 @@
   <h2 data-date="2026-10-29">Thursday, Oct 29 — Growing Beauty (Donovan) <span class="wx-badge" data-wx-badge>…</span></h2>
   <p class="crew">Crew: Justin + Jason</p>
   <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table class="tblnotes">
-    <tr><th>Time</th><th>Stop</th><th>Notes</th><th>Time on site</th><th>Man-hours</th></tr>
+    <tr><th>#</th><th>Stop</th><th>Notes</th><th>Time on site</th><th>Man-hours</th></tr>
     <tr class="done"><td>1</td><td><strong>6309 Norham Ct, <span class="addr-city">Oklahoma City</span></strong> — FIRST JOB (moved from Wednesday)</td><td>Trim large tree/shrub by back patio; clean up backyard tree rings/islands. Needs the ladder. <span class="done-tag">✅ Finished</span> — on site 8:00 AM – 12:21 PM <span class="small">(planned start 8:00 AM)</span> · 📷 <a href="photos/6309-norham-ct.html">Finished-work photos (7)</a></td><td><strong>4:21:00</strong></td><td><strong>8:42:00</strong> <span class="small">(2 men)</span></td></tr>
     <tr class="done"><td>2</td><td><strong>1517 Craig Blvd, <span class="addr-city">Edmond</span></strong> — CORRECTION VISIT</td><td>Correction visit — redo the front bed (too much Bermuda grass and weeds). <span class="done-tag">✅ Finished</span> — on site 1:15 PM – 1:48 PM · 📷 <a href="photos/craig-blvd-correction.html">Finished-work photos (1)</a></td><td><strong>0:33:00</strong></td><td><strong>1:06:00</strong> <span class="small">(2 men)</span></td></tr>
     <tr class="done"><td>3</td><td><strong>2801 NW 154th St, <span class="addr-city">Oklahoma City</span></strong> — LAST JOB</td><td>Level the backyard with dirt and seed. <span class="done-tag">✅ Finished</span> — on site 2:07 PM – 4:25 PM</td><td><strong>2:18:00</strong></td><td><strong>4:36:00</strong> <span class="small">(2 men)</span></td></tr>
