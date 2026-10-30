@@ -21,6 +21,7 @@
   tr.done td { background:#f0f7f0; }
   tr.done td:first-child { border-left:6px solid var(--green2); }
   .tag-done { color:#0d4718; font-weight:800; }
+  .tag-nd { color:#8c1d1d; font-weight:800; }
   .small { font-size:13px; color:#3c4a38; }
   a { color:var(--green2); font-weight:600; }
   .avg td { font-size:15px; }
@@ -53,7 +54,7 @@
     <p class="small" style="margin:0; line-height:1.55;">
       <strong>Customer / Property</strong> — who the work was for, and where.<br>
       <strong>Work done</strong> — what was done on that visit.<br>
-      <strong>Status</strong> — ✅ Finished = completed · Scheduled = coming up.<br>
+      <strong>Status</strong> — ✅ Finished = completed · ❌ Not done = visited, work not done · Scheduled = coming up.<br>
       <strong>Time on site</strong> — <strong>You:</strong> the start/finish times you reported. <strong>Phone:</strong> times captured automatically from your phone's location (accurate to about 15 minutes).<br>
       <strong>Man-hours</strong> — the true labor in a job: time on site × men on the crew (2 men working 1 hour = 2 man-hours).<br>
       <strong>Averages</strong> — your typical minutes at each property, figured separately from your reported times and from the phone's times, so the two can be checked against each other.
@@ -85,6 +86,7 @@ function manText(it, d){
 }
 function statusText(it){
   if (it.status === 'done') return '<span class="tag-done">✅ Finished</span>';
+  if (it.status === 'skipped') return '<span class="tag-nd">❌ Not done</span>';
   if (it.status === 'note') return 'Note';
   return 'Scheduled';
 }

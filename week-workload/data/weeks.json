@@ -369,9 +369,9 @@
       {
        "name": "Hilaire Johnson",
        "address": "5305 NW 116th St, Oklahoma City",
-       "scope": "Mow",
-       "status": "scheduled",
-       "start": null,
+       "scope": "Mow (not done Oct 30 — arrived 7:55 AM, work not done)",
+       "status": "skipped",
+       "start": "07:55",
        "finish": null,
        "minutes": null,
        "auto_start": null,
@@ -395,8 +395,8 @@
        "man_auto_minutes": null
       },
       {
-       "name": "Dotti",
-       "address": "7408 NW 104th St, Oklahoma City",
+       "name": "Robert Windsor",
+       "address": "11300 Shady Glen Rd, Oklahoma City",
        "scope": "Mow",
        "status": "scheduled",
        "start": null,
@@ -409,8 +409,8 @@
        "man_auto_minutes": null
       },
       {
-       "name": "Robert Windsor",
-       "address": "11300 Shady Glen Rd, Oklahoma City",
+       "name": "Dotti",
+       "address": "7408 NW 104th St, Oklahoma City",
        "scope": "Mow",
        "status": "scheduled",
        "start": null,
