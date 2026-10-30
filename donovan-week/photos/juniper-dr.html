@@ -15,6 +15,16 @@
   figure img { width: 100%; display: block; }
   figcaption { font-size: 13px; color: #43503c; padding: 7px 10px; }
   @media (max-width: 700px) { .wrap { border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; } }
+
+  figure img { cursor: zoom-in; }
+  .lb { position: fixed; inset: 0; z-index: 999; background: rgba(10,12,9,.94); display: none; flex-direction: column; }
+  .lb.open { display: flex; }
+  .lb-view { flex: 1; overflow: hidden; display: flex; align-items: center; justify-content: center; touch-action: none; }
+  .lb-view img { max-width: 100%; max-height: 100%; display: block; cursor: zoom-in; user-select: none; -webkit-user-select: none; -webkit-user-drag: none; }
+  .lb.zoomed .lb-view img { cursor: grab; }
+  .lb-cap { color: #e8ece4; font-size: 14px; text-align: center; padding: 10px 16px 2px; }
+  .lb-hint { color: #9aa892; font-size: 12px; text-align: center; padding: 2px 16px 12px; }
+  .lb-close { position: absolute; top: 10px; right: 12px; z-index: 2; background: rgba(255,255,255,.16); color: #fff; border: 0; border-radius: 999px; width: 40px; height: 40px; font-size: 19px; line-height: 1; cursor: pointer; }
 </style>
 </head>
 <body>
@@ -34,5 +44,109 @@
   </div>
   <p><a href="../">← Back to Donovan's instructions</a></p>
 </div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-close" id="lbClose" type="button" aria-label="Close">&#10005;</button>
+  <div class="lb-view" id="lbView"><img id="lbImg" alt=""></div>
+  <div class="lb-cap" id="lbCap"></div>
+  <div class="lb-hint">Pinch or scroll to zoom &middot; drag to pan &middot; tap photo to zoom in/out</div>
+</div>
+<script>
+(function () {
+  var lb = document.getElementById('lb'),
+      view = document.getElementById('lbView'),
+      img = document.getElementById('lbImg'),
+      cap = document.getElementById('lbCap'),
+      closeBtn = document.getElementById('lbClose');
+  var scale = 1, tx = 0, ty = 0;
+  var pointers = new Map(), startDist = 0, startScale = 1,
+      downPos = null, startTx = 0, startTy = 0, suppressClick = false;
+
+  function render() {
+    var vw = view.clientWidth, vh = view.clientHeight;
+    var w = img.offsetWidth * scale, h = img.offsetHeight * scale;
+    var mx = Math.max(0, (w - vw) / 2), my = Math.max(0, (h - vh) / 2);
+    tx = Math.min(mx, Math.max(-mx, tx));
+    ty = Math.min(my, Math.max(-my, ty));
+    img.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+    lb.classList.toggle('zoomed', scale > 1);
+  }
+  function openLb(src, alt, caption) {
+    img.src = src; img.alt = alt || ''; cap.textContent = caption || '';
+    scale = 1; tx = 0; ty = 0;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    render();
+  }
+  function closeLb() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    pointers.clear(); startDist = 0; downPos = null;
+  }
+  function dist(a, b) { var dx = a.x - b.x, dy = a.y - b.y; return Math.sqrt(dx * dx + dy * dy); }
+
+  var figs = document.querySelectorAll('figure');
+  Array.prototype.forEach.call(figs, function (f) {
+    var im = f.querySelector('img');
+    if (!im) return;
+    var fc = f.querySelector('figcaption');
+    im.addEventListener('click', function () {
+      openLb(im.getAttribute('src'), im.getAttribute('alt'), fc ? fc.textContent : '');
+    });
+  });
+
+  img.addEventListener('load', render);
+  img.addEventListener('dragstart', function (e) { e.preventDefault(); });
+  img.addEventListener('click', function () {
+    if (suppressClick) { suppressClick = false; return; }
+    if (scale > 1) { scale = 1; tx = 0; ty = 0; } else { scale = 2.5; }
+    render();
+  });
+  view.addEventListener('click', function (e) { if (e.target === view) closeLb(); });
+  closeBtn.addEventListener('click', function (e) { e.stopPropagation(); closeLb(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lb.classList.contains('open')) closeLb();
+  });
+  view.addEventListener('wheel', function (e) {
+    e.preventDefault();
+    scale = Math.min(6, Math.max(1, scale * Math.exp(-e.deltaY * 0.0015)));
+    if (scale === 1) { tx = 0; ty = 0; }
+    render();
+  }, { passive: false });
+
+  view.addEventListener('pointerdown', function (e) {
+    try { view.setPointerCapture(e.pointerId); } catch (err) {}
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (pointers.size === 1) {
+      downPos = { x: e.clientX, y: e.clientY }; startTx = tx; startTy = ty;
+    } else if (pointers.size === 2) {
+      var p = Array.from(pointers.values());
+      startDist = dist(p[0], p[1]); startScale = scale;
+      suppressClick = true;
+    }
+  });
+  view.addEventListener('pointermove', function (e) {
+    if (!pointers.has(e.pointerId)) return;
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (pointers.size === 1 && downPos) {
+      var dx = e.clientX - downPos.x, dy = e.clientY - downPos.y;
+      if (Math.abs(dx) + Math.abs(dy) > 6) suppressClick = true;
+      if (scale > 1) { tx = startTx + dx; ty = startTy + dy; render(); }
+    } else if (pointers.size === 2 && startDist > 0) {
+      var p = Array.from(pointers.values());
+      scale = Math.min(6, Math.max(1, startScale * dist(p[0], p[1]) / startDist));
+      render();
+    }
+  });
+  function endPointer(e) {
+    pointers.delete(e.pointerId);
+    if (pointers.size < 2) startDist = 0;
+    if (pointers.size === 0) downPos = null;
+  }
+  view.addEventListener('pointerup', endPointer);
+  view.addEventListener('pointercancel', endPointer);
+  window.addEventListener('resize', function () { if (lb.classList.contains('open')) render(); });
+})();
+</script>
 </body>
 </html>
