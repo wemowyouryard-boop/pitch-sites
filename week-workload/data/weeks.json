@@ -397,15 +397,15 @@
       {
        "name": "Sam",
        "address": "1205 E Madison St, Oklahoma City",
-       "scope": "Mow (moved up Oct 30 — started 11:20 AM)",
-       "status": "scheduled",
+       "scope": "Mow (no blowing — blower broke; customer told)",
+       "status": "done",
        "start": "11:20",
-       "finish": null,
-       "minutes": null,
+       "finish": "12:13",
+       "minutes": 53,
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "man_minutes": null,
+       "man_minutes": 106,
        "man_auto_minutes": null
       },
       {
