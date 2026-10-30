@@ -350,7 +350,7 @@
     },
     {
      "date": "2026-10-30",
-     "label": "Friday, Oct 30 — Friday route #2 (11 stops)",
+     "label": "Friday, Oct 30 — Friday route #2 (rain-shortened; remaining stops moved to Sun Nov 1, this week only)",
      "items": [
       {
        "name": "Adam's sister",
@@ -409,108 +409,10 @@
        "man_auto_minutes": null
       },
       {
-       "name": "Robert Windsor",
-       "address": "11300 Shady Glen Rd, Oklahoma City",
-       "scope": "Mow",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
-      },
-      {
-       "name": "Dotti",
-       "address": "7408 NW 104th St, Oklahoma City",
-       "scope": "Mow",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
-      },
-      {
-       "name": "Barry Rockler",
-       "address": "13416 N Coltrane Rd, Oklahoma City",
-       "scope": "Mow (makeup from Oct 23)",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
-      },
-      {
-       "name": "Christina Brown",
-       "address": "8500 N Harvey Pl, Oklahoma City",
-       "scope": "Mow (makeup; final 2026 visit)",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
-      },
-      {
-       "name": "Jenetta Davis",
-       "address": "2010 NW 28th St, Oklahoma City",
-       "scope": "Mow (every-3-weeks stop)",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
-      },
-      {
-       "name": "Aj",
-       "address": "2505 NW 20th St, Oklahoma City",
-       "scope": "Mow (every-3-weeks stop)",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
-      },
-      {
        "name": "Jeffery Elliott — MEETING (in person, ~12:00 PM)",
        "address": "2625 NW 58th Place, Oklahoma City",
        "scope": "Christmas light bid: $1,800 bid given Oct 30 — waiting for Jeffery's approval. (Early estimate was $570 for ~114 ft front roof line; on-site bid came to $1,800.) Materials, install, takedown included; full amount due up front when booked. Phone (805) 975-8191.",
        "status": "done",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
-      },
-      {
-       "name": "Hilaire Johnson",
-       "address": "10308 N May Ave, Oklahoma City",
-       "scope": "Mow (every-3-weeks stop)",
-       "status": "scheduled",
        "start": null,
        "finish": null,
        "minutes": null,
@@ -546,8 +448,106 @@
     },
     {
      "date": "2026-11-01",
-     "label": "Sunday, Nov 1 — Nothing scheduled",
+     "label": "Sunday, Nov 1 — Friday route finish (7 stops moved from Fri Oct 30 — rain + blower failure, this week only)",
      "items": [
+      {
+       "name": "Robert Windsor",
+       "address": "11300 Shady Glen Rd, Oklahoma City",
+       "scope": "Mow (moved from Fri Oct 30 — rain + blower failure; this week only)",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
+      },
+      {
+       "name": "Dotti",
+       "address": "7408 NW 104th St, Oklahoma City",
+       "scope": "Mow (moved from Fri Oct 30 — rain + blower failure; this week only)",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
+      },
+      {
+       "name": "Barry Rockler",
+       "address": "13416 N Coltrane Rd, Oklahoma City",
+       "scope": "Mow (makeup from Oct 23) (moved from Fri Oct 30 — rain + blower failure; this week only)",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
+      },
+      {
+       "name": "Christina Brown",
+       "address": "8500 N Harvey Pl, Oklahoma City",
+       "scope": "Mow (makeup; final 2026 visit) (moved from Fri Oct 30 — rain + blower failure; this week only)",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
+      },
+      {
+       "name": "Jenetta Davis",
+       "address": "2010 NW 28th St, Oklahoma City",
+       "scope": "Mow (every-3-weeks stop) (moved from Fri Oct 30 — rain + blower failure; this week only)",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
+      },
+      {
+       "name": "Aj",
+       "address": "2505 NW 20th St, Oklahoma City",
+       "scope": "Mow (every-3-weeks stop) (moved from Fri Oct 30 — rain + blower failure; this week only)",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
+      },
+      {
+       "name": "Hilaire Johnson",
+       "address": "10308 N May Ave, Oklahoma City",
+       "scope": "Mow (every-3-weeks stop) (moved from Fri Oct 30 — rain + blower failure; this week only)",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
+      },
       {
        "name": "Invoices due Nov 1",
        "address": "",
@@ -577,7 +577,7 @@
        "man_auto_minutes": null
       }
      ],
-     "crew_size": 0
+     "crew_size": 2
     }
    ]
   }
