@@ -523,8 +523,8 @@
       {
        "name": "Jerry Johnson",
        "address": "1409 Interurban Way, Edmond",
-       "scope": "Mow",
-       "status": "scheduled",
+       "scope": "Mow Skipped — non-payment.",
+       "status": "skipped",
        "start": null,
        "finish": null,
        "minutes": null,
