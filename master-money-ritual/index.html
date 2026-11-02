@@ -42,9 +42,9 @@
   #back:active{color:var(--gold)}
   .slide{
     position:fixed;inset:0;
-    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
     text-align:center;
-    padding:9vh 8vw calc(9vh + env(safe-area-inset-bottom));
+    padding:7vh 8vw calc(7vh + env(safe-area-inset-bottom));
     opacity:0;pointer-events:none;
     transform:translateX(26px);
     transition:opacity .45s ease,transform .45s ease;
@@ -52,6 +52,8 @@
   }
   .slide.active{opacity:1;pointer-events:auto;transform:translateX(0)}
   .slide.before{transform:translateX(-26px)}
+  .slide>:first-child{margin-top:auto}
+  .slide>:last-child{margin-bottom:auto}
   .kicker{
     font-size:.78rem;letter-spacing:.34em;text-transform:uppercase;
     color:var(--gold);margin-bottom:1.1em;
@@ -81,7 +83,8 @@
   }
   .words span em{font-style:normal;color:var(--gold)}
   .talisman{
-    display:block;width:min(88vw,430px,40.7vh);height:auto;
+    display:block;width:auto;height:auto;
+    max-width:min(84vw,430px);max-height:48vh;
     padding:clamp(14px,3.4vw,22px);
     background:linear-gradient(160deg,#17130c 0%,#100d07 100%);
     border:1px solid var(--gold);
@@ -90,7 +93,7 @@
     margin:.9em auto 1.15em;
   }
   .scanview{
-    overflow:hidden;padding:24px;margin:.35em auto .6em;line-height:0;
+    overflow:hidden;padding:18px;margin:.35em auto .6em;line-height:0;
   }
   .scanview .talisman{margin:0}
   @keyframes driftUp{from{transform:translateY(5px)}to{transform:translateY(-5px)}}
@@ -106,7 +109,7 @@
   @media (prefers-reduced-motion: reduce){
     .slide.active .drift-up,.slide.active .drift-down,.slide.active .drift-left,.slide.active .drift-diag,.slide.active .drift-rot{animation:none}
   }
-  .talisman.small{width:min(64vw,300px,26.3vh)}
+  .talisman.small{max-width:min(62vw,300px);max-height:36vh}
   .scanstep{
     font-size:clamp(2.4rem,11vw,3.6rem);color:var(--gold);line-height:1;margin-bottom:.25em;
   }
@@ -196,7 +199,7 @@
 <!-- 6 · THE TALISMAN -->
 <section class="slide">
   <div class="kicker">Step Four &middot; The Talisman</div>
-  <img class="talisman" alt="The Master Money Talisman">
+  <img width="2358" height="3591" class="talisman" alt="The Master Money Talisman">
   <p>Hold the pleasure <em style="color:var(--gold)">feeling</em> &mdash; not the pictures in your mind.</p>
   <p class="dim">Keep your eyes relaxed. Never read or translate the letters; let their shapes sink in. As you scan, see the white of the image become yellow-orange fire.</p>
 </section>
@@ -206,7 +209,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">1</div>
   <h2>The Left Vertical Word</h2>
-  <div class="scanview"><img class="talisman small drift-up" alt="The Master Money Talisman"></div>
+  <div class="scanview"><img width="2358" height="3591" class="talisman small drift-up" alt="The Master Money Talisman"></div>
   <p>Begin at the <b>bottom</b> of the vertical word on the left, and scan your eyes upward to the top.</p>
   <p class="dim">No need to turn the screen &mdash; simply scan up the word. Hold the pleasure feeling; white becomes fire.</p>
 </section>
@@ -216,7 +219,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">2</div>
   <h2>The Right Vertical Word</h2>
-  <div class="scanview"><img class="talisman small drift-down" alt="The Master Money Talisman"></div>
+  <div class="scanview"><img width="2358" height="3591" class="talisman small drift-down" alt="The Master Money Talisman"></div>
   <p>Move your eyes across to the vertical word on the right, and scan <b>downward</b> &mdash; from the top to the final letter at the bottom.</p>
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
@@ -226,7 +229,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">3</div>
   <h2>The Line</h2>
-  <div class="scanview"><img class="talisman small drift-left" alt="The Master Money Talisman"></div>
+  <div class="scanview"><img width="2358" height="3591" class="talisman small drift-left" alt="The Master Money Talisman"></div>
   <p>Start on the <b>right</b> and scan across the line of letters, right to left, to the far end of the line.</p>
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
@@ -236,7 +239,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">4</div>
   <h2>The Six Lines</h2>
-  <div class="scanview"><img class="talisman small drift-left" alt="The Master Money Talisman"></div>
+  <div class="scanview"><img width="2358" height="3591" class="talisman small drift-left" alt="The Master Money Talisman"></div>
   <p>Scan the first line from right to left. Move down one line at a time, each line right to left, until you have scanned all <b>six lines</b> of this section.</p>
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
@@ -246,7 +249,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">5</div>
   <h2>The Bottom Words</h2>
-  <div class="scanview"><img class="talisman small drift-left" alt="The Master Money Talisman"></div>
+  <div class="scanview"><img width="2358" height="3591" class="talisman small drift-left" alt="The Master Money Talisman"></div>
   <p>Move to the far right, at the <b>bottom</b> of the image, and scan the letters of these <b>five words</b>, from right to left.</p>
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
@@ -256,7 +259,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">6</div>
   <h2>The Outer White Circle</h2>
-  <div class="scanview"><img class="talisman small drift-rot" alt="The Master Money Talisman"></div>
+  <div class="scanview"><img width="2358" height="3591" class="talisman small drift-rot" alt="The Master Money Talisman"></div>
   <p>Scan your eyes <b>anticlockwise</b> around the outer white circle, <b>three times</b>.</p>
   <p class="dim">Begin at the top-right &mdash; the larger gap in the words marks the start. Hold the pleasure feeling; white becomes fire.</p>
 </section>
@@ -266,7 +269,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">7</div>
   <h2>The Next Circle</h2>
-  <div class="scanview"><img class="talisman small drift-rot" alt="The Master Money Talisman"></div>
+  <div class="scanview"><img width="2358" height="3591" class="talisman small drift-rot" alt="The Master Money Talisman"></div>
   <p>Move to the next circle inward, and scan <b>anticlockwise</b> around it, <b>three times</b>.</p>
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
@@ -276,7 +279,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">8</div>
   <h2>The Next Inner Circle</h2>
-  <div class="scanview"><img class="talisman small drift-rot" alt="The Master Money Talisman"></div>
+  <div class="scanview"><img width="2358" height="3591" class="talisman small drift-rot" alt="The Master Money Talisman"></div>
   <p>Move inward once more, and scan <b>anticlockwise</b> around this circle, <b>three times</b>.</p>
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
@@ -286,7 +289,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">9</div>
   <h2>The Central Circle</h2>
-  <div class="scanview"><img class="talisman small drift-diag" alt="The Master Money Talisman"></div>
+  <div class="scanview"><img width="2358" height="3591" class="talisman small drift-diag" alt="The Master Money Talisman"></div>
   <p>Scan the <b>three words</b> of the central circle from top to bottom, each word from right to left.</p>
   <p>Then take in the whole central circle.</p>
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
@@ -297,7 +300,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">10</div>
   <h2>The Final Scan</h2>
-  <div class="scanview"><img class="talisman drift-down" alt="The Master Money Talisman"></div>
+  <div class="scanview"><img width="2358" height="3591" class="talisman drift-down" alt="The Master Money Talisman"></div>
   <p>Take in the whole sigil, scanning from the centre-top down to the base.</p>
   <p class="dim">No more than five seconds &mdash; it is a scan, not a study.</p>
 </section>
