@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week's Workload — Completed Week of Oct 26 – Nov 1, 2026 (Archive) — Giving Tree Lawn Care</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; margin: 0; background: #f6f7f4; color: #1d2419; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 24px 20px 48px; box-sizing: border-box; border-left: 6px solid #2e7d32; border-right: 6px solid #2e7d32; border-top: 6px solid #2e7d32; border-bottom: 6px solid #2e7d32; }
+  h1 { font-size: 24px; margin: 8px 0 2px; }
+  .sub { color: #5a6653; margin: 0 0 20px; }
+  h2 { font-size: 19px; margin: 28px 0 6px; padding: 8px 12px; background: #2e4a22; color: #fff; border-radius: 8px; }
+  h2.off { background: #6b725f; }
+  .crew { color: #43503c; font-size: 14px; margin: 4px 2px 10px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #dfe4da; border-radius: 10px; overflow: hidden; margin: 10px 0; }
+  th, td { text-align: left; padding: 9px 12px; font-size: 15px; border-bottom: 1px solid #edf0ea; vertical-align: top; }
+  th { background: #eef3e8; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: #43503c; }
+  tr:last-child td { border-bottom: none; }
+  td.time { white-space: nowrap; color: #43503c; width: 86px; }
+  .card { background: #fff; border: 1px solid #dfe4da; border-radius: 10px; padding: 14px 16px; margin: 12px 0; }
+  .note { background: #fdf6e0; border-left: 4px solid #d9a514; padding: 8px 12px; border-radius: 6px; margin: 10px 0; font-size: 14px; }
+  .offcard { background: #eef3e8; border: 1px solid #c9d6bd; border-radius: 10px; padding: 14px 16px; margin: 12px 0; }
+  a { color: #2e4a22; font-weight: 600; }
+  .small { font-size: 13px; color: #5a6653; }
+  tr.done td { background: #f0f7f0; color: #10160d; }
+  tr.done td:first-child { border-left: 6px solid #2e7d32; }
+  .done-tag { color: #0d4718; font-weight: 800; }
+  .nd-tag { color: #8c1d1d; font-weight: 800; }
+  .wx-badge { float: right; font-size: 12.5px; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: #e8e8e8; color: #333; letter-spacing: 0; text-transform: none; }
+  .wx-badge.ok { background: #eef7ee; color: #0d4718; }
+  .wx-badge.watch { background: #fdf0c0; color: #7a5b00; }
+  .wx-badge.risk { background: #f8d2d2; color: #8c1d1d; }
+  .wx-live { border: 1px solid #c9d6bd; background: #f2f7ee; border-radius: 10px; padding: 12px 16px; margin: 12px 0 4px; }
+  .wx-live h3 { margin: 0 0 4px; font-size: 16px; }
+  .wx-updated { font-size: 12.5px; color: #5a6653; margin: 0 0 8px; }
+  .wx-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .wx-chip { font-size: 13px; padding: 4px 10px; border-radius: 999px; background: #e8e8e8; color: #333; font-weight: 600; }
+  .wx-chip.ok { background: #eef7ee; color: #0d4718; }
+  .wx-chip.watch { background: #fdf0c0; color: #7a5b00; }
+  .wx-chip.risk { background: #f8d2d2; color: #8c1d1d; }
+  .money-strip { background:#eef7ee; border:2px solid #2e7d32; border-radius:14px; padding:14px 18px; margin:0 0 18px; }
+  .money-strip .amt { font-size:26px; font-weight:800; color:#0d4718; letter-spacing:-0.3px; }
+  .money-strip .lbl { font-size:15px; color:#10160d; }
+  @media (max-width: 700px) { .wrap { border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; padding-left: 12px; padding-right: 12px; }
+    table { table-layout: fixed; }
+    th, td { padding: 7px 5px; font-size: 13px; overflow-wrap: anywhere; }
+    th { font-size: 10.5px; letter-spacing: 0; }
+    td.time { white-space: normal; width: auto; } }
+.eod{margin:12px 0 4px;padding:9px 12px;background:#eef4ee;border-top:3px solid #2e7d32;border-radius:6px;font-size:15px}
+
+  /* Wide tables: the page never scrolls sideways — a wide table scrolls inside its own
+     box instead, with arrow buttons, so the Job / Address column stays fully readable. */
+  .tbl-wrap { margin: 10px 0; }
+  .tbl-nav { display: flex; justify-content: flex-end; gap: 6px; margin: 0 0 6px; }
+  .tbl-nav[hidden] { display: none; }
+  .tbl-btn { background: #eef3e8; border: 1.5px solid #2e7d32; color: #2e4a22; font-family: inherit; font-size: 14px; line-height: 1; padding: 7px 18px; border-radius: 999px; cursor: pointer; }
+  .tbl-btn:active { background: #dcebdc; }
+  .tbl-btn:disabled { opacity: .3; cursor: default; }
+  .tbl-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tbl-scroll table { margin: 0; }
+  /* Addresses sit on two lines: street first, then the city/state/ZIP underneath,
+     smaller and muted — keeps the address column narrow without squeezing it. */
+  .addr-city { display: block; font-size: 0.86em; font-weight: 400; color: #5a6653; margin-top: 1px; }
+  @media (max-width: 700px) {
+    .tbl-scroll table { table-layout: auto; width: auto; min-width: 100%; }
+    .tbl-scroll th, .tbl-scroll td { overflow-wrap: normal; }
+    /* Columns are sized per table shape, to the content each column actually holds
+       (one rigid template starved the time/money columns and bloated Friday's name column):
+       - tbltime (Mon: Time | Stop | Notes | Time on site | Man-hours) — the Time column
+         fits "7:30 AM" / a range on two lines; the money columns fit a duration on one line.
+       - tblnotes (Tue/Wed/Thu: # | Job | Scope | Time on site | Man-hours) — slim # column,
+         roomy Scope, same money-column widths as tbltime.
+       - tbl3addr (Fri: Time | Stop | Address | ...) — Stop holds short names only (~122px),
+         Address gets the room instead (~152px, a full street address on one line). */
+    .tbl-scroll table.tbltime th:nth-child(1), .tbl-scroll table.tbltime td:nth-child(1) { min-width: 58px; }
+    .tbl-scroll table.tbltime th:nth-child(2), .tbl-scroll table.tbltime td:nth-child(2) { min-width: 168px; }
+    .tbl-scroll table.tbltime th:nth-child(3), .tbl-scroll table.tbltime td:nth-child(3) { min-width: 205px; max-width: 285px; }
+    .tbl-scroll table.tblnotes th:nth-child(2), .tbl-scroll table.tblnotes td:nth-child(2) { min-width: 168px; }
+    .tbl-scroll table.tblnotes th:nth-child(3), .tbl-scroll table.tblnotes td:nth-child(3) { min-width: 200px; max-width: 280px; }
+    .tbl-scroll table.tbltime th:nth-child(4), .tbl-scroll table.tbltime td:nth-child(4),
+    .tbl-scroll table.tblnotes th:nth-child(4), .tbl-scroll table.tblnotes td:nth-child(4) { min-width: 54px; }
+    .tbl-scroll table.tbltime th:nth-child(5), .tbl-scroll table.tbltime td:nth-child(5),
+    .tbl-scroll table.tblnotes th:nth-child(5), .tbl-scroll table.tblnotes td:nth-child(5) { min-width: 62px; }
+    .tbl-scroll table.tbl3addr th:nth-child(1), .tbl-scroll table.tbl3addr td:nth-child(1) { min-width: 56px; }
+    .tbl-scroll table.tbl3addr th:nth-child(2), .tbl-scroll table.tbl3addr td:nth-child(2) { min-width: 112px; }
+    .tbl-scroll table.tbl3addr th:nth-child(3), .tbl-scroll table.tbl3addr td:nth-child(3) { min-width: 142px; max-width: none; }
+    .tbl-scroll table.tbl3addr th:nth-child(4), .tbl-scroll table.tbl3addr td:nth-child(4) { min-width: 50px; }
+    .tbl-scroll table.tbl3addr th:nth-child(5), .tbl-scroll table.tbl3addr td:nth-child(5) { min-width: 58px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div style="display:flex; align-items:center; gap:14px; margin:2px 0 6px;">
+    <svg width="58" height="58" viewBox="0 0 64 64" role="img" aria-label="Giving Tree Lawn Care logo"><circle cx="32" cy="32" r="30" fill="#eef7ee" stroke="#2e7d32" stroke-width="2.5"/><circle cx="32" cy="23" r="11" fill="#2e7d32"/><circle cx="21.5" cy="28.5" r="8" fill="#43a047"/><circle cx="42.5" cy="28.5" r="8" fill="#43a047"/><path d="M29.5 29 h5 l-1 17 h-3 z" fill="#6d4c41"/><path d="M13 48 Q32 41.5 51 48" stroke="#2e7d32" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+    <div>
+      <div style="font-size:23px; font-weight:800; color:#14540f; letter-spacing:-0.2px; line-height:1.15;">Giving Tree Lawn Care, LLC</div>
+      <div style="color:#5a6653; font-size:13.5px;">Oklahoma City &middot; Lawn care, tree work &amp; Christmas lights &middot; 405-226-4100</div>
+    </div>
+  </div>
+  <p><a href="../">← Back to This Week's Workload</a></p>
+  <h1>✅ Completed Week — Oct 26 – Nov 1, 2026</h1>
+  <p class="sub">Monday Oct 26 – Sunday Nov 1, 2026 · Giving Tree Lawn Care, LLC · Routes start at home (1501 Oakhill Lane), first yard 7:30 AM, ~30 min per stop.</p>
+
+  <div class="money-strip" id="invoices-due">
+    <div class="lbl">💰 <strong>Money coming in by Sunday, Nov 1, 2026</strong></div>
+    <div class="amt">$2,915.00</div>
+    <div class="lbl">Expected in, all customers combined. Work done is money earned — it's already on its way to you. 🌱</div>
+  </div>
+
+  <div class="wx-live" id="wx-live">
+    <h3>🌦 Live Rain-Delay Watch — Oklahoma City</h3>
+    <p class="wx-updated" id="wx-updated">Loading live forecast…</p>
+    <div class="wx-chips" id="wx-chips"></div>
+  </div>
+
+  <h2 data-date="2026-10-26">Monday, Oct 26 — Route, 3 stops <span class="wx-badge" data-wx-badge>…</span></h2>
+  <p class="crew">Crew: Justin + Jason</p>
+  <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table class="tbltime">
+    <tr><th>Time</th><th>Stop</th><th>Notes</th><th>Time on site</th><th>Man-hours</th></tr>
+    <tr class="done"><td class="time">7:30 AM</td><td><strong>Reid Martin</strong><br>2624 NW 58th Pl, <span class="addr-city">Oklahoma City</span></td><td>Mow at 2 inches. His last weekly visit. <span class="done-tag">✅ Finished</span></td><td>—</td><td>—</td></tr>
+    <tr class="done"><td class="time">8:00 AM</td><td><strong>Jeffery Elliott — Christmas light quote</strong><br>2625 NW 58th Pl, <span class="addr-city">Oklahoma City</span></td><td>Right across the street from Reid. Quote includes tree lights for the courtyard. <span class="done-tag">✅ Finished</span> — roof line measured ~114 ft (fence to fence + courtyard), quote $570 at $5/ft.<strong> NOTE (Oct 30): this $570 was the FIRST quote — the original bid Justin gave him on the phone — not the final one. The current quote is the $1,800 on-site bid given Oct 30, 2026.</strong></td><td>—</td><td>—</td></tr>
+    <tr class="done"><td class="time"><strong>1:29 PM – 2:59 PM</strong><br><span class="small">planned 8:30 AM</span></td><td><strong>Ridgewood Village Apartments</strong><br>101 NE 18th St, <span class="addr-city">Moore</span></td><td>Monthly stop. <span class="done-tag">✅ Finished</span> GPS times: arrived 1:29 PM, left 2:59 PM.</td><td><strong>1:30:00</strong></td><td><strong>3:00:00</strong> <span class="small">(2 men)</span></td></tr>
+  </table></div></div>
+  <div class="eod">🏁 <strong>End of day</strong> — Total man-hours: <strong>3:00:00</strong></div>
+  <p class="small" style="margin:6px 2px 0;">Man-hours = time on site × men on the crew — the true labor in each job.</p>
+  <div class="card">
+    <p style="margin:0 0 6px;"><strong>Christmas Light Quote — Jeffery Elliott, 2625 NW 58th Pl, Oklahoma City</strong></p>
+    <p style="margin:0;" class="small">Roof line, fence to fence with the courtyard: front west fence to courtyard ~28 ft · courtyard run (in, across the back, back out) ~71 ft · front courtyard to east fence ~15 ft · <strong>Total ~114 ft × $5/ft = $570</strong>. Price includes materials, installation, and takedown after the season. Payment is simple: the full amount is due up front when you book — one payment, nothing owed later.</p><p style="margin:6px 0 0;" class="small"><strong>Note:</strong> this was the FIRST quote (Oct 26) — the original bid Justin gave him on the phone — not the final one. The current quote is the $1,800 on-site bid given Oct 30, 2026.</p>
+  </div>
+  <div class="note"><strong>Eira — Red Ribbon Week starts:</strong> Manic Monday (dress crazy).</div>
+
+  <h2 data-date="2026-10-27">Tuesday, Oct 27 — Growing Beauty (Donovan), 3 jobs <span class="wx-badge" data-wx-badge>…</span></h2>
+  <p class="crew">Crew: Justin + Jason · Full instructions with pictures: <a href="https://wemowyouryard-boop.github.io/pitch-sites/donovan-week/">Donovan's instruction sheet</a></p>
+  <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table class="tblnotes">
+    <tr><th>#</th><th>Job</th><th>Scope</th><th>Time on site</th><th>Man-hours</th></tr>
+    <tr class="done"><td>1</td><td><strong>1517 Craig Blvd, <span class="addr-city">Edmond</span></strong> — first stop</td><td>Mow; clean out front flowerbed weeds; trim front two shrubs (aggressive trim, do NOT scalp); remove volunteer trees along south back fence (loppers/maybe chainsaw; stack limbs neatly at front curb). <span class="done-tag">✅ Finished</span> — on site 8:29 AM – 10:32 AM · 📷 <a href="photos/craig-blvd.html">Finished-work photos (8)</a></td><td><strong>2:03:00</strong></td><td><strong>4:06:00</strong> <span class="small">(2 men)</span></td></tr>
+    <tr class="done"><td>2</td><td><strong>2275 NW 227th St, <span class="addr-city">Edmond</span></strong> <span class="done-tag">✅ Finished</span><br>🎬 <a href="photos/2275-nw-227th.html">Finished-work videos (2)</a></td><td>Mow + weed front &amp; back flowerbeds. Gate code #5252. 1 acre — zero turn useful.<br><strong>10:52 AM – 12:49 PM</strong><br><span class="small">GPS 10:59 AM – 12:44 PM</span></td><td><strong>1:57:00</strong></td><td><strong>3:54:00</strong></td></tr>
+    <tr class="done"><td>3</td><td><strong>Summit Lakes Entrances 1 &amp; 2</strong> <span class="done-tag">✅ Finished</span><br><span class="small">Entrance 1: 1:30 PM → 2:21 PM · Entrance 2: 2:24 PM → 3:21 PM · <a href="photos/summit-lakes.html">📷 Finished-work photos &amp; video (9)</a></span></td><td>Mow, edge, trim, blow + clean up all leaves &amp; pine needles. Gate #8585.<br><span class="small">1:30 PM → 3:21 PM</span></td><td>1:48:00</td><td>3:36:00</td></tr>
+  </table></div></div>
+  <div class="eod">🏁 <strong>End of day</strong> — Total man-hours: <strong>11:36:00</strong></div>
+  <div class="note"><strong>Eira:</strong> Team Day (favorite team gear).</div>
+
+  <h2 data-date="2026-10-28">Wednesday, Oct 28 — Growing Beauty (Donovan), 5 jobs <span class="wx-badge" data-wx-badge>…</span></h2>
+  <p class="crew">Crew: 2 men</p>
+  <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table class="tblnotes">
+    <tr><th>#</th><th>Job</th><th>Scope</th><th>Time on site</th><th>Man-hours</th></tr>
+    <tr class="done"><td>1</td><td><strong>15504 Juniper Dr, <span class="addr-city">Edmond</span></strong> — FIRST STOP (start here — per Donovan)</td><td>Mow + trim all holly and boxwood shrubs, front &amp; back. <span class="done-tag">✅ Finished</span> — on site 9:11 AM – 9:53 AM · 📷 <a href="photos/juniper-dr.html">Finished-work photos (7)</a></td><td><strong>0:42:00</strong></td><td><strong>1:24:00</strong> <span class="small">(2 men)</span></td></tr>
+    <tr class="done"><td>2</td><td><strong>2801 NW 154th St</strong></td><td>Mow. <span class="done-tag">✅ Finished</span> — on site 9:56 AM – 10:22 AM · 📷 <a href="photos/2801-nw-154th.html">Finished-work photos (8)</a></td><td><strong>0:26:00</strong></td><td><strong>0:52:00</strong> <span class="small">(2 men)</span></td></tr>
+    <tr class="done"><td>3</td><td><strong>2404 NW 154th St</strong></td><td>Mow + trim all front and side hollys &amp; boxwoods. <span class="done-tag">✅ Finished</span> — on site 10:34 AM – 11:23 AM · 📷 <a href="photos/2404-nw-154th.html">Finished-work photos (7)</a></td><td><strong>0:49:00</strong></td><td><strong>1:38:00</strong> <span class="small">(2 men)</span></td></tr>
+    <tr class="done"><td>4</td><td><strong>17400 Braken Dr</strong></td><td>Mow. <span class="done-tag">✅ Finished</span> — on site 11:34 AM – 12:04 PM · 📷 <a href="photos/17400-braken-dr.html">Finished-work photos (4)</a></td><td><strong>0:30:00</strong></td><td><strong>1:00:00</strong> <span class="small">(2 men)</span></td></tr>
+    <tr class="done"><td>5</td><td><strong>1109 Jamestown Cir</strong></td><td>Mow — seeded back area left unmowed, as instructed. <span class="done-tag">✅ Finished</span> — on site 12:30 PM – 12:54 PM · 📷 <a href="photos/1109-jamestown-cir.html">Finished-work photos (5)</a></td><td><strong>0:24:00</strong></td><td><strong>0:48:00</strong> <span class="small">(2 men)</span></td></tr>
+    <tr class="done"><td>6</td><td><strong>Clare Hadwiger — ESTIMATE</strong><br>3701 Oakdale Forest Rd, <span class="addr-city">Edmond</span></td><td><span class="done-tag">✅ Estimate done</span> — <strong>job booked: $1,200 agreement</strong> (backyard cleanup; black metal border, 60 bags mulch, Preen, Roundup). Work date to be set.</td><td>—</td><td>—</td></tr>
+  </table></div></div>
+  <div class="eod">🏁 <strong>End of day</strong> — Total man-hours: <strong>5:42:00</strong></div>
+  <div class="note"><strong>Eira:</strong> Workout Wednesday (workout gear).</div>
+
+  <h2 data-date="2026-10-29">Thursday, Oct 29 — Growing Beauty (Donovan) <span class="wx-badge" data-wx-badge>…</span></h2>
+  <p class="crew">Crew: Justin + Jason</p>
+  <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table class="tblnotes">
+    <tr><th>#</th><th>Stop</th><th>Notes</th><th>Time on site</th><th>Man-hours</th></tr>
+    <tr class="done"><td>1</td><td><strong>6309 Norham Ct, <span class="addr-city">Oklahoma City</span></strong> — FIRST JOB (moved from Wednesday)</td><td>Trim large tree/shrub by back patio; clean up backyard tree rings/islands. Needs the ladder. <span class="done-tag">✅ Finished</span> — on site 8:00 AM – 12:21 PM <span class="small">(planned start 8:00 AM)</span> · 📷 <a href="photos/6309-norham-ct.html">Finished-work photos (7)</a></td><td><strong>4:21:00</strong></td><td><strong>8:42:00</strong> <span class="small">(2 men)</span></td></tr>
+    <tr class="done"><td>2</td><td><strong>1517 Craig Blvd, <span class="addr-city">Edmond</span></strong> — CORRECTION VISIT</td><td>Correction visit — redo the front bed (too much Bermuda grass and weeds). <span class="done-tag">✅ Finished</span> — on site 1:15 PM – 1:48 PM · 📷 <a href="photos/craig-blvd-correction.html">Finished-work photos (1)</a></td><td><strong>0:33:00</strong></td><td><strong>1:06:00</strong> <span class="small">(2 men)</span></td></tr>
+    <tr class="done"><td>3</td><td><strong>2801 NW 154th St, <span class="addr-city">Oklahoma City</span></strong> — LAST JOB</td><td>Level the backyard with dirt and seed. <span class="done-tag">✅ Finished</span> — on site 2:07 PM – 4:25 PM</td><td><strong>2:18:00</strong></td><td><strong>4:36:00</strong> <span class="small">(2 men)</span></td></tr>
+  </table></div></div>
+  <div class="eod">🏁 <strong>End of day</strong> — Total man-hours: <strong>14:24:00</strong></div>
+  <div class="eod">🏁 <strong>End of week — Donovan (Tue–Thu, Oct 27–29)</strong> — Hours worked: <strong>15:51:00</strong> · Total man-hours: <strong>31:42:00</strong></div>
+  <div class="note"><strong>Eira:</strong> PJ Day (pajamas).</div>
+
+  <h2 data-date="2026-10-30">Friday, Oct 30 — Route (Friday #2) — rain-shortened; remaining stops moved to Sun Nov 1 (this week only) <span class="wx-badge" data-wx-badge>…</span></h2>
+  <p class="crew">Crew: Justin + Jason</p>
+  <div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div><div class="tbl-scroll"><table class="tbl3addr">
+    <tr><th>Time</th><th>Stop</th><th>Address</th><th>Time on site</th><th>Man-hours</th></tr>
+    <tr class="done"><td class="time"><strong>7:15 AM – 7:50 AM</strong><br><span class="small">planned 7:30 AM</span></td><td>Adam's sister <span class="done-tag">✅ Finished</span></td><td>5312 NW 108th Ter</td><td><strong>0:35:00</strong></td><td><strong>1:10:00</strong> <span class="small">(2 men)</span></td></tr>
+    <tr><td class="time"><strong>7:55 AM</strong><br><span class="small">planned 8:00 AM</span></td><td>Hilaire Johnson <span class="nd-tag">❌ Not done</span></td><td>5305 NW 116th St</td><td>—</td><td>—</td></tr>
+    <tr class="done"><td class="time"><strong>8:10 AM – 8:40 AM</strong><br><span class="small">planned 8:30 AM</span></td><td>Hal Williams <span class="done-tag">✅ Finished</span></td><td>6524 NW 115th St</td><td><strong>0:30:00</strong></td><td><strong>1:00:00</strong> <span class="small">(2 men)</span></td></tr>
+    <tr class="done"><td class="time"><strong>11:20 AM – 12:13 PM</strong></td><td>Sam <span class="done-tag">✅ Finished</span></td><td>1205 East Madison St</td><td><strong>0:53:00</strong></td><td><strong>1:46:00</strong> <span class="small">(2 men)</span></td></tr>
+    
+    
+    
+    
+    
+    
+    
+    
+  </table></div></div>
+  <div class="eod">🏁 <strong>End of day</strong> — Total man-hours: <strong>3:56:00</strong></div>
+  <div class="card">
+    <p style="margin:0;"><strong>~12:00 PM — Meeting: Jeffery Elliott (in person)</strong> — 2625 NW 58th Place. ✅ <strong>Bid given: $1,800</strong> for the Christmas lights — waiting for his approval. (Early estimate was $570 for the front roof line; the on-site bid came to $1,800.) Materials, installation and takedown included; full amount due up front when booked. Phone: (805) 975-8191.</p>
+  </div>
+  <div class="note"><strong>Eira:</strong> Halloween Costume Day at school — she needs her costume this morning.</div>
+
+  <h2 data-date="2026-10-31">Saturday, Oct 31 — Halloween (no route) <span class="wx-badge" data-wx-badge>…</span></h2>
+  <div class="card">
+    <p style="margin:0;"><strong>Eric's Toy Extravaganza: Halloween Edition</strong> — Cleveland County Fairgrounds, 615 E Robinson St, Norman. Early entry 9:00 AM ($10 entry), show hours 10:00 AM–5:00 PM ($5 entry). Costume contest with prizes for all ages, trick-or-treat the vendors, hourly raffles, hundreds of toy/comic vendors. <strong>Taking Quentin and Eira.</strong></p>
+  </div>
+  <div class="eod">🏁 <strong>End of day</strong> — Total man-hours: <strong>—</strong></div>
+
+  <h2 data-date="2026-11-01">Sunday, Nov 1 — Day off (Friday-finish stops moved to Mon Nov 2 — rain) <span class="wx-badge" data-wx-badge>…</span></h2>
+  <div class="card">
+    <p style="margin:0 0 6px;">Day off. The 7 Friday-finish stops — Robert Windsor, Dotti, Barry Rockler, Christina Brown, Jenetta Davis, Aj, and Hilaire Johnson — were moved to <strong>Monday, Nov 2</strong> (rain) and run at the front of Monday's combined route in the Nov 2–8 week.</p>
+    <ul style="margin:0 0 0 18px; padding:0;">
+      <li>OKC Utilities bill, $173.30, due Monday Nov 2.</li>
+    </ul>
+  </div>
+  <div class="eod">🏁 <strong>End of day</strong> — Total man-hours: <strong>—</strong></div>
+
+  <div class="card">
+    <p style="margin:0;" class="small"><strong>Running in the background all week:</strong> email sending is PAUSED (Gmail sending limit hit Oct 26 — batches are staged and cleaned, resume is light-only when Justin calls it), daily website builds plus three daily site-audit sweeps, daily Bitcoin posts, pool-owner harvest, and the morning money ritual (daily through Nov 3).</p>
+  </div>
+  <p><a href="../">← Back to This Week's Workload</a></p>
+
+</div>
+
+<script>
+// Live rain-delay watch — pulls the current Oklahoma City forecast (Open-Meteo, no key needed)
+// and flags each day on this page. Refreshes on load and every 30 minutes while open.
+(function () {
+  var LAT = 35.4676, LON = -97.5164; // Oklahoma City
+  var URL = 'https://api.open-meteo.com/v1/forecast?latitude=' + LAT + '&longitude=' + LON +
+    '&daily=weather_code,precipitation_sum,precipitation_probability_max' +
+    '&precipitation_unit=inch&timezone=America%2FChicago&forecast_days=16';
+
+  function classify(prob, inches) {
+    if ((prob !== null && prob >= 50) || inches >= 0.15) return { cls: 'risk', label: '🌧 Rain delay risk' };
+    if ((prob !== null && prob >= 30) || inches >= 0.05) return { cls: 'watch', label: '⚠️ Rain watch' };
+    return { cls: 'ok', label: '✅ No delay expected' };
+  }
+  function detail(prob, inches) {
+    var p = (prob === null || prob === undefined) ? '' : prob + '%';
+    var i = (inches === null || inches === undefined) ? '' : inches.toFixed(2) + ' in';
+    return [p, i].filter(Boolean).join(' · ');
+  }
+  function dayName(iso) {
+    var d = new Date(iso + 'T12:00:00');
+    return d.toLocaleDateString('en-US', { weekday: 'short' });
+  }
+
+  function render(daily) {
+    var byDate = {};
+    for (var i = 0; i < daily.time.length; i++) {
+      byDate[daily.time[i]] = {
+        prob: daily.precipitation_probability_max[i],
+        inches: daily.precipitation_sum[i] || 0
+      };
+    }
+    var chips = [];
+    document.querySelectorAll('h2[data-date]').forEach(function (h) {
+      var date = h.getAttribute('data-date');
+      var f = byDate[date];
+      var badge = h.querySelector('[data-wx-badge]');
+      if (!f) { if (badge) { badge.textContent = 'No forecast'; badge.className = 'wx-badge'; } return; }
+      var c = classify(f.prob, f.inches);
+      var txt = c.label + ' — ' + detail(f.prob, f.inches);
+      if (badge) { badge.textContent = txt; badge.className = 'wx-badge ' + c.cls; }
+      chips.push('<span class="wx-chip ' + c.cls + '">' + dayName(date) + ': ' + txt + '</span>');
+    });
+    var box = document.getElementById('wx-chips');
+    if (box) box.innerHTML = chips.join('');
+    var upd = document.getElementById('wx-updated');
+    if (upd) upd.textContent = 'Live forecast updated ' + new Date().toLocaleString('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) + ' · refreshes automatically every 30 min while this page is open.';
+  }
+
+  function load() {
+    fetch(URL).then(function (r) { return r.json(); }).then(function (j) {
+      if (j && j.daily) render(j.daily);
+    }).catch(function () {
+      var upd = document.getElementById('wx-updated');
+      if (upd) upd.textContent = 'Live forecast unavailable right now — badges will retry on refresh.';
+    });
+  }
+  load();
+  setInterval(load, 30 * 60 * 1000);
+})();
+</script>
+
+<script>
+// Wide-table helper: a table wider than the screen scrolls inside its own box —
+// tap the arrows to move it, or swipe inside the table. The page never scrolls sideways.
+(function () {
+  function init(wrap) {
+    var sc = wrap.querySelector('.tbl-scroll');
+    var nav = wrap.querySelector('.tbl-nav');
+    if (!sc || !nav) return;
+    var prev = nav.querySelector('.tbl-prev');
+    var next = nav.querySelector('.tbl-next');
+    function update() {
+      var over = sc.scrollWidth - sc.clientWidth > 2;
+      nav.hidden = !over;
+      if (!over) return;
+      prev.disabled = sc.scrollLeft <= 1;
+      next.disabled = sc.scrollLeft + sc.clientWidth >= sc.scrollWidth - 1;
+    }
+    if (!wrap.__tblReady) {
+      wrap.__tblReady = true;
+      prev.addEventListener('click', function () { sc.scrollBy({ left: -Math.round(sc.clientWidth * 0.75), behavior: 'smooth' }); });
+      next.addEventListener('click', function () { sc.scrollBy({ left: Math.round(sc.clientWidth * 0.75), behavior: 'smooth' }); });
+      sc.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      if (window.MutationObserver) new MutationObserver(update).observe(sc, { childList: true, subtree: true });
+    }
+    update();
+  }
+  function initAll() { document.querySelectorAll('.tbl-wrap').forEach(init); }
+  initAll();
+  window.addEventListener('load', initAll);
+})();
+</script>
+</body>
+</html>
