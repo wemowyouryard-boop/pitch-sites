@@ -490,7 +490,7 @@
    "days": [
     {
      "date": "2026-11-02",
-     "label": "Monday, Nov 2 — Combined route (19 stops: weekend makeups + Monday route)",
+     "label": "Monday, Nov 2 — Combined route (5 stops: 4 finished, 1 skipped; remaining 14 stops moved to Tue Nov 3 — rain)",
      "items": [
       {
        "name": "Barry Rockler",
@@ -561,7 +561,14 @@
        "auto_minutes": null,
        "man_minutes": 102,
        "man_auto_minutes": null
-      },
+      }
+     ],
+     "crew_size": 2
+    },
+    {
+     "date": "2026-11-03",
+     "label": "Tuesday, Nov 3 — Route (14 stops moved from Monday — rain)",
+     "items": [
       {
        "name": "Josh Caywood",
        "address": "1304 NW 149th St, Edmond",
@@ -760,12 +767,6 @@
       }
      ],
      "crew_size": 2
-    },
-    {
-     "date": "2026-11-03",
-     "label": "Tuesday, Nov 3 — Off",
-     "items": [],
-     "crew_size": 0
     },
     {
      "date": "2026-11-04",
