@@ -509,15 +509,15 @@
       {
        "name": "Grant Gibson",
        "address": "5832 Havenshire Ln, Edmond",
-       "scope": "Mow",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
+       "scope": "Mow Gate code 1422.",
+       "status": "done",
+       "start": "10:22",
+       "finish": "11:01",
+       "minutes": 39,
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "man_minutes": null,
+       "man_minutes": 78,
        "man_auto_minutes": null
       },
       {
