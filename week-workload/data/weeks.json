@@ -567,7 +567,7 @@
     },
     {
      "date": "2026-11-03",
-     "label": "Tuesday, Nov 3 — Route (14 stops moved from Monday — rain)",
+     "label": "Tuesday, Nov 3 — Route (13 stops moved from Monday — rain; Christina Brown removed at Justin's direction Nov 3)",
      "items": [
       {
        "name": "Jenetta Davis",
@@ -629,20 +629,6 @@
        "name": "Rudy Lang",
        "address": "2513 NW 58th Pl, Oklahoma City",
        "scope": "Mow",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
-      },
-      {
-       "name": "Christina Brown",
-       "address": "8500 N Harvey Pl, Oklahoma City",
-       "scope": "Mow (makeup; final 2026 visit)",
        "status": "scheduled",
        "start": null,
        "finish": null,
