@@ -652,7 +652,14 @@
        "auto_minutes": null,
        "man_minutes": 96,
        "man_auto_minutes": null
-      },
+      }
+     ],
+     "crew_size": 2
+    },
+    {
+     "date": "2026-11-04",
+     "label": "Wednesday, Nov 4 — Off",
+     "items": [
       {
        "name": "Wylene Durrett",
        "address": "11012 Maple Grove, Oklahoma City",
@@ -752,12 +759,6 @@
        "man_auto_minutes": null
       }
      ],
-     "crew_size": 2
-    },
-    {
-     "date": "2026-11-04",
-     "label": "Wednesday, Nov 4 — Off",
-     "items": [],
      "crew_size": 0
     },
     {
