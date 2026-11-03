@@ -612,23 +612,23 @@
        "man_auto_minutes": null
       },
       {
-       "name": "Reid Martin",
-       "address": "2624 NW 58th Pl, Oklahoma City",
-       "scope": "Mow — mow height 2 inches",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
-      },
-      {
        "name": "Rudy Lang",
        "address": "2513 NW 58th Pl, Oklahoma City",
        "scope": "Mow",
+       "status": "done",
+       "start": "12:38",
+       "finish": "13:06",
+       "minutes": 28,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": 56,
+       "man_auto_minutes": null
+      },
+      {
+       "name": "Reid Martin",
+       "address": "2624 NW 58th Pl, Oklahoma City",
+       "scope": "Mow — mow height 2 inches",
        "status": "scheduled",
        "start": null,
        "finish": null,
