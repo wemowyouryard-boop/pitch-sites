@@ -757,6 +757,20 @@
        "auto_minutes": null,
        "man_minutes": null,
        "man_auto_minutes": null
+      },
+      {
+       "name": "Abbie Davis — Christmas light bid meeting",
+       "address": "4424 Moulin Rd, Edmond, OK 73034",
+       "scope": "Christmas light bid meeting (house + 6-tree cluster; she has lights, wants more added; wants them up before her son's birthday on the 16th)",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       }
      ],
      "crew_size": 0
