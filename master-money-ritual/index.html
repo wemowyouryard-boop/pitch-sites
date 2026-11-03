@@ -97,15 +97,22 @@
   }
   .scanview .talisman{margin:0}
   .scanstage{position:relative;line-height:0}
-  .lens{
-    position:absolute;left:0;top:0;border-radius:50%;overflow:hidden;pointer-events:none;
-    border:1.5px solid rgba(217,180,92,.8);background:#100d07;opacity:0;transition:opacity .6s ease;
-    box-shadow:0 12px 34px rgba(0,0,0,.55),inset 0 0 0 1px rgba(0,0,0,.35),0 0 22px rgba(217,180,92,.16);
+  .focal{
+    position:absolute;left:0;top:0;border-radius:10px;pointer-events:none;
+    border:1.5px solid rgba(217,180,92,.85);background:transparent;opacity:0;transition:opacity .6s ease;
+    box-shadow:0 0 0 1px rgba(0,0,0,.25),0 0 18px rgba(217,180,92,.14);
   }
-  .slide.active .lens{opacity:1}
-  .lensclone{position:absolute;left:0;top:0;transform-origin:0 0;max-width:none;max-height:none;margin:0}
-  .lenspic{display:block;width:100%;height:100%}
-  .talisman.small{max-width:min(62vw,300px);max-height:36vh}
+  .slide.active .focal{opacity:1}
+  .magstrip{
+    position:relative;overflow:hidden;margin:.15em auto .55em;border-radius:8px;pointer-events:none;
+    border:1px solid rgba(217,180,92,.55);background:#100d07;opacity:0;transition:opacity .6s ease;
+    box-shadow:0 10px 26px rgba(0,0,0,.5),0 0 18px rgba(217,180,92,.10);
+  }
+  .slide.active .magstrip{opacity:1}
+  .magclone{position:absolute;left:0;top:0;transform-origin:0 0;max-width:none;max-height:none;margin:0}
+  .magpic{display:block;width:100%;height:100%}
+  .talisman.scan10{max-width:min(76vw,380px);max-height:36vh}
+  .talisman.small{max-width:min(62vw,300px);max-height:29vh}
   .scanstep{
     font-size:clamp(2.4rem,11vw,3.6rem);color:var(--gold);line-height:1;margin-bottom:.25em;
   }
@@ -205,7 +212,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">1</div>
   <h2>The Left Vertical Word</h2>
-  <div class="scanview"><div class="scanstage" data-scan="1"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="lens" aria-hidden="true"><div class="talisman lensclone"><img class="lenspic" alt=""></div></div></div></div>
+  <div class="scanview"><div class="scanstage" data-scan="1"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="focal" aria-hidden="true"></div></div></div><div class="magstrip" aria-hidden="true"><div class="talisman magclone"><img class="magpic" alt=""></div></div>
   <p>Begin at the <b>bottom</b> of the vertical word on the left, and scan your eyes upward to the top.</p>
   <p class="dim">No need to turn the screen &mdash; simply scan up the word. Hold the pleasure feeling; white becomes fire.</p>
 </section>
@@ -215,7 +222,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">2</div>
   <h2>The Right Vertical Word</h2>
-  <div class="scanview"><div class="scanstage" data-scan="2"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="lens" aria-hidden="true"><div class="talisman lensclone"><img class="lenspic" alt=""></div></div></div></div>
+  <div class="scanview"><div class="scanstage" data-scan="2"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="focal" aria-hidden="true"></div></div></div><div class="magstrip" aria-hidden="true"><div class="talisman magclone"><img class="magpic" alt=""></div></div>
   <p>Move your eyes across to the vertical word on the right, and scan <b>downward</b> &mdash; from the top to the final letter at the bottom.</p>
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
@@ -225,7 +232,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">3</div>
   <h2>The Line</h2>
-  <div class="scanview"><div class="scanstage" data-scan="3"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="lens" aria-hidden="true"><div class="talisman lensclone"><img class="lenspic" alt=""></div></div></div></div>
+  <div class="scanview"><div class="scanstage" data-scan="3"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="focal" aria-hidden="true"></div></div></div><div class="magstrip" aria-hidden="true"><div class="talisman magclone"><img class="magpic" alt=""></div></div>
   <p>Start on the <b>right</b> and scan across the line of letters, right to left, to the far end of the line.</p>
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
@@ -235,7 +242,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">4</div>
   <h2>The Six Lines</h2>
-  <div class="scanview"><div class="scanstage" data-scan="4"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="lens" aria-hidden="true"><div class="talisman lensclone"><img class="lenspic" alt=""></div></div></div></div>
+  <div class="scanview"><div class="scanstage" data-scan="4"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="focal" aria-hidden="true"></div></div></div><div class="magstrip" aria-hidden="true"><div class="talisman magclone"><img class="magpic" alt=""></div></div>
   <p>Scan the first line from right to left. Move down one line at a time, each line right to left, until you have scanned all <b>six lines</b> of this section.</p>
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
@@ -245,7 +252,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">5</div>
   <h2>The Bottom Words</h2>
-  <div class="scanview"><div class="scanstage" data-scan="5"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="lens" aria-hidden="true"><div class="talisman lensclone"><img class="lenspic" alt=""></div></div></div></div>
+  <div class="scanview"><div class="scanstage" data-scan="5"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="focal" aria-hidden="true"></div></div></div><div class="magstrip" aria-hidden="true"><div class="talisman magclone"><img class="magpic" alt=""></div></div>
   <p>Move to the far right, at the <b>bottom</b> of the image, and scan the letters of these <b>five words</b>, from right to left.</p>
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
@@ -255,7 +262,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">6</div>
   <h2>The Outer White Circle</h2>
-  <div class="scanview"><div class="scanstage" data-scan="6"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="lens" aria-hidden="true"><div class="talisman lensclone"><img class="lenspic" alt=""></div></div></div></div>
+  <div class="scanview"><div class="scanstage" data-scan="6"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="focal" aria-hidden="true"></div></div></div><div class="magstrip" aria-hidden="true"><div class="talisman magclone"><img class="magpic" alt=""></div></div>
   <p>Scan your eyes <b>anticlockwise</b> around the outer white circle, <b>three times</b>.</p>
   <p class="dim">Begin at the top-right &mdash; the larger gap in the words marks the start. Hold the pleasure feeling; white becomes fire.</p>
 </section>
@@ -265,7 +272,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">7</div>
   <h2>The Next Circle</h2>
-  <div class="scanview"><div class="scanstage" data-scan="7"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="lens" aria-hidden="true"><div class="talisman lensclone"><img class="lenspic" alt=""></div></div></div></div>
+  <div class="scanview"><div class="scanstage" data-scan="7"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="focal" aria-hidden="true"></div></div></div><div class="magstrip" aria-hidden="true"><div class="talisman magclone"><img class="magpic" alt=""></div></div>
   <p>Move to the next circle inward, and scan <b>anticlockwise</b> around it, <b>three times</b>.</p>
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
@@ -275,7 +282,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">8</div>
   <h2>The Next Inner Circle</h2>
-  <div class="scanview"><div class="scanstage" data-scan="8"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="lens" aria-hidden="true"><div class="talisman lensclone"><img class="lenspic" alt=""></div></div></div></div>
+  <div class="scanview"><div class="scanstage" data-scan="8"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="focal" aria-hidden="true"></div></div></div><div class="magstrip" aria-hidden="true"><div class="talisman magclone"><img class="magpic" alt=""></div></div>
   <p>Move inward once more, and scan <b>anticlockwise</b> around this circle, <b>three times</b>.</p>
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
 </section>
@@ -285,7 +292,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">9</div>
   <h2>The Central Circle</h2>
-  <div class="scanview"><div class="scanstage" data-scan="9"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="lens" aria-hidden="true"><div class="talisman lensclone"><img class="lenspic" alt=""></div></div></div></div>
+  <div class="scanview"><div class="scanstage" data-scan="9"><img width="2358" height="3591" class="talisman small" alt="The Master Money Talisman"><div class="focal" aria-hidden="true"></div></div></div><div class="magstrip" aria-hidden="true"><div class="talisman magclone"><img class="magpic" alt=""></div></div>
   <p>Scan the <b>three words</b> of the central circle from top to bottom, each word from right to left.</p>
   <p>Then take in the whole central circle.</p>
   <p class="dim">Hold the pleasure feeling; white becomes fire.</p>
@@ -296,7 +303,7 @@
   <div class="kicker">The Scan</div>
   <div class="scanstep">10</div>
   <h2>The Final Scan</h2>
-  <div class="scanview"><div class="scanstage" data-scan="10"><img width="2358" height="3591" class="talisman" alt="The Master Money Talisman"><div class="lens" aria-hidden="true"><div class="talisman lensclone"><img class="lenspic" alt=""></div></div></div></div>
+  <div class="scanview"><div class="scanstage" data-scan="10"><img width="2358" height="3591" class="talisman scan10" alt="The Master Money Talisman"><div class="focal" aria-hidden="true"></div></div></div><div class="magstrip" aria-hidden="true"><div class="talisman magclone"><img class="magpic" alt=""></div></div>
   <p>Take in the whole sigil, scanning from the centre-top down to the base.</p>
   <p class="dim">No more than five seconds &mdash; it is a scan, not a study.</p>
 </section>
@@ -398,12 +405,11 @@
 (function(){
   var Z = 1.25; /* slight magnification only */
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  document.querySelectorAll('img.lenspic').forEach(function(i){ i.src = 'talisman.jpg'; });
+  document.querySelectorAll('img.magpic').forEach(function(i){ i.src = 'talisman.jpg'; });
   function osc(t){ return 0.5 - 0.5 * Math.cos(2 * Math.PI * t); }
-  function eio(t){ return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; }
   var TAU = Math.PI * 2;
-  /* Each path returns the lens centre [x, y] as fractions of stage width/height
-     for cycle position t in [0,1). The talisman itself never moves. */
+  /* Paths give the focal centre [x, y] as fractions of stage width/height.
+     The talisman itself never moves and is never covered. */
   var PATHS = {
     '1':  function(t){ return [0.24, 0.79 - 0.58 * osc(t)]; },
     '2':  function(t){ return [0.76, 0.21 + 0.58 * osc(t)]; },
@@ -422,22 +428,32 @@
   }
   var PERIODS = { '6': 13000, '7': 13000, '8': 13000 };
   function frame(now){
-    var stage = document.querySelector('.slide.active .scanstage');
+    var slide = document.querySelector('.slide.active');
+    var stage = slide ? slide.querySelector('.scanstage') : null;
     if(stage){
-      var lens = stage.querySelector('.lens');
-      var clone = stage.querySelector('.lensclone');
+      var focal = stage.querySelector('.focal');
+      var strip = slide.querySelector('.magstrip');
+      var clone = strip ? strip.querySelector('.magclone') : null;
       var W = stage.clientWidth, H = stage.clientHeight;
-      if(lens && clone && W > 0 && H > 0){
-        var lw = 0.44 * W, lh = 0.30 * H;
-        lens.style.width = lw + 'px'; lens.style.height = lh + 'px';
-        clone.style.width = W + 'px'; clone.style.height = H + 'px';
-        var path = PATHS[stage.getAttribute('data-scan')] || PATHS['10'];
-        var period = PERIODS[stage.getAttribute('data-scan')] || 9000;
+      if(focal && strip && clone && W > 0 && H > 0){
+        var key = stage.getAttribute('data-scan');
+        var path = PATHS[key] || PATHS['10'];
+        var period = PERIODS[key] || 9000;
         var t = reduced ? 0 : (now % period) / period;
         var c = path(t, W, H);
-        var lx = c[0] * W - lw / 2, ly = c[1] * H - lh / 2;
-        lens.style.transform = 'translate(' + lx + 'px,' + ly + 'px)';
-        clone.style.transform = 'translate(' + (-Z * lx) + 'px,' + (-Z * ly) + 'px) scale(' + Z + ')';
+        /* The outlined region: half the talisman's width, a band of its height,
+           clamped so the outline always sits fully on the talisman. */
+        var mw = 0.50 * W;
+        var mh = Math.max(44, Math.min(64, 0.19 * H));
+        var fx = Math.max(mw / 2 + 2, Math.min(W - mw / 2 - 2, c[0] * W));
+        var fy = Math.max(mh / 2 + 2, Math.min(H - mh / 2 - 2, c[1] * H));
+        var mx = fx - mw / 2, my = fy - mh / 2;
+        focal.style.width = mw + 'px'; focal.style.height = mh + 'px';
+        focal.style.transform = 'translate(' + mx + 'px,' + my + 'px)';
+        /* The strip under the talisman shows exactly that region at 1.25x. */
+        strip.style.width = (mw * Z) + 'px'; strip.style.height = (mh * Z) + 'px';
+        clone.style.width = W + 'px'; clone.style.height = H + 'px';
+        clone.style.transform = 'translate(' + (-Z * mx) + 'px,' + (-Z * my) + 'px) scale(' + Z + ')';
       }
     }
     requestAnimationFrame(frame);
