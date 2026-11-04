@@ -664,14 +664,14 @@
        "name": "Josh Caywood",
        "address": "1304 NW 149th St, Edmond",
        "scope": "Mow",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
+       "status": "done",
+       "start": "7:50 AM",
+       "finish": "9:40 AM",
+       "minutes": 110,
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "man_minutes": null,
+       "man_minutes": 220,
        "man_auto_minutes": null
       },
       {
@@ -773,7 +773,7 @@
        "man_auto_minutes": null
       }
      ],
-     "crew_size": 0
+     "crew_size": 2
     },
     {
      "date": "2026-11-05",
