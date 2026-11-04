@@ -661,6 +661,20 @@
      "label": "Wednesday, Nov 4 — Off",
      "items": [
       {
+       "name": "Josh Caywood",
+       "address": "1304 NW 149th St, Edmond",
+       "scope": "Mow",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
+      },
+      {
        "name": "Wylene Durrett",
        "address": "11012 Maple Grove, Oklahoma City",
        "scope": "Mow",
@@ -733,20 +747,6 @@
       {
        "name": "Michael & Jody Miller",
        "address": "16245 Marigold Ave, Edmond",
-       "scope": "Mow",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
-      },
-      {
-       "name": "Josh Caywood",
-       "address": "1304 NW 149th St, Edmond",
        "scope": "Mow",
        "status": "scheduled",
        "start": null,
