@@ -692,14 +692,14 @@
        "name": "Bryce & Stephanie Newell",
        "address": "11028 Maple Grove, Oklahoma City",
        "scope": "Mow",
-       "status": "scheduled",
+       "status": "done",
        "start": "10:45 AM",
-       "finish": null,
-       "minutes": null,
+       "finish": "11:18 AM",
+       "minutes": 33,
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "man_minutes": null,
+       "man_minutes": 66,
        "man_auto_minutes": null
       },
       {
