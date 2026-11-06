@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Affirmations — See It. Feel It. Look Like It.</title>
+<meta name="description" content="A daily affirmation you step into: vivid imagery, how it feels in your body, and how you look living it. Embodiment, one morning at a time.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%232a1538'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23e9c877' font-family='Georgia,serif'>A</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#22122e;
+    --plum:#2a1538;
+    --plum-deep:#180a24;
+    --gold:#c9a24b;
+    --gold-light:#e9c877;
+    --cream:#fdf9f1;
+    --cream-dim:#f3ead9;
+    --muted:#7a6c86;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.65;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;}
+  .eyebrow{letter-spacing:.3em;text-transform:uppercase;font-size:.74rem;font-weight:700;color:var(--gold);}
+
+  /* ---------- HERO / TODAY ---------- */
+  .hero{
+    position:relative;
+    min-height:100svh;
+    display:flex;align-items:flex-end;
+    color:#fff;
+    background:linear-gradient(160deg,#3a1c5c 0%,#7a2d5e 55%,#c96a3a 130%);
+    overflow:hidden;
+  }
+  .hero-img{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;object-position:center;
+  }
+  .hero-shade{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(24,10,36,.34) 0%,rgba(24,10,36,.10) 34%,rgba(24,10,36,.55) 68%,rgba(24,10,36,.88) 100%);
+  }
+  .hero-inner{position:relative;width:100%;padding:110px 0 64px;}
+  .hero-top{
+    position:absolute;top:0;left:0;right:0;
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    padding:22px 0;
+  }
+  .brand{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;font-weight:700;letter-spacing:.04em;color:#fff;}
+  .brand span{color:var(--gold-light);}
+  .hero-date{font-size:.92rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#f3e7ff;}
+  .theme-tag{
+    display:inline-block;border:1.5px solid var(--gold-light);color:var(--gold-light);
+    border-radius:999px;padding:5px 16px;font-size:.8rem;font-weight:700;
+    letter-spacing:.22em;text-transform:uppercase;margin-bottom:20px;
+    background:rgba(24,10,36,.35);
+  }
+  .hero-aff{
+    font-size:clamp(2.3rem,7vw,4.2rem);
+    font-weight:600;line-height:1.12;max-width:840px;margin-bottom:30px;
+    text-shadow:0 2px 30px rgba(0,0,0,.35);
+  }
+  .beats{max-width:720px;display:flex;flex-direction:column;gap:18px;margin-bottom:34px;}
+  .beat{
+    background:rgba(24,10,36,.42);
+    border-left:3px solid var(--gold);
+    border-radius:0 12px 12px 0;
+    padding:16px 20px;
+    backdrop-filter:blur(3px);
+  }
+  .beat .beat-label{
+    font-size:.72rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--gold-light);margin-bottom:5px;
+  }
+  .beat p{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.15rem,3.4vw,1.45rem);font-style:italic;line-height:1.45;color:#fdf6ff;}
+  .breathe{
+    font-size:1rem;color:#efe4ff;max-width:560px;
+  }
+  .breathe strong{color:var(--gold-light);}
+  .scroll-hint{margin-top:26px;font-size:.8rem;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.65);}
+
+  /* ---------- Sections ---------- */
+  section{padding:72px 0;}
+  .sec-head{text-align:center;max-width:660px;margin:0 auto 42px;}
+  .sec-head h2{font-size:clamp(1.9rem,5vw,2.7rem);font-weight:600;color:var(--plum);line-height:1.15;margin:10px 0 12px;}
+  .sec-head p{color:var(--muted);font-size:1.05rem;}
+  .gold-rule{width:64px;height:2px;background:var(--gold);margin:16px auto 0;border-radius:2px;}
+
+  /* ---------- Themes ---------- */
+  .themes{background:var(--cream-dim);}
+  .theme-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media(min-width:640px){.theme-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:960px){.theme-grid{grid-template-columns:repeat(3,1fr);} .theme-card:last-child{grid-column:2;}}
+  .theme-card{
+    position:relative;border:none;cursor:pointer;text-align:left;
+    border-radius:16px;overflow:hidden;min-height:168px;
+    color:#fff;font-family:inherit;
+    box-shadow:0 10px 28px rgba(42,21,56,.18);
+    transition:transform .18s ease, box-shadow .18s ease;
+    background:linear-gradient(150deg,#3a1c5c,#7a2d5e);
+  }
+  .theme-card:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(42,21,56,.26);}
+  .theme-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .theme-card .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(24,10,36,.12),rgba(24,10,36,.78));}
+  .theme-card .tc-body{position:relative;padding:22px;}
+  .theme-card h3{font-size:1.7rem;font-weight:600;line-height:1.1;margin-bottom:4px;}
+  .theme-card p{font-size:.95rem;color:#f0e6ff;}
+  .theme-card.active{outline:3px solid var(--gold);outline-offset:3px;}
+
+  /* ---------- Gallery ---------- */
+  .gallery-grid{display:grid;grid-template-columns:1fr;gap:22px;}
+  @media(min-width:760px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+  .aff-card{
+    background:#fff;border-radius:18px;overflow:hidden;
+    border:1px solid #eadfce;
+    box-shadow:0 8px 26px rgba(42,21,56,.07);
+    display:flex;flex-direction:column;
+  }
+  .aff-card .imgbox{position:relative;height:210px;background:linear-gradient(150deg,#57248f,#a03a7d);}
+  .aff-card .imgbox img{width:100%;height:100%;object-fit:cover;}
+  .aff-card .imgbox .theme-chip{
+    position:absolute;top:14px;left:14px;
+    background:rgba(24,10,36,.55);color:var(--gold-light);
+    font-size:.7rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+    padding:5px 12px;border-radius:999px;border:1px solid rgba(233,200,119,.7);
+  }
+  .aff-card .body{padding:26px 24px 28px;display:flex;flex-direction:column;gap:16px;flex:1;}
+  .aff-card .statement{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;font-weight:600;line-height:1.25;color:var(--plum);}
+  .mini-beat .beat-label{font-size:.68rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:3px;}
+  .mini-beat p{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.08rem;line-height:1.45;color:#453355;}
+  .gallery-note{text-align:center;color:var(--muted);margin-bottom:26px;font-size:.98rem;}
+  .show-all{
+    display:block;margin:30px auto 0;background:var(--plum);color:#fff;border:none;cursor:pointer;
+    font-family:inherit;font-weight:700;font-size:.95rem;letter-spacing:.06em;
+    padding:13px 34px;border-radius:999px;
+  }
+  .show-all:hover{background:#3a1c5c;}
+
+  /* ---------- Practice ---------- */
+  .practice{background:linear-gradient(170deg,var(--plum-deep),var(--plum) 60%,#472060);color:#fff;}
+  .practice .sec-head h2{color:#fff;}
+  .practice .sec-head p{color:#d9c8f2;}
+  .steps{display:grid;grid-template-columns:1fr;gap:18px;}
+  @media(min-width:760px){.steps{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:1020px){.steps{grid-template-columns:repeat(4,1fr);}}
+  .step{
+    background:rgba(255,255,255,.06);border:1px solid rgba(233,200,119,.35);
+    border-radius:16px;padding:28px 24px;
+  }
+  .step .num{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.6rem;font-weight:700;color:var(--gold-light);line-height:1;margin-bottom:10px;}
+  .step h3{font-size:1.45rem;font-weight:600;margin-bottom:8px;}
+  .step p{font-size:.97rem;color:#e6dbf7;}
+
+  footer{background:var(--plum-deep);color:#cdbcf0;text-align:center;padding:44px 20px 34px;}
+  footer .premise{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.3rem,4vw,1.7rem);font-style:italic;color:#fff;max-width:640px;margin:0 auto 14px;line-height:1.4;}
+  footer .small{font-size:.88rem;color:#9d8bb5;}
+</style>
+</head>
+<body>
+
+<!-- ============ TODAY'S AFFIRMATION ============ -->
+<header class="hero">
+  <img class="hero-img" id="heroImg" src="" alt="Vivid scene for today's affirmation">
+  <div class="hero-shade"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-top">
+      <div class="brand">Daily <span>Affirmations</span></div>
+      <div class="hero-date" id="heroDate"></div>
+    </div>
+    <span class="theme-tag" id="heroTheme"></span>
+    <h1 class="hero-aff" id="heroAff"></h1>
+    <div class="beats">
+      <div class="beat">
+        <div class="beat-label">This is how I feel</div>
+        <p id="heroFeel"></p>
+      </div>
+      <div class="beat">
+        <div class="beat-label">This is how I look</div>
+        <p id="heroLook"></p>
+      </div>
+    </div>
+    <p class="breathe"><strong>Breathe.</strong> Read it. See it. Stand up and feel it in your body before you scroll.</p>
+    <div class="scroll-hint">Today's affirmation &middot; a new one every morning</div>
+  </div>
+</header>
+
+<!-- ============ THEMES ============ -->
+<section class="themes">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Choose Your Scene</p>
+      <h2>Affirmations by Theme</h2>
+      <p>Every affirmation is a scene you step into — not just words you repeat. Pick the feeling you want to wear today.</p>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="theme-grid" id="themeGrid"></div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">The Collection</p>
+      <h2 id="galleryTitle">All Affirmations</h2>
+      <p>Read one slowly. Picture the scene. Notice what your body does.</p>
+      <div class="gold-rule"></div>
+    </div>
+    <p class="gallery-note" id="galleryNote"></p>
+    <div class="gallery-grid" id="galleryGrid"></div>
+    <button class="show-all" id="showAllBtn" style="display:none;">Show all affirmations</button>
+  </div>
+</section>
+
+<!-- ============ EMBODIMENT PRACTICE ============ -->
+<section class="practice">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">The Practice</p>
+      <h2>Embodiment in Four Steps</h2>
+      <p>An affirmation only works when it leaves the page and enters your body. Two minutes, every morning:</p>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>See It</h3>
+        <p>Close your eyes and step into the scene. The light, the air, the ground under your feet — build the picture until it feels like a memory.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Feel It</h3>
+        <p>Scan your body. Where does this version of you live — the open chest, the slow breath, the warm hands? Let the sensation get bigger.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Look It</h3>
+        <p>Now arrange yourself like the person in the scene: spine tall, shoulders back, chin level, eyes up. Dress your posture in it.</p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h3>Live It</h3>
+        <p>Carry one small action into today — one call, one walk, one brave sentence — done as the person you just saw.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="premise">"Don't just say it. See it. Feel it. Look like it. Live it."</p>
+  <p class="small">Daily Affirmations &middot; A new scene every morning</p>
+</footer>
+
+<script>
+var U = function(id){ return "https://images.unsplash.com/photo-" + id + "?q=80&w=1600&auto=format&fit=crop"; };
+
+var AFFIRMATIONS = [
+  /* ---------- CONFIDENCE ---------- */
+  { theme:"Confidence", img:U("1506905925346-21bda4d32df4"),
+    statement:"I move through my day with quiet, unshakeable confidence.",
+    feel:"My breath drops low and slow, like air settling into a deep valley. My chest is open and warm, my shoulders heavy with ease — nothing in me is braced for impact.",
+    look:"I stand like someone who belongs on the summit: spine long, chin level, eyes taking in the whole horizon. My steps land sure and unhurried." },
+  { theme:"Confidence", img:U("1477959858617-67f85cf4f1df"),
+    statement:"I walk into every room like I was expected.",
+    feel:"There is a steady hum under my ribs, the way a city hums before it wakes. My jaw is loose, my hands are warm, and my heartbeat keeps an even, unhurried time.",
+    look:"My stride is long and easy on the morning pavement. I meet eyes and hold them a half-second longer, a small nod, a calm half-smile — a man the room makes space for." },
+  { theme:"Confidence", img:U("1464822759023-fed622ff2c3b"),
+    statement:"My word is solid ground — when I speak, it stays spoken.",
+    feel:"My voice comes from low in my body, resonant as wind through a high pass. There is no flutter in my stomach, only the solid weight of rock under my feet.",
+    look:"I speak slowly, with pauses that don't apologize. My gaze is level, my hands still, my posture rooted like the ridgeline behind me — unmistakable and calm." },
+
+  /* ---------- CALM ---------- */
+  { theme:"Calm", img:U("1507525428034-b723cf961d3e"),
+    statement:"I am the shoreline — the day can wash over me and I stay.",
+    feel:"Each exhale is a wave going back out. The tightness across my forehead smooths, my shoulders melt down an inch, and my whole body moves at the pace of warm water.",
+    look:"I sit the way a man sits on an empty beach at dawn: unhurried, barefoot in the moment, face soft toward the light. Nothing about me rushes to defend itself." },
+  { theme:"Calm", img:U("1476514525535-07fb3b4ae5f1"),
+    statement:"Peace is my default setting; I return to it like still water.",
+    feel:"My nervous system is a glassy lake at first light — every thought lands like a single drop and the ripples settle on their own. My breath barely disturbs the surface.",
+    look:"From the outside I look unhurried in a way people can feel: slow gestures, low voice, eyes that stay on one thing at a time. Calm is visible on me." },
+  { theme:"Calm", img:U("1441716844725-09cedc13a4e7"),
+    statement:"I don't chase the noise. I stand in the mist and let it pass.",
+    feel:"Cool air on my skin, the smell of wet earth, a quiet that gets into my lungs. My fists unclench on their own. My mind stops arguing and just listens.",
+    look:"I look like a tall tree in fog — still, rooted, unbothered by what can't be seen yet. My movements are few and deliberate, and my face is at rest." },
+
+  /* ---------- STRENGTH ---------- */
+  { theme:"Strength", img:U("1518837695005-2083093ee35b"),
+    statement:"I have survived every wave so far — I am built for this water.",
+    feel:"Power coils in my legs and back like a swell gathering offshore. My hands tingle with readiness. There is pressure, yes — but it reads as fuel, not fear.",
+    look:"I look like the wave itself: gathered, rising, undeniable. Chest forward, feet planted wide, eyes on the horizon line I'm about to break through." },
+  { theme:"Strength", img:U("1469474968028-56623f02e42e"),
+    statement:"My strength is quiet, seasoned, and already proven.",
+    feel:"Sunlight on a mountainside — that's the temperature inside me. A deep, banked warmth in my core, the steadiness of a man who has carried weight before and knows the route.",
+    look:"I carry myself like high country in full sun: no wasted motion, no flinching at the climb. People read endurance on me before I say a word." },
+  { theme:"Strength", img:U("1441974231531-c6227db76b6e"),
+    statement:"I grow through what presses on me; pressure makes me taller.",
+    feel:"I can feel my own rootedness — weight traveling down through my heels like roots drinking deep. My back is broad and warm, my breathing patient as seasons.",
+    look:"I stand the way old pines stand: straight up through the canopy, scarred in places, greener for it. My presence fills a room without crowding it." },
+
+  /* ---------- ABUNDANCE ---------- */
+  { theme:"Abundance", img:U("1470252649378-9c29740c9fa8"),
+    statement:"Good things grow in my life because I tend them daily.",
+    feel:"Golden-hour warmth spreads across my chest, the satisfied tiredness of a man walking his own field at dusk. My body believes there is enough — and more coming.",
+    look:"I look like a man surveying a harvest he planted: relaxed hands, grateful eyes, an easy grin at the horizon. Generosity sits naturally on my face." },
+  { theme:"Abundance", img:U("1500382017468-9049fed747ef"),
+    statement:"I am rooted in enough, and reaching for more without fear.",
+    feel:"One deep root of contentment, and branches full of appetite — that's the balance in my body. My stomach is settled, my breath full, my hands open instead of grasping.",
+    look:"I stand alone in the field like the great tree: unhurried, well-fed by sun and season, shade to offer others. I never look scarce; I look supplied." },
+  { theme:"Abundance", img:U("1490750967868-88aa4486c946"),
+    statement:"My life keeps blooming in new places — I expect good news.",
+    feel:"There's a lightness behind my eyes, almost a laugh, like walking into a garden I forgot I planted. My chest rises easily. Anticipation feels sweet, not anxious.",
+    look:"Color suits me. I move like a man whose season is arriving — head up, noticing everything that's opening, quick to smile at strangers and mean it." },
+
+  /* ---------- RADIANCE / SELF-IMAGE ---------- */
+  { theme:"Radiance", img:U("1470071459604-3b5ec3a7fe05"),
+    statement:"I like the man I see becoming — and it shows on my face.",
+    feel:"First light over foggy hills: that's my inner weather. A gentle lift at the corners of my mouth, warmth in my cheeks, a mind clearing like mist burning off.",
+    look:"I look rested, lit from inside — eyes clear, skin easy, the expression of a man at peace with his reflection. People ask what changed; it's this." },
+  { theme:"Radiance", img:U("1518495973542-4542c06a5843"),
+    statement:"There is light in me, and I let it through.",
+    feel:"Sunbeams through leaves land on my skin one patch at a time, and something in me answers each one. My whole face softens. Breathing feels like being forgiven and beginning again.",
+    look:"I look like someone photographed at the golden moment — unposed, glowing at the edges, comfortable being seen. I don't dim myself to fit the shade." },
+  { theme:"Radiance", img:U("1475924156734-496f6cac6ec1"),
+    statement:"I carry myself like the day is mine and the light agrees.",
+    feel:"Salt air, open water, the sun going down gold instead of going out — that's my mood from the inside. Shoulders down, heart forward, completely at ease in my own skin.",
+    look:"I look like the last photograph of a perfect day: chin up into the light, wind in my shirt, a face that has decided to be glad. It reads as radiance because it is." },
+
+  /* ---------- ENERGY ---------- */
+  { theme:"Energy", img:U("1501785888041-af3ef285b470"),
+    statement:"I wake up charged — today runs on my energy, not the other way around.",
+    feel:"Sunrise hits the lake and something in me ignites the same way: blood bright and moving, lungs hungry for the cold air, every muscle quietly switched on. I feel lit from inside, like the first gold light crawling down the peaks.",
+    look:"I look like morning itself — eyes wide and clear, shoulders rolled back, moving with the bounce of a man who slept well and means business. People catch energy off me before I've said a word." },
+  { theme:"Energy", img:U("1472214103451-9374bd1c798e"),
+    statement:"My body is an engine that loves the open road.",
+    feel:"A green field at sunrise, wind coming — my energy moves like that: clean, wide, impossible to fence. My legs want distance. My mind is already three miles ahead and grinning.",
+    look:"I look built for motion — light on my feet, sleeves pushed up, the posture of a man mid-stride toward something he chose. Momentum is visible on me." },
+  { theme:"Energy", img:U("1495616811223-4d98c6e9c869"),
+    statement:"I rise early, I rise bright, I rise on purpose.",
+    feel:"The sky before the sun clears the ridge — pink, gold, enormous — that's the size of my mood. My chest feels wide enough for weather. Sleepiness has no argument against this.",
+    look:"I look like a man silhouetted against a big sky: upright, awake before the world, already grateful. Early light and I have the same expression." },
+
+  /* ---------- GRATITUDE ---------- */
+  { theme:"Gratitude", img:U("1447752875215-b2761acb3c5d"),
+    statement:"I notice what is already good, and it multiplies under my attention.",
+    feel:"Shafts of light through the trees land on me like hands on my shoulders. My throat warms. Appreciation is a physical thing in me — a loosening, a softening, a yes.",
+    look:"I look like a man mid-thank-you: head slightly bowed, then lifted, eyes shining a little. Gratitude gives my face an openness people trust instantly." },
+  { theme:"Gratitude", img:U("1493246507139-91e8fad9978e"),
+    statement:"This ordinary day is somebody's answered prayer — I treat it that way.",
+    feel:"Still water, huge mountains, a silence that feels like being held — gratitude settles my whole system down into awe. My breathing slows to match the lake.",
+    look:"I move gently through the day, the way you walk through a beautiful place you respect. My thank-yous are frequent, specific, and said while looking people in the eye." },
+  { theme:"Gratitude", img:U("1519681393784-d120267933ba"),
+    statement:"Under everything I've survived, I'm still here — and I'm thankful.",
+    feel:"Night air on a high ridge, a sky crowded with stars: gratitude feels like scale. My problems shrink to their true size, and my chest fills with something older than worry.",
+    look:"I look up more than I look down. There's a steadiness in my face at day's end — a man counting gifts instead of grievances, lit by something vast." }
+];
+
+var THEME_BLURBS = {
+  "Confidence":"Walk in like you belong — because you do.",
+  "Calm":"Slow water, slow breath, unhurried man.",
+  "Strength":"Proven, rooted, built for this water.",
+  "Abundance":"Rooted in enough, reaching for more.",
+  "Radiance":"Let the light in you show on your face.",
+  "Energy":"Wake up charged and move like it.",
+  "Gratitude":"Notice what's good. Watch it multiply."
+};
+
+/* ---- Today's affirmation: deterministic by day-of-year ---- */
+(function(){
+  var now = new Date();
+  var start = new Date(now.getFullYear(), 0, 0);
+  var doy = Math.floor((now - start) / 86400000);
+  var idx = doy % AFFIRMATIONS.length;
+  var a = AFFIRMATIONS[idx];
+  document.getElementById('heroImg').src = a.img;
+  document.getElementById('heroImg').alt = "Vivid scene for today's affirmation — " + a.theme;
+  document.getElementById('heroTheme').textContent = "Today · " + a.theme;
+  document.getElementById('heroAff').textContent = a.statement;
+  document.getElementById('heroFeel').textContent = a.feel;
+  document.getElementById('heroLook').textContent = a.look;
+  var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  document.getElementById('heroDate').textContent = days[now.getDay()] + " · " + months[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
+})();
+
+/* ---- Theme cards ---- */
+(function(){
+  var grid = document.getElementById('themeGrid');
+  var seen = [];
+  AFFIRMATIONS.forEach(function(a){ if (seen.indexOf(a.theme) === -1) seen.push(a.theme); });
+  seen.forEach(function(t){
+    var first = AFFIRMATIONS.filter(function(a){ return a.theme === t; })[0];
+    var b = document.createElement('button');
+    b.className = 'theme-card';
+    b.setAttribute('data-theme', t);
+    b.innerHTML = '<img src="' + first.img + '" alt="' + t + ' theme scene" loading="lazy">' +
+      '<div class="shade"></div><div class="tc-body"><h3>' + t + '</h3><p>' + THEME_BLURBS[t] + '</p></div>';
+    b.addEventListener('click', function(){ filterGallery(t, b); });
+    grid.appendChild(b);
+  });
+})();
+
+/* ---- Gallery ---- */
+function cardHTML(a){
+  return '<article class="aff-card">' +
+    '<div class="imgbox"><img src="' + a.img + '" alt="' + a.theme + ' scene" loading="lazy"><span class="theme-chip">' + a.theme + '</span></div>' +
+    '<div class="body">' +
+      '<div class="statement">' + a.statement + '</div>' +
+      '<div class="mini-beat"><div class="beat-label">This is how I feel</div><p>' + a.feel + '</p></div>' +
+      '<div class="mini-beat"><div class="beat-label">This is how I look</div><p>' + a.look + '</p></div>' +
+    '</div></article>';
+}
+function renderGallery(list){
+  document.getElementById('galleryGrid').innerHTML = list.map(cardHTML).join('');
+}
+function filterGallery(theme, btn){
+  var list = AFFIRMATIONS.filter(function(a){ return a.theme === theme; });
+  renderGallery(list);
+  document.getElementById('galleryTitle').textContent = theme + " Affirmations";
+  document.getElementById('galleryNote').textContent = "Showing " + list.length + " " + theme.toLowerCase() + " scenes. Read one slowly — then stand up and feel it.";
+  document.getElementById('showAllBtn').style.display = 'block';
+  document.querySelectorAll('.theme-card').forEach(function(c){ c.classList.remove('active'); });
+  if (btn) btn.classList.add('active');
+  document.getElementById('galleryTitle').scrollIntoView({behavior:'smooth', block:'start'});
+}
+document.getElementById('showAllBtn').addEventListener('click', function(){
+  renderGallery(AFFIRMATIONS);
+  document.getElementById('galleryTitle').textContent = "All Affirmations";
+  document.getElementById('galleryNote').textContent = "";
+  document.getElementById('showAllBtn').style.display = 'none';
+  document.querySelectorAll('.theme-card').forEach(function(c){ c.classList.remove('active'); });
+});
+renderGallery(AFFIRMATIONS);
+</script>
+</body>
+</html>
