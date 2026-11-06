@@ -932,7 +932,7 @@
               "address": "2712 N Harvard Ave, Oklahoma City",
               "scope": "Mow",
               "status": "scheduled",
-              "start": null,
+              "start": "15:37",
               "finish": null,
               "minutes": null,
               "auto_start": null,
@@ -944,8 +944,8 @@
             {
               "name": "Hilaire Johnson",
               "address": "5305 NW 116th St, Oklahoma City",
-              "scope": "Mow",
-              "status": "scheduled",
+              "scope": "Mow \u2014 moved to Sat Nov 7 at Justin's direction \u00b7 no visit today",
+              "status": "skipped",
               "start": null,
               "finish": null,
               "minutes": null,
@@ -960,7 +960,7 @@
         },
         {
           "date": "2026-11-07",
-          "label": "Saturday, Nov 7 \u2014 Saturday route (14 stops)",
+          "label": "Saturday, Nov 7 \u2014 Saturday route (15 stops)",
           "items": [
             {
               "name": "Penny Love",
@@ -1050,6 +1050,20 @@
               "name": "Adam",
               "address": "12101 Camelot Pl, Oklahoma City",
               "scope": "Mow",
+              "status": "scheduled",
+              "start": null,
+              "finish": null,
+              "minutes": null,
+              "auto_start": null,
+              "auto_finish": null,
+              "auto_minutes": null,
+              "man_minutes": null,
+              "man_auto_minutes": null
+            },
+            {
+              "name": "Hilaire Johnson",
+              "address": "5305 NW 116th St, Oklahoma City",
+              "scope": "Mow \u2014 moved from Fri Nov 6",
               "status": "scheduled",
               "start": null,
               "finish": null,
