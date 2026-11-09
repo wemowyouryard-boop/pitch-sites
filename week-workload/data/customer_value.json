@@ -1,0 +1,359 @@
+{
+ "version": 1,
+ "generated": "2026-11-09",
+ "payments_source": "Invoice2Go (Giving Tree Lawn Care LLC), from the daily read-only Invoice2Go pulls Oct 26 – Nov 9, 2026, plus the confirmations recorded in the Oct 26 pull (payments back to Oct 9, 2026)",
+ "payments_note": "Covers every invoice those pulls listed — paid or still unpaid — as of Nov 9, 2026. Invoices that were already paid before Oct 26, 2026 and never appeared in those pulls are not loaded yet; a customer with no invoice in this set shows “payments not loaded yet.” Some listed payments pay for work done before Oct 26, 2026.",
+ "excluded_note": "Invoice #3062 (Sandy Kamas, $1,110) is excluded on purpose: it was deleted in Invoice2Go after the customer backed out of the job — it is not billed and was never paid.",
+ "property_customer": {
+  "the oak room|808 nw 6th st": "Devon Taylor",
+  "adam|12101 camelot pl": "Adam Chaibainou",
+  "ridgewood village apartments|101 ne 18th st": "Ridgewood Village"
+ },
+ "prefix_rules": [
+  {
+   "prefix": "jeffery elliott",
+   "customer": "Jeffery Elliott"
+  },
+  {
+   "prefix": "clare hadwiger",
+   "customer": "Clare Hadwiger"
+  }
+ ],
+ "customers": [
+  {
+   "name": "Adam Chaibainou",
+   "invoices": [
+    {
+     "num": "3115",
+     "total_cents": 25000,
+     "paid_cents": 25000,
+     "paid_date": "2026-11-02"
+    }
+   ],
+   "aliases": [
+    "Adam"
+   ]
+  },
+  {
+   "name": "Bill Taylor",
+   "invoices": [
+    {
+     "num": "3126",
+     "total_cents": 24000,
+     "paid_cents": 24000,
+     "paid_date": "2026-10-30"
+    }
+   ]
+  },
+  {
+   "name": "Brad Forsythe",
+   "invoices": [
+    {
+     "num": "3108",
+     "total_cents": 10000,
+     "paid_cents": 10000,
+     "paid_date": "2026-11-03"
+    }
+   ],
+   "aliases": [
+    "Brad Forsyth"
+   ]
+  },
+  {
+   "name": "Candace Todd",
+   "invoices": [
+    {
+     "num": "3124",
+     "total_cents": 10000,
+     "paid_cents": 10000,
+     "paid_date": "2026-11-01"
+    }
+   ]
+  },
+  {
+   "name": "Christina Brown",
+   "invoices": [
+    {
+     "num": "3099",
+     "total_cents": 8000,
+     "paid_cents": 8000,
+     "paid_date": "2026-10-09",
+     "note": "Invoice total later reduced from $120 to $80 in Invoice2Go; the $80 was paid Oct 9, 2026 — final record: $80 billed, $80 paid"
+    }
+   ]
+  },
+  {
+   "name": "Clare Hadwiger",
+   "invoices": [
+    {
+     "num": "3137",
+     "total_cents": 191629,
+     "paid_cents": 191629,
+     "paid_date": "2026-11-05"
+    },
+    {
+     "num": "3132",
+     "total_cents": 215000,
+     "paid_cents": 215000,
+     "paid_date": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "name": "Devon Taylor",
+   "invoices": [
+    {
+     "num": "3125",
+     "total_cents": 10000,
+     "paid_cents": 10000,
+     "paid_date": "2026-11-03"
+    }
+   ],
+   "aliases": [
+    "The Oak Room"
+   ]
+  },
+  {
+   "name": "Donovan Grahn",
+   "invoices": [
+    {
+     "num": "3134",
+     "total_cents": 60000,
+     "paid_cents": 65000,
+     "paid_date": "2026-10-29",
+     "note": "$650 payment recorded: $600 invoice + $50 gas"
+    }
+   ],
+   "note": "Payment was for the Oct 27–29 Growing Beauty week — that work is logged by property in the Oct 26 week, so it has no per-customer man-hours."
+  },
+  {
+   "name": "Grant Gibson",
+   "invoices": [
+    {
+     "num": "3112",
+     "total_cents": 12600,
+     "paid_cents": 12600,
+     "paid_date": "2026-10-28"
+    }
+   ]
+  },
+  {
+   "name": "Gregory Dutton",
+   "invoices": [
+    {
+     "num": "3110",
+     "total_cents": 12000,
+     "paid_cents": 12000,
+     "paid_date": "2026-11-02"
+    }
+   ]
+  },
+  {
+   "name": "Hal Williams",
+   "invoices": [
+    {
+     "num": "3025",
+     "total_cents": 120000,
+     "paid_cents": 120000,
+     "paid_date": "2026-11-03"
+    },
+    {
+     "num": "3136",
+     "total_cents": 82500,
+     "paid_cents": 0,
+     "paid_date": null
+    }
+   ]
+  },
+  {
+   "name": "Hilaire Johnson",
+   "invoices": [
+    {
+     "num": "3113",
+     "total_cents": 14000,
+     "paid_cents": 14000,
+     "paid_date": "2026-11-02"
+    }
+   ]
+  },
+  {
+   "name": "Marcel Caldwell",
+   "invoices": [
+    {
+     "num": "3122",
+     "total_cents": 10000,
+     "paid_cents": 10000,
+     "paid_date": "2026-10-30"
+    }
+   ]
+  },
+  {
+   "name": "Mary Shepard",
+   "invoices": [
+    {
+     "num": "3121",
+     "total_cents": 14000,
+     "paid_cents": 14000,
+     "paid_date": "2026-11-03"
+    }
+   ]
+  },
+  {
+   "name": "Meagan Gaddis",
+   "invoices": [
+    {
+     "num": "3106",
+     "total_cents": 10000,
+     "paid_cents": 0,
+     "paid_date": null,
+     "note": "Invoice created but never sent"
+    }
+   ]
+  },
+  {
+   "name": "Michael Miller",
+   "invoices": [
+    {
+     "num": "3107",
+     "total_cents": 12500,
+     "paid_cents": 0,
+     "paid_date": null,
+     "note": "Assigned by exact name match — the address on file for Michael Miller in Invoice2Go (2210 NW 49th St) differs from the route address (7898 NW 40th St)"
+    }
+   ]
+  },
+  {
+   "name": "Patrick O'Donnell",
+   "invoices": [
+    {
+     "num": "3022",
+     "total_cents": 162000,
+     "paid_cents": 162000,
+     "paid_date": "2026-10-28"
+    }
+   ]
+  },
+  {
+   "name": "Penny Love",
+   "invoices": [
+    {
+     "num": "3083",
+     "total_cents": 10000,
+     "paid_cents": 10000,
+     "paid_date": "2026-10-29"
+    },
+    {
+     "num": "3117",
+     "total_cents": 10000,
+     "paid_cents": 10000,
+     "paid_date": "2026-10-29"
+    }
+   ]
+  },
+  {
+   "name": "Ridgewood Village",
+   "invoices": [
+    {
+     "num": "3067",
+     "total_cents": 60000,
+     "paid_cents": 60000,
+     "paid_date": "2026-10-16"
+    },
+    {
+     "num": "3096",
+     "total_cents": 60000,
+     "paid_cents": 60000,
+     "paid_date": "2026-10-16"
+    },
+    {
+     "num": "3135",
+     "total_cents": 60000,
+     "paid_cents": 0,
+     "paid_date": null
+    }
+   ]
+  },
+  {
+   "name": "Sam Davis",
+   "invoices": [
+    {
+     "num": "3111",
+     "total_cents": 14000,
+     "paid_cents": 0,
+     "paid_date": null
+    }
+   ]
+  },
+  {
+   "name": "Sandy Kamas",
+   "invoices": [
+    {
+     "num": "3120",
+     "total_cents": 14000,
+     "paid_cents": 14000,
+     "paid_date": "2026-11-02"
+    }
+   ]
+  },
+  {
+   "name": "Steven Melville",
+   "invoices": [
+    {
+     "num": "3105",
+     "total_cents": 10000,
+     "paid_cents": 0,
+     "paid_date": null
+    }
+   ]
+  },
+  {
+   "name": "Tamara Gorbet",
+   "invoices": [
+    {
+     "num": "3133",
+     "total_cents": 18750,
+     "paid_cents": 18750,
+     "paid_date": "2026-10-31"
+    }
+   ]
+  },
+  {
+   "name": "Temple Pitts",
+   "invoices": [
+    {
+     "num": "3114",
+     "total_cents": 12000,
+     "paid_cents": 12000,
+     "paid_date": "2026-10-29",
+     "note": "Invoice name: Chris and Temple Pitts"
+    }
+   ],
+   "aliases": [
+    "Chris and Temple Pitts",
+    "Temple and Chris Pitts"
+   ]
+  },
+  {
+   "name": "Wylene Durrett",
+   "invoices": [
+    {
+     "num": "3123",
+     "total_cents": 22000,
+     "paid_cents": 22000,
+     "paid_date": "2026-11-01"
+    }
+   ]
+  },
+  {
+   "name": "Zach Johnson",
+   "invoices": [
+    {
+     "num": "3118",
+     "total_cents": 12000,
+     "paid_cents": 12000,
+     "paid_date": "2026-10-30"
+    }
+   ]
+  }
+ ]
+}

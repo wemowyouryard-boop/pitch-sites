@@ -87,6 +87,19 @@
     .tbl-scroll table.tbl3addr th:nth-child(4), .tbl-scroll table.tbl3addr td:nth-child(4) { min-width: 50px; }
     .tbl-scroll table.tbl3addr th:nth-child(5), .tbl-scroll table.tbl3addr td:nth-child(5) { min-width: 58px; }
   }
+
+  /* Previous Weeks + Customer Value (archive section, added 2026-11-09):
+     same palette/type as the rest of the page; content is rendered at runtime
+     from data/weeks.json + data/customer_value.json. */
+  .pw-input { width: 100%; box-sizing: border-box; font: inherit; font-size: 16px; padding: 10px 12px; border: 1.5px solid #2e7d32; border-radius: 10px; background: #fff; color: #1d2419; margin: 2px 0 4px; }
+  .pw-navrow { display: flex; align-items: center; gap: 8px; margin: 16px 0 2px; }
+  .pw-weeklabel { flex: 1; text-align: center; font-weight: 800; color: #2e4a22; font-size: 16px; }
+  .pw-group { font-weight: 800; color: #2e4a22; margin: 12px 2px 2px; font-size: 14px; text-transform: uppercase; letter-spacing: .04em; }
+  tr.clickable { cursor: pointer; }
+  tr.clickable:hover td { background: #eef7ee; }
+  .cv-grid { display: flex; flex-wrap: wrap; gap: 10px 26px; margin: 8px 0 4px; }
+  .cv-grid div b { display: block; font-size: 19px; color: #0d4718; }
+  .cv-grid div span { font-size: 12px; color: #5a6653; text-transform: uppercase; letter-spacing: .04em; }
 </style>
 </head>
 <body>
@@ -195,6 +208,27 @@
     <p style="margin:0;" class="small"><strong>Running in the background all week:</strong> email sending is PAUSED (Gmail sending limit hit Oct 26 — batches are staged and cleaned, resume is light-only when Justin calls it), daily website builds plus three daily site-audit sweeps, daily Bitcoin posts, pool-owner harvest, and the morning money ritual (final day Nov 3).</p>
   </div>
 
+  <h2>📚 Previous Weeks</h2>
+  <div class="card">
+    <p style="margin:0 0 8px;">Go back through every week on record — tap the arrows to step week by week, or search any stop by name or address.</p>
+    <input id="pw-q" class="pw-input" type="search" placeholder="Search previous weeks — a name or an address…" autocomplete="off">
+    <div id="pw-results"></div>
+    <div class="pw-navrow">
+      <button type="button" class="tbl-btn" id="pw-prev" aria-label="Older week">&#9664; Older</button>
+      <div class="pw-weeklabel" id="pw-weeklabel">Loading past weeks…</div>
+      <button type="button" class="tbl-btn" id="pw-next" aria-label="Newer week">Newer &#9654;</button>
+    </div>
+    <div id="pw-week"></div>
+  </div>
+
+  <h2>💲 Customer Value — Paid vs. Man-Hours</h2>
+  <div class="card">
+    <p style="margin:0 0 6px;">Every customer on record: how many finished visits, how many man-hours went into their properties, what Invoice2Go shows they were billed and have paid, and the effective dollars per man-hour. Tap a customer for their card.</p>
+    <div id="pw-card"></div>
+    <div id="pw-custindex"></div>
+    <p class="small" id="pw-coverage" style="margin:10px 2px 0;"></p>
+  </div>
+
 </div>
 
 <script>
@@ -290,6 +324,357 @@
   initAll();
   window.addEventListener('load', initAll);
 })();
+</script>
+<script>
+// Previous Weeks browser/search + Customer Value — rendered at runtime from
+// data/weeks.json (workload record) joined to data/customer_value.json
+// (Invoice2Go payment records). Static HTML intentionally carries no
+// historical figures, so the hours verifier's parsing is untouched.
+(function () {
+  var WEEKS = null, CV = null, pastList = [], pastIdx = 0, customers = [], custByKey = {};
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function norm(s) {
+    return String(s || '').toLowerCase().replace(/&/g, ' and ').replace(/[.,'#]/g, '').replace(/\s+/g, ' ').trim();
+  }
+  function street(a) { return norm(String(a || '').split(',')[0]); }
+  function propkey(name, addr) { return norm(name) + '|' + street(addr); }
+  function t2m(s) {
+    if (!s) return null;
+    var m = String(s).trim().match(/^(\d{1,2}):(\d{2})\s*(AM|PM)?$/i);
+    if (!m) return null;
+    var h = parseInt(m[1], 10), mi = parseInt(m[2], 10), ap = (m[3] || '').toUpperCase();
+    if (ap === 'PM' && h !== 12) h += 12;
+    if (ap === 'AM' && h === 12) h = 0;
+    return h * 60 + mi;
+  }
+  function fmtHMS(mins) {
+    if (mins == null) return '—';
+    mins = Math.round(mins);
+    var h = Math.floor(mins / 60), m = mins % 60;
+    return h + ':' + (m < 10 ? '0' : '') + m + ':00';
+  }
+  function fmtTime(s) {
+    var v = t2m(s);
+    if (v == null) return '';
+    var h = Math.floor(v / 60), mi = v % 60, ap = h < 12 ? 'AM' : 'PM', h12 = h % 12 || 12;
+    return h12 + ':' + (mi < 10 ? '0' : '') + mi + ' ' + ap;
+  }
+  function fmtMoney(cents) {
+    if (cents == null) return '—';
+    return '$' + (cents / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  function fmtDate(iso) {
+    if (!iso) return '';
+    var d = new Date(iso + 'T12:00:00');
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  }
+  function itemSpan(it) {
+    if (it.parts && it.parts.length) {
+      var t = 0;
+      it.parts.forEach(function (p) { t += (p.minutes != null ? p.minutes : (t2m(p.finish) - t2m(p.start))); });
+      return t;
+    }
+    var s = it.start || it.auto_start, f = it.finish || it.auto_finish;
+    if (s && f) return t2m(f) - t2m(s);
+    return null;
+  }
+  function addrHTML(addr) {
+    addr = String(addr || '');
+    var i = addr.indexOf(',');
+    if (i < 0) return esc(addr);
+    return esc(addr.slice(0, i)) + ', <span class="addr-city">' + esc(addr.slice(i + 1).trim()) + '</span>';
+  }
+  function statusTag(it) {
+    if (it.status === 'done') return ' <span class="done-tag">✅ Finished</span>';
+    if (it.status === 'skipped') return ' <span class="nd-tag">❌ Skipped</span>';
+    if (it.status === 'note') return '';
+    return ' <span class="nd-tag">Not marked finished</span>';
+  }
+  function statusWord(it) {
+    if (it.status === 'done') return '✅ Finished';
+    if (it.status === 'skipped') return '❌ Skipped';
+    if (it.status === 'note') return 'Note';
+    return 'Not marked finished';
+  }
+
+  // ---- customer identity resolution (twin of the build script's rules) ----
+  var alias2cust = {}, recByNorm = {};
+  function buildMaps() {
+    (CV.customers || []).forEach(function (r) {
+      recByNorm[norm(r.name)] = r;
+      (r.aliases || []).forEach(function (a) { alias2cust[norm(a)] = r.name; recByNorm[norm(a)] = r; });
+    });
+  }
+  function custFor(name, addr) {
+    var k = propkey(name, addr);
+    if (CV.property_customer && CV.property_customer[k]) return CV.property_customer[k];
+    var n = norm(name), rules = CV.prefix_rules || [];
+    for (var i = 0; i < rules.length; i++) if (n.indexOf(rules[i].prefix) === 0) return rules[i].customer;
+    if (alias2cust[n]) return alias2cust[n];
+    return String(name || '').trim();
+  }
+
+  function computeCustomers() {
+    var map = {};
+    function entry(name) {
+      var key = norm(name);
+      if (!map[key]) {
+        var rec = recByNorm[key] || null;
+        map[key] = {
+          key: key, name: rec ? rec.name : name, rec: rec,
+          visits: 0, man: 0, props: [], propSeen: {},
+          billed: rec ? rec.invoices.reduce(function (t, v) { return t + v.total_cents; }, 0) : null,
+          paid: rec ? rec.invoices.reduce(function (t, v) { return t + v.paid_cents; }, 0) : null
+        };
+      }
+      return map[key];
+    }
+    WEEKS.weeks.forEach(function (wk) {
+      wk.days.forEach(function (day) {
+        var crew = day.crew_size || 0;
+        (day.items || []).forEach(function (it) {
+          if (it.status !== 'done') return;
+          var c = entry(custFor(it.name, it.address));
+          c.visits += 1;
+          var span = itemSpan(it);
+          if (span != null) c.man += span * crew;
+          var pk = propkey(it.name, it.address);
+          if (!c.propSeen[pk]) { c.propSeen[pk] = 1; c.props.push({ name: it.name, address: it.address }); }
+        });
+      });
+    });
+    (CV.customers || []).forEach(function (r) { entry(r.name); });
+    customers = Object.keys(map).map(function (k) { return map[k]; });
+    custByKey = map;
+    customers.sort(function (a, b) {
+      var pa = a.paid == null ? -1 : a.paid, pb = b.paid == null ? -1 : b.paid;
+      if (pb !== pa) return pb - pa;
+      if (b.man !== a.man) return b.man - a.man;
+      return a.name.localeCompare(b.name);
+    });
+  }
+
+  function rateOf(c) {
+    if (c.paid == null || !c.man) return null;
+    return c.paid / 100 / (c.man / 60);
+  }
+  function fmtRate(c) {
+    var r = rateOf(c);
+    return r == null ? '—' : '$' + r.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  // ---- contained-scroll table wiring for dynamically added tables ----
+  function wireTbl(wrap) {
+    var sc = wrap.querySelector('.tbl-scroll'), nav = wrap.querySelector('.tbl-nav');
+    if (!sc || !nav) return;
+    var prev = nav.querySelector('.tbl-prev'), next = nav.querySelector('.tbl-next');
+    function update() {
+      var over = sc.scrollWidth - sc.clientWidth > 2;
+      nav.hidden = !over;
+      if (!over) return;
+      prev.disabled = sc.scrollLeft <= 1;
+      next.disabled = sc.scrollLeft + sc.clientWidth >= sc.scrollWidth - 1;
+    }
+    prev.addEventListener('click', function () { sc.scrollBy({ left: -Math.round(sc.clientWidth * 0.75), behavior: 'smooth' }); });
+    next.addEventListener('click', function () { sc.scrollBy({ left: Math.round(sc.clientWidth * 0.75), behavior: 'smooth' }); });
+    sc.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+    setTimeout(update, 300);
+  }
+  function tblWrap(tableCls, headRow, bodyRows) {
+    return '<div class="tbl-wrap"><div class="tbl-nav" hidden><button type="button" class="tbl-btn tbl-prev" aria-label="Scroll table left">&#9664;</button><button type="button" class="tbl-btn tbl-next" aria-label="Scroll table right">&#9654;</button></div>' +
+      '<div class="tbl-scroll"><table class="' + tableCls + '"><tr>' + headRow + '</tr>' + bodyRows + '</table></div></div>';
+  }
+
+  // ---- past-week rendering ----
+  function renderDay(day) {
+    var items = day.items || [], crew = day.crew_size || 0, out = '';
+    var isOff = !items.length;
+    out += '<h2' + (isOff ? ' class="off"' : '') + '>' + esc(day.label) + '</h2>';
+    if (crew > 0) out += '<p class="crew">Crew: ' + crew + (crew === 1 ? ' man' : ' men') + '</p>';
+    var dayMan = 0;
+    if (isOff) {
+      out += '<div class="offcard"><p style="margin:0;">Day off — no work scheduled.</p></div>';
+    } else {
+      var rows = '';
+      items.forEach(function (it) {
+        var span = itemSpan(it), done = it.status === 'done';
+        var man = (done && span != null) ? span * crew : null;
+        if (man != null) dayMan += man;
+        var s = it.start || it.auto_start, f = it.finish || it.auto_finish;
+        var timeCell = '—';
+        if (done && span != null && s && f) timeCell = '<strong>' + fmtTime(s) + ' – ' + fmtTime(f) + '</strong>';
+        else if (s) timeCell = esc(fmtTime(s) || s);
+        var notes = esc(it.scope || '');
+        if (done && span != null && !it.start && it.auto_start && s && f) {
+          notes += ' GPS times: arrived ' + fmtTime(s) + ', left ' + fmtTime(f) + '.';
+        }
+        if (it.parts && it.parts.length) {
+          notes += ' ' + it.parts.map(function (p) { return esc(p.name) + ' ' + fmtTime(p.start) + ' – ' + fmtTime(p.finish); }).join(' · ') + '.';
+        }
+        if (it.photos_page) notes += ' <a href="' + esc(it.photos_page) + '">📷 Finished-work photos</a>';
+        rows += '<tr' + (done ? ' class="done"' : '') + '><td class="time">' + timeCell + '</td>' +
+          '<td><strong>' + esc(it.name) + '</strong>' + (it.address ? '<br>' + addrHTML(it.address) : '') + '</td>' +
+          '<td>' + notes + statusTag(it) + '</td>' +
+          '<td>' + (done && span != null ? '<strong>' + fmtHMS(span) + '</strong>' : '—') + '</td>' +
+          '<td>' + (man != null ? '<strong>' + fmtHMS(man) + '</strong>' + (crew > 1 ? ' <span class="small">(' + crew + ' men)</span>' : '') : '—') + '</td></tr>';
+      });
+      out += tblWrap('tbltime', '<th>Time</th><th>Stop</th><th>Notes</th><th>Time on site</th><th>Man-hours</th>', rows);
+    }
+    out += '<div class="eod">🏁 <strong>End of day</strong> — Total man-hours: <strong>' + (dayMan ? fmtHMS(dayMan) : '—') + '</strong></div>';
+    return out;
+  }
+  function renderWeek() {
+    var wk = pastList[pastIdx], box = document.getElementById('pw-week');
+    var lbl = document.getElementById('pw-weeklabel');
+    if (!wk) { lbl.textContent = 'No past weeks on record yet.'; box.innerHTML = ''; return; }
+    lbl.textContent = 'Week of ' + wk.label + '  ·  ' + (pastIdx + 1) + ' of ' + pastList.length + ' past weeks';
+    document.getElementById('pw-prev').disabled = pastIdx >= pastList.length - 1;
+    document.getElementById('pw-next').disabled = pastIdx <= 0;
+    box.innerHTML = wk.days.map(renderDay).join('');
+    box.querySelectorAll('.tbl-wrap').forEach(wireTbl);
+  }
+
+  // ---- search across past weeks' stops + all customers ----
+  function doSearch(qRaw) {
+    var box = document.getElementById('pw-results');
+    var q = norm(qRaw);
+    if (q.length < 2) { box.innerHTML = ''; return; }
+    var out = '', stopRows = '', nStops = 0;
+    pastList.forEach(function (wk, wi) {
+      wk.days.forEach(function (day) {
+        (day.items || []).forEach(function (it) {
+          if (nStops >= 25) return;
+          if (norm(it.name).indexOf(q) < 0 && norm(it.address).indexOf(q) < 0) return;
+          nStops++;
+          var span = itemSpan(it), s = it.start || it.auto_start, f = it.finish || it.auto_finish;
+          var times = (span != null && s && f) ? fmtTime(s) + ' – ' + fmtTime(f) : '—';
+          stopRows += '<tr class="clickable" data-week="' + wi + '"><td>' + esc(day.label.split(' — ')[0]) + '<br><span class="small">' + esc(wk.label) + '</span></td>' +
+            '<td><strong>' + esc(it.name) + '</strong>' + (it.address ? '<br>' + addrHTML(it.address) : '') + '</td>' +
+            '<td>' + times + '</td><td>' + statusWord(it) + '</td></tr>';
+        });
+      });
+    });
+    var custRows = '', nCust = 0;
+    customers.forEach(function (c) {
+      if (nCust >= 25) return;
+      var hay = norm(c.name) + ' ' + c.props.map(function (p) { return norm(p.name) + ' ' + norm(p.address); }).join(' ');
+      (c.rec && c.rec.aliases || []).forEach(function (a) { hay += ' ' + norm(a); });
+      if (hay.indexOf(q) < 0) return;
+      nCust++;
+      custRows += '<tr class="clickable" data-cust="' + esc(c.key) + '"><td><strong>' + esc(c.name) + '</strong></td>' +
+        '<td>' + c.visits + '</td><td>' + fmtHMS(c.man) + '</td>' +
+        '<td>' + (c.paid == null ? '<span class="small">not loaded yet</span>' : fmtMoney(c.paid)) + '</td>' +
+        '<td>' + fmtRate(c) + '</td></tr>';
+    });
+    if (nStops) out += '<div class="pw-group">Stops in previous weeks</div>' + tblWrap('tbltime', '<th>Date</th><th>Stop</th><th>Time</th><th>Status</th>', stopRows);
+    if (nCust) out += '<div class="pw-group">Customers</div>' + tblWrap('tbltime', '<th>Customer</th><th>Visits</th><th>Man-hours</th><th>Paid</th><th>$/man-hour</th>', custRows);
+    if (!nStops && !nCust) out = '<p class="small" style="margin:8px 2px 0;">No matches in previous weeks or customers for “' + esc(qRaw) + '.”</p>';
+    box.innerHTML = out;
+    box.querySelectorAll('.tbl-wrap').forEach(wireTbl);
+    box.querySelectorAll('tr[data-week]').forEach(function (tr) {
+      tr.addEventListener('click', function () {
+        pastIdx = parseInt(tr.getAttribute('data-week'), 10);
+        renderWeek();
+        document.getElementById('pw-week').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+    box.querySelectorAll('tr[data-cust]').forEach(function (tr) {
+      tr.addEventListener('click', function () { showCard(tr.getAttribute('data-cust'), true); });
+    });
+  }
+
+  // ---- customer index + card ----
+  function renderIndex() {
+    var rows = '';
+    customers.forEach(function (c) {
+      rows += '<tr class="clickable" data-cust="' + esc(c.key) + '"><td><strong>' + esc(c.name) + '</strong></td>' +
+        '<td>' + c.visits + '</td><td>' + fmtHMS(c.man) + '</td>' +
+        '<td>' + (c.paid == null ? '<span class="small">not loaded yet</span>' : fmtMoney(c.paid)) + '</td>' +
+        '<td>' + fmtRate(c) + '</td></tr>';
+    });
+    var box = document.getElementById('pw-custindex');
+    box.innerHTML = tblWrap('tbltime', '<th>Customer</th><th>Visits</th><th>Man-hours</th><th>Paid (Invoice2Go)</th><th>$/man-hour</th>', rows);
+    box.querySelectorAll('.tbl-wrap').forEach(wireTbl);
+    box.querySelectorAll('tr[data-cust]').forEach(function (tr) {
+      tr.addEventListener('click', function () { showCard(tr.getAttribute('data-cust'), true); });
+    });
+    var first = WEEKS.weeks[0], last = WEEKS.weeks[WEEKS.weeks.length - 1];
+    document.getElementById('pw-coverage').textContent =
+      'Coverage — Visits & man-hours: ' + first.label + ' through ' + last.label + ' (every week in the workload archive), counted per finished stop from the recorded times. ' +
+      'Money: ' + CV.payments_source + '. ' + CV.payments_note + ' ' + CV.excluded_note + ' ' +
+      'The Oct 27–29, 2026 Growing Beauty (Donovan) jobs are logged by property address, the same as on Donovan\u2019s pages.';
+  }
+  function showCard(key, scroll) {
+    var c = custByKey[key], box = document.getElementById('pw-card');
+    if (!c || !box) return;
+    var owed = (c.billed != null && c.paid != null) ? c.billed - c.paid : null;
+    var stats = '<div class="cv-grid">' +
+      '<div><b>' + c.visits + '</b><span>Finished visits</span></div>' +
+      '<div><b>' + fmtHMS(c.man) + '</b><span>Man-hours</span></div>' +
+      '<div><b>' + (c.billed == null ? '—' : fmtMoney(c.billed)) + '</b><span>Billed (Invoice2Go)</span></div>' +
+      '<div><b>' + (c.paid == null ? '—' : fmtMoney(c.paid)) + '</b><span>Total paid</span></div>' +
+      (owed != null && owed > 0 ? '<div><b>' + fmtMoney(owed) + '</b><span>Still owed</span></div>' : '') +
+      '<div><b>' + fmtRate(c) + '</b><span>$ per man-hour</span></div></div>';
+    var inv = '';
+    if (c.rec && c.rec.invoices && c.rec.invoices.length) {
+      inv = '<p class="small" style="margin:6px 0 0;">' + c.rec.invoices.map(function (v) {
+        var line = 'Invoice #' + esc(v.num) + ' — billed ' + fmtMoney(v.total_cents) +
+          (v.paid_cents >= v.total_cents ? ' · paid ' + fmtMoney(v.paid_cents) + (v.paid_date ? ' on ' + fmtDate(v.paid_date) : '')
+            : v.paid_cents > 0 ? ' · ' + fmtMoney(v.paid_cents) + ' paid so far'
+            : ' · unpaid');
+        if (v.note) line += ' · ' + esc(v.note);
+        return line;
+      }).join('<br>') + '</p>';
+    } else {
+      inv = '<p class="small" style="margin:6px 0 0;">Payments not loaded yet — no invoice for this customer appears in the Invoice2Go records pulled so far.</p>';
+    }
+    var props = c.props.length ? '<p class="small" style="margin:2px 0 0;">' +
+      c.props.map(function (p) { return esc(p.address); }).join(' · ') + '</p>' : '';
+    var note = (c.rec && c.rec.note) ? '<p class="small" style="margin:6px 0 0;">' + esc(c.rec.note) + '</p>' : '';
+    box.innerHTML = '<div class="card" style="background:#f2f7ee; border-color:#2e7d32;">' +
+      '<p style="margin:0; font-size:17px;"><strong>' + esc(c.name) + '</strong></p>' + props + stats + inv + note + '</div>';
+    if (scroll) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  function fail(msg) {
+    document.getElementById('pw-weeklabel').textContent = msg;
+    document.getElementById('pw-coverage').textContent = msg + ' The full archive is also at the Workload Archive link at the top of this page.';
+  }
+
+  function init() {
+    pastList = WEEKS.weeks.slice(0, WEEKS.weeks.length - 1).slice().reverse();
+    pastIdx = 0;
+    buildMaps();
+    computeCustomers();
+    renderWeek();
+    renderIndex();
+    document.getElementById('pw-prev').addEventListener('click', function () {
+      if (pastIdx < pastList.length - 1) { pastIdx++; renderWeek(); }
+    });
+    document.getElementById('pw-next').addEventListener('click', function () {
+      if (pastIdx > 0) { pastIdx--; renderWeek(); }
+    });
+    var q = document.getElementById('pw-q');
+    q.addEventListener('input', function () { doSearch(q.value); });
+    q.addEventListener('search', function () { doSearch(q.value); });
+  }
+
+  Promise.all([
+    fetch('data/weeks.json').then(function (r) { return r.json(); }),
+    fetch('data/customer_value.json').then(function (r) { return r.json(); })
+  ]).then(function (res) {
+    WEEKS = res[0]; CV = res[1];
+    init();
+  }).catch(function () { fail('Previous weeks could not be loaded right now.'); });
+})();
+
 </script>
 </body>
 </html>
