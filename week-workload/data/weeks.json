@@ -1434,12 +1434,26 @@
     },
     {
      "date": "2026-11-12",
-     "label": "Thursday, Nov 12 \u2014 Booked job: Zach Johnson tree job ($450)",
+     "label": "Thursday, Nov 12 \u2014 Booked jobs: Zach Johnson tree job ($450) + Kristi Thiessen Christmas lights",
      "items": [
       {
        "name": "Zach Johnson",
        "address": "6213 N College St, Warr Acres",
        "scope": "Tree job \u2014 booked job, $450",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
+      },
+      {
+       "name": "Kristi Thiessen",
+       "address": "6008 W Hefner Rd, Oklahoma City, OK 73162",
+       "scope": "Christmas lights",
        "status": "scheduled",
        "start": null,
        "finish": null,
