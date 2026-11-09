@@ -1434,7 +1434,7 @@
     },
     {
      "date": "2026-11-12",
-     "label": "Thursday, Nov 12 \u2014 Booked jobs: Zach Johnson tree job ($450) + Kristi Thiessen Christmas lights",
+     "label": "Thursday, Nov 12 \u2014 Booked jobs: Zach Johnson tree job ($450) + Kristi Thiessen one-time mow",
      "items": [
       {
        "name": "Zach Johnson",
@@ -1453,7 +1453,7 @@
       {
        "name": "Kristi Thiessen",
        "address": "6008 W Hefner Rd, Oklahoma City, OK 73162",
-       "scope": "Christmas lights",
+       "scope": "One-time mow + branch removal off her fence",
        "status": "scheduled",
        "start": null,
        "finish": null,
