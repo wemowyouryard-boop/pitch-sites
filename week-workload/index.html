@@ -100,6 +100,13 @@
   .cv-grid { display: flex; flex-wrap: wrap; gap: 10px 26px; margin: 8px 0 4px; }
   .cv-grid div b { display: block; font-size: 19px; color: #0d4718; }
   .cv-grid div span { font-size: 12px; color: #5a6653; text-transform: uppercase; letter-spacing: .04em; }
+
+  /* Top tab bar (added 2026-11-09): quick jumps to the Man-Hour Cost and
+     Previous Weeks sections. Wrap-friendly so the page never scrolls sideways. */
+  .top-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+  .top-tab { display: inline-block; background: #2e4a22; color: #fff; font-weight: 700; font-size: 15px; padding: 10px 16px; border-radius: 999px; text-decoration: none; }
+  .top-tab:active { background: #2e7d32; }
+  #man-hour-cost, #previous-weeks { scroll-margin-top: 12px; }
 </style>
 </head>
 <body>
@@ -120,6 +127,11 @@
     <div class="lbl">Owed by Nov 1, 2026 — <strong>$465.00</strong></div>
     <div class="lbl">Owed by Dec 1, 2026 — <strong>$825.00</strong></div>
   </div>
+
+  <nav class="top-tabs" aria-label="Jump to a section">
+    <a class="top-tab" href="#man-hour-cost">💲 Man-Hour Cost</a>
+    <a class="top-tab" href="#previous-weeks">📚 Search Previous Weeks</a>
+  </nav>
 
   <div class="wx-live" id="wx-live">
     <h3>🌦 Live Rain-Delay Watch — Oklahoma City</h3>
@@ -209,7 +221,7 @@
     <p style="margin:0;" class="small"><strong>Running in the background all week:</strong> email sending is PAUSED (Gmail sending limit hit Oct 26 — batches are staged and cleaned, resume is light-only when Justin calls it), daily website builds plus three daily site-audit sweeps, daily Bitcoin posts, pool-owner harvest, and the morning money ritual (final day Nov 3).</p>
   </div>
 
-  <h2>📚 Previous Weeks</h2>
+  <h2 id="previous-weeks">📚 Previous Weeks</h2>
   <div class="card">
     <p style="margin:0 0 8px;">Go back through every week on record — tap the arrows to step week by week, or search any stop by name or address.</p>
     <input id="pw-q" class="pw-input" type="search" placeholder="Search previous weeks — a name or an address…" autocomplete="off">
@@ -222,9 +234,9 @@
     <div id="pw-week"></div>
   </div>
 
-  <h2>💲 Customer Value — Paid vs. Man-Hours</h2>
+  <h2 id="man-hour-cost">💲 Man-Hour Cost</h2>
   <div class="card">
-    <p style="margin:0 0 6px;">Every customer on record: how many finished visits, how many man-hours went into their properties, what Invoice2Go shows they were billed and have paid, and the effective dollars per man-hour. Tap a customer for their card.</p>
+    <p style="margin:0 0 6px;">Every customer on record: how many finished visits, how many man-hours went into their properties, what Invoice2Go shows they were billed and have paid, and the effective dollars per man-hour. Supplies/materials billed on an invoice are deducted from earnings before the $ per man-hour is figured. Tap a customer for their card.</p>
     <div id="pw-card"></div>
     <div id="pw-custindex"></div>
     <p class="small" id="pw-coverage" style="margin:10px 2px 0;"></p>
@@ -430,7 +442,8 @@
           key: key, name: rec ? rec.name : name, rec: rec,
           visits: 0, man: 0, props: [], propSeen: {},
           billed: rec ? rec.invoices.reduce(function (t, v) { return t + v.total_cents; }, 0) : null,
-          paid: rec ? rec.invoices.reduce(function (t, v) { return t + v.paid_cents; }, 0) : null
+          paid: rec ? rec.invoices.reduce(function (t, v) { return t + v.paid_cents; }, 0) : null,
+          materials: rec ? rec.invoices.reduce(function (t, v) { return t + (v.materials_cents || 0); }, 0) : null
         };
       }
       return map[key];
@@ -460,9 +473,15 @@
     });
   }
 
+  // Earned = what was actually paid minus any supplies/materials billed on
+  // the invoices — materials are a pass-through cost, not earnings.
+  function earnedOf(c) {
+    return c.paid == null ? null : c.paid - (c.materials || 0);
+  }
   function rateOf(c) {
-    if (c.paid == null || !c.man) return null;
-    return c.paid / 100 / (c.man / 60);
+    var e = earnedOf(c);
+    if (e == null || !c.man) return null;
+    return e / 100 / (c.man / 60);
   }
   function fmtRate(c) {
     var r = rateOf(c);
@@ -616,12 +635,15 @@
     var c = custByKey[key], box = document.getElementById('pw-card');
     if (!c || !box) return;
     var owed = (c.billed != null && c.paid != null) ? c.billed - c.paid : null;
+    var earned = earnedOf(c);
     var stats = '<div class="cv-grid">' +
       '<div><b>' + c.visits + '</b><span>Finished visits</span></div>' +
       '<div><b>' + fmtHMS(c.man) + '</b><span>Man-hours</span></div>' +
       '<div><b>' + (c.billed == null ? '—' : fmtMoney(c.billed)) + '</b><span>Billed (Invoice2Go)</span></div>' +
       '<div><b>' + (c.paid == null ? '—' : fmtMoney(c.paid)) + '</b><span>Total paid</span></div>' +
       (owed != null && owed > 0 ? '<div><b>' + fmtMoney(owed) + '</b><span>Still owed</span></div>' : '') +
+      (c.materials ? '<div><b>−' + fmtMoney(c.materials) + '</b><span>Materials deducted</span></div>' +
+        '<div><b>' + fmtMoney(earned) + '</b><span>Earned</span></div>' : '') +
       '<div><b>' + fmtRate(c) + '</b><span>$ per man-hour</span></div></div>';
     var inv = '';
     if (c.rec && c.rec.invoices && c.rec.invoices.length) {
@@ -630,6 +652,7 @@
           (v.paid_cents >= v.total_cents ? ' · paid ' + fmtMoney(v.paid_cents) + (v.paid_date ? ' on ' + fmtDate(v.paid_date) : '')
             : v.paid_cents > 0 ? ' · ' + fmtMoney(v.paid_cents) + ' paid so far'
             : ' · unpaid');
+        if (v.materials_cents) line += ' — labor/earned ' + fmtMoney(v.total_cents - v.materials_cents) + ' + materials ' + fmtMoney(v.materials_cents);
         if (v.note) line += ' · ' + esc(v.note);
         return line;
       }).join('<br>') + '</p>';
