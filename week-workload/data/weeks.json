@@ -1413,14 +1413,14 @@
        "name": "Ashley Guy",
        "address": "9209 SW 43rd St, OKC 73179",
        "scope": "One-time mow / yard cleanup",
-       "status": "scheduled",
+       "status": "done",
        "start": "13:34",
-       "finish": null,
-       "minutes": null,
+       "finish": "14:10",
+       "minutes": 36,
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "man_minutes": null,
+       "man_minutes": 72,
        "man_auto_minutes": null
       },
       {
