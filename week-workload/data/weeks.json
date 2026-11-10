@@ -1424,6 +1424,20 @@
        "man_auto_minutes": null
       },
       {
+       "name": "Robert Griffin",
+       "address": "2311 Flair Dr, OKC 73159",
+       "scope": "Christmas light bid \u2014 front only, fence to fence, ~65 ft, ~$325 quote",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
+      },
+      {
        "name": "Ronnie Jordan",
        "address": "4000 Patty Ln, Bethany, OK 73008",
        "scope": "Christmas light bid \u2014 west side only, ~133 ft, $665 quote",
