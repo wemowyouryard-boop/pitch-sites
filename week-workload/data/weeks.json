@@ -1427,14 +1427,14 @@
        "name": "Robert Griffin",
        "address": "2311 Flair Dr, OKC 73159",
        "scope": "Christmas light bid \u2014 front only, fence to fence, ~65 ft, ~$325 quote. BOOKED \u2014 install Tue Dec 1, 2026.",
-       "status": "scheduled",
+       "status": "done",
        "start": "14:35",
-       "finish": null,
-       "minutes": null,
+       "finish": "14:58",
+       "minutes": 23,
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "man_minutes": null,
+       "man_minutes": 46,
        "man_auto_minutes": null
       },
       {
