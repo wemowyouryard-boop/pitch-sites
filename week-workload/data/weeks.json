@@ -1428,7 +1428,7 @@
        "address": "2311 Flair Dr, OKC 73159",
        "scope": "Christmas light bid \u2014 front only, fence to fence, ~65 ft, ~$325 quote",
        "status": "scheduled",
-       "start": null,
+       "start": "14:35",
        "finish": null,
        "minutes": null,
        "auto_start": null,
