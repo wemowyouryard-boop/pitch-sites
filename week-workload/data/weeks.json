@@ -1422,6 +1422,34 @@
        "auto_minutes": null,
        "man_minutes": null,
        "man_auto_minutes": null
+      },
+      {
+       "name": "Ronnie Jordan",
+       "address": "4000 Patty Ln, Bethany, OK 73008",
+       "scope": "Christmas light bid \u2014 west side only, ~133 ft, $665 quote",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
+      },
+      {
+       "name": "Hal Williams",
+       "address": "6524 NW 115th St, OKC",
+       "scope": "Landscape project bid + pick up Christmas lights check ($825, Invoice #3136) to solidify the lights job",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
       }
      ],
      "crew_size": 2
