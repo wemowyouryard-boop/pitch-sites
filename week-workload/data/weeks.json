@@ -4,11 +4,11 @@
   {
    "week_start": "2026-10-26",
    "week_end": "2026-11-01",
-   "label": "Oct 26 \u2013 Nov 1, 2026",
+   "label": "Oct 26 – Nov 1, 2026",
    "days": [
     {
      "date": "2026-10-26",
-     "label": "Monday, Oct 26 \u2014 Monday route (3 stops)",
+     "label": "Monday, Oct 26 — Monday route (3 stops)",
      "items": [
       {
        "name": "Reid Martin",
@@ -27,7 +27,7 @@
       {
        "name": "Jeffery Elliott",
        "address": "2625 NW 58th Pl, Oklahoma City",
-       "scope": "Christmas light quote visit \u2014 ~114 ft roof line at $5/ft = $570. NOTE (Oct 30): this $570 was the FIRST quote \u2014 the original bid Justin gave him on the phone \u2014 not the final one. The current quote is the $1,800 on-site bid given Oct 30, 2026.",
+       "scope": "Christmas light quote visit — ~114 ft roof line at $5/ft = $570. NOTE (Oct 30): this $570 was the FIRST quote — the original bid Justin gave him on the phone — not the final one. The current quote is the $1,800 on-site bid given Oct 30, 2026.",
        "status": "done",
        "start": null,
        "finish": null,
@@ -57,12 +57,12 @@
     },
     {
      "date": "2026-10-27",
-     "label": "Tuesday, Oct 27 \u2014 Growing Beauty (Donovan), Justin + Jason",
+     "label": "Tuesday, Oct 27 — Growing Beauty (Donovan), Justin + Jason",
      "items": [
       {
        "name": "1517 Craig Blvd",
        "address": "1517 Craig Blvd, Edmond",
-       "scope": "First stop \u2014 mow; clean front flowerbed weeds; trim front two shrubs (aggressive, do NOT scalp); remove volunteer trees along south back fence (loppers/maybe chainsaw; stack limbs at front curb)",
+       "scope": "First stop — mow; clean front flowerbed weeds; trim front two shrubs (aggressive, do NOT scalp); remove volunteer trees along south back fence (loppers/maybe chainsaw; stack limbs at front curb)",
        "status": "done",
        "start": null,
        "finish": "10:32",
@@ -87,7 +87,7 @@
       {
        "name": "2275 NW 227th St",
        "address": "2275 NW 227th St, Edmond",
-       "scope": "Mow + weed front & back flowerbeds. Gate code #5252. 1 acre \u2014 zero turn useful.",
+       "scope": "Mow + weed front & back flowerbeds. Gate code #5252. 1 acre — zero turn useful.",
        "status": "done",
        "start": "10:52",
        "finish": "12:49",
@@ -149,7 +149,7 @@
     },
     {
      "date": "2026-10-28",
-     "label": "Wednesday, Oct 28 \u2014 Growing Beauty (Donovan)",
+     "label": "Wednesday, Oct 28 — Growing Beauty (Donovan)",
      "items": [
       {
        "name": "15504 Juniper Dr",
@@ -268,9 +268,9 @@
        "photos_page": "photos/1109-jamestown-cir.html"
       },
       {
-       "name": "Clare Hadwiger \u2014 ESTIMATE",
+       "name": "Clare Hadwiger — ESTIMATE",
        "address": "3701 Oakdale Forest Rd, Edmond, OK 73113",
-       "scope": "Estimate visit: backyard cleanup quote (front-yard clean-out project completed Oct 20\u201322). After the last Donovan stop of the day (1109 Jamestown Cir, ~4.5 mi away).",
+       "scope": "Estimate visit: backyard cleanup quote (front-yard clean-out project completed Oct 20–22). After the last Donovan stop of the day (1109 Jamestown Cir, ~4.5 mi away).",
        "status": "done",
        "start": null,
        "finish": null,
@@ -280,19 +280,19 @@
        "auto_minutes": null,
        "man_minutes": null,
        "man_auto_minutes": null,
-       "note": "Estimate done Oct 28 \u2014 job BOOKED: $1,200 agreement. Backyard cleanup. Materials: black metal border sections 7 ft + 6 ft + 13 ft + 17 ft + 31 ft (90 ft of black metal border (order quantity set by Justin Oct 28)), 60 bags of mulch, 13 lb Preen, 1 gal high-concentrate Roundup (Home Depot). Work date not yet set."
+       "note": "Estimate done Oct 28 — job BOOKED: $1,200 agreement. Backyard cleanup. Materials: black metal border sections 7 ft + 6 ft + 13 ft + 17 ft + 31 ft (90 ft of black metal border (order quantity set by Justin Oct 28)), 60 bags of mulch, 13 lb Preen, 1 gal high-concentrate Roundup (Home Depot). Work date not yet set."
       }
      ],
      "crew_size": 2
     },
     {
      "date": "2026-10-29",
-     "label": "Thursday, Oct 29 \u2014 Growing Beauty (Donovan)",
+     "label": "Thursday, Oct 29 — Growing Beauty (Donovan)",
      "items": [
       {
        "name": "6309 Norham Ct",
        "address": "6309 Norham Ct, Oklahoma City",
-       "scope": "Trim large tree/shrub by back patio; clean up backyard tree rings/islands. Needs the ladder. FIRST JOB of Thursday \u2014 start 8:00 AM (moved from Wednesday by Justin, Oct 28).",
+       "scope": "Trim large tree/shrub by back patio; clean up backyard tree rings/islands. Needs the ladder. FIRST JOB of Thursday — start 8:00 AM (moved from Wednesday by Justin, Oct 28).",
        "status": "done",
        "start": "08:00",
        "finish": "12:21",
@@ -316,7 +316,7 @@
       {
        "name": "1517 Craig Blvd",
        "address": "1517 Craig Blvd, Edmond",
-       "scope": "Correction visit \u2014 front bed redo: Bermuda grass and weeds (redo the front bed \u2014 it has too much Bermuda grass and weeds).",
+       "scope": "Correction visit — front bed redo: Bermuda grass and weeds (redo the front bed — it has too much Bermuda grass and weeds).",
        "status": "done",
        "start": "13:15",
        "finish": "13:48",
@@ -350,7 +350,7 @@
     },
     {
      "date": "2026-10-30",
-     "label": "Friday, Oct 30 \u2014 Friday route #2 (rain-shortened; remaining stops moved to Sun Nov 1, this week only)",
+     "label": "Friday, Oct 30 — Friday route #2 (rain-shortened; remaining stops moved to Sun Nov 1, this week only)",
      "items": [
       {
        "name": "Adam's sister",
@@ -369,7 +369,7 @@
       {
        "name": "Hilaire Johnson",
        "address": "5305 NW 116th St, Oklahoma City",
-       "scope": "Mow (not done Oct 30 \u2014 arrived 7:55 AM, work not done)",
+       "scope": "Mow (not done Oct 30 — arrived 7:55 AM, work not done)",
        "status": "skipped",
        "start": "07:55",
        "finish": null,
@@ -397,7 +397,7 @@
       {
        "name": "Sam",
        "address": "1205 E Madison St, Oklahoma City",
-       "scope": "Mow (blower broke during the morning visit \u2014 customer told; came back with the replacement blower and blew 3:53\u20133:58 PM)",
+       "scope": "Mow (blower broke during the morning visit — customer told; came back with the replacement blower and blew 3:53–3:58 PM)",
        "status": "done",
        "start": "11:20",
        "finish": "12:13",
@@ -409,9 +409,9 @@
        "man_auto_minutes": null
       },
       {
-       "name": "Jeffery Elliott \u2014 MEETING (in person, ~12:00 PM)",
+       "name": "Jeffery Elliott — MEETING (in person, ~12:00 PM)",
        "address": "2625 NW 58th Place, Oklahoma City",
-       "scope": "Christmas light bid: $1,800 bid given Oct 30 \u2014 waiting for Jeffery's approval. (Early estimate was $570 for ~114 ft front roof line; on-site bid came to $1,800.) Materials, install, takedown included; full amount due up front when booked. Phone (805) 975-8191.",
+       "scope": "Christmas light bid: $1,800 bid given Oct 30 — waiting for Jeffery's approval. (Early estimate was $570 for ~114 ft front roof line; on-site bid came to $1,800.) Materials, install, takedown included; full amount due up front when booked. Phone (805) 975-8191.",
        "status": "done",
        "start": null,
        "finish": null,
@@ -427,12 +427,12 @@
     },
     {
      "date": "2026-10-31",
-     "label": "Saturday, Oct 31 \u2014 Day off (family)",
+     "label": "Saturday, Oct 31 — Day off (family)",
      "items": [
       {
        "name": "Eric's Toy Extravaganza",
        "address": "Cleveland County Fairgrounds, 615 E Robinson St, Norman",
-       "scope": "Family day with Eira and Quentin \u2014 no route work",
+       "scope": "Family day with Eira and Quentin — no route work",
        "status": "scheduled",
        "start": null,
        "finish": null,
@@ -448,7 +448,7 @@
     },
     {
      "date": "2026-11-01",
-     "label": "Sunday, Nov 1 \u2014 Day off (Friday-finish stops moved to Mon Nov 2 \u2014 rain)",
+     "label": "Sunday, Nov 1 — Day off (Friday-finish stops moved to Mon Nov 2 — rain)",
      "items": [
       {
        "name": "Invoices due Nov 1",
@@ -486,11 +486,11 @@
   {
    "week_start": "2026-11-02",
    "week_end": "2026-11-08",
-   "label": "Nov 2 \u2013 Nov 8, 2026",
+   "label": "Nov 2 – Nov 8, 2026",
    "days": [
     {
      "date": "2026-11-02",
-     "label": "Monday, Nov 2 \u2014 Combined route (5 stops: 4 finished, 1 skipped; remaining 14 stops moved to Tue Nov 3 \u2014 rain)",
+     "label": "Monday, Nov 2 — Combined route (5 stops: 4 finished, 1 skipped; remaining 14 stops moved to Tue Nov 3 — rain)",
      "items": [
       {
        "name": "Barry Rockler",
@@ -523,7 +523,7 @@
       {
        "name": "Jerry Johnson",
        "address": "1409 Interurban Way, Edmond",
-       "scope": "Mow Skipped \u2014 non-payment.",
+       "scope": "Mow Skipped — non-payment.",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -567,7 +567,7 @@
     },
     {
      "date": "2026-11-03",
-     "label": "Tuesday, Nov 3 \u2014 Route (13 stops moved from Monday \u2014 rain; Christina Brown removed at Justin's direction Nov 3)",
+     "label": "Tuesday, Nov 3 — Route (13 stops moved from Monday — rain; Christina Brown removed at Justin's direction Nov 3)",
      "items": [
       {
        "name": "Jenetta Davis",
@@ -628,7 +628,7 @@
       {
        "name": "Reid Martin",
        "address": "2624 NW 58th Pl, Oklahoma City",
-       "scope": "Mow \u2014 mow height 2 inches",
+       "scope": "Mow — mow height 2 inches",
        "status": "done",
        "start": "13:08",
        "finish": "13:25",
@@ -658,7 +658,7 @@
     },
     {
      "date": "2026-11-04",
-     "label": "Wednesday, Nov 4 \u2014 Off",
+     "label": "Wednesday, Nov 4 — Off",
      "items": [
       {
        "name": "Josh Caywood",
@@ -759,7 +759,7 @@
        "man_auto_minutes": null
       },
       {
-       "name": "Abbie Davis \u2014 Christmas light bid meeting",
+       "name": "Abbie Davis — Christmas light bid meeting",
        "address": "4424 Moulin Rd, Edmond, OK 73034",
        "scope": "Christmas light bid meeting (house + 6-tree cluster; she has lights, wants more added; wants them up before her son's birthday on the 16th)",
        "status": "scheduled",
@@ -777,12 +777,12 @@
     },
     {
      "date": "2026-11-05",
-     "label": "Thursday, Nov 5 \u2014 Clare Hadwiger backyard cleanup ($1,200)",
+     "label": "Thursday, Nov 5 — Clare Hadwiger backyard cleanup ($1,200)",
      "items": [
       {
        "name": "Clare Hadwiger",
        "address": "3701 Oakdale Forest Rd, Edmond, OK 73013",
-       "scope": "Backyard cleanup \u2014 booked job, $1,200",
+       "scope": "Backyard cleanup — booked job, $1,200",
        "status": "done",
        "start": "08:41",
        "finish": "15:06",
@@ -799,7 +799,7 @@
     },
     {
      "date": "2026-11-06",
-     "label": "Friday, Nov 6 \u2014 Friday route #1 (11 stops)",
+     "label": "Friday, Nov 6 — Friday route #1 (11 stops)",
      "items": [
       {
        "name": "Michael Miller",
@@ -916,7 +916,7 @@
       {
        "name": "Barry Rockler",
        "address": "13416 N Coltrane Rd, Edmond",
-       "scope": "Mow \u2014 already serviced Mon Nov 2 \u00b7 no visit needed today",
+       "scope": "Mow — already serviced Mon Nov 2 · no visit needed today",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -944,7 +944,7 @@
       {
        "name": "Hilaire Johnson",
        "address": "5305 NW 116th St, Oklahoma City",
-       "scope": "Mow \u2014 moved to Sat Nov 7 at Justin's direction \u00b7 no visit today",
+       "scope": "Mow — moved to Sat Nov 7 at Justin's direction · no visit today",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -960,12 +960,12 @@
     },
     {
      "date": "2026-11-07",
-     "label": "Saturday, Nov 7 \u2014 Saturday route (15 stops)",
+     "label": "Saturday, Nov 7 — Saturday route (15 stops)",
      "items": [
       {
        "name": "Penny Love",
        "address": "304 E Charlotte Ter, Mustang",
-       "scope": "Mow \u2014 moved to Mon Nov 9 (cold) at Justin's direction",
+       "scope": "Mow — moved to Mon Nov 9 (cold) at Justin's direction",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -979,7 +979,7 @@
       {
        "name": "Mike Just",
        "address": "1047 W Windsor Way, Mustang",
-       "scope": "Mow \u2014 moved to Mon Nov 9 (cold) at Justin's direction",
+       "scope": "Mow — moved to Mon Nov 9 (cold) at Justin's direction",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -993,7 +993,7 @@
       {
        "name": "Mary Shepard",
        "address": "812 N Canadian Ter, Mustang",
-       "scope": "Mow \u2014 moved to Mon Nov 9 (cold) at Justin's direction",
+       "scope": "Mow — moved to Mon Nov 9 (cold) at Justin's direction",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -1007,7 +1007,7 @@
       {
        "name": "Candace Todd",
        "address": "9205 SW 43rd St, Oklahoma City",
-       "scope": "Mow \u2014 moved to Mon Nov 9 (cold) at Justin's direction",
+       "scope": "Mow — moved to Mon Nov 9 (cold) at Justin's direction",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -1021,7 +1021,7 @@
       {
        "name": "Felicia Richardson and Mike Jung",
        "address": "2024 Plymouth Ln, The Village",
-       "scope": "Mow \u2014 moved to Mon Nov 9 (cold) at Justin's direction",
+       "scope": "Mow — moved to Mon Nov 9 (cold) at Justin's direction",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -1035,7 +1035,7 @@
       {
        "name": "Ryan LaBar",
        "address": "10741 Whitehaven Rd, The Village",
-       "scope": "Mow \u2014 moved to Mon Nov 9 (cold) at Justin's direction",
+       "scope": "Mow — moved to Mon Nov 9 (cold) at Justin's direction",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -1049,7 +1049,7 @@
       {
        "name": "Adam",
        "address": "12101 Camelot Pl, Oklahoma City",
-       "scope": "Mow \u2014 moved to Mon Nov 9 (cold) at Justin's direction",
+       "scope": "Mow — moved to Mon Nov 9 (cold) at Justin's direction",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -1063,7 +1063,7 @@
       {
        "name": "Hilaire Johnson",
        "address": "5305 NW 116th St, Oklahoma City",
-       "scope": "Mow \u2014 moved from Fri Nov 6 \u2014 moved to Mon Nov 9 (cold) at Justin's direction",
+       "scope": "Mow — moved from Fri Nov 6 — moved to Mon Nov 9 (cold) at Justin's direction",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -1077,7 +1077,7 @@
       {
        "name": "Brad Forsyth",
        "address": "2805 Greenfield Dr, Edmond",
-       "scope": "Mow \u2014 moved to Mon Nov 9 (cold) at Justin's direction",
+       "scope": "Mow — moved to Mon Nov 9 (cold) at Justin's direction",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -1091,7 +1091,7 @@
       {
        "name": "Luanne Swiegel",
        "address": "2716 Greenfield Dr, Edmond",
-       "scope": "Mow \u2014 moved to Mon Nov 9 (cold) at Justin's direction",
+       "scope": "Mow — moved to Mon Nov 9 (cold) at Justin's direction",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -1105,7 +1105,7 @@
       {
        "name": "Sandy Kamas",
        "address": "817 Prairie Dunes Way, Edmond",
-       "scope": "Mow \u2014 moved to Mon Nov 9 (cold) at Justin's direction",
+       "scope": "Mow — moved to Mon Nov 9 (cold) at Justin's direction",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -1119,7 +1119,7 @@
       {
        "name": "Jay and Courtney Roberts",
        "address": "3224 Sand Plum Ln, Edmond",
-       "scope": "Mow \u2014 moved to Mon Nov 9 (cold) at Justin's direction",
+       "scope": "Mow — moved to Mon Nov 9 (cold) at Justin's direction",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -1133,7 +1133,7 @@
       {
        "name": "Bobbie Adams",
        "address": "1316 Echohollow Trail, Edmond",
-       "scope": "Mow \u2014 moved to Mon Nov 9 (cold) at Justin's direction",
+       "scope": "Mow — moved to Mon Nov 9 (cold) at Justin's direction",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -1147,7 +1147,7 @@
       {
        "name": "Trevor Wagner",
        "address": "1317 Echohollow Trail, Edmond",
-       "scope": "Mow \u2014 moved to Mon Nov 9 (cold) at Justin's direction",
+       "scope": "Mow — moved to Mon Nov 9 (cold) at Justin's direction",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -1161,7 +1161,7 @@
       {
        "name": "Patrick O'Donnell",
        "address": "4400 Wild Plum Ln, Edmond",
-       "scope": "Mow \u2014 moved to Mon Nov 9 (cold) at Justin's direction",
+       "scope": "Mow — moved to Mon Nov 9 (cold) at Justin's direction",
        "status": "skipped",
        "start": null,
        "finish": null,
@@ -1177,7 +1177,7 @@
     },
     {
      "date": "2026-11-08",
-     "label": "Sunday, Nov 8 \u2014 Off",
+     "label": "Sunday, Nov 8 — Off",
      "items": [],
      "crew_size": 0
     }
@@ -1186,11 +1186,11 @@
   {
    "week_start": "2026-11-09",
    "week_end": "2026-11-15",
-   "label": "Nov 9 \u2013 Nov 15, 2026",
+   "label": "Nov 9 – Nov 15, 2026",
    "days": [
     {
      "date": "2026-11-09",
-     "label": "Monday, Nov 9 \u2014 Route (Saturday route moved from Sat Nov 7 \u2014 cold; run as property cleanup, 15 stops)",
+     "label": "Monday, Nov 9 — Route (Saturday route moved from Sat Nov 7 — cold; run as property cleanup, 15 stops)",
      "items": [
       {
        "name": "Penny Love",
@@ -1251,7 +1251,7 @@
       {
        "name": "Felicia Richardson and Mike Jung",
        "address": "2024 Plymouth Ln, The Village",
-       "scope": "Property cleanup. Service note: Front yard: go more East \u2014 run the mowing further toward the east side of the front yard.",
+       "scope": "Property cleanup. Service note: Front yard: go more East — run the mowing further toward the east side of the front yard.",
        "status": "done",
        "start": "11:30",
        "finish": "11:53",
@@ -1407,7 +1407,7 @@
     },
     {
      "date": "2026-11-10",
-     "label": "Tuesday, Nov 10 \u2014 Booked job: Ashley Guy one-time mow",
+     "label": "Tuesday, Nov 10 — Booked job: Ashley Guy one-time mow",
      "items": [
       {
        "name": "Ashley Guy",
@@ -1426,7 +1426,7 @@
       {
        "name": "Robert Griffin",
        "address": "2311 Flair Dr, OKC 73159",
-       "scope": "Christmas light bid \u2014 front only, fence to fence, ~65 ft, ~$325 quote. BOOKED \u2014 install Fri Nov 27, 2026.",
+       "scope": "Christmas light bid — front only, fence to fence, ~65 ft, ~$325 quote. BOOKED — install Fri Nov 27, 2026.",
        "status": "done",
        "start": "14:35",
        "finish": "14:58",
@@ -1440,7 +1440,7 @@
       {
        "name": "Ronnie Jordan",
        "address": "4000 Patty Ln, Bethany, OK 73008",
-       "scope": "Christmas light bid \u2014 BOOKED: Ronnie accepted $1,100 (Nov 10). Paying by credit card by phone; invoice to follow.",
+       "scope": "Christmas light bid — BOOKED: Ronnie accepted $1,100 (Nov 10). Paying by credit card by phone; invoice to follow.",
        "status": "scheduled",
        "start": null,
        "finish": null,
@@ -1470,18 +1470,18 @@
     },
     {
      "date": "2026-11-11",
-     "label": "Wednesday, Nov 11 \u2014 Off",
+     "label": "Wednesday, Nov 11 — Off",
      "items": [],
      "crew_size": 0
     },
     {
      "date": "2026-11-12",
-     "label": "Thursday, Nov 12 \u2014 Booked jobs: Zach Johnson tree job ($450) + Kristi Thiessen one-time mow",
+     "label": "Thursday, Nov 12 — Booked jobs: Zach Johnson tree job ($450) + Kristi Thiessen one-time mow",
      "items": [
       {
        "name": "Zach Johnson",
        "address": "6213 N College St, Warr Acres",
-       "scope": "Tree job \u2014 booked job, $450",
+       "scope": "Tree job — booked job, $450",
        "status": "scheduled",
        "start": null,
        "finish": null,
@@ -1496,22 +1496,30 @@
        "name": "Kristi Thiessen",
        "address": "6008 W Hefner Rd, Oklahoma City, OK 73162",
        "scope": "One-time mow + branch removal off her fence",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
+       "status": "done",
+       "start": "08:25",
+       "finish": "09:07",
+       "minutes": 42,
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
+       "man_minutes": 84,
+       "man_auto_minutes": null,
+       "photos": [
+        "photos/6008-w-hefner-rd-1.jpg",
+        "photos/6008-w-hefner-rd-2.jpg",
+        "photos/6008-w-hefner-rd-3.jpg",
+        "photos/6008-w-hefner-rd-4.jpg",
+        "photos/6008-w-hefner-rd-5.jpg"
+       ],
+       "photos_page": "photos/6008-w-hefner-rd.html"
       }
      ],
      "crew_size": 2
     },
     {
      "date": "2026-11-13",
-     "label": "Friday, Nov 13 \u2014 Friday route #2 (6 stops)",
+     "label": "Friday, Nov 13 — Friday route #2 (6 stops)",
      "items": [
       {
        "name": "Adam's sister",
@@ -1602,13 +1610,13 @@
     },
     {
      "date": "2026-11-14",
-     "label": "Saturday, Nov 14 \u2014 Off",
+     "label": "Saturday, Nov 14 — Off",
      "items": [],
      "crew_size": 0
     },
     {
      "date": "2026-11-15",
-     "label": "Sunday, Nov 15 \u2014 Off",
+     "label": "Sunday, Nov 15 — Off",
      "items": [],
      "crew_size": 0
     }
