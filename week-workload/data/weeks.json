@@ -1519,7 +1519,13 @@
         },
         {
           "date": "2026-11-13",
-          "label": "Friday, Nov 13 — Friday route #2 (6 stops)",
+          "label": "Friday, Nov 13 — Off (Friday #2 route moved to Sat Nov 14)",
+          "items": [],
+          "crew_size": 0
+        },
+        {
+          "date": "2026-11-14",
+          "label": "Saturday, Nov 14 — Route (Friday #2, moved from Fri Nov 13), 6 stops",
           "items": [
             {
               "name": "Adam's sister",
@@ -1607,12 +1613,6 @@
             }
           ],
           "crew_size": 2
-        },
-        {
-          "date": "2026-11-14",
-          "label": "Saturday, Nov 14 — Off",
-          "items": [],
-          "crew_size": 0
         },
         {
           "date": "2026-11-15",
