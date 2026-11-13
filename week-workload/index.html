@@ -457,11 +457,15 @@
         (day.items || []).forEach(function (it) {
           if (it.status !== 'done') return;
           var c = entry(custFor(it.name, it.address));
+          var pk = propkey(it.name, it.address);
+          if (!c.propSeen[pk]) { c.propSeen[pk] = 1; c.props.push({ name: it.name, address: it.address }); }
+          // A customer record can set mh_from (e.g. a prepayment for a future
+          // season): visits/man-hours before that date are not counted
+          // against the payment (Patrick O'Donnell — 2027, per Justin).
+          if (c.rec && c.rec.mh_from && day.date && day.date < c.rec.mh_from) return;
           c.visits += 1;
           var span = itemSpan(it);
           if (span != null) c.man += span * crew;
-          var pk = propkey(it.name, it.address);
-          if (!c.propSeen[pk]) { c.propSeen[pk] = 1; c.props.push({ name: it.name, address: it.address }); }
         });
       });
     });
