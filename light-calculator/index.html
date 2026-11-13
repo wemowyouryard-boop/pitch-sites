@@ -26,6 +26,12 @@
   .wrap{max-width:640px;margin:0 auto}
   header{text-align:center;color:var(--cream);padding:12px 8px 20px}
   header .lights{font-size:22px;letter-spacing:6px;color:var(--gold)}
+  header .brand{
+    font-size:24px;font-weight:800;letter-spacing:.5px;color:#fff;
+    border-bottom:2px solid var(--gold);padding-bottom:10px;margin-bottom:14px;
+  }
+  header .brand .brand-phone{display:block;font-size:16px;font-weight:700;color:var(--gold);margin-top:4px}
+  header .brand .brand-phone a{color:var(--gold);text-decoration:none}
   header h1{font-size:30px;line-height:1.2;margin:8px 0 6px;font-weight:800}
   header p{color:var(--gold-soft);font-size:16px}
   .card{
@@ -86,6 +92,35 @@
   .result .r-label{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-soft)}
   .result .r-total{font-size:44px;font-weight:800;color:var(--gold);line-height:1.1;margin:4px 0}
   .result .r-feet{font-size:15px;color:var(--gold-soft)}
+  .quote{
+    margin-top:24px;background:#fff;border:2px solid var(--green-2);border-radius:12px;
+    padding:20px 18px;
+  }
+  .quote h2{font-size:20px;color:var(--green);margin-bottom:4px}
+  .quote .q-sub{font-size:14px;color:var(--muted);margin-bottom:6px}
+  .quote .q-summary{
+    background:var(--cream);border:1px dashed var(--gold);border-radius:8px;
+    padding:10px 12px;font-size:15px;font-weight:700;color:var(--green);text-align:center;margin-top:10px;
+  }
+  .quote label.field-label{margin:14px 0 6px;font-size:15px}
+  .quote input[type=text],.quote input[type=tel],.quote input[type=email]{
+    width:100%;padding:12px;font-size:16px;border:2px solid #cfd6d1;border-radius:8px;
+    color:var(--ink);background:#fff;
+  }
+  .quote input:focus{border-color:var(--green-2);outline:none}
+  .quote .req{color:#8a1f1f;font-weight:700}
+  .quote button.send{
+    display:block;width:100%;margin-top:18px;background:var(--gold);color:#231a02;
+    font-size:19px;font-weight:800;padding:16px;border:none;border-radius:12px;cursor:pointer;
+    box-shadow:0 4px 14px rgba(212,175,55,.45);
+  }
+  .quote button.send:disabled{opacity:.6;cursor:wait}
+  .quote .q-msg{display:none;border-radius:10px;padding:14px;font-size:15px;margin-top:16px;line-height:1.5}
+  .quote .q-msg.ok{display:block;background:#e7f4ec;border:1px solid var(--green-2);color:var(--green)}
+  .quote .q-msg.err{display:block;background:#fbecec;border:1px solid #b04a4a;color:#7a2020}
+  .quote .q-alt{display:none;text-align:center;margin-top:12px;font-size:15px}
+  .quote .q-alt.show{display:block}
+  .quote .q-alt a{color:var(--green);font-weight:700}
   .included{margin-top:20px}
   .included h2{font-size:16px;color:var(--green);margin-bottom:8px}
   .included ul{list-style:none}
@@ -112,6 +147,9 @@
 <body>
 <div class="wrap">
   <header>
+    <div class="brand">Giving Tree Lawn Care, LLC
+      <span class="brand-phone"><a href="tel:+14052264100">405-226-4100</a></span>
+    </div>
     <div class="lights">✦ ✦ ✦</div>
     <h1>Christmas Lights Cost Calculator</h1>
     <p>Professional installation for Oklahoma City homes</p>
@@ -172,6 +210,25 @@
       <div class="r-feet" id="feetOut">120 ft of lights at $5/ft</div>
     </div>
 
+    <div class="quote" id="quoteBox">
+      <h2>Like this price? Send us your quote</h2>
+      <p class="q-sub">Fill in your info and tap the button — your quote goes straight to us, and we'll call or text you to lock in your exact free measurement.</p>
+      <div class="q-summary" id="quoteSummary">Your quote: 120 ft of lights — $600</div>
+      <form id="quoteForm" novalidate>
+        <label class="field-label" for="qName">Your name <span class="req">*</span></label>
+        <input type="text" id="qName" name="name" autocomplete="name" placeholder="e.g. Jane Smith">
+        <label class="field-label" for="qAddress">Property address <span class="req">*</span></label>
+        <input type="text" id="qAddress" name="address" autocomplete="street-address" placeholder="Street address, Oklahoma City, OK">
+        <label class="field-label" for="qPhone">Phone number <span class="req">*</span></label>
+        <input type="tel" id="qPhone" name="phone" autocomplete="tel" placeholder="e.g. 405-555-1234">
+        <label class="field-label" for="qEmail">Email (optional)</label>
+        <input type="email" id="qEmail" name="email" autocomplete="email" placeholder="you@example.com">
+        <button type="submit" class="send" id="qSendBtn">Send My Quote to Giving Tree</button>
+      </form>
+      <div class="q-msg" id="qMsg" role="status"></div>
+      <p class="q-alt" id="qAlt">Or <a id="qMailto" href="mailto:wemowyouryard@gmail.com">tap here to email it instead</a></p>
+    </div>
+
     <div class="included">
       <h2>Every estimate includes:</h2>
       <ul>
@@ -209,6 +266,16 @@
   var storyNote = document.getElementById('storyNote');
   var totalOut = document.getElementById('totalOut');
   var feetOut = document.getElementById('feetOut');
+  var currentFeet = 120, currentTotal = 600;
+  var qName = document.getElementById('qName');
+  var qAddress = document.getElementById('qAddress');
+  var qPhone = document.getElementById('qPhone');
+  var qEmail = document.getElementById('qEmail');
+  var quoteSummary = document.getElementById('quoteSummary');
+  var qMailto = document.getElementById('qMailto');
+  var qMsg = document.getElementById('qMsg');
+  var qAlt = document.getElementById('qAlt');
+  var qSendBtn = document.getElementById('qSendBtn');
 
   function clampFeet(v){
     v = parseInt(v, 10);
@@ -228,7 +295,68 @@
     if (trees > 0) desc += ' + ' + trees + (trees === 1 ? ' tree' : ' trees') + ' (' + treeFeet + ' ft)';
     desc += ' = ' + totalFeet + ' ft at $5/ft';
     feetOut.textContent = desc;
+    currentFeet = totalFeet;
+    currentTotal = totalFeet * PRICE;
+    refreshQuote();
   }
+  function quoteText(){
+    return 'Name: ' + (qName.value.trim() || '(not given)') + '\n' +
+      'Property address: ' + (qAddress.value.trim() || '(not given)') + '\n' +
+      'Phone: ' + (qPhone.value.trim() || '(not given)') + '\n' +
+      'Email: ' + (qEmail.value.trim() || '(not given)') + '\n' +
+      'Lights: ' + currentFeet + ' ft at $5/ft\n' +
+      'Estimated total: ' + money(currentTotal);
+  }
+  function refreshQuote(){
+    quoteSummary.textContent = 'Your quote: ' + currentFeet + ' ft of lights — ' + money(currentTotal);
+    qMailto.href = 'mailto:wemowyouryard@gmail.com' +
+      '?subject=' + encodeURIComponent('New Christmas light quote from the calculator — ' + (qName.value.trim() || 'website visitor')) +
+      '&body=' + encodeURIComponent('Hi Giving Tree,\n\nHere is the quote I ran on your calculator:\n\n' + quoteText() + '\n\nPlease contact me to book.\n');
+  }
+  function showMsg(kind, text){
+    qMsg.className = 'q-msg ' + kind;
+    qMsg.textContent = text;
+  }
+  [qName, qAddress, qPhone, qEmail].forEach(function(el){
+    el.addEventListener('input', refreshQuote);
+  });
+  document.getElementById('quoteForm').addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var name = qName.value.trim(), address = qAddress.value.trim(), phone = qPhone.value.trim();
+    if (!name || !address || !phone) {
+      showMsg('err', 'Please fill in your name, property address, and phone number so we can reach you.');
+      qAlt.classList.add('show');
+      return;
+    }
+    qSendBtn.disabled = true;
+    qSendBtn.textContent = 'Sending…';
+    fetch('https://formsubmit.co/ajax/wemowyouryard@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name: name,
+        address: address,
+        phone: phone,
+        email: qEmail.value.trim(),
+        footage: currentFeet + ' ft',
+        total: money(currentTotal),
+        _subject: 'New Christmas light quote from the calculator — ' + name,
+        _template: 'table'
+      })
+    }).then(function(res){
+      if (!res.ok) throw new Error('send failed');
+      return res.json();
+    }).then(function(){
+      showMsg('ok', "Got it! Your quote is on its way to us — we'll be in touch shortly. Need us faster? Call or text 405-226-4100.");
+      qAlt.classList.remove('show');
+      qSendBtn.textContent = 'Quote Sent ✓';
+    }).catch(function(){
+      showMsg('err', "Sorry — the send didn't go through. Please tap the email link below, or call or text us at 405-226-4100 and we'll take it from there.");
+      qAlt.classList.add('show');
+      qSendBtn.disabled = false;
+      qSendBtn.textContent = 'Send My Quote to Giving Tree';
+    });
+  });
   range.addEventListener('input', function(){ num.value = range.value; update(); });
   num.addEventListener('input', function(){ range.value = clampFeet(num.value); update(); });
   num.addEventListener('change', function(){ num.value = clampFeet(num.value); range.value = num.value; update(); });
