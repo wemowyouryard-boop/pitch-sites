@@ -27,11 +27,14 @@
   header{text-align:center;color:var(--cream);padding:12px 8px 20px}
   header .lights{font-size:22px;letter-spacing:6px;color:var(--gold)}
   header .brand{
-    font-size:24px;font-weight:800;letter-spacing:.5px;color:#fff;
-    border-bottom:2px solid var(--gold);padding-bottom:10px;margin-bottom:14px;
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    border-bottom:2px solid var(--gold);padding-bottom:14px;margin-bottom:16px;
   }
-  header .brand .brand-phone{display:block;font-size:16px;font-weight:700;color:var(--gold);margin-top:4px}
-  header .brand .brand-phone a{color:var(--gold);text-decoration:none}
+  header .brand svg{flex:none}
+  header .brand-text{text-align:left}
+  header .brand-name{font-size:24px;font-weight:800;letter-spacing:-0.2px;line-height:1.15;color:#fff}
+  header .brand-tag{font-size:13.5px;color:var(--gold-soft);margin-top:3px}
+  header .brand-tag a{color:var(--gold-soft);text-decoration:none;font-weight:700}
   header h1{font-size:30px;line-height:1.2;margin:8px 0 6px;font-weight:800}
   header p{color:var(--gold-soft);font-size:16px}
   .card{
@@ -147,8 +150,12 @@
 <body>
 <div class="wrap">
   <header>
-    <div class="brand">Giving Tree Lawn Care, LLC
-      <span class="brand-phone"><a href="tel:+14052264100">405-226-4100</a></span>
+    <div class="brand">
+      <svg width="58" height="58" viewBox="0 0 64 64" role="img" aria-label="Giving Tree Lawn Care logo"><circle cx="32" cy="32" r="30" fill="#eef7ee" stroke="#2e7d32" stroke-width="2.5"/><circle cx="32" cy="23" r="11" fill="#2e7d32"/><circle cx="21.5" cy="28.5" r="8" fill="#43a047"/><circle cx="42.5" cy="28.5" r="8" fill="#43a047"/><path d="M29.5 29 h5 l-1 17 h-3 z" fill="#6d4c41"/><path d="M13 48 Q32 41.5 51 48" stroke="#2e7d32" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+      <div class="brand-text">
+        <div class="brand-name">Giving Tree Lawn Care, LLC</div>
+        <div class="brand-tag">Oklahoma City &middot; Lawn care, tree work &amp; Christmas lights &middot; <a href="tel:+14052264100">405-226-4100</a></div>
+      </div>
     </div>
     <div class="lights">✦ ✦ ✦</div>
     <h1>Christmas Lights Cost Calculator</h1>
