@@ -173,11 +173,13 @@
         {
           "num": "3136",
           "total_cents": 82500,
-          "paid_cents": 0,
-          "paid_date": null,
+          "paid_cents": 82500,
+          "paid_date": "2026-11-10",
           "materials_cents": 0
         }
-      ]
+      ],
+      "mh_from": "2027-01-01",
+      "note": "The $1,200 he paid (invoice #3025, paid Nov 3, 2026 via PayPal) is for his 2027 lawn care service — per Justin (Nov 12, 2026), man-hour tracking for Hal starts January 1, 2027. Work done in 2026 is not counted against that payment, so no $/man-hour rate applies for 2026."
     },
     {
       "name": "Hilaire Johnson",
