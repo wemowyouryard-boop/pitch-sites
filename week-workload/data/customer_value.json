@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generated": "2026-11-09",
-  "payments_source": "Invoice2Go (Giving Tree Lawn Care LLC), from the daily read-only Invoice2Go pulls Oct 26 – Nov 9, 2026, plus the confirmations recorded in the Oct 26 pull (payments back to Oct 9, 2026)",
-  "payments_note": "Covers every invoice those pulls listed — paid or still unpaid — as of Nov 9, 2026. Invoices that were already paid before Oct 26, 2026 and never appeared in those pulls are not loaded yet; a customer with no invoice in this set shows “payments not loaded yet.” Some listed payments pay for work done before Oct 26, 2026.",
+  "generated": "2026-11-12",
+  "payments_source": "Invoice2Go (Giving Tree Lawn Care LLC), from the daily read-only Invoice2Go pulls Oct 26 – Nov 9, 2026, plus the confirmations recorded in the Oct 26 pull (payments back to Oct 9, 2026); plus the Nov 12, 2026 full-books annual-payer audit (315 paid invoices) for the verified 2027 annual invoices for Ryan LaBar, Edward Holmes, Aj Al-Jarrah, Josh Caywood, Michael and Jody Miller, Dotti Ruffell, Luanne Schwegal, Patti Morris, and Robert Windsor",
+  "payments_note": "Covers every invoice those pulls listed — paid or still unpaid — as of Nov 9, 2026. Invoices that were already paid before Oct 26, 2026 and never appeared in those pulls are not loaded yet; a customer with no invoice in this set shows “payments not loaded yet.” Some listed payments pay for work done before Oct 26, 2026. For those nine added annual-payer customers, only the verified 2027 annual invoice is loaded so far; any other invoice of theirs that predates the Oct 26 pull remains part of the pending full-history load.",
   "excluded_note": "Invoice #3062 (Sandy Kamas, $1,110) is excluded on purpose: it was deleted in Invoice2Go after the customer backed out of the job — it is not billed and was never paid.",
   "property_customer": {
     "the oak room|808 nw 6th st": "Devon Taylor",
@@ -410,6 +410,150 @@
         }
       ],
       "note": "Christmas light install scheduled Tue Nov 24, 2026 (175 ft) — paid in full up front Nov 12, 2026 (per Justin); man-hours land with the install."
+    },
+    {
+      "name": "Ryan LaBar",
+      "invoices": [
+        {
+          "num": "3102",
+          "total_cents": 100000,
+          "paid_cents": 100000,
+          "paid_date": "2026-10-13",
+          "materials_cents": 0,
+          "note": "Invoice wording: “2027 Lawn Care front and back January through December.”"
+        }
+      ],
+      "mh_from": "2027-01-01",
+      "note": "The $1,000 he paid (invoice #3102, paid Oct 13, 2026) is for his 2027 lawn care — per Justin (Nov 12, 2026), man-hour tracking for Ryan starts January 1, 2027. Work done in 2026 is not counted against that payment, so no $/man-hour rate applies for 2026."
+    },
+    {
+      "name": "Edward Holmes",
+      "invoices": [
+        {
+          "num": "3061",
+          "total_cents": 100000,
+          "paid_cents": 100000,
+          "paid_date": "2026-09-15",
+          "materials_cents": 0,
+          "note": "Invoice wording: “2027 year-round care maintenance” — $1,200 less a $200 discount."
+        }
+      ],
+      "mh_from": "2027-01-01",
+      "note": "The $1,000 he paid (invoice #3061, paid Sep 15, 2026) is for his 2027 year-round care — per Justin (Nov 12, 2026), man-hour tracking for Edward starts January 1, 2027. Work done in 2026 is not counted against that payment, so no $/man-hour rate applies for 2026."
+    },
+    {
+      "name": "Aj Al-Jarrah",
+      "invoices": [
+        {
+          "num": "3058",
+          "total_cents": 120000,
+          "paid_cents": 120000,
+          "paid_date": "2026-08-27",
+          "materials_cents": 0,
+          "note": "Invoice wording: “2027 January through December year-round lawn care maintenance.”"
+        }
+      ],
+      "aliases": [
+        "Aj"
+      ],
+      "mh_from": "2027-01-01",
+      "note": "The $1,200 he paid (invoice #3058, paid Aug 27, 2026) is for his 2027 year-round lawn care — per Justin (Nov 12, 2026), man-hour tracking for Aj starts January 1, 2027. Work done in 2026 is not counted against that payment, so no $/man-hour rate applies for 2026."
+    },
+    {
+      "name": "Josh Caywood",
+      "invoices": [
+        {
+          "num": "3029",
+          "total_cents": 150000,
+          "paid_cents": 150000,
+          "paid_date": "2026-08-10",
+          "materials_cents": 0,
+          "note": "Invoice wording: “2027 Lawn Care and leaf maintenance.”"
+        }
+      ],
+      "mh_from": "2027-01-01",
+      "note": "The $1,500 he paid (invoice #3029, paid Aug 10, 2026) is for his 2027 lawn care and leaf maintenance — per Justin (Nov 12, 2026), man-hour tracking for Josh starts January 1, 2027. Work done in 2026 is not counted against that payment, so no $/man-hour rate applies for 2026."
+    },
+    {
+      "name": "Michael and Jody Miller",
+      "invoices": [
+        {
+          "num": "3026",
+          "total_cents": 115000,
+          "paid_cents": 115000,
+          "paid_date": "2026-08-08",
+          "materials_cents": 0,
+          "note": "Invoice wording: “2027 Lawn Care.”"
+        }
+      ],
+      "mh_from": "2027-01-01",
+      "note": "The $1,150 they paid (invoice #3026, paid Aug 8, 2026) is for their 2027 lawn care — per Justin (Nov 12, 2026), man-hour tracking for Michael and Jody Miller starts January 1, 2027. Work done in 2026 is not counted against that payment, so no $/man-hour rate applies for 2026. This is Michael and Jody Miller of Edmond, not Michael Miller."
+    },
+    {
+      "name": "Dotti Ruffell",
+      "invoices": [
+        {
+          "num": "3021",
+          "total_cents": 90000,
+          "paid_cents": 90000,
+          "paid_date": "2026-07-30",
+          "materials_cents": 0,
+          "note": "Invoice wording: “2027 January through December lawn care.”"
+        }
+      ],
+      "aliases": [
+        "Dotti"
+      ],
+      "mh_from": "2027-01-01",
+      "note": "The $900 she paid (invoice #3021, paid Jul 30, 2026) is for her 2027 lawn care — per Justin (Nov 12, 2026), man-hour tracking for Dotti starts January 1, 2027. Work done in 2026 is not counted against that payment, so no $/man-hour rate applies for 2026."
+    },
+    {
+      "name": "Luanne Schwegal",
+      "invoices": [
+        {
+          "num": "3016",
+          "total_cents": 90000,
+          "paid_cents": 90000,
+          "paid_date": "2026-07-25",
+          "materials_cents": 0,
+          "note": "Invoice wording: “2027 Lawn Care plus back yard clean up.”"
+        }
+      ],
+      "aliases": [
+        "Luanne Swiegel"
+      ],
+      "mh_from": "2027-01-01",
+      "note": "The $900 she paid (invoice #3016, paid Jul 25, 2026) is for her 2027 lawn care plus back yard clean up — per Justin (Nov 12, 2026), man-hour tracking for Luanne starts January 1, 2027. Work done in 2026 is not counted against that payment, so no $/man-hour rate applies for 2026."
+    },
+    {
+      "name": "Patti Morris",
+      "invoices": [
+        {
+          "num": "3028",
+          "total_cents": 65000,
+          "paid_cents": 65000,
+          "paid_date": "2026-08-27",
+          "materials_cents": 0,
+          "note": "Invoice wording: “backyard fence maintenance for Patti property 2027.”"
+        }
+      ],
+      "mh_from": "2027-01-01",
+      "note": "The $650 she paid (invoice #3028, paid Aug 27, 2026) is for backyard fence maintenance in 2027 — per Justin (Nov 12, 2026), man-hour tracking for Patti starts January 1, 2027. Work done in 2026 is not counted against that payment, so no $/man-hour rate applies for 2026."
+    },
+    {
+      "name": "Robert Windsor",
+      "invoices": [
+        {
+          "num": "3032",
+          "total_cents": 300000,
+          "paid_cents": 300000,
+          "paid_date": "2026-08-14",
+          "materials_cents": 0,
+          "note": "Invoice wording: “2027 Lawn care for show biz and also personal property” ($2,500) plus “100 feet of lights for show biz” ($500)."
+        }
+      ],
+      "mh_from": "2027-01-01",
+      "note": "The $3,000 he paid (invoice #3032, paid Aug 14, 2026) breaks down as $2,500 for 2027 lawn care for Show Biz and his personal property, plus $500 for 100 feet of Show Biz Christmas lights (the Nov 17, 2026 install). Per Justin (Nov 12, 2026), man-hour tracking for the 2027 lawn-care payment starts January 1, 2027; his 2026 work is not counted against that payment."
     }
   ]
 }
