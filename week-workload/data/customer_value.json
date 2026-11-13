@@ -388,8 +388,28 @@
           "paid_cents": 12000,
           "paid_date": "2026-10-30",
           "materials_cents": 0
+        },
+        {
+          "num": "3144",
+          "total_cents": 45000,
+          "paid_cents": 45000,
+          "paid_date": "2026-11-12",
+          "materials_cents": 0
         }
       ]
+    },
+    {
+      "name": "Kyla Tribble",
+      "invoices": [
+        {
+          "num": "3143",
+          "total_cents": 67500,
+          "paid_cents": 67500,
+          "paid_date": "2026-11-12",
+          "materials_cents": 0
+        }
+      ],
+      "note": "Christmas light install scheduled Tue Nov 24, 2026 (175 ft) — paid in full up front Nov 12, 2026 (per Justin); man-hours land with the install."
     }
   ]
 }
