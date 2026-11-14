@@ -1588,7 +1588,7 @@
               "address": "1205 E Madison St, Oklahoma City",
               "scope": "Mow",
               "status": "scheduled",
-              "start": null,
+              "start": "11:05",
               "finish": null,
               "minutes": null,
               "auto_start": null,
