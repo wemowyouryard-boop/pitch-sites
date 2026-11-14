@@ -1525,22 +1525,8 @@
         },
         {
           "date": "2026-11-14",
-          "label": "Saturday, Nov 14 — Route (Friday #2, moved from Fri Nov 13), 6 stops",
+          "label": "Saturday, Nov 14 — Route (Friday #2, moved from Fri Nov 13), 5 stops",
           "items": [
-            {
-              "name": "Adam's sister",
-              "address": "5312 NW 108th Ter, Oklahoma City",
-              "scope": "Mow",
-              "status": "scheduled",
-              "start": null,
-              "finish": null,
-              "minutes": null,
-              "auto_start": null,
-              "auto_finish": null,
-              "auto_minutes": null,
-              "man_minutes": null,
-              "man_auto_minutes": null
-            },
             {
               "name": "Hal Williams",
               "address": "6524 NW 115th St, Oklahoma City",
