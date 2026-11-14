@@ -1558,8 +1558,8 @@
             {
               "name": "Robert Windsor",
               "address": "11300 Shady Glen Rd, Oklahoma City",
-              "scope": "Mow",
-              "status": "scheduled",
+              "scope": "Mow — skipped Sat Nov 14 at Justin's direction; makeup mow scheduled Thu Nov 19, 2026",
+              "status": "skipped",
               "start": null,
               "finish": null,
               "minutes": null,
