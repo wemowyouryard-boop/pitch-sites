@@ -1641,7 +1641,7 @@
       {
        "name": "Kyla Tribble — Christmas light install",
        "address": "4325 NE 125th Ct, Edmond",
-       "scope": "Christmas light install — 175 ft; roof 2 warm white : 1 red, columns candy-cane. $675 PAID",
+       "scope": "Christmas light install — 175 ft; roof 2 warm white : 1 red, columns candy-cane. $675 PAID — Rescheduled to Mon Nov 23, 2026 (per Justin Nov 17)",
        "status": "scheduled",
        "start": null,
        "finish": null,
@@ -1684,7 +1684,7 @@
       {
        "name": "Ronnie Jordan — Christmas light install",
        "address": "4000 Patty Ln, Bethany",
-       "scope": "Christmas light install — ~220 ft, red/white/green. $1,100 PAID",
+       "scope": "Christmas light install — ~220 ft, red/white/green. $1,100 PAID — Rescheduled to Mon Nov 23, 2026 (per Justin Nov 17)",
        "status": "scheduled",
        "start": null,
        "finish": null,
@@ -2390,6 +2390,50 @@
      "label": "Sunday, Nov 22 — Off",
      "items": [],
      "crew_size": 2
+    }
+   ]
+  },
+  {
+   "week_start": "2026-11-23",
+   "week_end": "2026-11-29",
+   "label": "Nov 23 – Nov 29, 2026",
+   "days": [
+    {
+     "date": "2026-11-23",
+     "label": "Monday, Nov 23 — Christmas light installs (2 jobs, rescheduled from Tue Nov 17, both paid)",
+     "items": [
+      {
+       "name": "Ronnie Jordan — Christmas light install",
+       "address": "4000 Patty Ln, Bethany",
+       "scope": "Christmas light install — 220 ft, repeating red/warm white/green. $1,100 PAID — rescheduled from Tue Nov 17 (per Justin Nov 17)",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null,
+       "crew": 3
+      },
+      {
+       "name": "Kyla Tribble — Christmas light install",
+       "address": "4325 NE 125th Ct, Edmond",
+       "scope": "Christmas light install — 175 ft; roof repeating 2 warm white : 1 red, columns candy-cane. $675 PAID — rescheduled from Tue Nov 17 (per Justin Nov 17)",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null,
+       "crew": 3
+      }
+     ],
+     "crew_size": 3
     }
    ]
   }
