@@ -1657,7 +1657,7 @@
        "address": "6524 NW 115th St, Oklahoma City",
        "scope": "Christmas light install — ~165 ft, all warm white. $825 PAID",
        "status": "scheduled",
-       "start": null,
+       "start": "12:45",
        "finish": null,
        "minutes": null,
        "auto_start": null,
