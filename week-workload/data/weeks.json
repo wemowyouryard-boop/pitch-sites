@@ -1699,15 +1699,16 @@
        "name": "Robert Griffin — Christmas light install",
        "address": "2311 Flair Dr, Oklahoma City",
        "scope": "Christmas light install — ~65 ft, front only, red/green. $325 PAID",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
+       "status": "done",
+       "start": "11:10",
+       "finish": "12:07",
+       "minutes": 57,
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
+       "man_minutes": 171,
+       "man_auto_minutes": null,
+       "crew": 3
       }
      ],
      "crew_size": 3
