@@ -1656,15 +1656,16 @@
        "name": "Hal Williams — Christmas light install",
        "address": "6524 NW 115th St, Oklahoma City",
        "scope": "Christmas light install — ~165 ft, all warm white. $825 PAID",
-       "status": "scheduled",
+       "status": "done",
        "start": "12:45",
-       "finish": null,
-       "minutes": null,
+       "finish": "17:12",
+       "minutes": 267,
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
+       "man_minutes": 801,
+       "man_auto_minutes": null,
+       "crew": 3
       },
       {
        "name": "Show Biz — Christmas light install",
