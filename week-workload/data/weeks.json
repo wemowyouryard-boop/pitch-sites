@@ -1621,8 +1621,23 @@
     },
     {
      "date": "2026-11-17",
-     "label": "Tuesday, Nov 17 — Christmas light installs (5 jobs, all paid)",
+     "label": "Tuesday, Nov 17 — Show Biz mowing (done early) + Christmas light installs (5 jobs, all paid)",
      "items": [
+      {
+       "name": "Show Biz — Mowing",
+       "address": "4427 NW 63rd St, Oklahoma City",
+       "scope": "Mow — done Tue Nov 17 ahead of the moved Monday route (was set for Wed Nov 18); Justin solo",
+       "status": "done",
+       "start": "07:50",
+       "finish": "08:47",
+       "minutes": 57,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": 57,
+       "man_auto_minutes": null,
+       "crew": 1
+      },
       {
        "name": "Kyla Tribble — Christmas light install",
        "address": "4325 NE 125th Ct, Edmond",
@@ -1698,13 +1713,13 @@
     },
     {
      "date": "2026-11-18",
-     "label": "Wednesday, Nov 18 — Monday route (moved from Mon Nov 16 — truck trouble), 13 stops + Jack Bonura note",
+     "label": "Wednesday, Nov 18 — Monday route (moved from Mon Nov 16 — truck trouble), 12 stops + Jack Bonura note",
      "items": [
       {
        "name": "Show Biz",
        "address": "4427 NW 63rd St, Oklahoma City",
-       "scope": "Mow — moved from Mon Nov 16 (route not run — truck trouble); Show Biz runs first (Justin's Nov 14 direction)",
-       "status": "scheduled",
+       "scope": "Mow — DONE Tue Nov 17, 7:50–8:47 AM (Justin solo), ahead of the moved route — closed here so it is not double-counted; not on Wednesday's run",
+       "status": "skipped",
        "start": null,
        "finish": null,
        "minutes": null,
