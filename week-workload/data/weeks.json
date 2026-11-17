@@ -1670,15 +1670,16 @@
        "name": "Show Biz — Christmas light install",
        "address": "4427 NW 63rd St, Oklahoma City",
        "scope": "Christmas light install — 100 ft, red/white/green. $500 PAID",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
+       "status": "done",
+       "start": "07:50",
+       "finish": "10:07",
+       "minutes": 137,
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
+       "man_minutes": 411,
+       "man_auto_minutes": null,
+       "crew": 3
       },
       {
        "name": "Ronnie Jordan — Christmas light install",
