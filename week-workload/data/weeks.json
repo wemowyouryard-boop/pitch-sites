@@ -1716,7 +1716,7 @@
         },
         {
           "date": "2026-11-18",
-          "label": "Wednesday, Nov 18 — Monday route (moved from Mon Nov 16 — truck trouble) + Hal Williams & Robert Windsor makeup mows, 14 stops + Jack Bonura note",
+          "label": "Wednesday, Nov 18 — Monday route (moved from Mon Nov 16 — truck trouble) + makeup mows; 8 stops finished, 6 stops moved to Thu Nov 19, + Jack Bonura note",
           "items": [
             {
               "name": "Steven Melville",
@@ -1791,7 +1791,7 @@
             {
               "name": "Robert Windsor",
               "address": "11300 Shady Glen Rd, Oklahoma City",
-              "scope": "Mow — makeup for Sat Nov 14 skip; moved from Thu Nov 19 to Wed Nov 18 at Justin's direction (Nov 18)",
+              "scope": "Mow — makeup for Sat Nov 14 skip — Moved to Thu Nov 19 at Justin's direction (Nov 18)",
               "status": "scheduled",
               "start": null,
               "finish": null,
@@ -1805,7 +1805,7 @@
             {
               "name": "Hal Williams",
               "address": "6524 NW 115th St, Oklahoma City",
-              "scope": "Mow — makeup for Sat Nov 14 skip; moved from Thu Nov 19 to Wed Nov 18 at Justin's direction (Nov 18)",
+              "scope": "Mow — makeup for Sat Nov 14 skip — Moved to Thu Nov 19 at Justin's direction (Nov 18)",
               "status": "scheduled",
               "start": null,
               "finish": null,
@@ -1861,7 +1861,7 @@
             {
               "name": "Bill Taylor",
               "address": "804 Mallard Ave, Edmond",
-              "scope": "Mow — moved from Mon Nov 16 (route not run — truck trouble)",
+              "scope": "Mow — moved from Mon Nov 16 (route not run — truck trouble) — Moved to Thu Nov 19 at Justin's direction (Nov 18)",
               "status": "scheduled",
               "start": null,
               "finish": null,
@@ -1875,7 +1875,7 @@
             {
               "name": "Bill Taylor",
               "address": "800 Mallard Ave, Edmond",
-              "scope": "Mow — moved from Mon Nov 16 (route not run — truck trouble)",
+              "scope": "Mow — moved from Mon Nov 16 (route not run — truck trouble) — Moved to Thu Nov 19 at Justin's direction (Nov 18)",
               "status": "scheduled",
               "start": null,
               "finish": null,
@@ -1889,7 +1889,7 @@
             {
               "name": "Jerry Johnson",
               "address": "1409 Interurban Way, Edmond",
-              "scope": "Mow — moved from Mon Nov 16 (route not run — truck trouble)",
+              "scope": "Mow — moved from Mon Nov 16 (route not run — truck trouble) — Moved to Thu Nov 19 at Justin's direction (Nov 18)",
               "status": "scheduled",
               "start": null,
               "finish": null,
@@ -1903,7 +1903,7 @@
             {
               "name": "Grant Gibson",
               "address": "5832 Havenshire Ln, Edmond",
-              "scope": "Mow — moved from Mon Nov 16 (route not run — truck trouble)",
+              "scope": "Mow — moved from Mon Nov 16 (route not run — truck trouble) — Moved to Thu Nov 19 at Justin's direction (Nov 18)",
               "status": "scheduled",
               "start": null,
               "finish": null,
@@ -1947,13 +1947,83 @@
         },
         {
           "date": "2026-11-19",
-          "label": "Thursday, Nov 19 — No route work (makeup mows moved to Wed Nov 18)",
+          "label": "Thursday, Nov 19 — 7 stops: 6 mows moved from Wed Nov 18 + Robert Griffin Christmas light correction",
           "items": [
             {
-              "name": "Hal Williams + Robert Windsor — makeup mows",
-              "address": "",
-              "scope": "Moved to Wednesday, Nov 18 at Justin's direction (Nov 18) — no route work Thursday",
-              "status": "note",
+              "name": "Robert Windsor",
+              "address": "11300 Shady Glen Rd, Oklahoma City",
+              "scope": "Mow — makeup for Sat Nov 14 skip; moved from Wed Nov 18 to Thu Nov 19 at Justin's direction (Nov 18)",
+              "status": "scheduled",
+              "start": null,
+              "finish": null,
+              "minutes": null,
+              "auto_start": null,
+              "auto_finish": null,
+              "auto_minutes": null,
+              "man_minutes": null,
+              "man_auto_minutes": null
+            },
+            {
+              "name": "Hal Williams",
+              "address": "6524 NW 115th St, Oklahoma City",
+              "scope": "Mow — makeup for Sat Nov 14 skip; moved from Wed Nov 18 to Thu Nov 19 at Justin's direction (Nov 18)",
+              "status": "scheduled",
+              "start": null,
+              "finish": null,
+              "minutes": null,
+              "auto_start": null,
+              "auto_finish": null,
+              "auto_minutes": null,
+              "man_minutes": null,
+              "man_auto_minutes": null
+            },
+            {
+              "name": "Bill Taylor",
+              "address": "804 Mallard Ave, Edmond",
+              "scope": "Mow — moved from Mon Nov 16 route (route not run — truck trouble); moved from Wed Nov 18 to Thu Nov 19 at Justin's direction (Nov 18)",
+              "status": "scheduled",
+              "start": null,
+              "finish": null,
+              "minutes": null,
+              "auto_start": null,
+              "auto_finish": null,
+              "auto_minutes": null,
+              "man_minutes": null,
+              "man_auto_minutes": null
+            },
+            {
+              "name": "Bill Taylor",
+              "address": "800 Mallard Ave, Edmond",
+              "scope": "Mow — moved from Mon Nov 16 route (route not run — truck trouble); moved from Wed Nov 18 to Thu Nov 19 at Justin's direction (Nov 18)",
+              "status": "scheduled",
+              "start": null,
+              "finish": null,
+              "minutes": null,
+              "auto_start": null,
+              "auto_finish": null,
+              "auto_minutes": null,
+              "man_minutes": null,
+              "man_auto_minutes": null
+            },
+            {
+              "name": "Jerry Johnson",
+              "address": "1409 Interurban Way, Edmond",
+              "scope": "Mow — moved from Mon Nov 16 route (route not run — truck trouble); moved from Wed Nov 18 to Thu Nov 19 at Justin's direction (Nov 18)",
+              "status": "scheduled",
+              "start": null,
+              "finish": null,
+              "minutes": null,
+              "auto_start": null,
+              "auto_finish": null,
+              "auto_minutes": null,
+              "man_minutes": null,
+              "man_auto_minutes": null
+            },
+            {
+              "name": "Grant Gibson",
+              "address": "5832 Havenshire Ln, Edmond",
+              "scope": "Mow — moved from Mon Nov 16 route (route not run — truck trouble); moved from Wed Nov 18 to Thu Nov 19 at Justin's direction (Nov 18)",
+              "status": "scheduled",
               "start": null,
               "finish": null,
               "minutes": null,
