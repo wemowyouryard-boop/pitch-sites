@@ -1751,7 +1751,7 @@
               "address": "2624 NW 58th Pl, Oklahoma City",
               "scope": "Mow — moved from Mon Nov 16 (route not run — truck trouble). Service note: mow at 2 inches",
               "status": "scheduled",
-              "start": null,
+              "start": "08:43",
               "finish": null,
               "minutes": null,
               "auto_start": null,
