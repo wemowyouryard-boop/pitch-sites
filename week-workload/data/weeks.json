@@ -1834,14 +1834,14 @@
               "name": "Michael and Jody Miller",
               "address": "16245 Marigold Ave, Edmond",
               "scope": "Mow — moved from Mon Nov 16 (route not run — truck trouble)",
-              "status": "scheduled",
+              "status": "done",
               "start": "10:57",
-              "finish": null,
-              "minutes": null,
+              "finish": "11:32",
+              "minutes": 35,
               "auto_start": null,
               "auto_finish": null,
               "auto_minutes": null,
-              "man_minutes": null,
+              "man_minutes": 70,
               "man_auto_minutes": null
             },
             {
