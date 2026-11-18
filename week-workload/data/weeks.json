@@ -1835,7 +1835,7 @@
               "address": "16245 Marigold Ave, Edmond",
               "scope": "Mow — moved from Mon Nov 16 (route not run — truck trouble)",
               "status": "scheduled",
-              "start": null,
+              "start": "10:57",
               "finish": null,
               "minutes": null,
               "auto_start": null,
