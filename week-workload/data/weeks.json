@@ -1962,6 +1962,20 @@
               "auto_minutes": null,
               "man_minutes": null,
               "man_auto_minutes": null
+            },
+            {
+              "name": "Robert Griffin — Christmas light correction",
+              "address": "2311 Flair Dr, Oklahoma City",
+              "scope": "Christmas light correction: extend the extension cord at the front porch (cord is pulled too tight)",
+              "status": "scheduled",
+              "start": null,
+              "finish": null,
+              "minutes": null,
+              "auto_start": null,
+              "auto_finish": null,
+              "auto_minutes": null,
+              "man_minutes": null,
+              "man_auto_minutes": null
             }
           ],
           "crew_size": 2
