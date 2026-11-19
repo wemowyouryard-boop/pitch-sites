@@ -1947,7 +1947,7 @@
     },
     {
      "date": "2026-11-19",
-     "label": "Thursday, Nov 19 — 8 stops: 6 mows moved from Wed Nov 18 + Summit Lakes Entrances 1 & 2 + Robert Griffin Christmas light correction",
+     "label": "Thursday, Nov 19 — 8 stops listed: 6 mows moved from Wed Nov 18 (Hal Williams skipped at Justin's direction) + Summit Lakes Entrances 1 & 2 + Robert Griffin Christmas light correction",
      "items": [
       {
        "name": "Robert Windsor",
@@ -1966,8 +1966,8 @@
       {
        "name": "Hal Williams",
        "address": "6524 NW 115th St, Oklahoma City",
-       "scope": "Mow — makeup for Sat Nov 14 skip; moved from Wed Nov 18 to Thu Nov 19 at Justin's direction (Nov 18)",
-       "status": "scheduled",
+       "scope": "Mow — makeup for Sat Nov 14 skip — SKIPPED Thu Nov 19 at Justin's direction; moved to the week after next (placement being confirmed)",
+       "status": "skipped",
        "start": null,
        "finish": null,
        "minutes": null,
