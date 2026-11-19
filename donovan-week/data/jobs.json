@@ -160,6 +160,19 @@
    "photos": "",
    "status": "Finished",
    "work": "Leveling backyard with dirt and seed"
+  },
+  {
+   "address": "Summit Lakes Entrances 1 & 2, Edmond",
+   "arrival": "10:57 AM",
+   "crew": 2,
+   "date": "2026-11-19",
+   "day": "Thu, Nov 19",
+   "departure": "",
+   "hours_on_site": "",
+   "man_hours": "",
+   "status": "In progress",
+   "work": "Mowing, edging, trimming and blowing; clean up leaves and pine needles",
+   "gate_code": "8585"
   }
  ],
  "updated": "2026-10-27",
