@@ -2037,14 +2037,14 @@
        "name": "Summit Lakes Entrances 1 & 2",
        "address": "Summit Lakes, Edmond",
        "scope": "Mow, edge, trim, blow + clean up all leaves & pine needles — added to Thu Nov 19 route at Justin's direction (Nov 19)",
-       "status": "scheduled",
+       "status": "done",
        "start": "10:57",
-       "finish": null,
-       "minutes": null,
+       "finish": "11:50",
+       "minutes": 53,
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "man_minutes": null,
+       "man_minutes": 106,
        "man_auto_minutes": null
       },
       {

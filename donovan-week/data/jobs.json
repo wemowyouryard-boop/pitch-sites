@@ -167,10 +167,10 @@
    "crew": 2,
    "date": "2026-11-19",
    "day": "Thu, Nov 19",
-   "departure": "",
-   "hours_on_site": "",
-   "man_hours": "",
-   "status": "In progress",
+   "departure": "11:50 AM",
+   "hours_on_site": "0:53:00",
+   "man_hours": "1:46:00",
+   "status": "Finished",
    "work": "Mowing, edging, trimming and blowing; clean up leaves and pine needles",
    "gate_code": "8585"
   }
