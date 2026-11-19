@@ -1947,14 +1947,14 @@
     },
     {
      "date": "2026-11-19",
-     "label": "Thursday, Nov 19 — 7 stops: 6 mows moved from Wed Nov 18 + Robert Griffin Christmas light correction",
+     "label": "Thursday, Nov 19 — 8 stops: 6 mows moved from Wed Nov 18 + Summit Lakes Entrances 1 & 2 + Robert Griffin Christmas light correction",
      "items": [
       {
        "name": "Robert Windsor",
        "address": "11300 Shady Glen Rd, Oklahoma City",
        "scope": "Mow — makeup for Sat Nov 14 skip; moved from Wed Nov 18 to Thu Nov 19 at Justin's direction (Nov 18)",
        "status": "scheduled",
-       "start": null,
+       "start": "07:21",
        "finish": null,
        "minutes": null,
        "auto_start": null,
