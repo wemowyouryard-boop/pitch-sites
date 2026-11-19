@@ -2008,9 +2008,9 @@
       {
        "name": "Jerry Johnson",
        "address": "1409 Interurban Way, Edmond",
-       "scope": "Mow — moved from Mon Nov 16 route (route not run — truck trouble); moved from Wed Nov 18 to Thu Nov 19 at Justin's direction (Nov 18)",
-       "status": "scheduled",
-       "start": "09:51",
+       "scope": "Mow — moved from Mon Nov 16 route (route not run — truck trouble); moved from Wed Nov 18 to Thu Nov 19 — arrived 9:51 AM, SKIPPED at Justin's direction: no work done — non-payment for October and November",
+       "status": "skipped",
+       "start": null,
        "finish": null,
        "minutes": null,
        "auto_start": null,
