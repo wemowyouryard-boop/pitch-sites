@@ -1621,7 +1621,7 @@
     },
     {
      "date": "2026-11-17",
-     "label": "Tuesday, Nov 17 — Show Biz mowing (done early) + Christmas light installs (5 jobs, all paid)",
+     "label": "Tuesday, Nov 17 — Show Biz mowing (done early) + Christmas light installs (3 done; Ronnie Jordan + Kyla Tribble rescheduled to Mon Nov 23)",
      "items": [
       {
        "name": "Show Biz — Mowing",
@@ -1637,20 +1637,6 @@
        "man_minutes": 57,
        "man_auto_minutes": null,
        "crew": 1
-      },
-      {
-       "name": "Kyla Tribble — Christmas light install",
-       "address": "4325 NE 125th Ct, Edmond",
-       "scope": "Christmas light install — 175 ft; roof 2 warm white : 1 red, columns candy-cane. $675 PAID — Rescheduled to Mon Nov 23, 2026 (per Justin Nov 17)",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
       },
       {
        "name": "Hal Williams — Christmas light install",
@@ -1681,20 +1667,6 @@
        "man_minutes": 411,
        "man_auto_minutes": null,
        "crew": 3
-      },
-      {
-       "name": "Ronnie Jordan — Christmas light install",
-       "address": "4000 Patty Ln, Bethany",
-       "scope": "Christmas light install — ~220 ft, red/white/green. $1,100 PAID — Rescheduled to Mon Nov 23, 2026 (per Justin Nov 17)",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null
       },
       {
        "name": "Robert Griffin — Christmas light install",
