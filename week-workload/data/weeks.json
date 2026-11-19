@@ -1953,14 +1953,14 @@
        "name": "Robert Windsor",
        "address": "11300 Shady Glen Rd, Oklahoma City",
        "scope": "Mow — makeup for Sat Nov 14 skip; moved from Wed Nov 18 to Thu Nov 19 at Justin's direction (Nov 18)",
-       "status": "scheduled",
+       "status": "done",
        "start": "07:21",
-       "finish": null,
-       "minutes": null,
+       "finish": "07:51",
+       "minutes": 30,
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "man_minutes": null,
+       "man_minutes": 60,
        "man_auto_minutes": null
       },
       {
