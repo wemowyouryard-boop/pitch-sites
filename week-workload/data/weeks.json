@@ -2031,7 +2031,7 @@
               "address": "2505 NW 20th St, Oklahoma City",
               "scope": "Mow \u2014 every 3 weeks",
               "status": "scheduled",
-              "start": null,
+              "start": "12:16",
               "finish": null,
               "minutes": null,
               "auto_start": null,
