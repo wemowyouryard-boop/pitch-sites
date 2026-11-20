@@ -2086,7 +2086,7 @@
               "name": "Hilaire Johnson",
               "address": "5305 NW 116th St, Oklahoma City",
               "scope": "Mow",
-              "status": "scheduled",
+              "status": "skipped",
               "start": null,
               "finish": null,
               "minutes": null,
