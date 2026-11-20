@@ -1932,14 +1932,14 @@
        "name": "Michael Miller",
        "address": "7898 NW 40th St, Bethany",
        "scope": "Mow",
-       "status": "scheduled",
+       "status": "done",
        "start": "07:00",
-       "finish": null,
-       "minutes": null,
+       "finish": "07:28",
+       "minutes": 28,
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "man_minutes": null,
+       "man_minutes": 56,
        "man_auto_minutes": null
       },
       {
