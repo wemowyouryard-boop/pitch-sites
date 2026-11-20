@@ -1933,7 +1933,7 @@
        "address": "7898 NW 40th St, Bethany",
        "scope": "Mow",
        "status": "scheduled",
-       "start": null,
+       "start": "07:00",
        "finish": null,
        "minutes": null,
        "auto_start": null,
