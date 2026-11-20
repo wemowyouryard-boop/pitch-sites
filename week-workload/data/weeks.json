@@ -2044,14 +2044,14 @@
               "name": "Sadie Oglesby",
               "address": "2424 NW 18th St, Oklahoma City",
               "scope": "Mow",
-              "status": "scheduled",
+              "status": "done",
               "start": "12:49",
-              "finish": null,
-              "minutes": null,
+              "finish": "13:10",
+              "minutes": 21,
               "auto_start": null,
               "auto_finish": null,
               "auto_minutes": null,
-              "man_minutes": null,
+              "man_minutes": 42,
               "man_auto_minutes": null
             },
             {
