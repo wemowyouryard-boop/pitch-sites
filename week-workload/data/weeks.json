@@ -2030,14 +2030,14 @@
               "name": "Aj",
               "address": "2505 NW 20th St, Oklahoma City",
               "scope": "Mow \u2014 every 3 weeks",
-              "status": "scheduled",
+              "status": "done",
               "start": "12:16",
-              "finish": null,
-              "minutes": null,
+              "finish": "12:45",
+              "minutes": 29,
               "auto_start": null,
               "auto_finish": null,
               "auto_minutes": null,
-              "man_minutes": null,
+              "man_minutes": 58,
               "man_auto_minutes": null
             },
             {
