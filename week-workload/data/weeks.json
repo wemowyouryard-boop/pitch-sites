@@ -1975,7 +1975,7 @@
        "address": "1133 Woodlawn Pl, Oklahoma City",
        "scope": "Mow",
        "status": "scheduled",
-       "start": null,
+       "start": "09:20",
        "finish": null,
        "minutes": null,
        "auto_start": null,
