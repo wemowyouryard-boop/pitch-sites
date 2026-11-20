@@ -2072,7 +2072,7 @@
               "name": "Barry Rockler",
               "address": "13416 N Coltrane Rd, Edmond",
               "scope": "Mow",
-              "status": "scheduled",
+              "status": "skipped",
               "start": null,
               "finish": null,
               "minutes": null,
