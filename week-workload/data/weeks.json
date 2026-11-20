@@ -2058,14 +2058,14 @@
               "name": "The Oak Room",
               "address": "808 NW 6th St, Oklahoma City",
               "scope": "Mow",
-              "status": "scheduled",
+              "status": "done",
               "start": "13:23",
-              "finish": null,
-              "minutes": null,
+              "finish": "13:35",
+              "minutes": 12,
               "auto_start": null,
               "auto_finish": null,
               "auto_minutes": null,
-              "man_minutes": null,
+              "man_minutes": 24,
               "man_auto_minutes": null
             },
             {
