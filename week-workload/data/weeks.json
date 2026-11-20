@@ -2016,7 +2016,7 @@
               "name": "Jenetta Davis",
               "address": "2010 NW 28th St, Oklahoma City",
               "scope": "Mow \u2014 every 3 weeks",
-              "status": "scheduled",
+              "status": "skipped",
               "start": null,
               "finish": null,
               "minutes": null,
