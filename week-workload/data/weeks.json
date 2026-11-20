@@ -2059,7 +2059,7 @@
               "address": "808 NW 6th St, Oklahoma City",
               "scope": "Mow",
               "status": "scheduled",
-              "start": null,
+              "start": "13:23",
               "finish": null,
               "minutes": null,
               "auto_start": null,
