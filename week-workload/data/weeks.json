@@ -2045,7 +2045,7 @@
               "address": "2424 NW 18th St, Oklahoma City",
               "scope": "Mow",
               "status": "scheduled",
-              "start": null,
+              "start": "12:49",
               "finish": null,
               "minutes": null,
               "auto_start": null,
