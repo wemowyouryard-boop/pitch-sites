@@ -1947,7 +1947,7 @@
        "address": "6213 N College St, Warr Acres",
        "scope": "Mow",
        "status": "scheduled",
-       "start": null,
+       "start": "07:39",
        "finish": null,
        "minutes": null,
        "auto_start": null,
