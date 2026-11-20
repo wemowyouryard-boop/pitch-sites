@@ -2095,20 +2095,6 @@
               "auto_minutes": null,
               "man_minutes": null,
               "man_auto_minutes": null
-            },
-            {
-              "name": "Hilaire Johnson",
-              "address": "10308 N May Ave, Oklahoma City",
-              "scope": "Mow \u2014 every 3 weeks (second property)",
-              "status": "scheduled",
-              "start": null,
-              "finish": null,
-              "minutes": null,
-              "auto_start": null,
-              "auto_finish": null,
-              "auto_minutes": null,
-              "man_minutes": null,
-              "man_auto_minutes": null
             }
           ],
           "crew_size": 2
