@@ -2233,14 +2233,14 @@
        "name": "Ryan LaBar",
        "address": "10741 Whitehaven Rd, The Village",
        "scope": "Mow",
-       "status": "scheduled",
+       "status": "done",
        "start": "12:23",
-       "finish": null,
-       "minutes": null,
+       "finish": "13:05",
+       "minutes": 42,
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "man_minutes": null,
+       "man_minutes": 84,
        "man_auto_minutes": null
       },
       {
