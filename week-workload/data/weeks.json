@@ -2178,7 +2178,7 @@
        "address": "10741 Whitehaven Rd, The Village",
        "scope": "Mow",
        "status": "scheduled",
-       "start": null,
+       "start": "12:23",
        "finish": null,
        "minutes": null,
        "auto_start": null,
