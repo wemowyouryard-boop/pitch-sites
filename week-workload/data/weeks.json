@@ -2234,7 +2234,7 @@
        "address": "817 Prairie Dunes Way, Edmond",
        "scope": "Mow",
        "status": "scheduled",
-       "start": null,
+       "start": "10:00",
        "finish": null,
        "minutes": null,
        "auto_start": null,
