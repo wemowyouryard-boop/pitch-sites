@@ -2317,14 +2317,14 @@
        "name": "Steve Washam",
        "address": "18808 N Western Ave, Edmond",
        "scope": "Mow — monthly (the pond)",
-       "status": "scheduled",
+       "status": "done",
        "start": "07:09",
-       "finish": null,
-       "minutes": null,
+       "finish": "07:35",
+       "minutes": 26,
        "auto_start": null,
        "auto_finish": null,
        "auto_minutes": null,
-       "man_minutes": null,
+       "man_minutes": 52,
        "man_auto_minutes": null
       }
      ],
