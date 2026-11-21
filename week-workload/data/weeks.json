@@ -2188,6 +2188,20 @@
        "man_auto_minutes": null
       },
       {
+       "name": "Adam",
+       "address": "12101 Camelot Pl, Oklahoma City",
+       "scope": "Mow",
+       "status": "skipped",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null
+      },
+      {
        "name": "Brad Forsyth",
        "address": "2805 Greenfield Dr, Edmond",
        "scope": "Mow",
