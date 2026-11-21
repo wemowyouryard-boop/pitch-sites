@@ -2248,7 +2248,7 @@
        "address": "2024 Plymouth Ln, The Village",
        "scope": "Mow. Service note: Front yard: go more East — run the mowing further toward the east side of the front yard",
        "status": "scheduled",
-       "start": null,
+       "start": "13:11",
        "finish": null,
        "minutes": null,
        "auto_start": null,
