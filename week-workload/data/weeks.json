@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18",
+ "updated": "2026-11-23",
  "weeks": [
   {
    "week_start": "2026-10-26",
@@ -2331,7 +2331,7 @@
    "days": [
     {
      "date": "2026-11-23",
-     "label": "Monday, Nov 23 \u2014 Christmas light installs (3 jobs, all paid)",
+     "label": "Monday, Nov 23 \u2014 Christmas light installs (Ronnie Jordan done; Kyla Tribble + Gregory Dutton moved to Tue Nov 24)",
      "items": [
       {
        "name": "Ronnie Jordan \u2014 Christmas light install",
@@ -2347,11 +2347,18 @@
        "man_minutes": 1590,
        "man_auto_minutes": null,
        "crew": 3
-      },
+      }
+     ],
+     "crew_size": 3
+    },
+    {
+     "date": "2026-11-24",
+     "label": "Tuesday, Nov 24 \u2014 Christmas light installs (2 jobs, moved from Mon Nov 23)",
+     "items": [
       {
        "name": "Kyla Tribble \u2014 Christmas light install",
        "address": "4325 NE 125th Ct, Edmond",
-       "scope": "Christmas light install \u2014 175 ft; roof repeating 2 warm white : 1 red, columns candy-cane. $675 PAID \u2014 rescheduled from Tue Nov 17 (per Justin Nov 17)",
+       "scope": "Christmas light install \u2014 175 ft; roof repeating 2 warm white : 1 red, columns candy-cane. $675 PAID \u2014 rescheduled from Tue Nov 17; moved from Mon Nov 23 to Tue Nov 24 (per Justin Nov 23 \u2014 only Ronnie got done Mon)",
        "status": "scheduled",
        "start": null,
        "finish": null,
@@ -2366,7 +2373,7 @@
       {
        "name": "Gregory Dutton \u2014 Christmas light install",
        "address": "1117 Lombardy Rd, Oklahoma City",
-       "scope": "Christmas light install \u2014 $600 PAID Nov 20 (invoice #3171) \u2014 added to Mon Nov 23 at Justin's direction Nov 21",
+       "scope": "Christmas light install \u2014 $600 PAID Nov 20 (invoice #3171) \u2014 added to Mon Nov 23 at Justin's direction Nov 21; moved to Tue Nov 24 (per Justin Nov 23 \u2014 only Ronnie got done Mon)",
        "status": "scheduled",
        "start": null,
        "finish": null,
@@ -2380,6 +2387,97 @@
       }
      ],
      "crew_size": 3
+    },
+    {
+     "date": "2026-11-25",
+     "label": "Wednesday, Nov 25 \u2014 Off",
+     "items": [],
+     "crew_size": 0
+    },
+    {
+     "date": "2026-11-26",
+     "label": "Thursday, Nov 26 \u2014 Off \u2014 Thanksgiving",
+     "items": [],
+     "crew_size": 0
+    },
+    {
+     "date": "2026-11-27",
+     "label": "Friday, Nov 27 \u2014 Friday route #2, 4 stops",
+     "items": [
+      {
+       "name": "Dotti",
+       "address": "7408 NW 104th St, Oklahoma City",
+       "scope": "Mow",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null,
+       "crew": 2
+      },
+      {
+       "name": "Robert Windsor",
+       "address": "11300 Shady Glen Rd, Oklahoma City",
+       "scope": "Mow",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null,
+       "crew": 2
+      },
+      {
+       "name": "Sam",
+       "address": "1205 E Madison St, Oklahoma City",
+       "scope": "Mow",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null,
+       "crew": 2
+      },
+      {
+       "name": "Barry Rockler",
+       "address": "13416 N Coltrane Rd, Edmond",
+       "scope": "Mow \u2014 one-time makeup for the skipped Fri Nov 20 visit (per Justin Nov 20)",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null,
+       "crew": 2
+      }
+     ],
+     "crew_size": 2
+    },
+    {
+     "date": "2026-11-28",
+     "label": "Saturday, Nov 28 \u2014 Open",
+     "items": [],
+     "crew_size": 0
+    },
+    {
+     "date": "2026-11-29",
+     "label": "Sunday, Nov 29 \u2014 Off",
+     "items": [],
+     "crew_size": 0
     }
    ]
   }
