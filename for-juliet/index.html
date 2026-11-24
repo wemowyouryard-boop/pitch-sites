@@ -18,11 +18,16 @@
   header p{color:var(--muted);font-style:italic;font-size:.95rem;}
   .card{background:var(--card);border:1px solid #eadff7;border-radius:16px;padding:22px 18px;box-shadow:0 6px 22px rgba(61,20,112,.06);margin-bottom:16px;}
   .chart-box{text-align:center;}
-  svg{max-width:320px;width:100%;height:auto;}
-  .total-line{margin-top:10px;color:var(--muted);font-size:.95rem;}
-  .total-line strong{color:var(--purple);font-size:1.2rem;}
-  h2{font-size:1.15rem;color:var(--purple);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
-  .dot{width:14px;height:14px;border-radius:4px;flex:none;display:inline-block;}
+  svg{max-width:300px;width:100%;height:auto;}
+  .plain{margin-top:12px;font-size:1rem;line-height:1.5;color:var(--ink);}
+  .legend{margin-top:16px;text-align:left;}
+  .legend-row{display:flex;align-items:center;gap:10px;padding:9px 2px;border-bottom:1px dashed #eadff7;font-size:1rem;}
+  .legend-row:last-child{border-bottom:none;}
+  .dot{width:16px;height:16px;border-radius:4px;flex:none;display:inline-block;}
+  .legend-row .name{flex:1;}
+  .legend-row .amt{font-weight:bold;white-space:nowrap;}
+  .legend-row .pct{color:var(--muted);white-space:nowrap;min-width:44px;text-align:right;}
+  h2{font-size:1.15rem;color:var(--purple);margin-bottom:10px;}
   ul{list-style:none;}
   li{padding:7px 0;border-bottom:1px dashed #eadff7;font-size:.95rem;line-height:1.45;display:flex;justify-content:space-between;gap:10px;}
   li:last-child{border-bottom:none;}
@@ -36,32 +41,38 @@
   <header>
     <div class="rule">✦ ✦ ✦</div>
     <h1>For Juliet 💜</h1>
-    <p>Cash Justin has spent on Juliet Clarke — updated as new spending lands.</p>
+    <p>Where Justin's money for Juliet Clarke has gone — updated as new spending lands.</p>
   </header>
 
   <div class="card chart-box">
-    <svg viewBox="0 0 200 200" role="img" aria-label="Pie chart of cash spent on Juliet, by category">
-      <!-- Dates & gifts: $168.84 = 77.2% -->
-      <path d="M100,100 L100,10 A90,90 0 1 1 10.8,87.9 Z" fill="#b03060"/>
-      <!-- Bills & everyday: $50.00 = 22.8% -->
-      <path d="M100,100 L10.8,87.9 A90,90 0 0 1 100,10 Z" fill="#c9a227"/>
+    <svg viewBox="0 0 200 200" role="img" aria-label="Donut chart: dates and gifts $168.84, 77 percent; cell phone bill $50, 23 percent; total $218.84">
+      <circle cx="100" cy="100" r="70" fill="none" stroke="#f0e7fb" stroke-width="34"/>
+      <!-- Dates & gifts: 77.2% of $218.84 -->
+      <circle cx="100" cy="100" r="70" fill="none" stroke="#b03060" stroke-width="34"
+              stroke-dasharray="339.3 439.8" transform="rotate(-90 100 100)"/>
+      <!-- Cell phone bill: 22.8% of $218.84 -->
+      <circle cx="100" cy="100" r="70" fill="none" stroke="#c9a227" stroke-width="34"
+              stroke-dasharray="100.5 439.8" stroke-dashoffset="-339.3" transform="rotate(-90 100 100)"/>
+      <text x="100" y="97" text-anchor="middle" font-size="21" font-weight="bold" fill="#5b21b6">$218.84</text>
+      <text x="100" y="116" text-anchor="middle" font-size="10.5" fill="#6f6390">total spent</text>
     </svg>
-    <p class="total-line"><strong>$218.84</strong> total spent · since Nov 2026</p>
+
+    <div class="legend">
+      <div class="legend-row"><span class="dot" style="background:#b03060"></span><span class="name">Dates &amp; gifts</span><span class="amt">$168.84</span><span class="pct">77%</span></div>
+      <div class="legend-row"><span class="dot" style="background:#c9a227"></span><span class="name">Cell phone bill</span><span class="amt">$50.00</span><span class="pct">23%</span></div>
+    </div>
+
+    <p class="plain">In plain terms: out of every dollar Justin has spent on Juliet, <strong>77¢ went to dates &amp; gifts</strong> and <strong>23¢ went to her cell phone bill</strong>.</p>
   </div>
 
   <div class="card">
-    <h2><span class="dot" style="background:#b03060"></span>Dates &amp; gifts — $168.84 (77%)</h2>
+    <h2>Every dollar, item by item</h2>
     <ul>
       <li><span>Purple bouquet <span class="d">· Nov 19</span></span><span class="amt">$78.84</span></li>
       <li><span>Dinner at Othello’s, Norman <span class="d">· Nov 19</span></span><span class="amt">$60.00</span></li>
-      <li><span>Uber for a date <span class="d">· Nov 2026</span></span><span class="amt">$30.00</span></li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2><span class="dot" style="background:#c9a227"></span>Bills &amp; everyday — $50.00 (23%)</h2>
-    <ul>
       <li><span>Cell phone bill <span class="d">· Nov 2026</span></span><span class="amt">$50.00</span></li>
+      <li><span>Uber for a date <span class="d">· Nov 2026</span></span><span class="amt">$30.00</span></li>
+      <li><span><strong>Total</strong></span><span class="amt">$218.84</span></li>
     </ul>
   </div>
 
