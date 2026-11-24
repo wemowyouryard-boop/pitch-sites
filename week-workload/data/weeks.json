@@ -2331,7 +2331,7 @@
    "days": [
     {
      "date": "2026-11-23",
-     "label": "Monday, Nov 23 \u2014 Christmas light installs (Ronnie Jordan done; Kyla Tribble + Gregory Dutton moved to Tue Nov 24)",
+     "label": "Monday, Nov 23 \u2014 Christmas light installs (Ronnie Jordan done; Kyla Tribble + Gregory Dutton moved to Sat Nov 28)",
      "items": [
       {
        "name": "Ronnie Jordan \u2014 Christmas light install",
@@ -2353,40 +2353,9 @@
     },
     {
      "date": "2026-11-24",
-     "label": "Tuesday, Nov 24 \u2014 Christmas light installs (2 jobs, moved from Mon Nov 23)",
-     "items": [
-      {
-       "name": "Kyla Tribble \u2014 Christmas light install",
-       "address": "4325 NE 125th Ct, Edmond",
-       "scope": "Christmas light install \u2014 175 ft; roof repeating 2 warm white : 1 red, columns candy-cane. $675 PAID \u2014 rescheduled from Tue Nov 17; moved from Mon Nov 23 to Tue Nov 24 (per Justin Nov 23 \u2014 only Ronnie got done Mon)",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null,
-       "crew": 3
-      },
-      {
-       "name": "Gregory Dutton \u2014 Christmas light install",
-       "address": "1117 Lombardy Rd, Oklahoma City",
-       "scope": "Christmas light install \u2014 $600 PAID Nov 20 (invoice #3171) \u2014 added to Mon Nov 23 at Justin's direction Nov 21; moved to Tue Nov 24 (per Justin Nov 23 \u2014 only Ronnie got done Mon)",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null,
-       "crew": 3
-      }
-     ],
-     "crew_size": 3
+     "label": "Tuesday, Nov 24 \u2014 Off (Christmas installs moved to Sat Nov 28)",
+     "items": [],
+     "crew_size": 0
     },
     {
      "date": "2026-11-25",
@@ -2469,9 +2438,40 @@
     },
     {
      "date": "2026-11-28",
-     "label": "Saturday, Nov 28 \u2014 Open",
-     "items": [],
-     "crew_size": 0
+     "label": "Saturday, Nov 28 \u2014 Christmas light installs (2 jobs, moved from Tue Nov 24)",
+     "items": [
+      {
+       "name": "Kyla Tribble \u2014 Christmas light install",
+       "address": "4325 NE 125th Ct, Edmond",
+       "scope": "Christmas light install \u2014 175 ft; roof repeating 2 warm white : 1 red, columns candy-cane. $675 PAID \u2014 rescheduled from Tue Nov 17; moved to Sat Nov 28 (per Justin Nov 24)",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null,
+       "crew": 3
+      },
+      {
+       "name": "Gregory Dutton \u2014 Christmas light install",
+       "address": "1117 Lombardy Rd, Oklahoma City",
+       "scope": "Christmas light install \u2014 $600 PAID Nov 20 (invoice #3171) \u2014 added to Mon Nov 23 at Justin's direction Nov 21; moved to Sat Nov 28 (per Justin Nov 24)",
+       "status": "scheduled",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null,
+       "crew": 3
+      }
+     ],
+     "crew_size": 3
     },
     {
      "date": "2026-11-29",
