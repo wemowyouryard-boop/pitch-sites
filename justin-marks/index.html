@@ -35,6 +35,14 @@
   .project h3{font-size:1.08rem;margin-bottom:4px;}
   .project .goal{color:var(--muted);font-size:.95rem;}
   .project .goal b{color:var(--green);font-weight:normal;}
+  .stats{display:flex;gap:14px;margin-top:22px;}
+  .stat{flex:1;background:rgba(11,16,13,.88);border:1px solid var(--green-dim);border-radius:14px;padding:20px 10px 16px;text-align:center;box-shadow:0 0 30px rgba(0,224,101,.08);}
+  .stat .num{font-size:3rem;line-height:1;color:var(--green);}
+  .stat .lbl{margin-top:8px;font-size:.95rem;letter-spacing:1px;text-transform:uppercase;}
+  .stat .sub{color:var(--muted);font-size:.85rem;margin-top:2px;}
+  .rhythm{margin-top:14px;background:#07130b;border:1px solid var(--green-dim);border-radius:12px;padding:14px;text-align:center;font-size:1.02rem;}
+  .rhythm b{color:var(--green);font-weight:normal;}
+  @media (max-width:480px){ .stat .num{font-size:2.3rem;} }
   .goal-banner{text-align:center;border:1px solid var(--green-dim);border-radius:12px;padding:18px 14px;margin-top:6px;background:#07130b;}
   .goal-banner .num{font-size:2rem;color:var(--green);letter-spacing:1px;}
   .goal-banner .sub{color:var(--muted);font-size:.95rem;}
@@ -71,6 +79,20 @@
     <figcaption class="mono">// built in the field, not in an office</figcaption>
   </figure>
 
+  <div class="stats">
+    <div class="stat">
+      <div class="num mono">50</div>
+      <div class="lbl">Lawn Customers</div>
+      <div class="sub">on route, year-round</div>
+    </div>
+    <div class="stat">
+      <div class="num mono">7</div>
+      <div class="lbl">Christmas Light Customers</div>
+      <div class="sub">paid installs, 2026 season</div>
+    </div>
+  </div>
+  <div class="rhythm"><b>WEEKLY</b> mowing through the heavy spring &amp; summer months · <b>EVERY OTHER WEEK</b> through fall &amp; winter</div>
+
   <section>
     <h2><span class="mono">01</span>The Philosophy</h2>
     <p class="bigline">Life doesn't come with meaning. <strong>That's the good news.</strong></p>
@@ -84,7 +106,7 @@
 
     <div class="project">
       <h3>🌳 Giving Tree Lawn Care, LLC</h3>
-      <p>Lawn care, tree work, and property maintenance across Oklahoma City — dozens of regular customers on biweekly routes, plus seasonal work all year.</p>
+      <p>Lawn care, tree work, and property maintenance across Oklahoma City — <strong>50 customers</strong> under management. Mowing runs <strong>weekly through the heavy spring and summer months</strong>, then <strong>every other week through fall and winter</strong> — the rhythm the grass actually needs.</p>
       <p class="goal"><b>THE GOAL —</b> Be the crew OKC trusts with their homes: honest prices, finished work, every time.</p>
     </div>
 
