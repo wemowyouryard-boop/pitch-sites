@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justin Marks — Oklahoma City</title>
+<meta name="description" content="Justin Marks of Oklahoma City. Practicing nihilist. Professional kindness. Projects, goals, and the philosophy behind them.">
+<style>
+  :root{
+    --bg:#050807; --panel:#0b100d; --line:#1d2b21;
+    --green:#00e065; --green-dim:#0a3d22; --ink:#e8f2ea; --muted:#9db8a6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.6;overflow-x:hidden;}
+  #rain{position:fixed;inset:0;width:100%;height:100%;opacity:.16;pointer-events:none;z-index:0;}
+  .wrap{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:28px 18px 56px;}
+  .mono{font-family:'Courier New',Courier,monospace;}
+  header{text-align:center;padding:26px 0 8px;}
+  .kicker{color:var(--green);letter-spacing:5px;font-size:.78rem;text-transform:uppercase;}
+  h1{font-size:2.6rem;letter-spacing:2px;margin:10px 0 2px;font-weight:bold;}
+  .tagline{color:var(--muted);font-style:italic;font-size:1.05rem;}
+  .hero{margin:26px auto 6px;max-width:520px;border:1px solid var(--green-dim);border-radius:14px;overflow:hidden;box-shadow:0 0 44px rgba(0,224,101,.14);}
+  .hero img{display:block;width:100%;height:auto;}
+  .hero figcaption{padding:10px 14px;font-size:.85rem;color:var(--muted);text-align:center;background:var(--panel);}
+  section{background:rgba(11,16,13,.88);border:1px solid var(--line);border-radius:14px;padding:24px 20px;margin-top:22px;}
+  h2{font-size:1.35rem;color:var(--green);margin-bottom:12px;letter-spacing:1px;}
+  h2 .mono{font-size:.8rem;color:var(--muted);letter-spacing:3px;display:block;margin-bottom:4px;}
+  p{margin-bottom:12px;}
+  p:last-child{margin-bottom:0;}
+  .bigline{font-size:1.25rem;text-align:center;padding:8px 0 2px;}
+  .bigline strong{color:var(--green);}
+  .project{border-top:1px dashed var(--line);padding:16px 0 4px;}
+  .project:first-of-type{border-top:none;padding-top:4px;}
+  .project h3{font-size:1.08rem;margin-bottom:4px;}
+  .project .goal{color:var(--muted);font-size:.95rem;}
+  .project .goal b{color:var(--green);font-weight:normal;}
+  .goal-banner{text-align:center;border:1px solid var(--green-dim);border-radius:12px;padding:18px 14px;margin-top:6px;background:#07130b;}
+  .goal-banner .num{font-size:2rem;color:var(--green);letter-spacing:1px;}
+  .goal-banner .sub{color:var(--muted);font-size:.95rem;}
+  .player{border:1px dashed var(--green-dim);border-radius:12px;padding:22px 16px;text-align:center;color:var(--muted);}
+  .player .note{font-size:1.05rem;color:var(--ink);}
+  footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:28px;line-height:1.9;}
+  footer a{color:var(--green);text-decoration:none;}
+  a{color:var(--green);}
+  @media (max-width:480px){ h1{font-size:2rem;} .bigline{font-size:1.1rem;} }
+</style>
+</head>
+<body>
+<canvas id="rain" aria-hidden="true"></canvas>
+<div class="wrap">
+
+  <header>
+    <div class="kicker mono">Oklahoma City · Est. in the dirt, raised by the work</div>
+    <h1>JUSTIN MARKS</h1>
+    <p class="tagline">Practicing nihilist. Professional kindness.</p>
+  </header>
+
+  <figure class="hero">
+    <img src="justin-hero.webp" alt="Justin Marks in a black suit and silver tie, wearing sunglasses">
+    <figcaption class="mono">// nothing means anything — so make it count anyway</figcaption>
+  </figure>
+
+  <section>
+    <h2><span class="mono">01</span>The Philosophy</h2>
+    <p class="bigline">Life doesn't come with meaning. <strong>That's the good news.</strong></p>
+    <p>I'm a practicing nihilist. The phenomenon of life is, at its core, meaningless — no script, no scoreboard in the sky, nothing handed down. Most people hear that and flinch. I hear it as freedom: if meaning isn't given, then what I do with my days is entirely mine.</p>
+    <p>So my practice is <strong>kindness</strong>. Not because the universe rewards it — it doesn't notice. I do right by people because I choose to: fair prices, honest work, showing up when I say I will, leaving every yard, every deal, and every person better than I found them. Kindness isn't the meaning of life. It's what I build in the empty space where meaning was supposed to be.</p>
+    <p class="mono" style="color:var(--muted);font-size:.9rem;">No meaning given. All meaning made.</p>
+  </section>
+
+  <section>
+    <h2><span class="mono">02</span>The Projects</h2>
+
+    <div class="project">
+      <h3>🌳 Giving Tree Lawn Care, LLC</h3>
+      <p>Lawn care, tree work, and property maintenance across Oklahoma City — dozens of regular customers on biweekly routes, plus seasonal work all year.</p>
+      <p class="goal"><b>THE GOAL —</b> Be the crew OKC trusts with their homes: honest prices, finished work, every time.</p>
+    </div>
+
+    <div class="project">
+      <h3>🎄 Christmas Light Installs</h3>
+      <p>Full-service holiday lighting — measured, installed, and shining, paid up front and done right the first time.</p>
+      <p class="goal"><b>THE GOAL —</b> A season of roofs done on schedule, every house lit before its deadline.</p>
+    </div>
+
+    <div class="project">
+      <h3>💻 The Website Venture</h3>
+      <p>Most small businesses in OKC still don't have a real website. I build them one — designed, written, and live — for a flat monthly rate a small business can actually afford.</p>
+      <p class="goal"><b>THE GOAL —</b> Get Oklahoma City's no-website businesses online, one honest site at a time.</p>
+    </div>
+
+    <div class="project">
+      <h3>🏡 New-Homeowner Leads</h3>
+      <p>I track Oklahoma City home sales and package fresh new-homeowner leads for the local businesses that serve them.</p>
+      <p class="goal"><b>THE GOAL —</b> Connect new neighbors with good local pros, fast — everybody wins.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="mono">03</span>The Big Goal</h2>
+    <div class="goal-banner">
+      <div class="num mono">$100,000 in 90 days</div>
+      <div class="sub">October 20, 2026 → January 18, 2027 · Built from the projects above, run lean and automated.<br>Not because it means something. Because I said I would.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="mono">04</span>The Soundtrack</h2>
+    <p>Music I like, streaming right here — this is the player my playlists plug into.</p>
+    <div class="player">
+      <div class="note">🎧 Streaming soon</div>
+      <div>My playlists, live on this page — hookup in progress.</div>
+    </div>
+  </section>
+
+  <footer>
+    <div>Justin Marks · Oklahoma City, Oklahoma</div>
+    <div>Giving Tree Lawn Care, LLC · <a href="tel:+14052264100">(405) 226-4100</a> · <a href="mailto:wemowyouryard@gmail.com">wemowyouryard@gmail.com</a></div>
+    <div>X: <a href="https://x.com/wemowyouryard">@wemowyouryard</a></div>
+    <div class="mono" style="margin-top:10px;color:var(--green-dim);">// end of transmission — be kind anyway</div>
+  </footer>
+
+</div>
+<script>
+(function(){
+  var c=document.getElementById('rain'),x=c.getContext('2d'),cols,drops,W,H;
+  var chars='01';
+  function size(){W=c.width=window.innerWidth;H=c.height=window.innerHeight;cols=Math.floor(W/16);drops=[];for(var i=0;i<cols;i++)drops[i]=Math.random()*H/16;}
+  size();window.addEventListener('resize',size);
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function draw(){
+    x.fillStyle='rgba(5,8,7,0.08)';x.fillRect(0,0,W,H);
+    x.fillStyle='#00e065';x.font='14px monospace';
+    for(var i=0;i<cols;i++){
+      var ch=chars[Math.floor(Math.random()*chars.length)];
+      x.fillText(ch,i*16,drops[i]*16);
+      if(drops[i]*16>H&&Math.random()>0.975)drops[i]=0;
+      drops[i]+=0.35;
+    }
+  }
+  if(!reduce)setInterval(draw,50);else{draw();}
+})();
+</script>
+</body>
+</html>
