@@ -189,7 +189,7 @@
     <p>Music I like, streaming right here. This one opens the site — press play once and it stays on loop.</p>
     <div class="player">
       <div id="ytplayer" style="width:100%;aspect-ratio:16/9;border-radius:8px;overflow:hidden;"></div>
-      <div class="note" style="margin-top:12px;">🎧 “Somewhere I Belong” — Linkin Park</div>
+      <div class="note" style="margin-top:12px;">🎧 “Live How You Like” — F4MUSIC</div>
       <div>Streaming via YouTube · plays on a loop</div>
     </div>
   </section>
@@ -278,8 +278,8 @@ var jmPlayer=null,jmStarted=false,jmGateOpen=false;
 function jmTryPlay(){if(jmGateOpen&&jmPlayer&&jmPlayer.playVideo){try{jmPlayer.unMute();jmPlayer.playVideo();jmStarted=true;}catch(e){}}}
 function onYouTubeIframeAPIReady(){
   jmPlayer=new YT.Player('ytplayer',{
-    videoId:'zsCD5XCu6CM',
-    playerVars:{autoplay:0,loop:1,playlist:'zsCD5XCu6CM',playsinline:1,rel:0},
+    videoId:'sjD65pDJTRU',
+    playerVars:{autoplay:0,loop:1,playlist:'sjD65pDJTRU',playsinline:1,rel:0},
     events:{onReady:function(){jmTryPlay();}}
   });
 }
