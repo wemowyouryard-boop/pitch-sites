@@ -128,7 +128,8 @@
     <p>After leaving religious ideals, I started to wonder what other philosophies and principles am I being taught that are potentially indoctrinating concepts. So I remember looking up at the sky and saying to myself, is that the sky or is that the ground?</p>
     <p>But after going on this date and seeing the coffee cup, I decided nihilism was the path for me. I decided that life essentially had no meaning or real purpose for anything that we do.</p>
     <p>So my ethos for my life is kindness, and it is trying to work with customers and people in helping them grow and learn in whatever project we do together, but also doing so with a mutual understanding of kindness between both of us.</p>
-    <p>And I'm <strong>apolitical</strong>. I don't participate on the left or the right — teams aren't truth, and picking a side has never fed anybody. What I actually believe is simpler: every war should cease, everywhere, and the real solution to life isn't one side finally winning. It's <strong>kindness and peace amongst all humans</strong>.</p>
+    <p>I then started to think about politics, and how it was also very alienating and left and right and conflicting. Whenever people practiced a political concept it was always about one side versus the other, basically an organized system that divided the people against each other. And that old mantra of divide and conquer is very clearly implemented, very similar to the ideas behind religion of heaven and hell. Politics have the conservative and liberal. Right and left. Ideologies.</p>
+    <p>Every war should cease, everywhere. The real solution is <strong>kindness and peace amongst all humans</strong>.</p>
     <p class="mono" style="color:var(--muted);font-size:.9rem;">No meaning given. All meaning made.</p>
   </section>
 
@@ -189,36 +190,16 @@
 
   <section>
     <h2><span class="mono">04</span>The Soundtrack</h2>
-    <p>Music I like, streaming right here. This one opens the site — press play once and it stays on loop.</p>
+    <p>Music I like, streaming right here — a playlist, not just one song. It starts when you open the site, plays through track by track, and loops back to the top.</p>
     <div class="player">
       <div id="ytplayer" style="width:100%;aspect-ratio:16/9;border-radius:8px;overflow:hidden;"></div>
-      <div class="note" style="margin-top:12px;">🎧 “Live How You Like” — F4MUSIC</div>
-      <div>Streaming via YouTube · plays on a loop</div>
+      <div class="note" style="margin-top:12px;">🎧 First up: “Live How You Like” — F4MUSIC</div>
+      <div>Streaming via YouTube · playlist on loop</div>
     </div>
   </section>
 
   <section>
     <h2><span class="mono">05</span>Things I Like</h2>
-    <div class="likes">
-      <div class="like">🎧 <span>Linkin Park</span> — loud</div>
-      <div class="like">🟩 The <span>Matrix</span> aesthetic</div>
-      <div class="like">₿ <span>Bitcoin</span> — freedom technology</div>
-      <div class="like">🥈 Stacking <span>silver</span></div>
-      <div class="like">🛹 <span>Skateboarding</span></div>
-      <div class="like">🌳 Working <span>outdoors</span> with my hands</div>
-      <div class="like">🏋️ The <span>gym</span></div>
-      <div class="like">👨‍👧‍👦 Time with <span>my kids</span></div>
-      <div class="like">😄 Making people <span>laugh</span></div>
-      <div class="like">🤝 <span>Kindness</span>, practiced on purpose</div>
-      <div class="like">☮️ <span>Peace</span> — for all humans, every side</div>
-      <div class="like">🚫🏛️ <span>Apolitical</span> — no left, no right</div>
-      <div class="like">🎭 <span>Andy Kaufman</span></div>
-      <div class="like">📻 <span>Radiohead</span></div>
-      <div class="like">🌈 <span>Pink Floyd</span></div>
-      <div class="like">🎬 <span>Eraserhead</span></div>
-      <div class="like">👁️ <span>Kubrick</span> — Eyes Wide Shut</div>
-    </div>
-
     <div class="project" style="margin-top:18px;">
       <h3>₿ Bitcoin Is Freedom Technology</h3>
       <p>Money that no government can print into dust, no bank can freeze, and no border can stop — open to anybody on Earth with a phone, no permission asked. Satoshi Nakamoto built it, gave it away, and vanished. The most powerful gift ever left on the internet.</p>
@@ -277,13 +258,13 @@
 </div>
 <script>
 var ytTag=document.createElement('script');ytTag.src='https://www.youtube.com/iframe_api';document.head.appendChild(ytTag);
+var JM_PLAYLIST=['sjD65pDJTRU'];
 var jmPlayer=null,jmStarted=false,jmGateOpen=false;
 function jmTryPlay(){if(jmGateOpen&&jmPlayer&&jmPlayer.playVideo){try{jmPlayer.unMute();jmPlayer.playVideo();jmStarted=true;}catch(e){}}}
 function onYouTubeIframeAPIReady(){
   jmPlayer=new YT.Player('ytplayer',{
-    videoId:'sjD65pDJTRU',
-    playerVars:{autoplay:0,loop:1,playlist:'sjD65pDJTRU',playsinline:1,rel:0},
-    events:{onReady:function(){jmTryPlay();}}
+    playerVars:{autoplay:0,playsinline:1,rel:0},
+    events:{onReady:function(e){e.target.cuePlaylist(JM_PLAYLIST);e.target.setLoop(true);jmTryPlay();}}
   });
 }
 function jmOpenGate(){
