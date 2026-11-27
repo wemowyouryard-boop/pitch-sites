@@ -193,8 +193,9 @@
     <p>Music I like, streaming right here — a playlist, not just one song. It starts when you open the site, plays through track by track, and loops back to the top.</p>
     <div class="player">
       <div id="ytplayer" style="width:100%;aspect-ratio:16/9;border-radius:8px;overflow:hidden;"></div>
-      <div class="note" style="margin-top:12px;">🎧 First up: “Live How You Like” — F4MUSIC</div>
-      <div>Streaming via YouTube · playlist on loop</div>
+      <div class="note" style="margin-top:12px;">🎧 The playlist:</div>
+      <div style="margin-top:6px;line-height:1.9;">1. “Mr Noah” — Panda Bear<br>2. “Live How You Like” — F4MUSIC</div>
+      <div style="margin-top:8px;">Streaming via YouTube · playlist on loop</div>
     </div>
   </section>
 
@@ -258,7 +259,7 @@
 </div>
 <script>
 var ytTag=document.createElement('script');ytTag.src='https://www.youtube.com/iframe_api';document.head.appendChild(ytTag);
-var JM_PLAYLIST=['sjD65pDJTRU'];
+var JM_PLAYLIST=['RzJd171WN8s','sjD65pDJTRU'];
 var jmPlayer=null,jmStarted=false,jmGateOpen=false;
 function jmTryPlay(){if(jmGateOpen&&jmPlayer&&jmPlayer.playVideo){try{jmPlayer.unMute();jmPlayer.playVideo();jmStarted=true;}catch(e){}}}
 function onYouTubeIframeAPIReady(){
