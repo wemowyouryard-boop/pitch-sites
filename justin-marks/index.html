@@ -51,13 +51,38 @@
   .likes{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px;}
   .like{border:1px solid var(--green-dim);background:#07130b;border-radius:999px;padding:9px 16px;font-size:1rem;}
   .like span{color:var(--green);}
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+  .shot{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel);}
+  .shot img{display:block;width:100%;height:auto;}
+  .shot figcaption{padding:9px 12px;font-size:.86rem;color:var(--muted);}
+  .shot figcaption b{color:var(--ink);font-weight:normal;}
+  @media (max-width:520px){ .gallery{grid-template-columns:1fr;} }
+  body.locked{overflow:hidden;}
+  #gate{position:fixed;inset:0;z-index:50;background:rgba(3,5,4,.95);display:flex;align-items:center;justify-content:center;text-align:center;padding:22px;transition:opacity .7s ease;}
+  #gate.open{opacity:0;pointer-events:none;}
+  .gate-big{font-size:2.5rem;letter-spacing:2px;line-height:1.15;}
+  .gate-sub{color:var(--muted);font-style:italic;margin-top:10px;font-size:1.05rem;}
+  #enterBtn{margin-top:30px;background:transparent;color:var(--green);border:1px solid var(--green);border-radius:999px;padding:16px 34px;font-size:1.05rem;letter-spacing:2px;cursor:pointer;font-family:'Courier New',Courier,monospace;box-shadow:0 0 26px rgba(0,224,101,.25);}
+  #enterBtn:hover{background:var(--green);color:#031007;}
+  .gate-note{margin-top:22px;color:var(--muted);font-size:.85rem;}
+  @media (max-width:480px){ .gate-big{font-size:1.8rem;} }
   footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:28px;line-height:1.9;}
   footer a{color:var(--green);text-decoration:none;}
   a{color:var(--green);}
   @media (max-width:480px){ h1{font-size:2rem;} .bigline{font-size:1.1rem;} }
 </style>
+<noscript><style>#gate{display:none;}</style></noscript>
 </head>
-<body>
+<body class="locked">
+<div id="gate">
+  <div>
+    <div class="kicker mono">// before you scroll</div>
+    <div class="gate-big">LIFE IS<br>MEANINGLESS.</div>
+    <div class="gate-sub">…which is exactly why it's worth opening.</div>
+    <button id="enterBtn" type="button">OPEN HERE TO LEARN MORE →</button>
+    <div class="gate-note mono">🎧 the music starts when you do</div>
+  </div>
+</div>
 <canvas id="rain" aria-hidden="true"></canvas>
 <div class="wrap">
 
@@ -182,6 +207,46 @@
       <div class="like">👨‍👧‍👦 Time with <span>my kids</span></div>
       <div class="like">😄 Making people <span>laugh</span></div>
       <div class="like">🤝 <span>Kindness</span>, practiced on purpose</div>
+      <div class="like">🎭 <span>Andy Kaufman</span></div>
+      <div class="like">📻 <span>Radiohead</span></div>
+      <div class="like">🌈 <span>Pink Floyd</span></div>
+      <div class="like">🎬 <span>Eraserhead</span></div>
+      <div class="like">👁️ <span>Kubrick</span> — Eyes Wide Shut</div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="mono">06</span>The Influences</h2>
+    <p>The patron saints of making your own meaning:</p>
+    <div class="gallery">
+      <figure class="shot">
+        <img src="gallery/kaufman-1.jpg" alt="Andy Kaufman as Latka Gravas, wide-eyed in a white work coat against a blue background">
+        <figcaption><b>Andy Kaufman</b> as Latka — the sweetest mask he ever wore</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="gallery/kaufman-2.jpg" alt="Close-up portrait of Andy Kaufman with wide blue eyes against a teal background">
+        <figcaption><b>Andy Kaufman</b>, up close — nobody ever knew if he was joking</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="gallery/radiohead-1.jpg" alt="Radiohead performing live under a giant circular spiral light rig with green beams">
+        <figcaption><b>Radiohead</b>, live — the spiral</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="gallery/radiohead-2.jpg" alt="Radiohead performing live under blue spotlights, seen over the crowd">
+        <figcaption><b>Radiohead</b>, live in blue</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="gallery/pink-floyd.webp" alt="Black and white photo of the four members of Pink Floyd standing outdoors">
+        <figcaption><b>Pink Floyd</b> — the four of them, before the wall went up</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="gallery/eraserhead.jpg" alt="Henry Spencer from Eraserhead, his tall hair lit against a dark grainy background">
+        <figcaption><b>Eraserhead</b> (1977) — in heaven, everything is fine</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="gallery/eyes-wide-shut.webp" alt="A hooded figure in an ornate gold mask from Eyes Wide Shut, standing by stone columns">
+        <figcaption><b>Eyes Wide Shut</b> — Kubrick's masked ball. Fidelio.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -194,16 +259,26 @@
 </div>
 <script>
 var ytTag=document.createElement('script');ytTag.src='https://www.youtube.com/iframe_api';document.head.appendChild(ytTag);
-var jmPlayer=null,jmStarted=false;
-function jmTryPlay(){if(jmPlayer&&jmPlayer.playVideo){try{jmPlayer.unMute();jmPlayer.playVideo();jmStarted=true;}catch(e){}}}
+var jmPlayer=null,jmStarted=false,jmGateOpen=false;
+function jmTryPlay(){if(jmGateOpen&&jmPlayer&&jmPlayer.playVideo){try{jmPlayer.unMute();jmPlayer.playVideo();jmStarted=true;}catch(e){}}}
 function onYouTubeIframeAPIReady(){
   jmPlayer=new YT.Player('ytplayer',{
     videoId:'zsCD5XCu6CM',
-    playerVars:{autoplay:1,loop:1,playlist:'zsCD5XCu6CM',playsinline:1,rel:0},
+    playerVars:{autoplay:0,loop:1,playlist:'zsCD5XCu6CM',playsinline:1,rel:0},
     events:{onReady:function(){jmTryPlay();}}
   });
 }
-document.addEventListener('pointerdown',function(){if(!jmStarted)jmTryPlay();});
+function jmOpenGate(){
+  if(jmGateOpen)return;
+  jmGateOpen=true;
+  document.body.classList.remove('locked');
+  var g=document.getElementById('gate');
+  g.classList.add('open');
+  setTimeout(function(){g.style.display='none';},750);
+  jmTryPlay();
+}
+document.getElementById('enterBtn').addEventListener('click',jmOpenGate);
+document.addEventListener('pointerdown',function(){if(jmGateOpen&&!jmStarted)jmTryPlay();});
 document.addEventListener('keydown',function(){if(!jmStarted)jmTryPlay();});
 </script>
 <script>
