@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Andres Auto Service — general auto repair, in-house machine shop, air conditioning service and transmission work at 1201 N Council Rd, Oklahoma City, OK. Call 405-821-3549 or email Juanglzrmz73@gmail.com." />
+<link rel="icon" href="data:," />
+<title>Andres Auto Service — Auto Repair, Machine Shop, A/C &amp; Transmissions · Oklahoma City</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/hatch-maps.css" />
+<style>
+:root{
+  color-scheme: light dark;
+  --bg:#fffbe8; --surface:#ffffff; --surface-2:#fff3c2;
+  --ink:#1c1a08; --muted:#5c5738; --line:#e8d98a;
+  --black:#17150a; --black-2:#23200f;
+  --yellow:#ffc800; --yellow-2:#ffd83d; --yellow-deep:#e0a800;
+  --on-yellow:#171500; --on-black:#fff8dc;
+  --focus:#b88600;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14120a; --surface:#1e1c12; --surface-2:#2a2716;
+    --ink:#fdf6d8; --muted:#cfc69a; --line:#4a4426;
+    --black:#0c0b06; --black-2:#17150c;
+    --yellow:#ffc800; --yellow-2:#ffd83d; --yellow-deep:#ffc800;
+    --focus:#ffd83d;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Barlow",system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:17px;line-height:1.55}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* Header */
+header.site{background:var(--black);color:var(--on-black);position:sticky;top:0;z-index:50;border-bottom:5px solid var(--yellow)}
+.header-in{display:flex;align-items:center;gap:18px;padding:12px 20px;max-width:1180px;margin:0 auto;flex-wrap:wrap}
+.logo{display:flex;flex-direction:column;line-height:1;text-decoration:none;margin-right:auto}
+.logo .name{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:34px;letter-spacing:.04em;color:var(--yellow);white-space:nowrap}
+.logo .sub{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:15px;letter-spacing:.52em;color:#fff;margin-top:3px}
+nav.main{display:flex;gap:22px;font-weight:600;font-size:15.5px}
+nav.main a{text-decoration:none;color:#e9e2c2}
+nav.main a:hover{color:var(--yellow)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;border-radius:8px;padding:11px 19px;border:2px solid transparent;cursor:pointer}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-yellow{background:var(--yellow);color:var(--on-yellow)}
+.btn-yellow:hover{background:var(--yellow-2)}
+.btn-ghost{border-color:#8a834f;color:#fff;background:transparent}
+.btn-ghost:hover{border-color:var(--yellow);color:var(--yellow)}
+.btn-dark{background:var(--black);color:var(--yellow)}
+.btn-dark:hover{background:var(--black-2)}
+.btn-sm{font-size:16.5px;padding:8px 14px}
+
+/* Hero — full yellow field */
+.hero{background:var(--yellow);color:var(--on-yellow);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-70px;top:0;width:340px;height:100%;background:repeating-linear-gradient(-45deg,rgba(0,0,0,.09) 0 18px,transparent 18px 36px);pointer-events:none}
+.hero-in{position:relative;z-index:1;padding:64px 20px 70px;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.hero .where{display:inline-block;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13.5px;border:2px solid var(--on-yellow);border-radius:999px;padding:5px 14px}
+.hero h1{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:clamp(40px,6.5vw,72px);line-height:.98;margin:18px 0 14px;text-transform:uppercase}
+.hero h1 .u{text-decoration:underline;text-decoration-thickness:6px;text-underline-offset:6px}
+.hero p.lede{font-size:clamp(18px,2.4vw,21.5px);max-width:34em;margin:0 0 28px;font-weight:500}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn-black{background:var(--black);color:var(--yellow)}
+.btn-black:hover{background:#000}
+.btn-outline-b{border-color:var(--on-yellow);color:var(--on-yellow);background:transparent}
+.btn-outline-b:hover{background:rgba(0,0,0,.08)}
+.hero .addr{margin-top:24px;font-size:16.5px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-weight:600}
+.hero .addr svg{width:17px;height:17px;flex:none}
+.hero-photo{border:6px solid var(--black);border-radius:14px;overflow:hidden;transform:rotate(1.2deg);box-shadow:14px 14px 0 rgba(0,0,0,.85)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;min-height:300px}
+section[id],article[id]{scroll-margin-top:96px}
+
+/* Ribbon */
+.ribbon{background:var(--black);color:#fff}
+.ribbon-in{max-width:1180px;margin:0 auto;padding:13px 20px;display:flex;gap:10px 34px;flex-wrap:wrap;font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:18px;letter-spacing:.12em;text-transform:uppercase}
+.ribbon-in span::before{content:"★";color:var(--yellow);margin-right:9px}
+
+/* Rating */
+.rating-band{background:var(--surface);border-bottom:1px solid var(--line)}
+.rating-in{display:flex;gap:26px 54px;align-items:center;flex-wrap:wrap;padding-top:30px;padding-bottom:30px}
+.rating-score{display:flex;align-items:center;gap:18px}
+.rating-num{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:74px;line-height:.9}
+.stars{position:relative;width:148px;height:27px;margin-bottom:6px}
+.stars-row{position:absolute;left:0;top:0;display:flex;gap:3px;width:148px}
+.stars-row svg{width:27px;height:27px;flex:none}
+.stars-base svg{fill:var(--line)}
+.stars-top{width:94%;overflow:hidden}
+.stars-top svg{fill:var(--yellow-deep)}
+.rating-src{margin:0;color:var(--muted);font-size:16px}
+.rating-src strong{color:var(--ink)}
+.rating-themes{border-left:4px solid var(--yellow);padding-left:26px}
+.rating-themes-h{font-family:"Barlow Condensed",sans-serif;font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:14.5px;color:var(--muted);margin:0 0 8px}
+.rating-themes ul{list-style:none;margin:0;padding:0;display:flex;gap:8px 30px;flex-wrap:wrap}
+.rating-themes li{font-size:16.5px}
+
+/* Sections */
+section{padding:68px 0}
+.kicker{font-family:"Barlow Condensed",sans-serif;font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-size:15px;color:#8a6d00;margin:0 0 8px}
+@media (prefers-color-scheme: dark){.kicker{color:var(--yellow)}}
+h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:clamp(32px,4.6vw,44px);line-height:1.05;text-transform:uppercase;letter-spacing:.015em;margin:0 0 14px}
+.section-lede{color:var(--muted);max-width:46em;margin:0 0 40px;font-size:18px}
+.service{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--yellow);border-radius:12px;overflow:hidden;margin-bottom:28px}
+.service .photo{min-height:300px}
+.service .photo img{width:100%;height:100%;object-fit:cover}
+.service .body{padding:34px 36px}
+.service.flip .photo{order:2}
+.service h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:31px;text-transform:uppercase;letter-spacing:.02em;margin:0 0 4px}
+.service .tag{color:#8a6d00;font-weight:700;font-size:14px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 12px}
+@media (prefers-color-scheme: dark){.service .tag{color:var(--yellow)}}
+.service p{color:var(--muted);margin:0 0 16px}
+.service ul{list-style:none;margin:0 0 22px;padding:0;columns:2;column-gap:26px}
+.service li{padding:5px 0 5px 24px;position:relative;font-weight:500;break-inside:avoid}
+.service li::before{content:"";position:absolute;left:0;top:12px;width:13px;height:7px;border-left:3px solid var(--yellow-deep);border-bottom:3px solid var(--yellow-deep);transform:rotate(-45deg)}
+
+/* Why */
+.why{background:var(--black);color:var(--on-black)}
+.why h2{color:#fff}
+.why .kicker{color:var(--yellow)}
+.why .section-lede{color:#cfc69a}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.why-item{border-top:4px solid var(--yellow);padding-top:16px}
+.why-item h3{font-family:"Barlow Condensed",sans-serif;font-size:23px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin:0 0 8px;color:var(--yellow)}
+.why-item p{color:#e9e2c2;margin:0;font-size:16px}
+.why-item a{color:#fff;font-weight:700}
+
+/* Form */
+.request-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:start}
+form.req{background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--yellow);border-radius:12px;padding:28px}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:600;font-size:15px;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:16.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px}
+.field textarea{min-height:92px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.req-out{background:var(--surface-2);border:2px dashed #c9ae2e;border-radius:12px;padding:24px 26px}
+.req-out h3{font-family:"Barlow Condensed",sans-serif;font-size:23px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin:0 0 10px}
+.req-out pre{white-space:pre-wrap;font-family:inherit;font-size:16px;margin:0 0 18px}
+.req-out .empty{color:var(--muted)}
+.req-actions{display:flex;gap:10px;flex-wrap:wrap}
+.copied{font-weight:700;align-self:center}
+.send-status{font-weight:600;margin:0 0 16px}
+
+/* Visit */
+.visit-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:stretch}
+.visit-card{background:var(--yellow);color:var(--on-yellow);border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:20px;border:3px solid var(--black)}
+.visit-card h3{font-family:"Barlow Condensed",sans-serif;font-size:26px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin:0}
+.visit-row{display:flex;gap:12px;align-items:flex-start}
+.visit-row svg{width:21px;height:21px;flex:none;margin-top:3px}
+.visit-row .big{font-size:20px;font-weight:700;line-height:1.35}
+.visit-row a.tel{font-size:24px;font-weight:800;text-decoration:none;display:block;line-height:1.3}
+.visit-row a.tel:hover{text-decoration:underline}
+.visit-row .note{font-size:15px;font-weight:500;opacity:.75}
+.visit-card .spacer{flex:1}
+#shop-map{height:100%;min-height:380px;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--surface-2)}
+.map-fallback{height:100%;min-height:380px;border-radius:12px;border:1px solid var(--line);background:var(--surface);display:none;align-items:center;justify-content:center;text-align:center;padding:30px}
+.map-fallback p{color:var(--muted);margin:0 0 16px}
+
+/* Footer */
+footer.site{background:var(--black);color:#e9e2c2;border-top:5px solid var(--yellow)}
+.footer-in{max-width:1180px;margin:0 auto;padding:38px 20px 30px;display:flex;gap:26px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between}
+footer .f-name{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:24px;letter-spacing:.05em;color:var(--yellow);text-transform:uppercase}
+footer p{margin:4px 0;font-size:15.5px}
+footer a{color:#e9e2c2}
+footer a:hover{color:var(--yellow)}
+.footer-phones a{display:block;font-weight:700;font-size:19px;text-decoration:none;color:#fff}
+.fineprint{border-top:1px solid #2c2917;padding:16px 20px 22px;text-align:center;font-size:13.5px;color:#a89f6e;max-width:1180px;margin:0 auto}
+
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--black);border-top:4px solid var(--yellow);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+.callbar a{flex:1;justify-content:center;white-space:nowrap;font-size:16px;padding:11px 6px}
+
+@media (max-width:860px){
+  nav.main{display:none}
+  .header-in{flex-wrap:nowrap;gap:10px;padding:10px 14px}
+  .header-in .btn{font-size:15px;padding:8px 10px;white-space:nowrap}
+  .hero-in{grid-template-columns:1fr;padding:36px 20px 42px}
+  .hero .addr{display:none}
+  .hero::after{width:110px;right:-30px}
+  .hero-photo{transform:none}
+  .hero-photo img{min-height:210px;max-height:260px}
+  .service{grid-template-columns:1fr}
+  .service.flip .photo{order:0}
+  .service .photo{min-height:210px;max-height:260px}
+  .service .body{padding:26px 22px}
+  .service ul{columns:1}
+  .why-grid,.request-grid,.visit-grid{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .rating-themes{border-left:none;padding-left:0}
+  .rating-num{font-size:60px}
+  section{padding:50px 0}
+  .callbar{display:flex}
+  body{padding-bottom:92px}
+  .logo .name{font-size:27px}
+}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="header-in">
+    <a class="logo" href="#top" aria-label="Andres Auto Service — home">
+      <span class="name">ANDRES</span>
+      <span class="sub">AUTO SERVICE</span>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#machine-shop">Machine Shop</a>
+      <a href="#request">Request Service</a>
+      <a href="#visit">Find Us</a>
+    </nav>
+    <a class="btn btn-yellow" href="tel:+14058213549">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.4 11.4 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.57 1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+      405-821-3549
+    </a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="hero-in">
+      <div>
+        <span class="where">Oklahoma City · 1201 N Council Rd</span>
+        <h1>Auto repair, machining &amp; transmissions — <span class="u">done in-house.</span></h1>
+        <p class="lede">Andres Auto Service is a full-service shop on the west side of Oklahoma City: general repair, an in-house machine shop, air conditioning service, and transmission work under one roof.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-black" href="tel:+14058213549">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.4 11.4 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.57 1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+            Call 405-821-3549
+          </a>
+          <a class="btn btn-outline-b directions-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Andres%20Auto%20Service%2C%201201%20N%20Council%20Rd%2C%20Oklahoma%20City%2C%20OK&amp;travelmode=driving" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+        <p class="addr">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          <span><a class="directions-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Andres%20Auto%20Service%2C%201201%20N%20Council%20Rd%2C%20Oklahoma%20City%2C%20OK&amp;travelmode=driving" target="_blank" rel="noopener">1201 N Council Rd, Oklahoma City, OK 73127</a> — call ahead and we'll get you on the schedule.</span>
+        </p>
+      </div>
+      <div class="hero-photo"><img src="assets/hero.jpg" alt="Mechanic at work under the hood in the Andres Auto Service shop" /></div>
+    </div>
+  </div>
+
+  <div class="ribbon" aria-hidden="true">
+    <div class="ribbon-in">
+      <span>General Repair</span><span>Machine Shop</span><span>Air Conditioning</span><span>Transmissions</span>
+    </div>
+  </div>
+
+  <div class="rating-band">
+    <div class="wrap rating-in">
+      <div class="rating-score">
+        <div class="rating-num">4.7</div>
+        <div>
+          <div class="stars" role="img" aria-label="Rated 4.7 out of 5 stars on Google">
+            <div class="stars-row stars-base" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            </div>
+            <div class="stars-row stars-top" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>
+            </div>
+          </div>
+          <p class="rating-src">Rated <strong>4.7 out of 5</strong> from <strong>26 Google reviews</strong></p>
+        </div>
+      </div>
+      <div class="rating-themes">
+        <p class="rating-themes-h">What customers mention most</p>
+        <ul>
+          <li><strong>Fair prices</strong> — honest work at a fair number</li>
+          <li><strong>Knowledgeable, trustworthy mechanics</strong></li>
+          <li><strong>Great customer service</strong> from drop-off to pick-up</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <p class="kicker">What we do</p>
+      <h2>Four shops in one</h2>
+      <p class="section-lede">Most shops send the hard jobs out. Andres Auto Service handles the full job on site — from a check-engine light to a full transmission rebuild, with the machining done in our own shop.</p>
+
+      <article class="service">
+        <div class="photo"><img src="assets/general-repair.jpg" alt="Mechanic leaning into an open engine bay to work on a car engine" /></div>
+        <div class="body">
+          <h3>General Repair</h3>
+          <p class="tag">Everyday repairs &amp; diagnostics</p>
+          <p>Day-to-day repairs and troubleshooting for cars and light trucks — we find the problem, explain it plainly, and fix it right.</p>
+          <ul>
+            <li>Engine diagnostics</li><li>Brakes &amp; suspension</li><li>Belts, hoses &amp; cooling</li>
+            <li>Starters &amp; alternators</li><li>Tune-ups &amp; maintenance</li><li>Check-engine lights</li>
+          </ul>
+          <a class="btn btn-dark btn-sm" href="tel:+14058213549">Call 405-821-3549</a>
+        </div>
+      </article>
+
+      <article class="service flip" id="machine-shop">
+        <div class="photo"><img src="assets/machine-shop.jpg" alt="Engine block mounted on a boring machine in the machine shop, cylinders freshly machined" /></div>
+        <div class="body">
+          <h3>Machine Shop Work</h3>
+          <p class="tag">Machining done in-house</p>
+          <p>Our own machine shop means engine work doesn't leave the building — no shipping blocks across town and waiting on somebody else's schedule.</p>
+          <ul>
+            <li>Cylinder boring &amp; honing</li><li>Head resurfacing</li><li>Valve work</li>
+            <li>Block machining</li><li>Engine rebuild prep</li><li>Press &amp; fitting work</li>
+          </ul>
+          <a class="btn btn-dark btn-sm" href="tel:+14058213549">Call 405-821-3549</a>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="photo"><img src="assets/ac-service.webp" alt="A/C manifold gauges connected under the hood of a car during air conditioning service" /></div>
+        <div class="body">
+          <h3>Air Conditioning</h3>
+          <p class="tag">A/C service &amp; repair</p>
+          <p>Oklahoma summers are no time for warm air from the vents. We pressure-test, recharge, and repair A/C systems so the cab stays cold.</p>
+          <ul>
+            <li>A/C performance checks</li><li>Refrigerant recharge</li><li>Leak detection</li>
+            <li>Compressor replacement</li><li>Condensers &amp; lines</li><li>Blower &amp; controls</li>
+          </ul>
+          <a class="btn btn-dark btn-sm" href="tel:+14058213549">Call 405-821-3549</a>
+        </div>
+      </article>
+
+      <article class="service flip">
+        <div class="photo"><img src="assets/transmissions.jpg" alt="Transmission gears, shafts and clutch packs laid out on a workbench during a rebuild" /></div>
+        <div class="body">
+          <h3>Transmissions</h3>
+          <p class="tag">Repair, service &amp; rebuilds</p>
+          <p>Slipping, hard shifts, or a transmission that won't go at all — we diagnose it first, then repair or rebuild it here in the shop.</p>
+          <ul>
+            <li>Automatic transmissions</li><li>Manual transmissions</li><li>Transmission diagnostics</li>
+            <li>Rebuilds &amp; repair</li><li>Fluid &amp; filter service</li><li>Clutch work</li>
+          </ul>
+          <a class="btn btn-dark btn-sm" href="tel:+14058213549">Call 405-821-3549</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="wrap">
+      <p class="kicker">The shop</p>
+      <h2>Why drivers come to Andres</h2>
+      <p class="section-lede">We're a family-friendly, honest mechanic shop on N Council Rd — straight answers, fair prices, and work done right. The kind of place you can trust with your family's cars.</p>
+      <div class="why-grid">
+        <div class="why-item">
+          <h3>Machining in-house</h3>
+          <p>Blocks, heads, and engine parts are machined right here. That means tighter turnaround on engine and transmission work, and one shop accountable for the whole job.</p>
+        </div>
+        <div class="why-item">
+          <h3>Big jobs welcome</h3>
+          <p>Transmission rebuilds and engine work are the jobs other shops turn away. They're a core part of what this shop does every week.</p>
+        </div>
+        <div class="why-item">
+          <h3>Honest &amp; family-friendly</h3>
+          <p>We treat you like family — honest advice, clear prices, and no work you don't need. Call <a href="tel:+14058213549">405-821-3549</a> or email <a href="mailto:Juanglzrmz73@gmail.com">Juanglzrmz73@gmail.com</a> and talk it through with real people before you ever roll in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="request">
+    <div class="wrap">
+      <p class="kicker">Book a job</p>
+      <h2>Request service</h2>
+      <p class="section-lede">Fill this in and hit send — your request goes straight to the shop's inbox at Juanglzrmz73@gmail.com. You'll also get a copy of the summary on screen, handy if you'd rather call it in at 405-821-3549.</p>
+      <div class="request-grid">
+        <form class="req" id="req-form">
+          <div class="two">
+            <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required /></div>
+            <div class="field"><label for="f-phone">Your phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" /></div>
+          </div>
+          <div class="two">
+            <div class="field"><label for="f-vehicle">Vehicle (year, make, model)</label><input id="f-vehicle" name="vehicle" type="text" placeholder="e.g. 2016 Ford F-150" required /></div>
+            <div class="field"><label for="f-service">Service needed</label>
+              <select id="f-service" name="service">
+                <option>General repair</option><option>Machine shop work</option><option>Air conditioning</option><option>Transmission</option><option>Not sure — need a diagnosis</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label for="f-notes">What's it doing? (symptoms, noises, leaks)</label><textarea id="f-notes" name="notes"></textarea></div>
+          <button class="btn btn-yellow" type="submit" style="border-color:var(--black)">Send request to the shop</button>
+        </form>
+        <div class="req-out" aria-live="polite">
+          <h3>Your job summary</h3>
+          <pre id="req-summary" class="empty">Fill in the form and your summary will show up here when you send it.</pre>
+          <p class="send-status" id="send-status" hidden></p>
+          <div class="req-actions">
+            <a class="btn btn-dark btn-sm" id="email-link" href="mailto:Juanglzrmz73@gmail.com">Email it yourself</a>
+            <button class="btn btn-dark btn-sm" type="button" id="copy-btn" disabled>Copy summary</button>
+            <a class="btn btn-dark btn-sm" href="tel:+14058213549">Call 405-821-3549</a>
+            <span class="copied" id="copied-msg" hidden>Copied ✓</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" style="padding-top:0">
+    <div class="wrap">
+      <p class="kicker">Find us</p>
+      <h2>On N Council Rd, west OKC</h2>
+      <p class="section-lede">We're at 1201 N Council Rd in Oklahoma City — call 405-821-3549 or email before you head over and we'll be ready for you.</p>
+      <div class="visit-grid">
+        <div class="visit-card">
+          <h3>Andres Auto Service</h3>
+          <div class="visit-row">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+            <div><div class="big">1201 N Council Rd<br />Oklahoma City, OK 73127</div><div class="note">West Oklahoma City, on Council Rd</div></div>
+          </div>
+          <div class="visit-row">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.4 11.4 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.57 1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+            <div><a class="tel" href="tel:+14058213549">405-821-3549</a><div class="note">Tap the number to call the shop</div></div>
+          </div>
+          <div class="visit-row">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <div><a class="tel" href="mailto:Juanglzrmz73@gmail.com" style="font-size:19px;word-break:break-all">Juanglzrmz73@gmail.com</a><div class="note">Email the shop anytime</div></div>
+          </div>
+          <div class="spacer"></div>
+          <a class="btn btn-black directions-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Andres%20Auto%20Service%2C%201201%20N%20Council%20Rd%2C%20Oklahoma%20City%2C%20OK&amp;travelmode=driving" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+        <div>
+          <div id="shop-map" role="img" aria-label="Map showing Andres Auto Service at 1201 N Council Rd, Oklahoma City, OK 73127"></div>
+          <div class="map-fallback" id="map-fallback">
+            <div>
+              <p>The map couldn't load here — the shop is at <strong>1201 N Council Rd, Oklahoma City, OK 73127</strong>. Call 405-821-3549 for directions.</p>
+              <a class="btn btn-yellow directions-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Andres%20Auto%20Service%2C%201201%20N%20Council%20Rd%2C%20Oklahoma%20City%2C%20OK&amp;travelmode=driving" target="_blank" rel="noopener" style="border-color:var(--black)">Get Directions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="footer-in">
+    <div>
+      <div class="f-name">Andres Auto Service</div>
+      <p>General Repair · Machine Shop · Air Conditioning · Transmissions</p>
+      <p>1201 N Council Rd, Oklahoma City, OK 73127</p>
+    </div>
+    <div class="footer-phones">
+      <a href="tel:+14058213549">405-821-3549</a>
+      <a href="mailto:Juanglzrmz73@gmail.com" style="font-weight:600;font-size:16.5px">Juanglzrmz73@gmail.com</a>
+    </div>
+  </div>
+  <div class="fineprint">© <span id="year">2026</span> Andres Auto Service · Oklahoma City, Oklahoma</div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-yellow" href="tel:+14058213549">Call 405-821-3549</a>
+</div>
+
+<script src="assets/hatch-maps.js"></script>
+<script src="assets/map_helpers.js"></script>
+<script>
+(function(){
+  var PLACE={label:"Andres Auto Service",address:"1201 N Council Rd",locality:"Oklahoma City",region:"OK",country:"US",lat:35.48049,lng:-97.65448};
+  try{
+    if(window.MapHelpers&&MapHelpers.mapsDirectionsUrl){
+      var url=MapHelpers.mapsDirectionsUrl(PLACE,{travelmode:"driving"});
+      if(url){var links=document.querySelectorAll(".directions-link");for(var i=0;i<links.length;i++)links[i].setAttribute("href",url);}
+    }
+  }catch(e){}
+  var mapEl=document.getElementById("shop-map");
+  function showFallback(){mapEl.style.display="none";var fb=document.getElementById("map-fallback");if(fb)fb.style.display="flex";}
+  try{
+    if(window.MapHelpers&&MapHelpers.mountMap){
+      var dark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var handle=MapHelpers.mountMap(mapEl,{places:[PLACE],baseStyle:dark?"dark":"light"},showFallback);
+      if(!handle)showFallback();
+    }else{showFallback();}
+  }catch(e){showFallback();}
+
+  var SHOP_EMAIL="Juanglzrmz73@gmail.com";
+  var form=document.getElementById("req-form");
+  var out=document.getElementById("req-summary");
+  var copyBtn=document.getElementById("copy-btn");
+  var emailLink=document.getElementById("email-link");
+  var sendStatus=document.getElementById("send-status");
+  var copiedMsg=document.getElementById("copied-msg");
+  var lastSummary="";
+  form.addEventListener("submit",function(ev){
+    ev.preventDefault();
+    var v=function(id){return document.getElementById(id).value.trim();};
+    var subject="Service request — Andres Auto Service";
+    var lines=["Service request — Andres Auto Service","Name: "+v("f-name"),v("f-phone")?"Phone: "+v("f-phone"):null,"Vehicle: "+v("f-vehicle"),"Service: "+v("f-service"),v("f-notes")?"Details: "+v("f-notes"):null].filter(Boolean);
+    lastSummary=lines.join("\n");
+    out.textContent=lastSummary;out.classList.remove("empty");copyBtn.disabled=false;copiedMsg.hidden=true;
+    emailLink.setAttribute("href","mailto:"+SHOP_EMAIL+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(lastSummary));
+    sendStatus.hidden=false;sendStatus.textContent="Sending your request to the shop…";
+    out.scrollIntoView({block:"nearest",behavior:"smooth"});
+    function sendFailed(){sendStatus.textContent="The automatic send didn't go through. Call 405-821-3549, or use “Email it yourself” to send the summary from your own mail app.";}
+    if(!window.fetch){sendFailed();return;}
+    fetch("https://formsubmit.co/ajax/"+SHOP_EMAIL,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({_subject:subject,name:v("f-name"),phone:v("f-phone"),vehicle:v("f-vehicle"),service:v("f-service"),details:v("f-notes")})}).then(function(res){
+      if(!res.ok)throw new Error("send failed");
+      sendStatus.textContent="Sent ✓ — your request is on its way to the shop. Rather talk it through? Call 405-821-3549.";
+    }).catch(sendFailed);
+  });
+  copyBtn.addEventListener("click",function(){
+    if(!lastSummary)return;
+    function done(){copiedMsg.hidden=false;}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(lastSummary).then(done,done);}
+    else{var ta=document.createElement("textarea");ta.value=lastSummary;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");}catch(e){}document.body.removeChild(ta);done();}
+  });
+  document.getElementById("year").textContent=String(new Date().getFullYear());
+})();
+</script>
+</body>
+</html>
