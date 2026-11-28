@@ -2371,13 +2371,29 @@
     },
     {
      "date": "2026-11-27",
-     "label": "Friday, Nov 27 — Friday route #2 moved to Tue Dec 1 (per Justin Nov 27)",
-     "items": [],
+     "label": "Friday, Nov 27 — Friday route #2 moved to Tue Dec 1; Nicole Wolfe install finished",
+     "items": [
+      {
+       "name": "Nicole Wolfe — Christmas light install",
+       "address": "12924 Firerock Cir, Oklahoma City",
+       "scope": "Christmas light install — front of home + dormer, ~85 ft. $525 PAID Nov 25 (+ $15 tip) — estimate #71 — gate code #9547 — booked Nov 25 (per Justin) — ✅ Finished Fri Nov 27 evening (per Justin; no times reported)",
+       "status": "done",
+       "start": null,
+       "finish": null,
+       "minutes": null,
+       "auto_start": null,
+       "auto_finish": null,
+       "auto_minutes": null,
+       "man_minutes": null,
+       "man_auto_minutes": null,
+       "crew": 3
+      }
+     ],
      "crew_size": 2
     },
     {
      "date": "2026-11-28",
-     "label": "Saturday, Nov 28 — Christmas light installs (3 jobs)",
+     "label": "Saturday, Nov 28 — Christmas light installs (2 jobs; Nicole Wolfe finished Fri Nov 27)",
      "items": [
       {
        "name": "Kyla Tribble — Christmas light install",
@@ -2398,21 +2414,6 @@
        "name": "Gregory Dutton — Christmas light install",
        "address": "1117 Lombardy Rd, Oklahoma City",
        "scope": "Christmas light install — $600 PAID Nov 20 (invoice #3171) — added to Mon Nov 23 at Justin's direction Nov 21; moved to Sat Nov 28 (per Justin Nov 24)",
-       "status": "scheduled",
-       "start": null,
-       "finish": null,
-       "minutes": null,
-       "auto_start": null,
-       "auto_finish": null,
-       "auto_minutes": null,
-       "man_minutes": null,
-       "man_auto_minutes": null,
-       "crew": 3
-      },
-      {
-       "name": "Nicole Wolfe — Christmas light install",
-       "address": "12924 Firerock Cir, Oklahoma City",
-       "scope": "Christmas light install — front of home + dormer, ~85 ft. $525 PAID Nov 25 (+ $15 tip) — estimate #71 — gate code #9547 — booked Nov 25 (per Justin)",
        "status": "scheduled",
        "start": null,
        "finish": null,
